@@ -1,0 +1,60 @@
+/* Color
+------------------------------------------- */
+$color_text: #595959;
+$color_red: #EC513C;
+$color_purple: #542E4B;
+$color_blue: #2A2F4C;
+
+$color_blue1: #285F8A;
+$color_blue2: #32507C;
+$color_blue3: #4B4B72;
+$color_blue4: #404060;
+
+$color_purple1: #703F50;
+$color_purple2: #604752;
+
+$color_gray0: #F4F5F6;
+$color_gray1: #E0E0E0;
+$color_gray2: #C0C0C0;
+$color_gray3: #8D8D8D;
+
+$color_twitter: #5594CF;
+$color_facebook: #2D4B86;
+$color_linkedin: #256BA6;
+$color_tumblr: #2B374A;
+$color_googleplus: #C04A38;
+
+/* Typography
+------------------------------------------- */
+$font_heading: "BrandonGrotesque", helvetica, sans-serif;
+$font_text: 'Mercury Text G1 A', 'Mercury Text G1 B', georgia, serif;
+
+/* Layout
+------------------------------------------- */
+$page_maxwidth: 1170px;
+
+$grid_margin_static: 30px;
+$grid_width_static: 70px;
+$grid_margin: percentage($grid_margin_static / $page_maxwidth);
+$grid_width: percentage($grid_width_static / $page_maxwidth);  
+
+$grid_span2: ($grid_width*2 + $grid_margin);
+$grid_span3: ($grid_width*3 + $grid_margin*2);
+$grid_span4: ($grid_width*4 + $grid_margin*3);
+$grid_span5: ($grid_width*5 + $grid_margin*4);
+$grid_span6: ($grid_width*6 + $grid_margin*5);
+$grid_span7: ($grid_width*7 + $grid_margin*6);
+$grid_span8: ($grid_width*8 + $grid_margin*7);
+$grid_span9: ($grid_width*9 + $grid_margin*8);
+$grid_span10: ($grid_width*10 + $grid_margin*9);
+
+
+
+
+
+
+
+
+
+
+

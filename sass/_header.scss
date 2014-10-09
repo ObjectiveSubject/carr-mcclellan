@@ -1,0 +1,79 @@
+.site-header {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+}
+
+/* Site Title
+----------------------------------- */
+.site-branding {
+	padding: 5em 0;
+}
+
+.site-title {
+	margin: 0;
+	a {
+		display: block;
+		text-indent: -99999px;
+		overflow: hidden;
+		background: url(images/sprite.png) no-repeat center top;
+		width: 240px;
+		height: 22px;
+		margin: 0 auto;
+	}
+}
+
+/* Main Nav
+----------------------------------- */
+.main-nav {
+	position: relative;
+	z-index: 1;
+	clear: both;
+	display: block;
+	width: 100%;
+	margin: 1.3em auto;
+	padding: 0 $grid_margin_static;
+}
+
+.main-nav ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-nav li {
+	width: 20%;
+	text-align: center;
+	float: left;
+	position: relative;
+	&:before { content: ""; margin: 0; }
+}
+
+.main-nav a {
+	display: block;
+	font: normal normal bold 14px/1em $font_heading;
+	text-transform: uppercase;
+}
+
+/* Small menu */
+.main-nav .menu-toggle {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

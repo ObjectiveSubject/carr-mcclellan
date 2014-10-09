@@ -1,0 +1,86 @@
+/* Layout / Formatting
+-------------------------------------- */
+@mixin layout-clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin box-sizing($box-model) {
+	-webkit-box-sizing: $box-model; // Safari <= 7
+	-moz-box-sizing: $box-model; // Firefox <= 19
+	box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+	background-clip: padding-box; /* stops bg color from leaking outside the border: */
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+/* Typography
+-------------------------------------- */
+@mixin h1size {
+	font-size: 60px;
+	line-height: 1.2em;
+}
+@mixin h2size {
+	font-size: 28px;
+	line-height: 1.2em;
+}
+@mixin h3size {
+	font-size: 24px;
+	line-height: 1.25em;
+}
+@mixin h4size {
+	font-size: 20px;
+	line-height: 1em;
+}
+@mixin h5size {
+	font-size: 16px;
+	line-height: 1.3em;
+}
+@mixin h6size {
+	font-size: 16px;
+	line-height: 1.3em;
+}
+@mixin textsize {
+	font-size: 18px;
+	line-height: 1.666em;
+}
+
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-otcaps {
+	text-transform: lowercase;
+	font-variant: small-caps;
+}
+
+
+/* Color 
+-------------------------------------- */
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+
+/* Images
+-------------------------------------- */
+@mixin sprite($x: 0, $y: 0) {
+	background-image: url(images/sprite.png);
+	background-position: $x $y;
+	background-repeat: no-repeat;
+}

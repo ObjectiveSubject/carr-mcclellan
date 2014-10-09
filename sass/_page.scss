@@ -1,0 +1,16 @@
+body {
+	border: 10px solid $color_red;
+	border-left: none;
+}
+
+#page {
+	position: relative;
+}
+
+#primary {
+
+
+	&.terminal-page {
+		background: $color_gray0;
+	}
+}

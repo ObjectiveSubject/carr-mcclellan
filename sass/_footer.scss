@@ -1,0 +1,167 @@
+.footer-nav {
+	float: left;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+	
+	li {
+		display: inline-block;
+	}
+	
+	a {
+		display: block;
+		padding: 16px 20px 12px 0;
+		color: #FFF;
+		font: normal normal bold 14px/1em $font_heading;
+		text-transform: uppercase;
+	
+		&:hover {
+			color: $color_red;
+		}
+	}
+}
+
+.site-footer {
+	background: $color_blue;
+	color: #FFF;	
+
+	.monogram { float: right; }
+	
+	.row { @include layout-clearfix; }
+	.row1 { margin: 2em auto; }
+	.row2, .row3 { margin-bottom: 2em; }
+	
+	#mc_embed_signup {
+		position: relative;
+		margin-right: $grid_margin;
+		
+		.email {
+			position: absolute;
+			border-right: none;
+			border-bottom: 4px solid;
+			color: tint($color_blue, 70%);
+			padding: 16px 105px 14px 0;
+			line-height: 1em;
+			border-color: tint($color_blue, 30%);
+			&:hover {
+				border-color: #FFF;
+				color: #FFF;
+			}
+			&:focus {
+				border-color: $color_red;
+			}
+		}
+		.button {
+			width: auto;
+			float: right;
+			position: relative;
+			z-index: 1;
+			color: #FFF;
+			padding: 19px 17px 16px;
+			border-color: tint($color_blue, 30%);
+			&:hover, &:focus { 
+				color: $color_red; 
+				border-color: $color_red;
+			}
+		}
+	}
+
+	.contact {
+		margin-left: $grid_margin;
+		.info {
+			width: 57.45%;
+			font-size: 0.8em;
+			color: tint($color_blue, 70%);
+		}
+		address.info { 
+			width: 36.17%;
+			margin-right: 6.38%; 
+		}
+		a {
+			color: tint($color_blue, 70%);
+			&:hover { color: $color_red; }
+		}
+	}
+
+	.social-nav {
+		display: inline-block;
+		margin-right: 20px;
+	
+		li {
+			display: inline-block;
+		}
+		a {
+			color: #FFF;
+			display: block;
+			padding: 7px;
+			font-size: 14px;
+			&.icon-twitter {
+				background: $color_twitter;
+				&:hover { background: #FFF; color: $color_twitter; }
+			}
+			&.icon-linkedin {
+				background: $color_linkedin;
+				&:hover { background: #FFF; color: $color_linkedin; }
+			}
+			&.icon-facebook {
+				background: $color_facebook;
+				&:hover { background: #FFF; color: $color_facebook; }
+			}
+		}
+	}
+
+} /* site-footer */
+
+.utility-nav {
+	display: inline-block;
+
+	.menu-legalutility-nav-container { display: inline-block; }
+	
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		font: normal normal bold 12px/12px $font_heading;
+		color: tint($color_blue, 30%);
+		text-transform: uppercase;
+		padding: 0 10px 0 0;
+		&:hover { color: #FFF; }
+	}
+}
+
+.copyright {
+	display: inline-block;
+	font: normal normal bold 12px/12px $font_heading;
+	color: tint($color_blue, 30%);
+	margin: 12px 0 0px $grid_margin;
+}
+
+#grid-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	
+	.wrapper {
+		position: relative;
+		height: 100%;
+	}
+	
+	.column {
+		float: left;
+		height: 100%;
+		margin-right: $grid_margin;
+		background: #FF7EEA;
+		opacity: 0.2;
+		width: $grid_width;
+		&:last-child { margin: 0; }
+	}
+}

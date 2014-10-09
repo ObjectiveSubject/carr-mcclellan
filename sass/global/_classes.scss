@@ -1,0 +1,134 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.push-left { float: left; }
+.push-right { float: right; }
+
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+	@include layout-clearfix;
+}
+
+.hide-text { display: none; }
+
+.font-text {
+	font-family: $font_text;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.font-heading {
+	font-family: $font_heading;
+}
+
+.social-icon {
+	display: block;
+	padding: 16px;
+	width: $grid_width_static;
+	height: $grid_width_static;
+	text-align: center;
+	font-size: 32px;
+	color: #FFF;
+	&.icon-twitter { 
+		background: $color_twitter;
+		&:hover { background: #FFF; color: $color_twitter; }
+	}
+	&.icon-facebook { 
+		background: $color_facebook; 
+		&:hover { background: #FFF; color: $color_facebook; }
+	}
+	&.icon-tumblr { 
+		background: $color_tumblr; 
+		&:hover { background: #FFF; color: $color_tumblr; }
+	}
+	&.icon-linkedin { 
+		background: $color_linkedin; 
+		&:hover { background: #FFF; color: $color_linkedin; }
+	}
+	&.icon-googleplus { 
+		background: $color_googleplus; 
+		&:hover { background: #FFF; color: $color_googleplus; }
+	}
+}
+
+.monogram {
+	display: block;
+	width: 36px;
+	height: 41px;
+	@include sprite(-38px, -25px);
+}
+
+.link-gray3 {
+	color: $color_gray3;	
+	&:hover {
+		color: $color_red;
+	}
+}
+
+.span1 {
+	width: $grid_width;
+}
+.span2 {
+	width: $grid_span2;	
+}
+.span3 {
+	width: $grid_span3;	
+}
+.span4 {
+	width: $grid_span4;
+}
+.span5 {
+	width: $grid_span5;
+}
+.span6 {
+	width: $grid_span6;
+}
+.span7 {
+	width: $grid_span7;
+}
+.span8 {
+	width: $grid_span8;
+}
+.span9 {
+	width: $grid_span9;
+}
+.span10 {
+	width: $grid_span10;	
+}
+.span12 {
+	position: relative;
+	max-width: $page_maxwidth;
+	padding: 0 $grid_margin_static;
+	@include box-sizing(content-box);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

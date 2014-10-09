@@ -1,0 +1,54 @@
+/* Page Header
+----------------------------------- */
+.page-header {
+	position: relative;
+	text-align: center;
+	padding: 16em 0 0 0;
+	@include layout-clearfix;
+	background: $color_gray0;
+	}
+	.home .page-header {
+		background: url(images/large-monogram.png) no-repeat center center $color_gray0;
+		padding-bottom: 5em;
+		}
+	.terminal-page .page-header {
+		background: #FFF;
+	}
+
+	.page-title { 
+		color: $color_purple;
+		padding: 0 0 0.25em;
+		margin: 0;
+	}
+	.page-subtitle {
+		font-family: $font_text;
+		@include h3size;
+		text-transform: none;
+		font-weight: normal;
+		max-width: 50%;
+		margin: 0 auto;
+		padding-bottom: 1.5em;
+	}
+	.entry-meta {
+		padding: 0 0 1em;
+		}
+		.meta-date {
+			font-size: 14px;
+			color: $color_gray2;
+			}
+		.meta-title {
+			color: $color_purple;
+			}
+	.attorney-pic {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-width: 250px;
+	}
+
+/* Main
+----------------------------------- */
+#main {
+	padding-top: 3em;
+	padding-bottom: 5em;
+	}

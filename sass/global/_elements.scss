@@ -1,0 +1,68 @@
+hr {
+	background-color: $color_gray0;
+	border: 0;
+	height: 4px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: decimal;
+	margin: 0 0 1.5em 1.5em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
+
+a {
+	color: $color_red;
+	text-decoration: none;
+	transition: all 250ms ease;
+}
+
+a:visited {
+	color: $color_red;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $color_purple;
+}
