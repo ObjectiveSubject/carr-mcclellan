@@ -7,8 +7,13 @@ body {
 	position: relative;
 }
 
-#primary {
+#wrapper {
+	max-width: $page_maxwidth;
+	margin: 0 auto;
+	clear: both;
+}
 
+#primary {
 
 	&.terminal-page {
 		background: $color_gray0;

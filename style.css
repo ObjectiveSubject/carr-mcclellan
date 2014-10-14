@@ -751,12 +751,15 @@ body {
 #page {
   position: relative; }
 
+#wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  clear: both; }
+
 #primary.terminal-page {
   background: #F4F5F6; }
 
 .site-header {
-  position: absolute;
-  z-index: 1;
   width: 100%; }
 
 /* Site Title
