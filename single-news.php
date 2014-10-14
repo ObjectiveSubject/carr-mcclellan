@@ -16,11 +16,6 @@
 				<div class="container">
 					<header id="header" class="header-4">
 						<div class="panel">
-							<ul class="breadcrumbs">
-								<a href="<?php bloginfo('url');?>">Home</a> ·
-								<a href="<?= get_permalink('32'); ?>">News & Events</a> ·
-								<a href="<?= get_permalink('41'); ?>">In The News</a>
-							</ul>
 							<span class="addthis link-share">Share</span>
 						</div>
 						<h1>In The News</h1>

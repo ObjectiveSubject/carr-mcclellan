@@ -25,7 +25,6 @@
 
 					<header id="header" class="header-4 header-practices-detail">
 						<div class="panel">
-							<?php include('breadcrumbs.php'); ?>
 							<span class="addthis link-share">Share</span>
 						</div>
 						<h1><?php the_title();?></h1>

@@ -12,7 +12,6 @@
 
 					<header id="header" class="header-4 header-news-search-detail">
 						<div class="panel">
-							<?php include('breadcrumbs.php'); ?>
 							<span class="addthis link-share">Share</span>
 						</div>
 						<div class="holder">
