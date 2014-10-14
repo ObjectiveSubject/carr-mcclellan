@@ -799,6 +799,8 @@ body {
   .main-nav li:before {
     content: "";
     margin: 0; }
+  .main-nav li ul.children {
+    display: none; }
 
 .main-nav a {
   display: block;
@@ -1110,6 +1112,8 @@ body {
     display: inline-block; }
   .utility-nav li {
     display: inline-block; }
+    .utility-nav li ul.children {
+      display: none; }
   .utility-nav a {
     display: block;
     font: normal normal bold 12px/12px "BrandonGrotesque", helvetica, sans-serif;

@@ -122,6 +122,10 @@
 	
 	li {
 		display: inline-block;
+
+		ul.children {
+			display: none;
+		}
 	}
 
 	a {

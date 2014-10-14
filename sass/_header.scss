@@ -47,6 +47,10 @@
 	float: left;
 	position: relative;
 	&:before { content: ""; margin: 0; }
+
+	ul.children {
+		display: none;
+	}
 }
 
 .main-nav a {
