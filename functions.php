@@ -74,30 +74,12 @@ require get_template_directory() . '/inc/template-tags.php';
 From here down is stuff brought over from Carr McClellan 1.0
 ------------------------------------------------------------
 ------------------------------------------------------------
-
-
-/*******************************************************
-  Custom WYSIWYG for Pages
 */
-  function myformatTinyMCE($in) {
-    $post = get_post($post_id);
-    if ($post->post_type == 'page') {
-      $in['theme_advanced_buttons1'] = 'formatselect,bold,italic,|,bullist,numlist,blockquote,link,unlink,pastetext,pasteword,removeformat,undo,redo';
-      $in['theme_advanced_buttons2'] = '';
-      $in['theme_advanced_buttons3'] = '';
-      $in['theme_advanced_buttons4'] = '';
-    }
-    return $in;
-  }
-  add_filter('tiny_mce_before_init', 'myformatTinyMCE' );
+
 
   function carr_load_tiny_mce() {
     wp_tiny_mce( false ); // true gives you a stripped down version of the editor
   }
-  function carr_load_admin_scripts() {
-    wp_enqueue_script(array('jquery', 'editor', 'media-upload'));
-  }
-  add_action('admin_enqueue_scripts', 'carr_load_admin_scripts');
 
 /*******************************************************
   Register Components
