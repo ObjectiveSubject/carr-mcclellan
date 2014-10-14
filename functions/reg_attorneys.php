@@ -18,7 +18,6 @@
         );
       register_post_type( 'attorneys' , $args );
   }
-  add_action("admin_head","carr_load_tiny_mce");
 
   // Disable Autosave ** Edit - Modified save_attorneys_meta() to fix autosave
   //

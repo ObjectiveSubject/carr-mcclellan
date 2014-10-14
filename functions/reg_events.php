@@ -18,7 +18,6 @@
         );
       register_post_type( 'events' , $args );
   }
-  add_action("admin_head","carr_load_tiny_mce");
 
 /*********************************************************
   Custom Column Headers

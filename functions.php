@@ -77,10 +77,6 @@ From here down is stuff brought over from Carr McClellan 1.0
 */
 
 
-  function carr_load_tiny_mce() {
-    wp_tiny_mce( false ); // true gives you a stripped down version of the editor
-  }
-
 /*******************************************************
   Register Components
 */
