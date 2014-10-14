@@ -35,7 +35,6 @@
 							<?php the_block('Logo List'); ?>
 						</section>
 					</div>
-					<?php include('pre-footer.php'); ?>
 				</div>
 			</div>
 		</div>

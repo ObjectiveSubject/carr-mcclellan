@@ -106,9 +106,6 @@
 							</div>
 						</section>
 					</div>
-
-					<?php include('pre-footer.php'); ?>
-
 				</div>
 			</div>
 		</div>

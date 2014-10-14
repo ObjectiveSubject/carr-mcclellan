@@ -185,8 +185,6 @@ if (class_exists('MultiPostThumbnails')
 							</section>
 						</section>
 					</div>	
-					
-					<?php include('pre-footer.php'); ?>
 				</div>
 			</div>
 		</div>
