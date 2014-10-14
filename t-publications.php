@@ -8,7 +8,6 @@
 	<div id="wrapper">
 		<div class="w1">
 			<div class="w2">
-				<?php include('sidebar.php'); ?>
 				<div class="container">
 					<header id="header" class="header-2 header-publications-overview">
 						<div class="panel">

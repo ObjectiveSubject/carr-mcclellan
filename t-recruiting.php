@@ -9,7 +9,6 @@
 	<div id="wrapper">
 		<div class="w1">
 			<div class="w2">
-				<?php include('sidebar.php'); ?>
 				<div class="container">
 					<header id="header" class="header-4 header-our-firm-detail">
 						<div class="panel">

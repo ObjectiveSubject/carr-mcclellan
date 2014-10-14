@@ -13,7 +13,6 @@
 				<div class="container">
 					<header id="header" class="header-4 header-our-firm-detail">
 						<div class="panel">
-							<?php include('breadcrumbs.php'); ?>
 							<span class="addthis link-share">Share</span>
 						</div>
 						<h1><?=get_the_title();?></h1>

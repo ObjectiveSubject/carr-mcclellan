@@ -13,7 +13,6 @@
 				<div class="container">					
 					<header id="header" class="header-2 header-practices-overview">
 						<div class="panel">
-							<?php include('breadcrumbs.php'); ?>
 							<span class="addthis link-share">Share</span>
 						</div>
 						<div class="holder">
