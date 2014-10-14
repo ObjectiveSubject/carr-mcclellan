@@ -15,12 +15,8 @@ function cmc_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
+	// Enable support for Post Thumbnails on posts and pages.
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -28,13 +24,24 @@ function cmc_setup() {
 		'secondary' => __( 'Secondary Menu', 'cmc' ),
 	) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
+	// Page Excerpts
+	add_post_type_support( 'page', 'excerpt' );
+
+	// Switch default core markup for search form, comment form, and comments
+	// to output valid HTML5
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
+
+	// Image sizes from v1.0 of theme
+	add_image_size( 'miletone-thumb', 210, 130, true );
+	add_image_size( 'membership-thumb', 210, 90, true );
+	add_image_size( 'attorney-thumb', 145, 145, true );
+	add_image_size( 'attorney-detail', 284, 264, true );
+	add_image_size( 'practice-chair', 71, 71, true );
+	add_image_size( 'event-large', 690, 9999, false );
+	add_image_size( 'event-medium', 450, 9999, false );
+	add_image_size( 'news-medium', 190, 9999, false );
 
 }
 endif; // cmc_setup
@@ -101,12 +108,6 @@ From here down is stuff brought over from Carr McClellan 1.0
   Register Components
 */
 
-  // Page Excerpts
-  add_post_type_support( 'page', 'excerpt' );
-
-
-  // Add Support for Featured Image
-  add_theme_support( 'post-thumbnails' );
 
 
   // Remove Featured Image from Posts
@@ -116,21 +117,6 @@ From here down is stuff brought over from Carr McClellan 1.0
       remove_meta_box( 'postimagediv','page','side' );
       remove_meta_box( 'multi_content','attorneys','side' );
   }
-
-
-
-
-/*********************************************************
-    Custom Image Sizes
-*/
-  add_image_size( 'miletone-thumb', 210, 130, true );
-  add_image_size( 'membership-thumb', 210, 90, true );
-  add_image_size( 'attorney-thumb', 145, 145, true );
-  add_image_size( 'attorney-detail', 284, 264, true );
-  add_image_size( 'practice-chair', 71, 71, true );
-  add_image_size( 'event-large', 690, 9999, false );
-  add_image_size( 'event-medium', 450, 9999, false );
-  add_image_size( 'news-medium', 190, 9999, false );
 
 
 
