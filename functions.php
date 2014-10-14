@@ -243,15 +243,6 @@ From here down is stuff brought over from Carr McClellan 1.0
 
 
 /*******************************************************
-  Custom Fields
-*/
-	// include_once('../../plugins/advanced-custom-fields/acf.php');
-	
-	// Page Meta
-  include('functions/page_meta.php');
-
-
-/*******************************************************
   Custom RSS Feeds
 */
 
