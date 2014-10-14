@@ -10,7 +10,7 @@
 // ?f_name=&l_name=&m_name=&company=&title=&address=&city=&state=&postal=&phone=&fax=&email=&url
 
 
-require_once('v_card_class.php');
+require_once( 'v_card_class.php' );
 
 $vc = new vcard();
 

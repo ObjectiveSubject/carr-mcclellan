@@ -36,7 +36,7 @@
 	$areas_related_practice = get_post_meta($post->ID, 'areas_related_practice', 'single');
 
 
-	$v_card = get_bloginfo('template_url') . '/functions/v_card.php?';
+	$v_card = get_bloginfo('template_url') . '/inc/v_card.php?';
 	$v_card .= 'f_name=' . $custom["first_name"][0];
 	$v_card .= '&l_name=' . $custom["last_name"][0];
 	$v_card .= '&m_name=' . $custom["middle_initial"][0];

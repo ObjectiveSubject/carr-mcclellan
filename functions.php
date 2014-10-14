@@ -112,31 +112,31 @@ From here down is stuff brought over from Carr McClellan 1.0
 */
 
   // Milestones
-  include('functions/reg_milestones.php');
+  include( 'inc/reg_milestones.php' );
 
   // Memberships
-  include('functions/reg_memberships.php');
+  include( 'inc/reg_memberships.php' );
 
   // Attorneys
-  include('functions/reg_attorneys.php');
+  include( 'inc/reg_attorneys.php' );
 
   // Practices
-  include('functions/reg_practices.php');
+  include( 'inc/reg_practices.php' );
 
   // Publications
-  include('functions/reg_publications.php');
+  include( 'inc/reg_publications.php' );
 
   // Newsletters
-  include('functions/reg_newsletters.php');
+  include( 'inc/reg_newsletters.php' );
 
   // Events
-  include('functions/reg_events.php');
+  include( 'inc/reg_events.php' );
 
   // News
-  include('functions/reg_news.php');
+  include( 'inc/reg_news.php' );
 
   // Posts Tagging of Attorneys
-  include('functions/posts_meta.php');
+  include( 'inc/posts_meta.php' );
 
 
 
