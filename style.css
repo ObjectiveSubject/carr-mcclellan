@@ -808,7 +808,8 @@ body {
 .main-nav a {
   display: block;
   font: normal normal bold 14px/1em "BrandonGrotesque", helvetica, sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #404060; }
 
 /* Small menu */
 .main-nav .menu-toggle {
