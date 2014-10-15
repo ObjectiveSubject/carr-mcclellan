@@ -56,6 +56,8 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
+					<?php cmc_post_nav(); ?>
+
 				</article><!-- #post-## -->
 
 				<aside class="aside aside-right aside-categories">
@@ -73,8 +75,7 @@ get_header(); ?>
 				</aside>
 	
 		</main><!-- #main -->
-		
-		<?php cmc_post_nav(); ?>
+
 
 		<?php endwhile; // end of the loop. ?>
 
