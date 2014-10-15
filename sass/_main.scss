@@ -89,6 +89,16 @@
 	&.child6 { background: $color_blue4; }
 }
 
+.page .square {
+	width: 48%;
+	float: left;
+	min-height: 18em;
+
+	&.child1, &.child3, &.child5 {
+		margin-right: 2%;
+	}
+}
+
 /* Border Block
 ------------------------------------- */
 .border-block {
@@ -120,11 +130,26 @@
 		padding: 1.5em 0 1.5em 1.5em;
 	}
 	&.child1 { border-color: $color_blue1; }
-	&.child2 { border-color: $color_purple1; }
-	&.child3 { border-color: $color_blue2; }
-	&.child4 { border-color: $color_purple2; }
-	&.child5 { border-color: $color_blue3; }
-	&.child6 { border-color: $color_blue4; }
+	&.child2 {
+		border-color: $color_purple1;
+		h3 a { color: $color_purple1; }
+	}
+	&.child3 {
+		border-color: $color_blue2;
+		h3 a { color: $color_blue1; }
+	}
+	&.child4 {
+		border-color: $color_purple2;
+		h3 a { color: $color_purple2; }
+	}
+	&.child5 {
+		border-color: $color_blue3;
+		h3 a { color: $color_blue3; }
+	}
+	&.child6 {
+		border-color: $color_blue4;
+		h3 a { color: $color_blue4; }
+	}
 
 	
 	ul { margin: 0 0 1em 0; }
