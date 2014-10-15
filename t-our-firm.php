@@ -2,9 +2,8 @@
 /**
  * Template Name: Our Firm
 **/
-global $post;
-$custom = get_post_custom($post->ID);
-$subtitle = $custom["page_subtitle"][0];
+
+$subtitle = get_post_meta( $post->ID, 'post_subtitle', true );
 
 get_header(); ?>
 
@@ -25,22 +24,22 @@ get_header(); ?>
 			
 			<ul>
 				<li class="solid-block square child1">
-					<? echo $subtitle; ?>
+					<?php echo $subtitle; ?>
 				</li>
 				<li class="border-block top-right-bottom square child2">
-					<a href="<?= get_permalink('14'); ?>">Firm History</a>
+					<h3><a href="<?php echo get_permalink('14'); ?>">Firm History</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child3">
-					<a href="<?= get_permalink('16'); ?>">Community Involvement</a>
+					<h3><a href="<?php echo get_permalink('16'); ?>">Community Involvement</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child4">
-					<a href="<?= get_permalink('18'); ?>">Affiliations & Memberships</a>
+					<h3><a href="<?php echo get_permalink('18'); ?>">Affiliations & Memberships</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child5">
-					<a href="<?= get_permalink('22'); ?>">Recruiting</a>
+					<h3><a href="<?php echo get_permalink('22'); ?>">Recruiting</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child6">
-					<a href="<?= get_permalink('20'); ?>">Contact Us</a>
+					<h3><a href="<?php echo get_permalink('20'); ?>">Contact Us</a></h3>
 				</li>
 			</ul>
 		
