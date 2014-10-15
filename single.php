@@ -24,15 +24,19 @@ get_header(); ?>
 
 				<aside class="aside aside-left aside-author-share">
 
-					<div class="border-block top author">
-						<h3 class="block-label">Author</h3>
-						<ul>
-							<?php $related_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' ); ?>
-							<?php foreach ( $related_attorneys as $related_attorney ) { ?>
-								<li><a href="<? echo get_permalink( $related_attorney ); ?>" class="link-gray3"><? echo get_the_title( $related_attorney ); ?></a></li>
-							<?php } ?>
-						</ul>
-					</div>
+					<?php $related_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' ); ?>
+					
+					<?php if ( $related_attorneys ) : ?>
+						<div class="border-block top author">
+							<h3 class="block-label">Author</h3>
+							<ul>
+								<?php $related_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' ); ?>
+								<?php foreach ( $related_attorneys as $related_attorney ) { ?>
+									<li><a href="<?php echo get_permalink( $related_attorney ); ?>" class="link-gray3"><?php echo get_the_title( $related_attorney ); ?></a></li>
+								<?php } ?>
+							</ul>
+						</div>
+					<?php endif; ?>
 
 					<div class="border-block top social-share">
 						<h3 class="block-label">Share</h3>
