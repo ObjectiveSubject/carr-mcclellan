@@ -47,24 +47,36 @@ function cmc_post_nav() {
 	if ( ! $next && ! $previous ) {
 		return;
 	}
-	$previous_date = get_the_date('M. j, Y', $previous->ID); $next_date = get_the_date('M. j, Y', $next->ID); ?>
-	
+
+	$previous_date = '';
+	$next_date = '';
+
+	if ( $previous ) {
+		$previous_date = get_the_date( 'M. j, Y', $previous->ID );
+	}
+
+	if ( $next ) {
+		$next_date = get_the_date('M. j, Y', $next->ID);
+	}
+
+	?>
+
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'cmc' ); ?></h1>
 		<div class="nav-links">
-			<? if ($previous) : ?>
+			<?php if ($previous) : ?>
 			<div class="nav-previous border-block top">
 				<p class="block-label"><span class="icon-arrow-left small"></span>&nbsp;&nbsp;Previous</p>
-				<p class="date ot-caps"><? echo $previous_date; ?></p>
+				<p class="date ot-caps"><?php echo $previous_date; ?></p>
 				<h3 class="last-item title font-text"><?php previous_post_link( '%link', _x( '%title', 'Previous post link', 'cmc' ) ); ?></h3>
 			</div>
-			<? endif; if ($next) : ?>
+			<?php endif; if ($next) : ?>
 			<div class="nav-next border-block top">
 				<p class="block-label">Next&nbsp;&nbsp;<span class="icon-arrow-right small"></span></p>
-				<p class="date ot-caps"><? echo $next_date; ?></p>
+				<p class="date ot-caps"><?php echo $next_date; ?></p>
 				<h3 class="last-item title font-text"><?php next_post_link('%link', _x( '%title', 'Next post link', 'cmc' ) ); ?></h3>
 			</div>
-			<? endif; ?>
+			<?php endif; ?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	
