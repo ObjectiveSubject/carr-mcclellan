@@ -73,7 +73,20 @@ From here down is stuff brought over from Carr McClellan 1.0
   Register Components
 */
 
-
+/*******************************************************
+-  Custom WYSIWYG for Pages
+ */
+function myformatTinyMCE($in) {
+	$post = get_post($post_id);
+	if ($post->post_type == 'page') {
+		$in['theme_advanced_buttons1'] = 'formatselect,bold,italic,|,bullist,numlist,blockquote,link,unlink,pastetext,pasteword,removeformat,undo,redo';
+		$in['theme_advanced_buttons2'] = '';
+		$in['theme_advanced_buttons3'] = '';
+		$in['theme_advanced_buttons4'] = '';
+	}
+	return $in;
+}
+//add_filter('tiny_mce_before_init', 'myformatTinyMCE' );
 
   // Remove Featured Image from Posts
   add_action('do_meta_boxes', 'remove_thumbnail_box');

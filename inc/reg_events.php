@@ -167,7 +167,7 @@
     <tr>
       <th style="width: 20%;"><label for="description">Description</label></th>
       <td>
-        <textarea class="description" name="description" style="width: 100%;height:200px;"><?php echo $description;?></textarea>
+	      <?php wp_editor( $description, 'description' ); ?>
       </td>
     </tr>
     <tr>

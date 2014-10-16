@@ -38,6 +38,9 @@
 
   function attorneys_meta_options(){
     global $post;
+	$fax = '';
+	$phone = '';
+
     $custom = get_post_custom($post->ID);
     $first_name = $custom["first_name"][0];
     $middle_initial = $custom["middle_initial"][0];
@@ -174,13 +177,13 @@
             <li class="tab_lang"><a href="javascript:void(null);">Languages</a></li>
           </ul>
           <div class="tab_bio">
-            <textarea class="biography" style="width:100%;height:200px;" name="biography"><?php echo $biography; ?></textarea>
+	          <?php wp_editor( $biography, 'biography' ); ?>
           </div>
           <div class="tab_aca">
-            <textarea class="academic_creds" style="width:100%;height:200px;" name="academic_creds"><?php echo $academic_creds; ?></textarea>
+	          <?php wp_editor( $academic_creds, 'academic_creds' ); ?>
           </div>
           <div class="tab_lang">
-            <textarea class="attorney_languages" style="width:100%;height:200px;" name="attorney_languages"><?php echo $attorney_languages; ?></textarea>
+	          <?php wp_editor( $attorney_languages, 'attorney_languages' ); ?>
           </div>
         </div>
       </td>
@@ -256,37 +259,37 @@
         <div class="metabox-tabs-div">
           <ul class="metabox-tabs" id="metabox-tabs">
             <li class="active tab0"><a class="active" href="javascript:void(null);">Representative Matters</a></li>
-            <li class="tab1"><a href="javascript:void(null);">Professional Organizations</a></li>
-            <li class="tab2"><a href="javascript:void(null);">Courts and Forums</a></li>
-            <li class="tab3"><a href="javascript:void(null);">Civic and Charitable</a></li>
-            <li class="tab4"><a href="javascript:void(null);">Recent Speaking Engagements</a></li>
-            <li class="tab5"><a href="javascript:void(null);">Honors and Awards</a></li>
+            <li class="tab1"><a href="javascript:void(null);">Prof Orgs</a></li>
+            <li class="tab2"><a href="javascript:void(null);">Courts &amp; Forums</a></li>
+            <li class="tab3"><a href="javascript:void(null);">Civic &amp; Charitable</a></li>
+            <li class="tab4"><a href="javascript:void(null);">Speaking Engagements</a></li>
+            <li class="tab5"><a href="javascript:void(null);">Honors &amp; Awards</a></li>
             <li class="tab6"><a href="javascript:void(null);">Custom</a></li>
           </ul>
           <div class="tab0">
-            <textarea class="special_exp" style="width:100%;height:200px;" name="special_exp"><?php echo $special_exp; ?></textarea>
+	          <?php wp_editor( $special_exp, 'special_exp' ); ?>
           </div>
           <div class="tab1">
-            <textarea class="prof_affilations" style="width:100%;height:200px;" name="prof_affilations"><?php echo $prof_affilations; ?></textarea>
+	          <?php wp_editor( $prof_affilations, 'prof_affilations' ); ?>
           </div>
           <div class="tab2">
-            <textarea class="courts_forums" style="width:100%;height:200px;" name="courts_forums"><?php echo $courts_forums; ?></textarea>
+	          <?php wp_editor( $courts_forums, 'courts_forums' ); ?>
           </div>
           <div class="tab3">
-            <textarea class="civic_affiliations" style="width:100%;height:200px;" name="civic_affiliations"><?php echo $civic_affiliations; ?></textarea>
+	          <?php wp_editor( $civic_affiliations, 'civic_affiliations' ); ?>
           </div>
           <div class="tab4">
-            <textarea class="recent_speaking" style="width:100%;height:200px;" name="recent_speaking"><?php echo $recent_speaking; ?></textarea>
+	          <?php wp_editor( $recent_speaking, 'recent_speaking' ); ?>
           </div>
           <div class="tab5">
-            <textarea class="honors_awards" style="width:100%;height:200px;" name="honors_awards"><?php echo $honors_awards; ?></textarea>
+	          <?php wp_editor( $honors_awards, 'honors_awards' ); ?>
           </div>
           <div class="tab6">
             <p>
-            <label for="custom_title">Title</label><br />
+            <label for="custom_title">Title</label><br>
             <input type="text" class="custom_title" name="custom_title" value="<?php echo $custom_title; ?>" size="30" /></p>
-            <label for="custom_body">Body</label><br />
-            <textarea class="custom_body" style="width:100%;height:200px;" name="custom_body"><?php echo $custom_body; ?></textarea>
+            <label for="custom_body">Body</label><br>
+	          <?php wp_editor( $custom_body, 'custom_body' ); ?>
           </div>
         </div>
       </td>

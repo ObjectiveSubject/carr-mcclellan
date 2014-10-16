@@ -14,9 +14,6 @@
 	$biography = $custom["biography"][0];
 	$title = $custom["title"][0];
 
-	$attachments = attachments_get_attachments();
-	$pdf = $attachments[0]['location'];
-
 	$quote = $custom["quote"][0];
 	$academic_creds = $custom["academic_creds"][0];
 	$attorney_languages = $custom["attorney_languages"][0];

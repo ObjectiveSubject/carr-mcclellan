@@ -24,7 +24,7 @@ get_header(); ?>
 			
 			<ul>
 				<li class="solid-block square child1">
-					<?php echo $subtitle; ?>
+					<?php if ( $subtitle ) { echo $subtitle; } ?>
 				</li>
 				<li class="border-block top-right-bottom square child2">
 					<h3><a href="<?php echo get_permalink('14'); ?>">Firm History</a></h3>
