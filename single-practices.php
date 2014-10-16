@@ -16,34 +16,54 @@
 	if($chair_id_2) {$attorney_title = $attorney_title . 's';}
 ?>
 
-<body>
-	<div id="wrapper">
-		<div class="w1">
-			<div class="w2">
-				<?php include('sidebar.php'); ?>
-				<div class="container">
+<div id="primary" class="content-area terminal-page">
 
-					<header id="header" class="header-4 header-practices-detail">
-						<div class="panel">
-							<span class="addthis link-share">Share</span>
-						</div>
-						<h1><?php the_title();?></h1>
-					</header>
+	<header class="page-header">
+		<div class="span12 aligncenter">
+			<h1 class="page-title"><?php the_title(); ?></h1>
+		</div>
+	</header><!-- .entry-header -->
 
-					<div id="main">
-						<section id="content">
-							<div class="main-section block-3">
-								<article class="block-2 practice-content">
-									<?php echo ($tagline) ? '<h2>' . $tagline . '</h2>' : ''; ?>
-									<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-									<?php the_content(); ?>
-									<?php endwhile; ?>
-									<?php endif; ?>
-								</article>
+<main id="main" class="site-main span12 aligncenter clear" role="main">
 
-								<div class="block-1 last">
+	<aside class="aside aside-left span2 push-left">
+		<div class="border-block top">
+			<h3 class="block-label">Filter by practice</h3>
+
+			<?php
+			$practices = new WP_Query(array(
+				'post_type' => 'practices',
+				'orderby' => 'title',
+				'order' => 'ASC',
+				'posts_per_page' => 100
+			));
+
+			while ( $practices->have_posts() ) : $practices->the_post();
+				?>
+				<ul>
+					<li class="<?php echo $post->post_name; ?>"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></li>
+				</ul>
+
+			<?php endwhile; ?>
+		</div>
+	</aside>
+
+	<section class="span6 push-left">
+
+		<article class="block-2 practice-content">
+			<?php echo ($tagline) ? '<h2>' . $tagline . '</h2>' : ''; ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+			<?php endwhile; ?>
+			<?php endif; ?>
+		</article>
+	</section>
+
+								<aside class="aside aside-right">
+									<div class="border-block top">
+
 									<?php if($chair_id && get_post($chair_id) ) :?>
-									<h2><?php echo $attorney_title;?></h2>
+										<h3 class="block-label"><?php echo $attorney_title;?></h3>
 									<div class="block-person">
 										<?php
 											// Get Attorney by Id
@@ -58,7 +78,6 @@
 											$get_chair = get_post($chair_id);
 											$chair_url = $get_chair->guid;
 										?>
-										<?php echo get_the_post_thumbnail( $chair_id, 'practice-chair', array('class' => 'alignleft png-bg')); ?>
 										<div class="holder">
 											<a href="<?php echo get_permalink($chair_id); ?>"><?php echo $chair_name;?></a>
 											<p>
@@ -106,7 +125,7 @@
 									<?php endif; ?>
 
 
-									<h2 style="margin-top: 20px;">Practicing Attorneys</h2>
+										<h3 class="block-label">Practicing Attorneys</h3>
 									<ul class="list list-2">
 										<?php
 											// Get current page title, and remove special characters
@@ -149,9 +168,9 @@
 										?>
 									</ul>
 
-
+									</div>
 								</div>
-							</div>
+							</aside>
 
 							<?php if($areas_focus[0]['title']) : ?>
 							<div class="block-3">
@@ -442,7 +461,6 @@
 						</section>
 					</div>
 				</div>
-			</div>
-		</div>
 
-<?php get_footer(); ?>
+
+<?php get_footer();
