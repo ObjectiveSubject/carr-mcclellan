@@ -59,12 +59,12 @@
 		<header class="page-header">
 			<div class="span12 aligncenter">
 				<h1 class="page-title"><?php the_title(); ?></h1>
-				<? if ($title) : ?>
+				<?php if ( $title ) : ?>
 				<div class="entry-meta">
 					<strong class="meta-title font-heading caps"><?php echo $title; ?></strong>
 				</div><!-- .entry-meta -->
-				<? endif; ?>
-				<? the_post_thumbnail('full', array('class' => 'attorney-pic')); ?>
+				<?php endif; ?>
+				<?php the_post_thumbnail( 'full', array( 'class' => 'attorney-pic' ) ); ?>
 			</div>
 		</header><!-- .entry-header -->
 
@@ -75,17 +75,17 @@
 					<div class="border-block top contact-info">
 						<h3 class="block-label phone">Phone</h3>
 						<ul>
-							<li><? echo $phone; ?></li>
+							<li><?php echo $phone; ?></li>
 						</ul>
 						<h3 class="block-label fax">Fax</h3>
 						<ul>
-							<li><? echo $fax; ?></li>
+							<li><?php echo $fax; ?></li>
 						</ul>
 						<h3 class="block-label email">Email</h3>
 						<ul>
-							<li><a href="mailto:<? echo $email; ?>" target="_blank" class="link-gray3"><? echo $email; ?></a></li>
+							<li><a href="mailto:<?php echo $email; ?>" target="_blank" class="link-gray3"><?php echo $email; ?></a></li>
 						</ul>
-						<h3 class="block-label vcard"><a href="<? echo $v_card; ?>" class="link-gray3"><span class="small icon-download"></span>&nbsp;&nbsp;Download vCard</a></h3>
+						<h3 class="block-label vcard"><a href="<?php echo $v_card; ?>" class="link-gray3"><span class="small icon-download"></span>&nbsp;&nbsp;Download vCard</a></h3>
 						<h3 class="block-label print"><a href="#" class="link-gray3"><span class="icon-print"></span>&nbsp;&nbsp;Print Profile</a></h3>
 					</div>
 
@@ -106,20 +106,20 @@
 					<div class="border-block top practice-areas">
 						<h3 class="block-label">Practice Areas</h3>
 						<ul>
-							<? foreach($areas_practice as $practice) : ?>
-								<li><a href="<? echo get_the_permalink($practice); ?>"><? echo get_the_title($practice); ?></a></li>
-							<? endforeach; ?>
+							<?php foreach($areas_practice as $practice) : ?>
+								<li><a href="<?php echo get_the_permalink($practice); ?>"><?php echo get_the_title($practice); ?></a></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 
 					<div class="border-block top academic-creds">
 						<h3 class="block-label">Academic Credentials</h3>
 						<ul>
-							<li><? echo $academic_creds; ?></li>
+							<li><?php echo $academic_creds; ?></li>
 						</ul>
 					</div>
 
-					<a class="button">View <? echo $custom["first_name"][0] . '\'s' ?> Blog Posts <span class="icon-arrow-right"></span></a>
+					<a class="button">View <?php echo $custom["first_name"][0] . '\'s' ?> Blog Posts <span class="icon-arrow-right"></span></a>
 
 				</aside>
 					
