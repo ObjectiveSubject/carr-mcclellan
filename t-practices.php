@@ -5,69 +5,31 @@
 	get_header();
 ?>
 
-<body>
-	<div id="wrapper">
-		<div class="w1">
-			<div class="w2">
-				<?php include('sidebar.php'); ?>
-				<div class="container">					
-					<header id="header" class="header-2 header-practices-overview">
-						<div class="panel">
-							<span class="addthis link-share">Share</span>
-						</div>
-						<div class="holder">
-							<h1><?php the_block('Banner'); ?></h1>
-						</div>
-					</header>
-					
-					<div id="main">
-						<section id="content">
-							<div class="head-text community-head-text practice-head-text practice-head-fix">
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-								<?php the_content(); ?>
-								<?php endwhile; ?>
-								<?php endif; ?>
-							</div>
-							
-							<div class="block-practices">
-								<h2>Our Practices</h2>
-								<div class="practices">
-								
-								<?php
-									$loop = new WP_Query(array(
-											'post_type' => 'practices', 
-											//'meta_key' => 'milestone_date',
-											'orderby' => 'title',
-											'order' => 'ASC',
-											'posts_per_page' => 100
-										));
-									while ( $loop->have_posts() ) : $loop->the_post();
-										$custom = get_post_custom($post->ID);
-						
-								?>
-									<article class="item">
-										<h3><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
-										<div class="holder">
-											<?php 
-												$abbr_content = strip_tags(get_the_content());		
-												if(strlen($abbr_content) > 240){								
-													$abbr_content = preg_replace('/\s+?(\S+)?$/', '', substr($abbr_content, 0, 240));
-													$abbr_content .= '…';
-												}
-												echo '<p>' . $abbr_content . '</p>';
-											?>	
-										</div>
-									</article>
-								<?php
-									endwhile;
-								?>
-								
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
+	<header class="page-header">
+		<div class="span12 aligncenter">
+			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
+	</header>
+
+	<main id="main" class="site-main span6 aligncenter clear" role="main">
+
+		<section id="content">
+			<div class="practices">
+								
+				<?php
+					$practices = new WP_Query(array(
+						'post_type' => 'practices',
+						'orderby' => 'title',
+						'order' => 'ASC',
+						'posts_per_page' => 100
+					));
+				?>
+
+				<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
+					<article class="practice <?php echo $post->post_name; ?>">
+						<h3><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3>
+					</article>
+				<?php endwhile; ?>
+		</section>
 		
 <?php get_footer(); ?>
