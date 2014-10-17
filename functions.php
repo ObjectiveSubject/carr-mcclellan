@@ -27,7 +27,6 @@ function cmc_setup() {
 
 	// Image sizes from v1.0 of theme
 	add_image_size( 'miletone-thumb', 210, 130, true );
-	add_image_size( 'membership-thumb', 210, 90, true );
 	add_image_size( 'attorney-thumb', 145, 145, true );
 	add_image_size( 'attorney-detail', 284, 264, true );
 	add_image_size( 'practice-chair', 71, 71, true );
@@ -127,9 +126,6 @@ function myformatTinyMCE($in) {
   // Milestones
   include( 'inc/reg_milestones.php' );
 
-  // Memberships
-  include( 'inc/reg_memberships.php' );
-
   // Attorneys
   include( 'inc/reg_attorneys.php' );
 
@@ -158,9 +154,6 @@ function myformatTinyMCE($in) {
 
     // Milestones
     add_meta_box("milestones_meta_options", "Options", "milestones_meta_options", "milestones");
-
-    // Memeberships
-    add_meta_box("memberships_meta_options", "Options", "memberships_meta_options", "memberships");
 
     // Attorneys
     add_meta_box("attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys");
@@ -200,7 +193,7 @@ function myformatTinyMCE($in) {
   function datepicker_css(){
       global $post;
       if( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
-          wp_enqueue_style('jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css');
+          wp_enqueue_style('jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css  ');
       }
   }
   add_action('admin_print_styles', 'datepicker_css');
