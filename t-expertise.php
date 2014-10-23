@@ -27,13 +27,13 @@ get_header(); ?>
 					<?php if ( $subtitle ) { echo $subtitle; } ?>
 				</li>
 				<li class="border-block top-right-bottom square child2">
-					<h3><a href="/practices/">Practices</a></h3>
+					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>practices/">Practices</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child3">
-					<h3><a href="/industries/">Industries</a></h3>
+					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>industries/">Industries</a></h3>
 				</li>
 				<li class="border-block top-right-bottom square child4">
-					<h3><a href="/publications/">Publications</a></h3>
+					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>publications/">Publications</a></h3>
 				</li>
 			</ul>
 		
