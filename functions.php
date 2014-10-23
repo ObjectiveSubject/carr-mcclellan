@@ -281,7 +281,9 @@ function myformatTinyMCE($in) {
   }
   add_action('admin_menu', 'themeoptions_admin_menu');
 
-
+/**
+ * Retrieve the practices list and display
+ */
 function cmc_get_practices() {
 
 	$practices = new WP_Query( array(
@@ -294,7 +296,7 @@ function cmc_get_practices() {
 ?>
 	<div class="practices">
 
-	<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
+	<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
 
 		<article class="practice <?php echo esc_attr( $post->post_name ); ?>">
 			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
@@ -304,4 +306,76 @@ function cmc_get_practices() {
 
 	</div>
 	<?php
+}
+
+/**
+ * Retrieve a short list of attorneys and display
+ */
+function cmc_get_attorneys() {
+
+	$attorneys = new WP_Query(array(
+		'post_type' => 'attorneys',
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
+		'posts_per_page' => 3
+	));
+
+	?>
+	<div class="attorneys">
+
+		<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+
+			<?php
+				global $post;
+				$name = get_post_meta( $post->ID, 'first_name', true ) . ' ';
+				$name .= get_post_meta( $post->ID, 'middle_initial', true ) . ' ';
+				$name .= get_post_meta( $post->ID, 'last_name', true);
+
+				$title = get_post_meta( $post->ID, 'title', true );
+				$sec_title = get_post_meta( $post->ID, 'secondary_title', true );
+			?>
+
+			<article class="border-block top-right-bottom square attorney">
+				<h3><a href="<?php the_permalink() ?>"><?php echo $name; ?></a></h3>
+
+				<p class="titles">
+					<?php echo $title; ?>
+					<?php if ( $title && $sec_title ) echo '<br>'; ?>
+					<?php echo $sec_title; ?>
+				</p>
+
+				<?php the_post_thumbnail('attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
+			</article>
+
+		<?php endwhile; ?>
+
+	</div>
+<?php
+}
+
+/**
+ * Retrieve recent news and events
+ */
+function cmc_get_newsevents() {
+
+	$practices = new WP_Query( array(
+		'post_type' => array( 'post', 'event' ),
+		'orderby' => 'date',
+		'posts_per_page' => 6
+	));
+
+	?>
+	<div class="news-events">
+
+		<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
+
+			<article class="practice <?php echo esc_attr( $post->post_name ); ?>">
+				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+				<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+			</article>
+
+		<?php endwhile; ?>
+
+	</div>
+<?php
 }

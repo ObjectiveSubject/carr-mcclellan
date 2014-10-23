@@ -34,8 +34,3 @@ $vc->data['email1'] = $_GET['email'];
 $vc->data['url'] = $_GET['url'];
 
 $vc->download();
-
-
-?>
-
-

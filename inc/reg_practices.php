@@ -452,5 +452,3 @@
 			update_post_meta( $post->ID, 'practices_attorneys', $_POST['practices_attorneys'] );
 		}
 	}
-
-?>

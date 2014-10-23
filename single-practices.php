@@ -28,7 +28,7 @@
 
 	<aside class="aside aside-left span2 push-left">
 		<div class="border-block top">
-			<h3 class="block-label">Filter by practice</h3>
+			<h3 class="block-label">Practices</h3>
 
 			<?php
 			$practices = new WP_Query(array(

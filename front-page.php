@@ -26,8 +26,12 @@ get_header(); ?>
 		<h2>News &amp; Events</h2>
 		<a href="">See All</a>
 
+		<?php cmc_get_newsevents(); ?>
+
 		<h2>Meet Our Attorneys</h2>
 		<a href="">See All</a>
+
+		<?php cmc_get_attorneys(); ?>
 
 		<h2>Our Practices</h2>
 		<?php cmc_get_practices(); ?>

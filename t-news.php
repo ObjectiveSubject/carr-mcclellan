@@ -18,7 +18,6 @@
 			<section id="content">
 				<div class="events">
 					<?php
-						//$today = date('y/d/m');
 						$loop = new WP_Query(array(
 								'post_type' => 'news',
 								'meta_key' => 'date',
@@ -28,39 +27,35 @@
 							));
 
 						while ( $loop->have_posts() ) : $loop->the_post();
-							$custom = get_post_custom($post->ID);
-
-							//$date = $custom["date"][0];
-							//$fix_date = explode('/', $date);
-							//$fix_date = $fix_date[1] . '/' . $fix_date[2] . '/' . $fix_date[0];
-
-							$date = $custom["date"][0];
+							$date = get_post_meta( $post->ID, 'date', true );
 							$fix_date = explode('/', $date);
 							$fix_date = $fix_date[2] . '-' . $fix_date[1] . '-20' . $fix_date[0];
 							$date = date('M. j, Y', strtotime($fix_date));
 
-							$news_type_select = $custom["news_type_select"][0];
-							$source = $custom["source"][0];
-							$source_url = $custom["source_url"][0];
-							$description = $custom["description"][0];
-							$summary = $custom["summary"][0];
+							$news_type_select = get_post_meta( $post->ID, 'news_type_select', true );
+							$source = get_post_meta( $post->ID, 'source', true );
+							$source_url = get_post_meta( $post->ID, 'source_url', true );
+							$description = get_post_meta( $post->ID, 'description', true );
+							$summary = get_post_meta( $post->ID, 'summary', true );
 
-							$link_target = ($news_type_select == 'external' || $news_type_select == 'pdf') ? 'target="_blank"' : '';
+							$link_target = ( $news_type_select == 'external' || $news_type_select == 'pdf') ? 'target="_blank"' : '';
 
 							$attachments = attachments_get_attachments();
-							$pdf = $attachments[0]['location'];
+							if ( $attachments ) {
+								$pdf = $attachments[0]['location'];
+							} else { $pdf = ''; }
 
-							if($news_type_select == 'internal'){
+							if( $news_type_select == 'internal' ){
 								$source_url = get_permalink();
 							}
-							if($news_type_select == 'external'){
+							if( $news_type_select == 'external' ){
 								$source_url = $source_url;
 							}
-							if($news_type_select == 'pdf'){
+							if( $news_type_select == 'pdf' ){
 								$source_url = $pdf;
 							}
 
-							if($pdf){
+							if( $pdf ){
 								//$source_url = $pdf;
 							}
 
@@ -69,17 +64,17 @@
 
 
 						<article class="item">
-							<span class="article-date"><?=$date;?></span>
-							<h2><a href="<?=$source_url;?>" <?=$link_target;?>>
+							<span class="article-date"><?php echo $date; ?></span>
+							<h2><a href="<?php echo $source_url; ?>" <?php echo $link_target; ?>>
 								<?php the_title();?>
-								<?php if($news_type_select == 'external') : ?>
-									<img src="<?php bloginfo('template_url');?>/images/external-icon.png" width="10" height="10" alt="External Icon">
-								<?php elseif($news_type_select == 'pdf' && $pdf) :?>
-									<img src="<?php bloginfo('template_url');?>/images/tiny-pdf.png" width="10" height="10" alt="External Icon">
+								<?php if( $news_type_select == 'external' ) : ?>
+									<img src="<?php bloginfo( 'template_url' );?>/images/external-icon.png" width="10" height="10" alt="External Icon">
+								<?php elseif( $news_type_select == 'pdf' && $pdf ) :?>
+									<img src="<?php bloginfo( 'template_url' );?>/images/tiny-pdf.png" width="10" height="10" alt="External Icon">
 								<?php endif; ?>
 							</a></h2>
-							<?php if($source) : ?>
-							<span>Source: <?=$source;?></span>
+							<?php if( $source ) : ?>
+							<span>Source: <?php echo $source; ?></span>
 							<?php endif; ?>
 						</article>
 
@@ -90,6 +85,8 @@
 					?>
 				</div>
 			</section>
-		</div>
+
+		</main>
+	</div>
 
 <?php get_footer(); ?>

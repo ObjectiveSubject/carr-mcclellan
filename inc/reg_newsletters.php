@@ -366,5 +366,3 @@
       );
     if(isset($_POST["in_this_issue_1"])) update_post_meta($post->ID, "in_this_issue", $in_this_issue_array);
   }
-
-?>
