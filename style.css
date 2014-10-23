@@ -890,6 +890,8 @@ body {
     color: #EC513C; }
   .entry-content ul, .entry-content ol {
     margin: 0 0 1.5em; }
+    .entry-content ul ul, .entry-content ul ol, .entry-content ol ul, .entry-content ol ol {
+      margin: 0 0 0 1.5em; }
   .entry-content ul li:before {
     content: "›";
     margin-right: 10px; }

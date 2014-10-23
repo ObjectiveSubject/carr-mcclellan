@@ -88,7 +88,7 @@
 */
 
   add_action("admin_init", "admin_init");
-  add_action('save_post', 'save_news_meta');
+  add_action( 'save_post', 'save_news_meta', 15, 2 );
 
   function news_meta_options(){
     global $post;
@@ -247,6 +247,7 @@
         ?>
       </td>
     </tr>
+	  <?php wp_nonce_field( 'save', 'carr_news' ); ?>
   </table>
 
 
@@ -254,10 +255,19 @@
   }
 
 
-  function save_news_meta(){
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+  function save_news_meta( $post_id, $post ) {
+	  // Bail if doing autosave
+	  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-    global $post;
+	  // Bail if nonce isn't set
+	  if ( ! isset( $_POST['carr_news'] ) || ! wp_verify_nonce( $_POST['carr_news'], 'save' ) ) { return; }
+
+	  // Bail if the user isn't allowed to edit the post
+	  if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	  // Bail if not an asset
+	  if ( 'news' !== $post->post_type ) { return; }
+
     $fix_date = explode('/', $_POST["date"]);
     $fix_date = $fix_date[2] . '/' . $fix_date[0] . '/' . $fix_date[1];
     if(isset($_POST["date"])) update_post_meta($post->ID, "date", $fix_date);

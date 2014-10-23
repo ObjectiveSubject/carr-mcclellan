@@ -34,7 +34,7 @@
 */
 
   add_action("admin_init", "admin_init");
-  add_action('save_post', 'save_attorneys_meta');
+  add_action( 'save_post', 'save_attorneys_meta', 15, 2 );
 
   function attorneys_meta_options(){
     global $post;
@@ -42,31 +42,31 @@
 	$phone = '';
 
     $custom = get_post_custom($post->ID);
-    $first_name = $custom["first_name"][0];
-    $middle_initial = $custom["middle_initial"][0];
-    $last_name = $custom["last_name"][0];
-    $title = $custom["title"][0];
-    $secondary_title = $custom["secondary_title"][0];
-    $phone = ($phone) ? $custom["phone"][0] : '650-342-9600 ';
-    $fax = ($fax) ? $custom["fax"][0] : '650-342-7685';
-    $email = $custom["email"][0];
-    $linkedin = $custom["linkedin"][0];
-    $biography = $custom["biography"][0];
-    $quote = $custom["quote"][0];
-    $academic_creds = $custom["academic_creds"][0];
-    $attorney_languages = $custom["attorney_languages"][0];
-    $special_exp = $custom["special_exp"][0];
-    $prof_affilations = $custom["prof_affilations"][0];
-    $courts_forums = $custom["courts_forums"][0];
-    $civic_affiliations = $custom["civic_affiliations"][0];
-    $honors_awards = $custom["honors_awards"][0];
-    $custom_title = $custom["custom_title"][0];
-    $custom_body = $custom["custom_body"][0];
-    $recent_exp = $custom["recent_exp"][0];
-    $recent_speaking = $custom["recent_speaking"][0];
-    $areas_practice_hidden = $custom["areas_practice_hidden"][0];
+    $first_name = get_post_meta( $post->ID, 'first_name', true );
+    $middle_initial = get_post_meta( $post->ID, "middle_initial", true );
+    $last_name = get_post_meta( $post->ID, "last_name", true );
+    $title = get_post_meta( $post->ID, "title", true );
+    $secondary_title = get_post_meta( $post->ID, "secondary_title", true );
+    $phone = ($phone) ? get_post_meta( $post->ID, "phone", true ) : '650-342-9600 ';
+    $fax = ($fax) ? get_post_meta( $post->ID, "fax", true ) : '650-342-7685';
+    $email = get_post_meta( $post->ID, "email", true );
+    $linkedin = get_post_meta( $post->ID, "linkedin", true );
+    $biography = get_post_meta( $post->ID, "biography", true );
+    $quote = get_post_meta( $post->ID, "quote", true );
+    $academic_creds = get_post_meta( $post->ID, "academic_creds", true );
+    $attorney_languages = get_post_meta( $post->ID, "attorney_languages", true );
+    $special_exp = get_post_meta( $post->ID, "special_exp", true );
+    $prof_affilations = get_post_meta( $post->ID, "prof_affilations", true );
+    $courts_forums = get_post_meta( $post->ID, "courts_forums", true );
+    $civic_affiliations = get_post_meta( $post->ID, "civic_affiliations", true );
+    $honors_awards = get_post_meta( $post->ID, "honors_awards", true );
+    $custom_title = get_post_meta( $post->ID, "custom_title", true );
+    $custom_body = get_post_meta( $post->ID, "custom_body", true );
+    $recent_exp = get_post_meta( $post->ID, "recent_exp", true );
+    $recent_speaking = get_post_meta( $post->ID, "recent_speaking", true );
+    $areas_practice_hidden = get_post_meta( $post->ID, "areas_practice_hidden", true );
     $areas_practice = get_post_meta($post->ID, 'areas_practice', true);
-    $areas_related_practice_hidden = $custom["areas_related_practice_hidden"][0];
+    $areas_related_practice_hidden = get_post_meta( $post->ID, "areas_related_practice_hidden", true );
     $areas_related_practice = get_post_meta($post->ID, 'areas_related_practice', true);
   ?>
 
@@ -294,14 +294,25 @@
         </div>
       </td>
     </tr>
-
+	  <?php wp_nonce_field( 'save', 'carr_attorneys' ); ?>
   </table>
 
   <?php
   }
 
-  function save_attorneys_meta(){
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+  function save_attorneys_meta( $post_id, $post ) {
+	  // Bail if doing autosave
+	  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+
+	  // Bail if nonce isn't set
+	  if ( ! isset( $_POST['carr_attorneys'] ) || ! wp_verify_nonce( $_POST['carr_attorneys'], 'save' ) ) { return; }
+
+	  // Bail if the user isn't allowed to edit the post
+	  if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	  // Bail if not an asset
+	  if ( 'attorneys' !== $post->post_type ) { return; }
+
     global $post;
     if(isset($_POST["first_name"])) update_post_meta($post->ID, "first_name", $_POST["first_name"]);
     if(isset($_POST["middle_initial"])) update_post_meta($post->ID, "middle_initial", $_POST["middle_initial"]);

@@ -22,11 +22,13 @@ get_header(); ?>
 		
 		<main id="main" class="site-main span12 aligncenter" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-			
-				<?php get_template_part( 'content', 'page' ); ?>
+			<section id="content">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

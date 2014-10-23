@@ -37,7 +37,7 @@
 */
 
 	add_action("admin_init", "admin_init");
-	add_action('save_post', 'save_publications_meta');
+	add_action( 'save_post', 'save_publications_meta', 15, 2 );
 
 	function publications_meta_options(){
 		global $post;
@@ -146,16 +146,26 @@
 				?>
 			</td>
 		</tr>
+		<?php wp_nonce_field( 'save', 'carr_publications' ); ?>
 	</table>
 
 	<?php
 	}
 
 
-	function save_publications_meta(){
-		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+	function save_publications_meta( $post_id, $post ){
+		// Bail if doing autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-		global $post;
+		// Bail if nonce isn't set
+		if ( ! isset( $_POST['carr_publications'] ) || ! wp_verify_nonce( $_POST['carr_publications'], 'save' ) ) { return; }
+
+		// Bail if the user isn't allowed to edit the post
+		if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+		// Bail if not an asset
+		if ( 'publications' !== $post->post_type ) { return; }
+
 		if(isset($_POST["pub_summary"])) update_post_meta($post->ID, "pub_summary", $_POST["pub_summary"]);
 		if(isset($_POST["pub_attorneys"])) update_post_meta($post->ID, "pub_attorneys", $_POST["pub_attorneys"]);
 		if(isset($_POST["pub_practices"])) update_post_meta($post->ID, "pub_practices", $_POST["pub_practices"]);

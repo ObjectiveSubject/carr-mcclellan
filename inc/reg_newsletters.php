@@ -24,7 +24,7 @@
 */
 
   add_action("admin_init", "admin_init");
-  add_action('save_post', 'save_newsletters_meta');
+  add_action( 'save_post', 'save_newsletters_meta', 15, 2 );
 
   function newsletters_meta_options(){
     global $post;
@@ -315,16 +315,26 @@
 
       </td>
     </tr>
+	  <?php wp_nonce_field( 'save', 'carr_newsletters' ); ?>
   </table>
 
   <?php
   }
 
 
-  function save_newsletters_meta(){
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+  function save_newsletters_meta( $post_id, $post ) {
+	  // Bail if doing autosave
+	  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-    global $post;
+	  // Bail if nonce isn't set
+	  if ( ! isset( $_POST['carr_newsletters'] ) || ! wp_verify_nonce( $_POST['carr_newsletters'], 'save' ) ) { return; }
+
+	  // Bail if the user isn't allowed to edit the post
+	  if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	  // Bail if not an asset
+	  if ( 'newsletters' !== $post->post_type ) { return; }
+
     if(isset($_POST["author"])) update_post_meta($post->ID, "author", $_POST["author"]);
     if(isset($_POST["in_this_issue_wysiwyg"])) update_post_meta($post->ID, "in_this_issue_wysiwyg", $_POST["in_this_issue_wysiwyg"]);
 

@@ -12,17 +12,18 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cmc' ); ?></h1>
+					<div class="span12 aligncenter">
+						<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cmc' ); ?></h1>
+					</div>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
+				<main id="main" class="site-main span12 aligncenter clear" role="main">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cmc' ); ?></p>
 
 					<?php get_search_form(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( cmc_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'cmc' ); ?></h2>
 						<ul>
@@ -37,7 +38,6 @@ get_header(); ?>
 						?>
 						</ul>
 					</div><!-- .widget -->
-					<?php endif; ?>
 
 					<?php
 						/* translators: %1$s: smiley */
@@ -47,7 +47,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-				</div><!-- .page-content -->
+				</main><!-- .page-content -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->

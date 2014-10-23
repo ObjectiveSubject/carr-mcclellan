@@ -25,23 +25,23 @@
 */
 
 	add_action("admin_init", "admin_init");
-	add_action('save_post', 'save_practices_meta');
+	add_action( 'save_post', 'save_practices_meta', 15, 2 );
 
-	function practices_meta_options(){
+	function practices_meta_options() {
 		global $post;
-		$custom = get_post_custom($post->ID);
-		$tagline = $custom["tagline"][0];
-		$description = $custom["description"][0];
-		$chair_id = $custom["chair_id"][0];
-		$attorney_title = $custom["attorney_title"][0];
-		$chair_id_2 = $custom["chair_id_2"][0];
-		$attorney_title_2 = $custom["attorney_title_2"][0];
-		$practices_url = $custom["practices_url"][0];
-		$rep_matters = $custom["rep_matters"][0];
-		$areas_focus = get_post_meta($post->ID, 'areas_focus', 'single');
 
-		if(!$areas_focus){
-			$areas_focus = array('','','','','','','','','','');
+		$tagline = get_post_meta( $post->ID, "tagline", true );
+		$description = get_post_meta( $post->ID, "description", true );
+		$chair_id = get_post_meta( $post->ID, "chair_id", true );
+		$attorney_title = get_post_meta( $post->ID, "attorney_title", true );
+		$chair_id_2 = get_post_meta( $post->ID, "chair_id_2", true );
+		$attorney_title_2 = get_post_meta( $post->ID, "attorney_title_2", true );
+		$practices_url = get_post_meta( $post->ID, "practices_url", true );
+		$rep_matters = get_post_meta( $post->ID, "rep_matters", true );
+		$areas_focus = get_post_meta($post->ID, 'areas_focus', true );
+
+		if ( ! $areas_focus ) {
+			$areas_focus = array( '','','','','','','','','','' );
 		}
 
 	?>
@@ -164,14 +164,14 @@
 		<tr>
 			<th style="width: 20%;"><label for="tagline">Tagline</label></th>
 			<td>
-				<textarea class="" name="tagline" style="width: 97%;height:50px;"><?=$tagline;?></textarea>
+				<textarea class="" name="tagline" style="width: 97%;height:50px;"><?php echo $tagline;?></textarea>
 				<!-- <input type="text" class="text_input" name="tagline" value="<?php echo $tagline; ?>" style="width:97%" /> -->
 			</td>
 		</tr>
 		<tr style="display:none;">
 			<th style="width: 20%;"><label for="description">Description</label></th>
 			<td>
-				<textarea name="description" style="width: 97%;height:140px;"><?=$description;?></textarea>
+				<textarea name="description" style="width: 97%;height:140px;"><?php echo $description;?></textarea>
 			</td>
 		</tr>
 
@@ -191,9 +191,9 @@
 						while ( $loop->have_posts() ) {
 							$loop->the_post();
 							$custom = get_post_custom($post->ID);
-							$name = $custom["last_name"][0].', ';
-							$name .= $custom["first_name"][0] . ' ';
-							$name .= $custom["middle_initial"][0];
+							$name = get_post_meta( $post->ID, "last_name", true ).', ';
+							$name .= get_post_meta( $post->ID, "first_name", true ) . ' ';
+							$name .= get_post_meta( $post->ID, "middle_initial", true );
 							$id = $post->ID;
 							$selected = ($chair_id == $id) ? 'selected="selected"' : '';
 							echo '<option value="' . $id . '" ' . $selected . '>' . $name . '</option>';
@@ -222,9 +222,9 @@
 						while ( $loop->have_posts() ) {
 							$loop->the_post();
 							$custom = get_post_custom($post->ID);
-							$name = $custom["last_name"][0].', ';
-							$name .= $custom["first_name"][0] . ' ';
-							$name .= $custom["middle_initial"][0];
+							$name = get_post_meta( $post->ID, "last_name", true ).', ';
+							$name .= get_post_meta( $post->ID, "first_name", true ) . ' ';
+							$name .= get_post_meta( $post->ID, "middle_initial", true );
 							$id = $post->ID;
 							$selected = ($chair_id_2 == $id) ? 'selected="selected"' : '';
 							echo '<option value="' . $id . '" ' . $selected . '>' . $name . '</option>';
@@ -241,7 +241,7 @@
 		<tr>
 			<th style="width: 20%;"><label for="rep_matters">Representative Matters</label></th>
 			<td>
-				<textarea class="rep_matters" name="rep_matters" style="width: 97%;height:140px;"><?=$rep_matters;?></textarea>
+				<textarea class="rep_matters" name="rep_matters" style="width: 97%;height:140px;"><?php echo $rep_matters;?></textarea>
 			</td>
 		</tr>
 
@@ -251,16 +251,16 @@
 
 				<?php
 					$i = 1;
-					foreach($areas_focus as $area) :
-					if($area['title']) {
+					foreach( $areas_focus as $area ) :
+					if ( isset( $area['title'] ) && $area['title'] !== '' ) {
 				?>
-				<div class="postbox area" id="area-<?=$i;?>">
+				<div class="postbox area" id="area-<?php echo $i; ?>">
 				<div class="inside">
 
 					<div class="inside-header">
 						<div class="left">
 							<h2>+</h2>
-							<input type="text" class="text_input areas_title" name="areas_title_<?=$i;?>" value="<?=$area['title'];?>"/>
+							<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" value="<?php echo $area['title'];?>"/>
 						</div>
 						<h4>Sort</h4>
 						<div style="clear:both;"></div>
@@ -268,11 +268,11 @@
 
 					<div class="inside-hide" style="display:none;">
 						<!--
-<label for="areas_title_<?=$i;?>">Title</label>
-						<input type="text" class="text_input areas_title" name="areas_title_<?=$i;?>" style="width:100%;" value="<?=$area['title'];?>"/>
-						<label for="areas_body_<?=$i;?>">Description</label>
+<label for="areas_title_<?php echo $i;?>">Title</label>
+						<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" style="width:100%;" value="<?php echo $area['title'];?>"/>
+						<label for="areas_body_<?php echo $i;?>">Description</label>
 -->
-						<textarea class="areas_textarea" name="areas_body_<?=$i;?>" style="width: 100%;height:140px;"><?=$area['description'];?></textarea>
+						<textarea class="areas_textarea" name="areas_body_<?php echo $i;?>" style="width: 100%;height:140px;"><?php echo $area['description'];?></textarea>
 						<p style="text-align:right;">
 							<a href="#" class="delete_area" onclick="return confirm('Are you sure?');">Delete</a>
 						</p>
@@ -282,13 +282,18 @@
 				</div>
 				<?php
 					} else {
+						if ( isset( $area['title'] ) ) { $area_title = $area['title']; }
+						else { $area_title = ''; }
+
+						if ( isset( $area['title'] ) ) { $area_desc = $area['description']; }
+						else { $area_desc = ''; }
 				?>
-				<div class="postbox area" id="area-<?=$i;?>" style="display:none;">
+				<div class="postbox area" id="area-<?php echo $i;?>" style="display:none;">
 				<div class="inside">
 					<div class="inside-header">
 						<div class="left">
 							<h2>-</h2>
-							<input type="text" class="text_input areas_title" name="areas_title_<?=$i;?>" value="<?=$area['title'];?>"/>
+							<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" value="<?php echo $area_title; ?>"/>
 						</div>
 						<h4>Sort</h4>
 						<div style="clear:both;"></div>
@@ -296,11 +301,11 @@
 
 					<div class="inside-hide">
 						<!--
-<label for="areas_title_<?=$i;?>">Title</label>
-						<input type="text" class="text_input" name="areas_title_<?=$i;?>" style="width:100%;" value="<?=$area['title'];?>"/>
-						<label for="areas_body_<?=$i;?>">Description</label>
+<label for="areas_title_<?php echo $i;?>">Title</label>
+						<input type="text" class="text_input" name="areas_title_<?php echo $i;?>" style="width:100%;" value="<?php echo $area_title; ?>"/>
+						<label for="areas_body_<?php echo $i;?>">Description</label>
 -->
-						<textarea class="areas_textarea" name="areas_body_<?=$i;?>" style="width: 100%;height:140px;"><?=$area['description'];?></textarea>
+						<textarea class="areas_textarea" name="areas_body_<?php echo $i;?>" style="width: 100%;height:140px;"><?php echo $area_desc; ?></textarea>
 						<p style="text-align:right;">
 							<a href="#" class="delete_area" onclick="return confirm('Are you sure?');">Delete</a>
 						</p>
@@ -317,18 +322,27 @@
 
 			</td>
 		</tr>
-
+		<?php wp_nonce_field( 'save', 'carr_practices' ); ?>
 	</table>
 
 	<?php
 	}
 
 
-	function save_practices_meta(){
+	function save_practices_meta( $post_id, $post ){
 
-        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+		// Bail if doing autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-		global $post;
+		// Bail if nonce isn't set
+		if ( ! isset( $_POST['carr_practices'] ) || ! wp_verify_nonce( $_POST['carr_practices'], 'save' ) ) { return; }
+
+		// Bail if the user isn't allowed to edit the post
+		if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+		// Bail if not an asset
+		if ( 'practices' !== $post->post_type ) { return; }
+
 		if(isset($_POST["tagline"])) update_post_meta($post->ID, "tagline", $_POST["tagline"]);
 		if(isset($_POST["description"])) update_post_meta($post->ID, "description", $_POST["description"]);
 		if(isset($_POST["attorney_title"])) update_post_meta($post->ID, "attorney_title", $_POST["attorney_title"]);
@@ -385,7 +399,7 @@
 		if(isset($_POST["areas_title_1"])) update_post_meta($post->ID, "areas_focus", $focus_array); 
 	}
 
-	add_action('save_post', 'save_practices_attorneys_meta');
+	add_action('save_post', 'save_practices_attorneys_meta', 15, 2 );
 
 	function practices_attorneys_meta_options(){
 		global $post;
@@ -414,15 +428,29 @@
 					}
 				?>
 			</ul>
+			<?php wp_nonce_field( 'save', 'carr_practices_attorneys' ); ?>
 		</div>
 
 	<?php
 	}
 
 
-	function save_practices_attorneys_meta(){
-		global $post;
-		if(isset($_POST["practices_attorneys"])) update_post_meta($post->ID, "practices_attorneys", $_POST["practices_attorneys"]);
+	function save_practices_attorneys_meta( $post_id, $post ){
+		// Bail if doing autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+
+		// Bail if nonce isn't set
+		if ( ! isset( $_POST['carr_practices_attorneys'] ) || ! wp_verify_nonce( $_POST['carr_practices_attorneys'], 'save' ) ) { return; }
+
+		// Bail if the user isn't allowed to edit the post
+		if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+		// Bail if not an asset
+		if ( 'practices' !== $post->post_type ) { return; }
+
+		if( isset($_POST['practices_attorneys'] ) ) {
+			update_post_meta( $post->ID, 'practices_attorneys', $_POST['practices_attorneys'] );
+		}
 	}
 
 ?>

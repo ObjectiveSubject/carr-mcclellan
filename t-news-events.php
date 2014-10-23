@@ -5,25 +5,28 @@
 	get_header();
 ?>
 
-<body>
-	<div id="wrapper">
-		<div class="w1">
-			<div class="w2">
-				<?php include('sidebar.php'); ?>
-				<div class="container">
+	<div id="primary" class="content-area">
+
+		<header class="page-header">
+			<div class="centered">
+				<?php get_template_part('t-site-branding'); ?>
+				<h1 class="page-title"><?php the_block('Banner Text'); ?></h1>
+				<div class="page-subtitle"><?php the_content(); ?></div>
+			</div>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<main id="main" class="site-main span12 aligncenter" role="main">
+
+					<?php get_template_part( 'content', 'page' ); ?>
+
+				</main><!-- #main -->
+
+			<?php endwhile; // end of the loop. ?>
+		</header>
 
 
-					<header id="header" class="header-2 header-news-search-overview">
-						<div class="panel">
-							<span class="addthis link-share">Share</span>
-						</div>
-						<div class="holder">
-							<h1><?php the_block('Banner Text'); ?></h1>
-						</div>
-					</header>
-
-
-					<div id="main">
+		<main id="main" class="site-main span12 aligncenter" role="main">
 						<section id="content">
 							<div class="head-text">
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -258,30 +261,6 @@
 								</article>
 
 
-
-								<article class="item">
-									<h2 class="block-1"><a href="<?php echo get_permalink('43'); ?>">Email Alerts</a></h2>
-									<div class="block-2">
-										<div class="item">
-											<header class="info-head">
-												<h3>Sign Up</h3>
-											</header>
-											<p>Your email address and personal information are confidential and will not be sold or rented. See our <a href="<?php echo get_permalink('82'); ?>">Privacy Policy</a> for more details.</p>
-											<form class="sign-form sign-form-2" action="#">
-												<fieldset>
-													<div class="row">
-														<?php include('email-signup.php');?>
-													</div>
-
-													<?php include('rss-feeds.php');?>
-												</fieldset>
-											</form>
-										</div>
-									</div>
-								</article>
-
-
-
 								<article class="item">
 									<h2 class="block-1"><a href="">Media Contact</a></h2>
 									<div class="block-2">
@@ -297,8 +276,7 @@
 							</div>
 						</section>
 					</div>
-				</div>
-			</div>
-		</div>
 
-<?php get_footer(); ?>
+	</main>
+
+<?php get_footer();

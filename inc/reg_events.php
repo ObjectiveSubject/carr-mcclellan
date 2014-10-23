@@ -77,7 +77,7 @@
 
 
   add_action("admin_init", "admin_init");
-  add_action('save_post', 'save_events_meta');
+  add_action( 'save_post', 'save_events_meta', 15, 2 );
 
   function events_meta_options(){
     global $post;
@@ -230,16 +230,26 @@
         ?>
       </td>
     </tr>
+	  <?php wp_nonce_field( 'save', 'carr_events' ); ?>
   </table>
 
   <?php
   }
 
 
-  function save_events_meta(){
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+  function save_events_meta( $post_id, $post ) {
+	  // Bail if doing autosave
+	  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-    global $post;
+	  // Bail if nonce isn't set
+	  if ( ! isset( $_POST['carr_events'] ) || ! wp_verify_nonce( $_POST['carr_events'], 'save' ) ) { return; }
+
+	  // Bail if the user isn't allowed to edit the post
+	  if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	  // Bail if not an asset
+	  if ( 'events' !== $post->post_type ) { return; }
+
     $fix_date = explode('/', $_POST["date"]);
     $fix_date = $fix_date[2] . '/' . $fix_date[0] . '/' . $fix_date[1];
 

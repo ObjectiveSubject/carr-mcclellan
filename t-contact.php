@@ -65,42 +65,30 @@
 							));
 						while ( $loop->have_posts() ) :
 							$loop->the_post();
-							$custom = get_post_custom($post->ID);
-							$chair_id = $custom["chair_id"][0];
+							$chair_id = get_post_meta( $post->ID, 'chair_id', true );
 
 							$attorney = get_post_custom($chair_id);
-							$attorney_name = $attorney['first_name'][0] . ' ';
-							$attorney_name .= $attorney['middle_initial'][0] . ' ';
-							$attorney_name .= $attorney['last_name'][0];
-							$attorney_phone = $attorney['phone'][0];
-							$attorney_fax = $attorney['fax'][0];
-							$attorney_email = $attorney['email'][0];
-							$attorney_url = site_url() . '/?page_id=' . $chair_id;
-
-							$attorney_thumb_id = $attorney['attorneys_secondary-image_thumbnail_id'][0];
-							$attorney_thumb = wp_get_attachment_image($attorney_thumb_id, 'attorney-thumb');
+							$attorney_name = get_post_meta( $chair_id, 'first_name', true ) . ' ';
+							$attorney_name .= get_post_meta( $chair_id, 'middle_initial', true ) . ' ';
+							$attorney_name .= get_post_meta( $chair_id, 'last_name', true );
+							$attorney_phone = get_post_meta( $chair_id, 'phone', true );
+							$attorney_fax = get_post_meta( $chair_id, 'fax', true );
+							$attorney_email = get_post_meta( $chair_id, 'email', true );
+							$attorney_url = get_the_permalink( $chair_id );
 
 					?>
 
-
 						<li>
-							<a href="#" class="opener"><?php the_title();?></a>
-							<article class="slide">
+							<h3><?php the_title(); ?></h3>
+							<article class="chair">
 								<div class="block-person">
-									<?php echo get_the_post_thumbnail( $chair_id, 'attorney-thumb', array('class' => 'alignleft png-bg') ); ?>
-									<strong><a href="<?php get_permalink($chair_id); ?>"><?php echo $attorney_name; ?></a></strong>
-									<dl>
-										<dt>P: </dt>
-										<dd><?php echo $attorney_phone; ?> <br /></dd>
-										<dt>F: </dt>
-										<dd><?php echo $attorney_fax; ?></dd>
-									</dl>
-									<a href="mailto:<?php echo $attorney_email; ?>"><?php echo $attorney_email; ?></a>
+									<strong><a href="<?php echo $attorney_url; ?>"><?php echo $attorney_name; ?></a></strong>
+										<div class="phone">P: <?php echo $attorney_phone; ?></div>
+										<div class="fax">F: <?php echo $attorney_fax; ?></div>
+										<div class="email"><a href="mailto:<?php echo $attorney_email; ?>"><?php echo $attorney_email; ?></a></div>
 								</div>
 							</article>
 						</li>
-
-
 
 					<?php endwhile; ?>
 

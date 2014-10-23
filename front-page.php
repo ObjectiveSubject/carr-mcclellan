@@ -16,14 +16,23 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<main id="main" class="site-main span12 aligncenter" role="main">
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
-			</main><!-- #main -->
+			<?php get_template_part( 'content', 'page' ); ?>
 
 		<?php endwhile; // end of the loop. ?>
 	</header>
+
+	<main id="main" class="site-main span12 aligncenter" role="main">
+
+		<h2>News &amp; Events</h2>
+		<a href="">See All</a>
+
+		<h2>Meet Our Attorneys</h2>
+		<a href="">See All</a>
+
+		<h2>Our Practices</h2>
+		<?php cmc_get_practices(); ?>
+
+	</main><!-- #main -->
 
 </div><!-- #primary -->
 

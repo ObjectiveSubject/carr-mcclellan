@@ -24,7 +24,7 @@
 */
 
   add_action("admin_init", "admin_init");
-  add_action('save_post', 'save_milestone_meta');
+  add_action( 'save_post', 'save_milestone_meta', 15, 2 );
 
   function milestones_meta_options(){
     global $post;
@@ -43,18 +43,33 @@
         <small>Ex: January 1988</small>
       </td>
     </tr>
+	<?php wp_nonce_field( 'save', 'carr_milestones' ); ?>
   </table>
 
 
   <?php
   }
 
-  function save_milestone_meta(){
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return; // Fixes autosave for custom meta
+  function save_milestone_meta( $post_id, $post ){
+	// Bail if doing autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
-    global $post;
-    $new_date = strtotime($_POST["milestone_date"]);
-    if(isset($_POST["milestone_date"])) update_post_meta($post->ID, "milestone_date", $new_date);
+	// Bail if nonce isn't set
+	if ( ! isset( $_POST['carr_milestones'] ) || ! wp_verify_nonce( $_POST['carr_milestones'], 'save' ) ) { return; }
+
+	// Bail if the user isn't allowed to edit the post
+	if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	// Bail if not an asset
+	if ( 'milestones' !== $post->post_type ) { return; }
+
+    if( isset( $_POST['milestone_date'] ) ) {
+	    $new_date = strtotime( $_POST['milestone_date'] );
+
+	    update_post_meta( $post_id, 'milestone_date', $new_date );
+    } else {
+	    delete_post_meta( $post_id, 'milestone_date' );
+    }
   }
 
 

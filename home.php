@@ -16,34 +16,41 @@ get_header(); ?>
 <div id="primary" class="content-area page-default">
 	<header class="page-header">
 		<div class="span12 aligncenter">
-			<h1 class="page-title"><?php the_title(); ?></h1>
+			<h1 class="page-title">Blog</h1>
 		</div>
 	</header>
 
 	<main id="main" class="site-main span12 aligncenter" role="main">
+		<aside class="aside aside-left span2 push-left">
+			<div class="border-block top">
+				<h3 class="block-label">Categories</h3>
 
-		<?php if ( have_posts() ) : ?>
+					<ul>
+						<?php wp_list_categories( '&title_li=' ); ?>
+					</ul>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			</div>
+		</aside>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+		<section class="span9 push-right">
+			<?php if ( have_posts() ) : ?>
 
-			<?php endwhile; ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<article class="border-block top-right-bottom square">
+						<h4 class="timestamp"><?php the_time('F j, Y'); ?></h4>
+						<h3><?php the_title(); ?></h3>
+					</article>
 
-			<?php cmc_paging_nav(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php cmc_paging_nav(); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'content', 'none' ); ?>
 
+			<?php endif; ?>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
