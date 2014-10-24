@@ -298,7 +298,7 @@ function cmc_get_practices() {
 
 	<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
 
-		<article class="practice <?php echo esc_attr( $post->post_name ); ?>">
+		<article class="border-block square practice <?php echo esc_attr( $post->post_name ); ?>">
 			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 		</article>
 
@@ -369,7 +369,7 @@ function cmc_get_newsevents() {
 
 		<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
 
-			<article class="practice <?php echo esc_attr( $post->post_name ); ?>">
+			<article class="border-block square news event">
 				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 			</article>

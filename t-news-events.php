@@ -26,18 +26,23 @@
 
 
 		<main id="main" class="site-main span12 aligncenter" role="main">
-			<h2>News &amp; Events</h2>
+			<h2 class="front-page">News &amp; Events</h2>
 			<a href="">See All</a>
 
 			<?php cmc_get_newsevents(); ?>
 
-			<h2>Meet Our Attorneys</h2>
-			<a href="">See All</a>
+			<section class="attorneys span10 aligncenter">
+				<h2 class="front-page">Meet Our Attorneys</h2>
+				<a href="">See All</a>
 
-			<?php cmc_get_attorneys(); ?>
+				<?php cmc_get_attorneys(); ?>
 
-			<h2>Our Practices</h2>
-			<?php cmc_get_practices(); ?>
+			</section>
+
+			<section class="attorneys span10 aligncenter">
+				<h2 class="front-page">Our Practices</h2>
+				<?php cmc_get_practices(); ?>
+			</section>
 
 			<hr>
 			<article class="item">

@@ -249,6 +249,9 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1em; }
+  h2.front-page {
+    text-align: center;
+    color: #EC513C; }
 
 h3 {
   font-size: 24px;
@@ -743,6 +746,35 @@ object {
   padding: 0 30px;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
+
+.practices .practice {
+  width: 50%;
+  min-height: 6em;
+  background: #285F8A; }
+  .practices .practice h3 {
+    text-align: center; }
+    .practices .practice h3 a {
+      color: white; }
+  .practices .practice.business-litigation {
+    background-color: #404060; }
+  .practices .practice.construction-law {
+    background-color: #4B4B72; }
+  .practices .practice.corporate-business {
+    background-color: #32507C; }
+  .practices .practice.creditors-rights-bankruptcy {
+    background-color: #285F8A; }
+  .practices .practice.employment-2 {
+    background-color: #703F50; }
+  .practices .practice.exempt-organizations {
+    background-color: #604752; }
+  .practices .practice.intellectual-property {
+    background-color: #404060; }
+  .practices .practice.real-estate {
+    background-color: #4B4B72; }
+  .practices .practice.taxation-2 {
+    background-color: #32507C; }
+  .practices .practice.trust-estate-fiduciary {
+    background-color: #285F8A; }
 
 body {
   border: 10px solid #EC513C;
