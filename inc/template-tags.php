@@ -22,11 +22,15 @@ function cmc_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'cmc' ) ); ?></div>
+			<div class="nav-previous border-block top">
+				<p class="block-label"><?php next_posts_link( __( '<span class="icon-arrow-left small"></span> Older posts', 'cmc' ) ); ?></p>
+			</div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'cmc' ) ); ?></div>
+			<div class="nav-next border-block top">
+				<p class="block-label"><?php previous_posts_link( __( 'Newer posts <span class="icon-arrow-right small"></span>', 'cmc' ) ); ?></p>
+			</div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->

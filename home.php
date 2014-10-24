@@ -36,9 +36,9 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<article class="border-block top-right-bottom square">
+					<article class="border-block top-right-bottom square blog-post">
 						<h4 class="timestamp"><?php the_time('F j, Y'); ?></h4>
-						<h3><?php the_title(); ?></h3>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</article>
 
 				<?php endwhile; ?>
