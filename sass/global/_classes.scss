@@ -120,30 +120,6 @@
 	@include box-sizing(content-box);
 }
 
-.practices {
-	.practice {
-		width: 50%;
-		min-height: 6em;
-		background: $color_blue1;
-		h3 {
-			text-align: center;
-			a {
-				color: white;
-			}
-		}
-		&.business-litigation { background-color: $color_blue4; }
-		&.construction-law { background-color: $color_blue3; }
-		&.corporate-business { background-color: $color_blue2; }
-		&.creditors-rights-bankruptcy { background-color: $color_blue1; }
-		&.employment-2 { background-color: $color_purple1; }
-		&.exempt-organizations { background-color: $color_purple2; }
-		&.intellectual-property { background-color: $color_blue4; }
-		&.real-estate { background-color: $color_blue3; }
-		&.taxation-2 { background-color: $color_blue2; }
-		&.trust-estate-fiduciary { background-color: $color_blue1; }
-	}
-}
-
 
 
 

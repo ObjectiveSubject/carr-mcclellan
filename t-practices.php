@@ -11,7 +11,7 @@
 		</div>
 	</header>
 
-	<main id="main" class="site-main span6 aligncenter clear" role="main">
+	<main id="main" class="site-main span12 aligncenter clear" role="main">
 
 		<section id="content">
 			<?php cmc_get_practices(); ?>

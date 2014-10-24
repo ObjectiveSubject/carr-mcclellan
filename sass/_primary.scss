@@ -7,7 +7,7 @@
 	@include layout-clearfix;
 	background: $color_gray0;
 	}
-	.home .page-header {
+	.home .page-header, .page-id-32 .page-header {
 		background: url(images/large-monogram.png) no-repeat center center $color_gray0;
 		padding-bottom: 5em;
 		}

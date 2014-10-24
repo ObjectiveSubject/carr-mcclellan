@@ -747,35 +747,6 @@ object {
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
-.practices .practice {
-  width: 50%;
-  min-height: 6em;
-  background: #285F8A; }
-  .practices .practice h3 {
-    text-align: center; }
-    .practices .practice h3 a {
-      color: white; }
-  .practices .practice.business-litigation {
-    background-color: #404060; }
-  .practices .practice.construction-law {
-    background-color: #4B4B72; }
-  .practices .practice.corporate-business {
-    background-color: #32507C; }
-  .practices .practice.creditors-rights-bankruptcy {
-    background-color: #285F8A; }
-  .practices .practice.employment-2 {
-    background-color: #703F50; }
-  .practices .practice.exempt-organizations {
-    background-color: #604752; }
-  .practices .practice.intellectual-property {
-    background-color: #404060; }
-  .practices .practice.real-estate {
-    background-color: #4B4B72; }
-  .practices .practice.taxation-2 {
-    background-color: #32507C; }
-  .practices .practice.trust-estate-fiduciary {
-    background-color: #285F8A; }
-
 body {
   border: 10px solid #EC513C;
   border-left: none; }
@@ -862,7 +833,7 @@ body {
   .page-header:after {
     clear: both; }
 
-.home .page-header {
+.home .page-header, .page-id-32 .page-header {
   background: url(images/large-monogram.png) no-repeat center center #F4F5F6;
   padding-bottom: 5em; }
 
@@ -1022,6 +993,40 @@ body {
       font-size: 1em; }
       .site-main .square.blog-post h3 a {
         color: #8D8D8D; }
+  .site-main .square.practice {
+    width: 50%;
+    height: 16em;
+    min-height: 16em;
+    background: #285F8A;
+    position: relative;
+    padding: 0;
+    margin: 0; }
+    .site-main .square.practice h3 {
+      text-align: center;
+      margin-bottom: 0;
+      height: 100%; }
+      .site-main .square.practice h3 a {
+        color: white; }
+    .site-main .square.practice.business-litigation {
+      background-color: #404060; }
+    .site-main .square.practice.construction-law {
+      background-color: #4B4B72; }
+    .site-main .square.practice.corporate-business {
+      background-color: #32507C; }
+    .site-main .square.practice.creditors-rights-bankruptcy {
+      background-color: #285F8A; }
+    .site-main .square.practice.employment-2 {
+      background-color: #703F50; }
+    .site-main .square.practice.exempt-organizations {
+      background-color: #604752; }
+    .site-main .square.practice.intellectual-property {
+      background-color: #404060; }
+    .site-main .square.practice.real-estate {
+      background-color: #4B4B72; }
+    .site-main .square.practice.taxation-2 {
+      background-color: #32507C; }
+    .site-main .square.practice.trust-estate-fiduciary {
+      background-color: #285F8A; }
 
 /* Border Block
 ------------------------------------- */
