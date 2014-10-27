@@ -132,6 +132,9 @@ function myformatTinyMCE($in) {
   // Practices
   include( 'inc/reg_practices.php' );
 
+  // Industries
+  include( 'inc/reg_industries.php' );
+
   // Publications
   include( 'inc/reg_publications.php' );
 
