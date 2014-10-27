@@ -58,6 +58,7 @@ add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+require get_template_directory() . '/inc/extras.php';
 
 
 /*----------------------------------------------------------
