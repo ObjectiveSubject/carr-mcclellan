@@ -71,6 +71,9 @@
 
 	.contact {
 		margin-left: $grid_margin;
+		.font-text a {
+			color: white;
+		}
 		.info {
 			width: 57.45%;
 			font-size: 0.8em;

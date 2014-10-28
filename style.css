@@ -939,6 +939,8 @@ body {
 .solid-block {
   padding: 1.5em;
   color: #FFF; }
+  .solid-block a {
+    color: #fff; }
   .solid-block.child1 {
     background: #285F8A; }
   .solid-block.child2 {
@@ -1000,11 +1002,12 @@ body {
     background: #285F8A;
     position: relative;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle; }
     .site-main .square.practice h3 {
       text-align: center;
-      margin-bottom: 0;
-      height: 100%; }
+      margin-bottom: 0; }
       .site-main .square.practice h3 a {
         color: white; }
     .site-main .square.practice.business-litigation {
@@ -1106,6 +1109,31 @@ body {
   .post-navigation a, .paging-navigation a {
     display: block; }
 
+.practices {
+  position: relative;
+  display: table;
+  margin-bottom: 2em; }
+  .practices:before, .practices:after {
+    content: "";
+    display: table; }
+  .practices:after {
+    clear: both; }
+
+.attorneys, .news-events {
+  position: relative;
+  margin-bottom: 2em; }
+  .attorneys:before, .attorneys:after, .news-events:before, .news-events:after {
+    content: "";
+    display: table; }
+  .attorneys:after, .news-events:after {
+    clear: both; }
+  .attorneys .see-all, .news-events .see-all {
+    position: absolute;
+    color: #32507C;
+    display: block;
+    top: 0;
+    right: 0; }
+
 .footer-nav {
   float: left; }
   .footer-nav ul {
@@ -1166,6 +1194,8 @@ body {
         border-color: #EC513C; }
   .site-footer .contact {
     margin-left: 2.5641%; }
+    .site-footer .contact .font-text a {
+      color: white; }
     .site-footer .contact .info {
       width: 57.45%;
       font-size: 0.8em;
