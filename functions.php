@@ -206,88 +206,6 @@ function myformatTinyMCE($in) {
   add_action('admin_print_styles', 'datepicker_css');
 
 
-/*******************************************************
-  Theme Options Page
-*/
-
-  function themeoptions_admin_menu() {
-    add_menu_page("Theme Options", "Theme Options", 'manage_options', basename(__FILE__), 'themeoptions_page');
-  }
-
-  function themeoptions_page() {
-    if ( $_POST['update_themeoptions'] == 'true' ) { themeoptions_update(); }
-      $about_carr = get_option('about_carr');
-      $email_signup = get_option('email_signup');
-
-      $about_carr = str_replace("\'","'",$about_carr);
-      $about_carr = str_replace('\"','"',$about_carr);
-    ?>
-
-    <script type="text/javascript">
-      jQuery(document).ready(function($) {
-        tinyMCE.init({
-          plugins : "paste wplink",
-          theme_advanced_buttons1 : "bold,italic,separator,numlist,bullist,separator,link,unlink,separator,pasteword,pastetext",
-          theme_advanced_buttons2 : "",
-          theme_advanced_buttons3 : "",
-          mode : "specific_textareas",
-          editor_selector : /(about_carr)/,
-          theme_advanced_toolbar_location : "top",
-          theme_advanced_toolbar_align : "left",
-          theme_advanced_resizing : true,
-          theme_advanced_resizing_max_height : 240,
-          menubar : false
-        });
-      });
-
-    </script>
-
-    <div class="wrap">
-      <div id="icon-themes" class="icon32"><br /></div>
-      <h2>Theme Options</h2>
-      <form method="POST" action="">
-        <input type="hidden" name="update_themeoptions" value="true" />
-        <table class="form-table">
-          <tbody>
-            <tr valign="top">
-              <th scope="row">
-                <label for="about_carr">
-                  <strong>About Carr</strong><br />
-                  <small>(Text the bottom of each page.)</small>
-                </label>
-              </th>
-              <td>
-                <textarea class="about_carr" name="about_carr" style="width: 310px;height:130px;"><?php echo $about_carr; ?></textarea>
-              </td>
-            </tr>
-            <tr valign="top">
-              <th scope="row">
-                <label for="email_signup">
-                  <strong>Email Sign Up</strong><br />
-                  <small>(Text the bottom of each page.)</small>
-                </label>
-              </th>
-              <td>
-                <textarea name="email_signup" style="width: 310px;height:50px;"><?php $email_signup = str_replace('\"', '"', $email_signup); echo $email_signup; ?></textarea>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p style="margin-top:30px;"><input type="submit" value="Update Options" class="button-primary" /></p>
-      </form>
-
-    </div>
-    <?php
-  }
-
-  function themeoptions_update() {
-
-    update_option('about_carr',   $_POST['about_carr']);
-    update_option('email_signup',   $_POST['email_signup']);
-  }
-  add_action('admin_menu', 'themeoptions_admin_menu');
-
 /**
  * Retrieve the practices list and display
  */
@@ -371,16 +289,18 @@ function cmc_get_newsevents() {
 		'posts_per_page' => 6
 	));
 
+	$count = 1;
+
 	?>
 	<div class="news-events">
 
 		<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
 
-			<article class="border-block square news event">
+			<article class="solid-block square news event child<?php echo $count; ?>">
 				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 			</article>
-
+			<?php $count++; ?>
 		<?php endwhile; ?>
 
 	</div>
