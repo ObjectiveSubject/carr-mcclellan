@@ -284,9 +284,19 @@
 	margin-bottom: 2em;
 	.see-all {
 		position: absolute;
-	  color: $color_blue2;
+	  color: $color_gray2;
 		display: block;
 		top: 0;
 		right: 0;
+		padding-right: 20px;
+		font-family: $font_heading;
+		font-weight: bold;
+		text-transform: uppercase;
+		[class*="icon-"] {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-top: -10px;
+		}
 	}
 }

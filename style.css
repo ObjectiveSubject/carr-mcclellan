@@ -1129,10 +1129,19 @@ body {
     clear: both; }
   .attorneys .see-all, .news-events .see-all {
     position: absolute;
-    color: #32507C;
+    color: #C0C0C0;
     display: block;
     top: 0;
-    right: 0; }
+    right: 0;
+    padding-right: 20px;
+    font-family: "BrandonGrotesque", helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .attorneys .see-all [class*="icon-"], .news-events .see-all [class*="icon-"] {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -10px; }
 
 .footer-nav {
   float: left; }
