@@ -24,7 +24,7 @@ $post_sidebar_2 = get_post_meta( $post->ID, 'post_sidebar_2', true );
 				<?php echo apply_filters( 'the_content', $post_sidebar_1 ); ?>
 			</aside>
 
-			<section class="span8 push-left">
+			<section class="span6 push-left">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="entry-content">
