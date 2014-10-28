@@ -16,7 +16,7 @@
 			<nav id="footer-navigation" class="footer-nav clear" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
 			</nav>
-			<a href="<? echo get_bloginfo('siteurl'); ?>" class="monogram sprite"><span class="hide-text">Carr McClellan</span></a>
+			<a href="<?php echo get_bloginfo( 'url' ); ?>" class="monogram sprite"><span class="hide-text">Carr McClellan</span></a>
 		</div>
 		
 		<div class="row row2 span12 aligncenter">
@@ -38,7 +38,7 @@
 			</div>
 			
 			<div class="contact span5 push-right">
-				<h3 class="font-text">Contact</h3>
+				<h3 class="font-text"><a href="<?php echo get_bloginfo( 'url' ); ?>/our-firm/contact-us/">Contact</a></h3>
 				<address class="info span2 push-left">
 					216 Park Road<br/>
 					Burlingame, CA 94010
