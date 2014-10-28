@@ -181,6 +181,9 @@ function myformatTinyMCE($in) {
     // Posts
     add_meta_box("posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side");
     add_meta_box("posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side");
+
+	  // Pages
+	  add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
   }
 
 
