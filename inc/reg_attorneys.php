@@ -132,6 +132,7 @@
           <option value="Special Counsel" <?php echo($title=='Special Counsel') ? 'selected="selected"':'';?>>Special Counsel</option>
           <option value="Senior Counsel" <?php echo($title=='Senior Counsel') ? 'selected="selected"':'';?>>Senior Counsel</option>
           <option value="Of Counsel" <?php echo($title=='Of Counsel') ? 'selected="selected"':'';?>>Of Counsel</option>
+	      <option value="Senior Associate" <?php echo($title=='Senior Associate') ? 'selected="selected"':'';?>>Senior Associate</option>
         </select>
       </td>
     </tr>
