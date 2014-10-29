@@ -20,6 +20,8 @@ body {
 	}
 }
 
-.attorneys {
-
+.page-default {
+	article {
+		@include layout-clearfix;
+	}
 }
