@@ -821,6 +821,8 @@ body {
   font: normal normal bold 14px/1em "BrandonGrotesque", helvetica, sans-serif;
   text-transform: uppercase;
   color: #404060; }
+  .main-nav a:hover {
+    color: #EC513C; }
 
 /* Small menu */
 .main-nav .menu-toggle {

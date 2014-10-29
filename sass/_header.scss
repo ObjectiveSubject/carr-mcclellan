@@ -58,6 +58,9 @@
 	font: normal normal bold 14px/1em $font_heading;
 	text-transform: uppercase;
 	color: $color_blue4;
+	&:hover {
+		color: $color_red;
+	}
 }
 
 /* Small menu */
