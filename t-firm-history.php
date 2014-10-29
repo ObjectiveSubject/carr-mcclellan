@@ -34,15 +34,24 @@
 							'posts_per_page' => 100
 						));
 
-					while ( $milestones->have_posts() ) : $milestones->the_post();
+					$count = 1;
 				?>
+				<ul class="milestones">
+					<?php while ( $milestones->have_posts() ) : $milestones->the_post(); ?>
+						<li class="<?php echo $post->post_name; ?> year <?php if ( $count == 1 ) { echo "active"; } ?>">
+							<?php the_title(); ?>
+						</li>
+					<?php $count++; endwhile; ?>
+				</ul>
 
-					<article class="item">
+				<?php rewind_posts(); $count = 1; ?>
+
+				<?php while ( $milestones->have_posts() ) : $milestones->the_post(); ?>
+					<article class="item milestone <?php echo $post->post_name; ?> <?php if ( $count == 1 ) { echo "active"; } ?>">
 						<h2><?php the_title(); ?></h2>
 						<?php the_content();?>
 					</article>
-
-				<?php endwhile; ?>
+				<?php $count++; endwhile; ?>
 
 				</div>
 			</section>

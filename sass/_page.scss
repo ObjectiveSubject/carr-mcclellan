@@ -25,3 +25,30 @@ body {
 		@include layout-clearfix;
 	}
 }
+
+.history {
+	.milestones {
+		text-align: center;
+		@include h4size;
+		font-family: $font_heading;
+		font-weight: bold;
+		margin-bottom: 2em;
+		li {
+			display: inline-block;
+			color: $color_blue2;
+			cursor: pointer;
+			margin-right: 1em;
+			&.active, &:hover {
+				color: $color_red;
+				border-bottom: 2px solid $color_red;
+			}
+		}
+	}
+	.milestone {
+		display: none;
+		&.active {
+			display: block;
+		}
+		h2 { display: none; }
+	}
+}
