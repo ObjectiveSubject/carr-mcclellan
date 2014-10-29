@@ -52,3 +52,10 @@ body {
 		h2 { display: none; }
 	}
 }
+
+.our-firm {
+	.border-block p {
+		font-size: 16px;
+		color: $color_gray3;
+	}
+}
