@@ -9,7 +9,7 @@
       $args = array(
           'label' => __('Firm History'),
           'singular_label' => __('Milestones'),
-          'public' => true,
+          'public' => false,
           'show_ui' => true,
           'capability_type' => 'post',
           'hierarchical' => false,
