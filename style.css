@@ -762,6 +762,12 @@ body {
 #primary.terminal-page {
   background: #F4F5F6; }
 
+.page-default article:before, .page-default article:after {
+  content: "";
+  display: table; }
+.page-default article:after {
+  clear: both; }
+
 .site-header {
   position: absolute;
   z-index: 1;
