@@ -81,7 +81,7 @@ function save_posts_practices_meta(){
 	if(isset($_POST["post_practices"])) update_post_meta($post->ID, "post_practices", $_POST["post_practices"]);
 }
 
-add_action( 'edit_form_after_title', 'carr_subtitle' );
+// add_action( 'edit_form_after_title', 'carr_subtitle' );
 
 function carr_subtitle( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'page' ) ) ) {
