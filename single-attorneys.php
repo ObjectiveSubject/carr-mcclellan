@@ -37,7 +37,7 @@
 	$v_card .= 'f_name=' . $custom["first_name"][0];
 	$v_card .= '&l_name=' . $custom["last_name"][0];
 	$v_card .= '&m_name=' . $custom["middle_initial"][0];
-	$v_card .= '&company=Carr, McClellan, Ingersoll, Thompson &amp; Horn';
+	$v_card .= '&company=Carr McClellan P.C.';
 	$v_card .= '&title=' . $custom["title"][0];
 	$v_card .= '&address=216 Park Road';
 	$v_card .= '&city=Burlingame';
