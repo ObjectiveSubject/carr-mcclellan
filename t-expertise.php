@@ -24,16 +24,29 @@ get_header(); ?>
 			
 			<ul>
 				<li class="solid-block square child1">
-					<?php if ( $subtitle ) { echo $subtitle; } ?>
+					<?php the_excerpt(); ?>
 				</li>
 				<li class="border-block top-right-bottom square child2">
-					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>practices/">Practices</a></h3>
+					<?php
+						$excerpt = '';
+						$expertise_page = get_post( 2312 );
+
+						if ($expertise_page ) {
+							$excerpt = $expertise_page->post_excerpt;
+						} else { $excerpt = ''; }
+					?>
+					<h3><a href="<?php echo get_permalink('2312'); ?>">Industries</a></h3>
+					<p><?php echo $excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child3">
-					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>industries/">Industries</a></h3>
+					<?php $expertise_page = get_post( 26 ); ?>
+					<h3><a href="<?php echo get_permalink('26'); ?>">Practices</a></h3>
+					<p><?php echo $expertise_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child4">
-					<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>publications/">Publications</a></h3>
+					<?php $expertise_page = get_post( 28 ); ?>
+					<h3><a href="<?php echo get_permalink('28'); ?>">Publications</a></h3>
+					<p><?php echo $expertise_page->post_excerpt; ?></p>
 				</li>
 			</ul>
 		
