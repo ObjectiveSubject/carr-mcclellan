@@ -24,22 +24,32 @@ get_header(); ?>
 			
 			<ul>
 				<li class="solid-block square child1">
-					<?php if ( $subtitle ) { echo $subtitle; } ?>
+					<?php the_excerpt(); ?>
 				</li>
 				<li class="border-block top-right-bottom square child2">
+					<?php $firm_page = get_post( 14 ); ?>
 					<h3><a href="<?php echo get_permalink('14'); ?>">Firm History</a></h3>
+					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child3">
+					<?php $firm_page = get_post( 16 ); ?>
 					<h3><a href="<?php echo get_permalink('16'); ?>">Community Involvement</a></h3>
+					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child4">
+					<?php $firm_page = get_post( 18 ); ?>
 					<h3><a href="<?php echo get_permalink('18'); ?>">Affiliations & Memberships</a></h3>
+					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child5">
+					<?php $firm_page = get_post( 22 ); ?>
 					<h3><a href="<?php echo get_permalink('22'); ?>">Recruiting</a></h3>
+					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child6">
+					<?php $firm_page = get_post( 20 ); ?>
 					<h3><a href="<?php echo get_permalink('20'); ?>">Contact Us</a></h3>
+					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 			</ul>
 		
