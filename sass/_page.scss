@@ -59,3 +59,13 @@ body {
 		color: $color_gray3;
 	}
 }
+
+.practice-list {
+	li {
+		margin-bottom: 1em;
+		cursor: pointer;
+		&.active {
+			color: $color_red;
+		}
+	}
+}

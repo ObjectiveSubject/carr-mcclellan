@@ -35,18 +35,18 @@ $attorneys = new WP_Query(array(
 						'order' => 'ASC',
 						'posts_per_page' => 100
 					));
-
-					while ( $practices->have_posts() ) : $practices->the_post();
 				?>
-						<ul>
-							<li class="<?php echo $post->post_name; ?>"><a href="#"><?php the_title();?></a></li>
-						</ul>
+				<ul class="practice-list">
+					<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
+
+							<li class="practice <?php echo $post->post_name; ?>"><?php the_title();?></li>
 
 					<?php endwhile; ?>
+				</ul>
 			</div>
 		</aside>
 
-		<section class="span9 push-right">
+		<section class="span9 push-right attorneys">
 			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
 
 				<?php
@@ -69,7 +69,7 @@ $attorneys = new WP_Query(array(
 
 				?>
 
-				<article class="border-block top-right-bottom square attorney <?php echo $practice_areas; ?>">
+				<article class="border-block top-right-bottom square attorney <?php echo $practice_areas; ?> active">
 					<h3><a href="<?php the_permalink() ?>"><?php echo $name; ?></a></h3>
 
 					<p class="titles">
