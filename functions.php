@@ -2,42 +2,45 @@
 
 if ( ! function_exists( 'cmc_setup' ) ) :
 
-function cmc_setup() {
+	function cmc_setup() {
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Enable support for Post Thumbnails on posts and pages.
-	add_theme_support( 'post-thumbnails' );
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'main' => __( 'Main Menu', 'cmc' ),
-		'secondary' => __( 'Secondary Menu', 'cmc' ),
-	) );
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus( array(
+			'main'      => __( 'Main Menu', 'cmc' ),
+			'secondary' => __( 'Secondary Menu', 'cmc' ),
+		) );
 
-	// Page Excerpts
-	add_post_type_support( 'page', 'excerpt' );
+		// Page Excerpts
+		add_post_type_support( 'page', 'excerpt' );
 
-	// Switch default core markup for search form, comment form, and comments
-	// to output valid HTML5
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+		// Switch default core markup for search form, comment form, and comments
+		// to output valid HTML5
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-	// Image sizes from v1.0 of theme
-	add_image_size( 'miletone-thumb', 210, 130, true );
-	add_image_size( 'attorney-thumb', 145, 145, true );
-	add_image_size( 'attorney-detail', 284, 264, true );
-	add_image_size( 'practice-chair', 71, 71, true );
-	add_image_size( 'event-large', 690, 9999, false );
-	add_image_size( 'event-medium', 450, 9999, false );
-	add_image_size( 'news-medium', 190, 9999, false );
+		// Image sizes from v1.0 of theme
+		add_image_size( 'miletone-thumb', 210, 130, true );
+		add_image_size( 'attorney-thumb', 145, 145, true );
+		add_image_size( 'attorney-detail', 284, 264, true );
+		add_image_size( 'practice-chair', 71, 71, true );
+		add_image_size( 'event-large', 690, 9999, false );
+		add_image_size( 'event-medium', 450, 9999, false );
+		add_image_size( 'news-medium', 190, 9999, false );
 
-}
+	}
 endif; // cmc_setup
 add_action( 'after_setup_theme', 'cmc_setup' );
-
 
 
 /**
@@ -49,8 +52,8 @@ function cmc_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js' );
 	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core.js', array( 'jquery' ), '1.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
 
+add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
 
 
 /**
@@ -70,140 +73,137 @@ From here down is stuff brought over from Carr McClellan 1.0
 
 
 /*******************************************************
-  Register Components
-*/
+ * Register Components
+ */
 
 /*******************************************************
--  Custom WYSIWYG for Pages
+ * -  Custom WYSIWYG for Pages
  */
-function myformatTinyMCE($in) {
-	$post = get_post($post_id);
-	if ($post->post_type == 'page') {
+function myformatTinyMCE( $in ) {
+	$post = get_post( $post_id );
+	if ( $post->post_type == 'page' ) {
 		$in['theme_advanced_buttons1'] = 'formatselect,bold,italic,|,bullist,numlist,blockquote,link,unlink,pastetext,pasteword,removeformat,undo,redo';
 		$in['theme_advanced_buttons2'] = '';
 		$in['theme_advanced_buttons3'] = '';
 		$in['theme_advanced_buttons4'] = '';
 	}
+
 	return $in;
 }
+
 //add_filter('tiny_mce_before_init', 'myformatTinyMCE' );
 
-  // Remove Featured Image from Posts
-  add_action('do_meta_boxes', 'remove_thumbnail_box');
-  function remove_thumbnail_box() {
-      remove_meta_box( 'postimagediv','post','side' );
-      remove_meta_box( 'postimagediv','page','side' );
-      remove_meta_box( 'multi_content','attorneys','side' );
-  }
-
-
-
+// Remove Featured Image from Posts
+add_action( 'do_meta_boxes', 'remove_thumbnail_box' );
+function remove_thumbnail_box() {
+	remove_meta_box( 'postimagediv', 'post', 'side' );
+	remove_meta_box( 'postimagediv', 'page', 'side' );
+	remove_meta_box( 'multi_content', 'attorneys', 'side' );
+}
 
 
 /*******************************************************
-  Custom WP Login Logo
-*/
+ * Custom WP Login Logo
+ */
 
-  add_action("login_head", "my_login_head");
-  function my_login_head() {
-    echo "
+add_action( "login_head", "my_login_head" );
+function my_login_head() {
+	echo "
     <style>
     body.login #login h1 a {
-      background: url('".get_bloginfo('template_url')."/images/carr-login.png') no-repeat scroll center top transparent !important; background-size: 274px 63px; width: 274px; height: 63px; 
+      background: url('" . get_bloginfo( 'template_url' ) . "/images/carr-login.png') no-repeat scroll center top transparent !important; background-size: 274px 63px; width: 274px; height: 63px;
 
     }
     </style>
     ";
-  }
-
-
-
+}
 
 
 /*******************************************************
-  Register Custom Post Types
-*/
+ * Register Custom Post Types
+ */
 
-  // Milestones
-  include( 'inc/reg_milestones.php' );
+// Milestones
+include( 'inc/reg_milestones.php' );
 
-  // Attorneys
-  include( 'inc/reg_attorneys.php' );
+// Attorneys
+include( 'inc/reg_attorneys.php' );
 
-  // Practices
-  include( 'inc/reg_practices.php' );
+// Practices
+include( 'inc/reg_practices.php' );
 
-  // Industries
-  include( 'inc/reg_industries.php' );
+// Industries
+include( 'inc/reg_industries.php' );
 
-  // Publications
-  include( 'inc/reg_publications.php' );
+// Publications
+include( 'inc/reg_publications.php' );
 
-  // Newsletters
-  include( 'inc/reg_newsletters.php' );
+// Newsletters
+include( 'inc/reg_newsletters.php' );
 
-  // Events
-  include( 'inc/reg_events.php' );
+// Events
+include( 'inc/reg_events.php' );
 
-  // News
-  include( 'inc/reg_news.php' );
+// News
+include( 'inc/reg_news.php' );
 
-  // Posts Tagging of Attorneys
-  include( 'inc/posts_meta.php' );
-
-
-
-  // Init all Meta Boxes
-  function admin_init(){
-
-    // Milestones
-    add_meta_box("milestones_meta_options", "Options", "milestones_meta_options", "milestones");
-
-    // Attorneys
-    add_meta_box("attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys");
-
-    // Practices
-    add_meta_box("practices_meta_options", "Practice Information", "practices_meta_options", "practices");
-    add_meta_box("practices_attorneys_meta_options", "Practicing Attorneys", "practices_attorneys_meta_options", "practices", "side");
-
-    // Publications
-    add_meta_box("publications_meta_options", "Publication Information", "publications_meta_options", "publications");
-
-    // Newsletters
-    add_meta_box("newsletters_meta_options", "Newsletter Information", "newsletters_meta_options", "newsletters");
-
-    // Events
-    add_meta_box("events_meta_options", "Event Information", "events_meta_options", "events");
-
-    // News
-    add_meta_box("news_meta_options", "News Information", "news_meta_options", "news");
-
-    // Posts
-    add_meta_box("posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side");
-    add_meta_box("posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side");
-
-	  // Pages
-	  add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
-  }
+// Posts Tagging of Attorneys
+include( 'inc/posts_meta.php' );
 
 
-  // Register datepicker ui for properties
-  function datepicker_js(){
-      global $post;
-      if( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
-          wp_enqueue_script('jquery-ui-datepicker');
-      }
-  }
-  add_action('admin_print_scripts', 'datepicker_js');
+// Init all Meta Boxes
+function admin_init() {
 
-  // Register ui styles for properties
-  function datepicker_css(){
-      global $post;
-      if( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
-          wp_enqueue_style('jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css  ');
-      }
-  }
-  add_action('admin_print_styles', 'datepicker_css');
+	// Milestones
+	add_meta_box( "milestones_meta_options", "Options", "milestones_meta_options", "milestones" );
+
+	// Attorneys
+	add_meta_box( "attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys" );
+
+	// Practices
+	add_meta_box( "practices_meta_options", "Practice Information", "practices_meta_options", "practices" );
+	add_meta_box( "practices_attorneys_meta_options", "Practicing Attorneys", "practices_attorneys_meta_options", "practices", "side" );
+
+	// Publications
+	add_meta_box( "publications_meta_options", "Publication Information", "publications_meta_options", "publications" );
+
+	// Newsletters
+	add_meta_box( "newsletters_meta_options", "Newsletter Information", "newsletters_meta_options", "newsletters" );
+
+	// Events
+	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "events" );
+
+	// News
+	add_meta_box( "news_meta_options", "News Information", "news_meta_options", "news" );
+
+	// Posts
+	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
+	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
+
+	// Pages
+	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
+}
+
+
+// Register datepicker ui for properties
+function datepicker_js() {
+	global $post;
+	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
+		wp_enqueue_script( 'jquery-ui-datepicker' );
+	}
+}
+
+add_action( 'admin_print_scripts', 'datepicker_js' );
+
+// Register ui styles for properties
+function datepicker_css() {
+	global $post;
+	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
+		wp_enqueue_style( 'jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css  ' );
+	}
+}
+
+add_action( 'admin_print_styles', 'datepicker_css' );
 
 
 /**
@@ -212,25 +212,26 @@ function myformatTinyMCE($in) {
 function cmc_get_practices() {
 
 	$practices = new WP_Query( array(
-		'post_type' => 'practices',
-		'orderby' => 'title',
-		'order' => 'ASC',
+		'post_type'      => 'practices',
+		'orderby'        => 'title',
+		'order'          => 'ASC',
 		'posts_per_page' => 100
-	));
+	) );
 
-?>
+	?>
 	<div class="practices">
 
-	<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
+		<?php while ( $practices->have_posts() ) : $practices->the_post();
+			global $post; ?>
 
-		<article class="border-block square practice <?php echo esc_attr( $post->post_name ); ?>">
-			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-		</article>
+			<article class="border-block square practice <?php echo esc_attr( $post->post_name ); ?>">
+				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+			</article>
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
 
 	</div>
-	<?php
+<?php
 }
 
 /**
@@ -238,12 +239,12 @@ function cmc_get_practices() {
  */
 function cmc_get_attorneys() {
 
-	$attorneys = new WP_Query(array(
-		'post_type' => 'attorneys',
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
+	$attorneys = new WP_Query( array(
+		'post_type'      => 'attorneys',
+		'orderby'        => 'menu_order',
+		'order'          => 'ASC',
 		'posts_per_page' => 3
-	));
+	) );
 
 	?>
 	<div class="attorneys">
@@ -251,13 +252,13 @@ function cmc_get_attorneys() {
 		<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
 
 			<?php
-				global $post;
-				$name = get_post_meta( $post->ID, 'first_name', true ) . ' ';
-				$name .= get_post_meta( $post->ID, 'middle_initial', true ) . ' ';
-				$name .= get_post_meta( $post->ID, 'last_name', true);
+			global $post;
+			$name = get_post_meta( $post->ID, 'first_name', true ) . ' ';
+			$name .= get_post_meta( $post->ID, 'middle_initial', true ) . ' ';
+			$name .= get_post_meta( $post->ID, 'last_name', true );
 
-				$title = get_post_meta( $post->ID, 'title', true );
-				$sec_title = get_post_meta( $post->ID, 'secondary_title', true );
+			$title     = get_post_meta( $post->ID, 'title', true );
+			$sec_title = get_post_meta( $post->ID, 'secondary_title', true );
 			?>
 
 			<article class="border-block top-right-bottom square attorney">
@@ -265,11 +266,13 @@ function cmc_get_attorneys() {
 
 				<p class="titles">
 					<?php echo $title; ?>
-					<?php if ( $title && $sec_title ) echo '<br>'; ?>
+					<?php if ( $title && $sec_title ) {
+						echo '<br>';
+					} ?>
 					<?php echo $sec_title; ?>
 				</p>
 
-				<?php the_post_thumbnail('attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
+				<?php the_post_thumbnail( 'attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
 			</article>
 
 		<?php endwhile; ?>
@@ -284,23 +287,24 @@ function cmc_get_attorneys() {
 function cmc_get_newsevents() {
 
 	$practices = new WP_Query( array(
-		'post_type' => array( 'post', 'event' ),
-		'orderby' => 'date',
+		'post_type'      => array( 'post', 'event' ),
+		'orderby'        => 'date',
 		'posts_per_page' => 6
-	));
+	) );
 
 	$count = 1;
 
 	?>
 	<div class="news-events">
 
-		<?php while ( $practices->have_posts() ) : $practices->the_post(); global $post; ?>
+		<?php while ( $practices->have_posts() ) : $practices->the_post();
+			global $post; ?>
 
 			<article class="solid-block square news event child<?php echo $count; ?>">
 				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
 			</article>
-			<?php $count++; ?>
+			<?php $count ++; ?>
 		<?php endwhile; ?>
 
 	</div>
