@@ -14,24 +14,6 @@ get_header();
 
 			<aside class="aside aside-left span2 push-left">
 				<div class="border-block top">
-					<h3 class="block-label">Practices</h3>
-
-					<?php
-					$practices = new WP_Query( array(
-						'post_type'      => 'practices',
-						'orderby'        => 'title',
-						'order'          => 'ASC',
-						'posts_per_page' => 100
-					) );
-
-					while ( $practices->have_posts() ) : $practices->the_post();
-						?>
-						<ul>
-							<li class="<?php echo $post->post_name; ?>">
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-						</ul>
-
-					<?php endwhile; ?>
 				</div>
 			</aside>
 

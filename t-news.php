@@ -15,7 +15,7 @@
 
 		<main id="main" class="site-main span12 aligncenter" role="main">
 
-			<section id="content">
+			<section id="content" class="span6 aligncenter">
 				<div class="events">
 					<?php
 						$loop = new WP_Query(array(
