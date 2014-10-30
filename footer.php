@@ -54,9 +54,9 @@
 			<div class="span5 push-left">
 				<nav id="social-navigation" class="social-nav">
 					<ul class="menu">
-						<li><a href="#" class="icon-twitter" target="_blank"><span class="hide-text">Twitter</span></a></li>
+						<!-- <li><a href="#" class="icon-twitter" target="_blank"><span class="hide-text">Twitter</span></a></li> -->
 						<li><a href="https://www.linkedin.com/company/carr-mcclellan/" class="icon-linkedin" target="_blank"><span class="hide-text">Linkedin</span></a></li>
-						<li><a href="#" class="icon-facebook" target="_blank"><span class="hide-text">Facebook</span></a></li>
+						<!-- <li><a href="#" class="icon-facebook" target="_blank"><span class="hide-text">Facebook</span></a></li> -->
 					</ul>
 				</nav>
 				<nav id="utility-navigation" class="utility-nav">
