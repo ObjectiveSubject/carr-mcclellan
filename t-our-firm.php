@@ -46,9 +46,9 @@ get_header(); ?>
 					<h3><a href="<?php echo get_permalink('22'); ?>"><?php echo get_the_title( 22 ); ?></a></h3>
 					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
-				<li class="border-block top-right-bottom square child6">
-					<?php $firm_page = get_post( 20 ); ?>
-					<h3><a href="<?php echo get_permalink('20'); ?>"><?php echo get_the_title( 20 ); ?></a></h3>
+				<li class="solid-block square child6">
+					<?php $firm_page = get_post( 2305 ); ?>
+					<h3><a href="<?php echo get_permalink('2305'); ?>"><?php echo get_the_title( 2305 ); ?></a></h3>
 					<p><?php echo $firm_page->post_excerpt; ?></p>
 				</li>
 			</ul>
