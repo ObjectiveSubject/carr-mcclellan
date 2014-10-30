@@ -800,6 +800,9 @@ body {
   .practice-list li.active {
     color: #EC513C; }
 
+.attorneys .attorney.sortable {
+  display: none; }
+
 .site-header {
   position: absolute;
   z-index: 1;
@@ -1001,7 +1004,6 @@ body {
   .site-main .square.child1, .site-main .square.child3, .site-main .square.child5 {
     margin-right: 2%; }
   .site-main .square.attorney {
-    display: none;
     position: relative;
     width: 30%;
     margin-left: 3%;

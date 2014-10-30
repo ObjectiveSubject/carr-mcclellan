@@ -69,7 +69,7 @@ $attorneys = new WP_Query(array(
 
 				?>
 
-				<article class="border-block top-right-bottom square attorney <?php echo $practice_areas; ?> active">
+				<article class="border-block top-right-bottom square attorney sortable <?php echo $practice_areas; ?> active">
 					<h3><a href="<?php the_permalink() ?>"><?php echo $name; ?></a></h3>
 
 					<p class="titles">

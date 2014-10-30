@@ -26,14 +26,16 @@
 
 
 		<main id="main" class="site-main span12 aligncenter" role="main">
-			<h2 class="front-page">News &amp; Events</h2>
-			<a href="">See All</a>
+			<section class="news-events span10 aligncenter">
+				<h2 class="front-page">News &amp; Events</h2>
+				<a href="<?php echo get_bloginfo( 'url' ); ?>/news-events/" class="see-all">See All <span class="icon-arrow-right"></span></a>
 
-			<?php cmc_get_newsevents(); ?>
+				<?php cmc_get_newsevents(); ?>
+			</section>
 
 			<section class="attorneys span10 aligncenter">
 				<h2 class="front-page">Meet Our Attorneys</h2>
-				<a href="">See All</a>
+				<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="see-all">See All <span class="icon-arrow-right"></span></a>
 
 				<?php cmc_get_attorneys(); ?>
 

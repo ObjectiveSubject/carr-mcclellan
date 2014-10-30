@@ -69,3 +69,9 @@ body {
 		}
 	}
 }
+
+.attorneys {
+	.attorney.sortable {
+		display: none;
+	}
+}
