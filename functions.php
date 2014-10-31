@@ -300,10 +300,16 @@ function cmc_get_newsevents() {
 		<?php while ( $practices->have_posts() ) : $practices->the_post();
 			global $post; ?>
 
-			<article class="solid-block square news event child<?php echo $count; ?>">
-				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-				<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
-			</article>
+			<?php if ( $count % 3 == 1 ) : ?>
+			<section class="section-<?php echo ceil( $count / 3 ); ?>">
+			<?php endif; ?>
+				<article class="solid-block square news event child<?php echo $count; ?>">
+					<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+					<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+				</article>
+			<?php if ( $count % 3 == 0 ) : ?>
+				</section>
+			<?php endif; ?>
 			<?php $count ++; ?>
 		<?php endwhile; ?>
 

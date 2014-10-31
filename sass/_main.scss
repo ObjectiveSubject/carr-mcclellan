@@ -282,6 +282,7 @@
 	display: table;
 	margin-bottom: 2em;
 }
+
 .attorneys, .news-events {
 	@include layout_clearfix;
 	position: relative;
@@ -302,5 +303,17 @@
 			right: 0;
 			margin-top: -10px;
 		}
+	}
+}
+
+.news-events {
+	section {
+		display: none;
+		&.section-1 { display: block; }
+	}
+	.square {
+		width: 33.3%;
+		margin-right: 0 !important; // this could probably be reengineered
+		display: inline-block;
 	}
 }

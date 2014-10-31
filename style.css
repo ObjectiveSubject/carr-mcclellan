@@ -1188,6 +1188,15 @@ body {
       right: 0;
       margin-top: -10px; }
 
+.news-events section {
+  display: none; }
+  .news-events section.section-1 {
+    display: block; }
+.news-events .square {
+  width: 33.3%;
+  margin-right: 0 !important;
+  display: inline-block; }
+
 .footer-nav {
   float: left; }
   .footer-nav ul {
