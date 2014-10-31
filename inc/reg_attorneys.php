@@ -68,6 +68,8 @@
     $areas_practice = get_post_meta($post->ID, 'areas_practice', true);
     $areas_related_practice_hidden = get_post_meta( $post->ID, "areas_related_practice_hidden", true );
     $areas_related_practice = get_post_meta($post->ID, 'areas_related_practice', true);
+	  $industry_hidden = get_post_meta( $post->ID, "industry_hidden", true );
+	  $industry = get_post_meta($post->ID, 'industry', true);
   ?>
 
   <script type="text/javascript">
@@ -255,6 +257,34 @@
     </tr>
 
     <tr>
+	    <th style="width: 20%;"><label for="industry">Industries</label></th>
+	    <td>
+		    <div style="height:90px;overflow:scroll;background:#fff;border:1px solid #ccc;padding:10px;">
+			    <?php
+			    $loop = new WP_Query(array(
+				    'post_type' => 'industries',
+				    'orderby' => 'title',
+				    'order' => 'ASC',
+				    'posts_per_page' => 100
+			    ));
+			    while ( $loop->have_posts() ) {
+				    $loop->the_post();
+				    $id = $post->ID;
+				    $custom = get_post_custom($id);
+				    $name = get_the_title();
+				    $cust_name = str_replace(',','', $name);
+				    $cust_name = str_replace('&','', $cust_name);
+				    $selected = ( is_array($industry) && in_array($id, $industry)) ? 'checked="checked"' : '';
+				    echo '<input type="checkbox" class="areas" name="industry[]"';
+				    echo 'value="' . $id . '" ' . $selected . '/> ' . $name . ' <br />';
+			    }
+			    ?>
+		    </div>
+		    <input type="hidden" class="text_input" name="areas_practice_hidden" value="<?php echo $industry_hidden; ?>" size="30" />
+	    </td>
+    </tr>
+
+    <tr>
       <th style="width: 20%;"><label>Experience and affiliations</label></th>
       <td>
         <div class="metabox-tabs-div">
@@ -352,6 +382,12 @@
     } else {
       update_post_meta($post->ID, "areas_related_practice", '');
     }
+
+	  if(isset($_POST["industry"])) {
+		  update_post_meta($post->ID, "industry", $_POST["industry"]);
+	  } else {
+		  update_post_meta($post->ID, "industry", '');
+	  }
 
     if(isset($_POST["test_input"])) update_post_meta($post->ID, "test_input", $_POST["test_input"]);
 
