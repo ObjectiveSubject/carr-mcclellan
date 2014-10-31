@@ -38,11 +38,8 @@
 		$attorney_title_2 = get_post_meta( $post->ID, "attorney_title_2", true );
 		$practices_url = get_post_meta( $post->ID, "practices_url", true );
 		$rep_matters = get_post_meta( $post->ID, "rep_matters", true );
-		$areas_focus = get_post_meta($post->ID, 'areas_focus', true );
-
-		if ( ! $areas_focus ) {
-			$areas_focus = array( '','','','','','','','','','' );
-		}
+		$industry_hidden = get_post_meta( $post->ID, "industry_hidden", true );
+		$industry = get_post_meta($post->ID, 'industry', true);
 
 	?>
 	<script type="text/javascript">
@@ -63,101 +60,8 @@
       	menubar : false
 			});
 
-			// Show the first hidden Areas of Focus box
-			$('.add_area').click(function(e){
-				e.preventDefault();
-				$(".area").filter(function() { return $(this).css("display") == "none" }).first().slideDown();
-			});
-
-			// Clear Areas of Focus fields and hide box
-			$('.delete_area').click(function(e){
-				e.preventDefault();
-
-				//$(this).parent().siblings('input').val(''); // Clear Title
-				$(this).parent().parent().parent().children('.inside-header').children('.left').children('input').val('');
-				var editor = $(this).parent().siblings('textarea').attr('name');
-				tinyMCE.get(editor).setContent(''); // Clear TinyMCE
-				$(this).closest('.area').slideUp();
-			});
-
-			$('.area-sort-container').sortable({
-				handle: 'h4',
-				cursor: 'move',
-				start: function(){
-					//tinyMCE.execCommand('mceRemoveControl', false, $('.areas_textarea') );
-				},
-				stop: function(e,ui) {
-					resetAreas();
-					//tinyMCE.execCommand( 'mceAddControl', true, $(this).attr('id') );
-				}
-			});
-
-			function resetAreas(){
-				var i = 1;
-				$('.area').each(function(){
-					$(this).children('div.inside').children('.inside-header').children('.left').children('input').attr('name','areas_title_' + i);
-					$(this).children('div.inside').children('.inside-hide').children('textarea').attr('name','areas_body_' + i);
-					i++;
-				});
-			}
-
-			$('.inside-header h2').click(function(){
-
-				if($(this).html() == '+'){
-					$(this).html('-');
-				} else {
-					$(this).html('+');
-				}
-				$(this).parent().parent().siblings('.inside-hide').slideToggle();
-			});
-
 		});
 	</script>
-
-	<style type="text/css">
-		#sortable li {
-			border: 1px solid #ddd;
-			background:#f5f5f5;
-			padding:10px;
-			}
-		#sortable li h4 {
-			/* cursor: pointer; */
-			}
-		.inside h4 {
-			text-align: right;
-			color: #888;
-			background: url('<?php bloginfo('template_url');?>/images/sort.png') no-repeat center right;
-			padding-right: 20px;
-			cursor: pointer;
-			}
-		.inside-header .left {
-			float: left;
-			width: 60%;
-			}
-		.inside-header .left h2 {
-			float: left;
-			width: 20px;
-			font-weight: bold;
-			color: #888 !important;
-			margin: 7px 0 0 0 !important;
-			padding: 0 !important;
-			}
-		.inside-header .left h2:hover {
-			color: #000 !important;
-			cursor: pointer;
-			}
-		.inside-header .left input {
-			margin-top: 12px;
-			width: 80%;
-			}
-		.inside-header h4 {
-			float: right;
-			width: 30%;
-			}
-		.inside-hide {
-			/* display: none; */
-			}
-	</style>
 
 	<table class="form-table">
 
@@ -246,82 +150,33 @@
 		</tr>
 
 		<tr>
-			<th style="width: 20%;"><label for="areas_focus">Areas of Focus</label></th>
-			<td class="area-sort-container">
-
-				<?php
-					$i = 1;
-					foreach( $areas_focus as $area ) :
-					if ( isset( $area['title'] ) && $area['title'] !== '' ) {
-				?>
-				<div class="postbox area" id="area-<?php echo $i; ?>">
-				<div class="inside">
-
-					<div class="inside-header">
-						<div class="left">
-							<h2>+</h2>
-							<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" value="<?php echo $area['title'];?>"/>
-						</div>
-						<h4>Sort</h4>
-						<div style="clear:both;"></div>
-					</div>
-
-					<div class="inside-hide" style="display:none;">
-						<!--
-<label for="areas_title_<?php echo $i;?>">Title</label>
-						<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" style="width:100%;" value="<?php echo $area['title'];?>"/>
-						<label for="areas_body_<?php echo $i;?>">Description</label>
--->
-						<textarea class="areas_textarea" name="areas_body_<?php echo $i;?>" style="width: 100%;height:140px;"><?php echo $area['description'];?></textarea>
-						<p style="text-align:right;">
-							<a href="#" class="delete_area" onclick="return confirm('Are you sure?');">Delete</a>
-						</p>
-					</div>
-
-				</div>
-				</div>
-				<?php
-					} else {
-						if ( isset( $area['title'] ) ) { $area_title = $area['title']; }
-						else { $area_title = ''; }
-
-						if ( isset( $area['title'] ) ) { $area_desc = $area['description']; }
-						else { $area_desc = ''; }
-				?>
-				<div class="postbox area" id="area-<?php echo $i;?>" style="display:none;">
-				<div class="inside">
-					<div class="inside-header">
-						<div class="left">
-							<h2>-</h2>
-							<input type="text" class="text_input areas_title" name="areas_title_<?php echo $i;?>" value="<?php echo $area_title; ?>"/>
-						</div>
-						<h4>Sort</h4>
-						<div style="clear:both;"></div>
-					</div>
-
-					<div class="inside-hide">
-						<!--
-<label for="areas_title_<?php echo $i;?>">Title</label>
-						<input type="text" class="text_input" name="areas_title_<?php echo $i;?>" style="width:100%;" value="<?php echo $area_title; ?>"/>
-						<label for="areas_body_<?php echo $i;?>">Description</label>
--->
-						<textarea class="areas_textarea" name="areas_body_<?php echo $i;?>" style="width: 100%;height:140px;"><?php echo $area_desc; ?></textarea>
-						<p style="text-align:right;">
-							<a href="#" class="delete_area" onclick="return confirm('Are you sure?');">Delete</a>
-						</p>
-					</div>
-				</div>
-				</div>
-				<?php
+			<th style="width: 20%;"><label for="industry">Industries</label></th>
+			<td>
+				<div style="height:90px;overflow:scroll;background:#fff;border:1px solid #ccc;padding:10px;">
+					<?php
+					$loop = new WP_Query(array(
+						'post_type' => 'industries',
+						'orderby' => 'title',
+						'order' => 'ASC',
+						'posts_per_page' => 100
+					));
+					while ( $loop->have_posts() ) {
+						$loop->the_post();
+						$id = $post->ID;
+						$custom = get_post_custom($id);
+						$name = get_the_title();
+						$cust_name = str_replace(',','', $name);
+						$cust_name = str_replace('&','', $cust_name);
+						$selected = ( is_array($industry) && in_array($id, $industry)) ? 'checked="checked"' : '';
+						echo '<input type="checkbox" class="areas" name="industry[]"';
+						echo 'value="' . $id . '" ' . $selected . '/> ' . $name . ' <br />';
 					}
-					$i++;
-					endforeach;
-				?>
-
-				<a href="#" class="add_area">Add New</a>
-
+					?>
+				</div>
+				<input type="hidden" class="text_input" name="areas_practice_hidden" value="<?php echo $industry_hidden; ?>" size="30" />
 			</td>
 		</tr>
+
 		<?php wp_nonce_field( 'save', 'carr_practices' ); ?>
 	</table>
 
@@ -352,51 +207,11 @@
 		if(isset($_POST["practices_url"])) update_post_meta($post->ID, "practices_url", $_POST["practices_url"]);
 		if(isset($_POST["rep_matters"])) update_post_meta($post->ID, "rep_matters", $_POST["rep_matters"]);
 
-		$focus_array = array(
-			array(
-				'title' => $_POST["areas_title_1"],
-				'description' => ($_POST["areas_title_1"]) ? $_POST["areas_body_1"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_2"],
-				'description' => ($_POST["areas_title_2"]) ? $_POST["areas_body_2"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_3"],
-				'description' => ($_POST["areas_title_3"]) ? $_POST["areas_body_3"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_4"],
-				'description' => ($_POST["areas_title_4"]) ? $_POST["areas_body_4"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_5"],
-				'description' => ($_POST["areas_title_5"]) ? $_POST["areas_body_5"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_6"],
-				'description' => ($_POST["areas_title_6"]) ? $_POST["areas_body_6"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_7"],
-				'description' => ($_POST["areas_title_7"]) ? $_POST["areas_body_7"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_8"],
-				'description' => ($_POST["areas_title_8"]) ? $_POST["areas_body_8"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_9"],
-				'description' => ($_POST["areas_title_9"]) ? $_POST["areas_body_9"] : ''
-				),
-			array(
-				'title' => $_POST["areas_title_10"],
-				'description' => ($_POST["areas_title_10"]) ? $_POST["areas_body_10"] : ''
-				)
-			);
-		//update_post_meta($post->ID,'areas_focus', $focus_array);
-
-		if(isset($_POST["areas_title_1"])) update_post_meta($post->ID, "areas_focus", $focus_array); 
+		if(isset($_POST["industry"])) {
+			update_post_meta($post->ID, "industry", $_POST["industry"]);
+		} else {
+			update_post_meta($post->ID, "industry", '');
+		}
 	}
 
 	add_action('save_post', 'save_practices_attorneys_meta', 15, 2 );
