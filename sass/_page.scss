@@ -75,3 +75,46 @@ body {
 		display: none;
 	}
 }
+
+.bottom-matter {
+	@include layout-clearfix;
+	clear: both;
+	.menu {
+		h3 {
+			color: $color_gray3;
+			cursor: pointer;
+			&.active { color: $color_red; }
+		}
+	}
+	section {
+		display: none;
+		color: $color_gray3;
+		margin-left: $grid_margin * 2;
+		&.active {
+			display: block;
+		}
+
+		// These are probably redundant, could use .entry-content
+		p {
+			@include textsize;
+			font-family: $font_text;
+			margin-bottom: 1.5em;
+		}
+
+		h1, h2, h3, h4 {
+			color: $color_red;
+		}
+
+		ul, ol {
+			margin: 0 0 1.5em;
+			ul, ol { margin: 0 0 0 1.5em; }
+		}
+
+		ul li {
+			&:before {
+				content: "›";
+				margin-right: 10px;
+			}
+		}
+	}
+}

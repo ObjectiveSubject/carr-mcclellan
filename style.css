@@ -803,6 +803,39 @@ body {
 .attorneys .attorney.sortable {
   display: none; }
 
+.bottom-matter {
+  clear: both; }
+  .bottom-matter:before, .bottom-matter:after {
+    content: "";
+    display: table; }
+  .bottom-matter:after {
+    clear: both; }
+  .bottom-matter .menu h3 {
+    color: #8D8D8D;
+    cursor: pointer; }
+    .bottom-matter .menu h3.active {
+      color: #EC513C; }
+  .bottom-matter section {
+    display: none;
+    color: #8D8D8D;
+    margin-left: 5.12821%; }
+    .bottom-matter section.active {
+      display: block; }
+    .bottom-matter section p {
+      font-size: 18px;
+      line-height: 1.666em;
+      font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
+      margin-bottom: 1.5em; }
+    .bottom-matter section h1, .bottom-matter section h2, .bottom-matter section h3, .bottom-matter section h4 {
+      color: #EC513C; }
+    .bottom-matter section ul, .bottom-matter section ol {
+      margin: 0 0 1.5em; }
+      .bottom-matter section ul ul, .bottom-matter section ul ol, .bottom-matter section ol ul, .bottom-matter section ol ol {
+        margin: 0 0 0 1.5em; }
+    .bottom-matter section ul li:before {
+      content: "›";
+      margin-right: 10px; }
+
 .site-header {
   position: absolute;
   z-index: 1;
