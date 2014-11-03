@@ -181,15 +181,12 @@ if ( $chair_id_2 ) {
 		<h3 class="news menu-item border-block top-right">News</h3>
 		<h3 class="blog-posts menu-item border-block top-right">Blog Posts</h3>
 	</div>
-	<?php $ii = 0; ?>
 
 	<div class="sections span6 push-left">
-		<?php $ii ++; ?>
 
 		<section class="rep-matters bottom-section border-block top-right-bottom  active">
 			<?php echo $rep_matters; ?>
 		</section>
-
 
 		<section class="publications bottom-section border-block top-right-bottom ">
 
@@ -216,19 +213,15 @@ if ( $chair_id_2 ) {
 				if ( is_array( $pub_practices ) && in_array( $this_post, $pub_practices ) ) :
 					?>
 
-					<?php echo $date; ?><br />
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br /><br />
+					<div class="date"><?php echo $date; ?></div>
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
 
 					<?php
 					$i ++;
-					$ii ++;
 				endif;
 			endwhile;
-			if ( $i == 0 ) :
-				?>
-
-			<?php endif; ?>
+			?>
 
 		</section>
 
@@ -267,24 +260,15 @@ if ( $chair_id_2 ) {
 					$source_url = $pdf;
 				}
 
-				if ( in_array( $this_post, $news_practices ) ) :
+				if ( is_array( $news_practices ) && in_array( $this_post, $news_practices ) ) :
 					?>
 
-					<?php echo $fix_date; ?> | Source: <?php echo $source; ?><br />
-					<a href="<?php echo $source_url; ?>" <?php echo $link_target; ?>><?php the_title(); ?></a>
-
-
-					<?php if ( $news_type_select == 'external' ) : ?>
-					<img src="<?php bloginfo( 'template_url' ); ?>/images/external-icon.png" width="10" height="10" alt="External Icon">
-				<?php elseif ( $news_type_select == 'pdf' || $pdf ) : ?>
-					<img src="<?php bloginfo( 'template_url' ); ?>/images/tiny-pdf.png" width="10" height="10" alt="External Icon">
-				<?php endif; ?>
-					<br /><br />
+					<div class="date"><?php echo $fix_date; ?> | Source: <?php echo $source; ?></div>
+					<h5><a href="<?php echo $source_url; ?>" <?php echo $link_target; ?>><?php the_title(); ?></a></h5>
 
 
 					<?php
 					$i ++;
-					$ii ++;
 				endif;
 			endwhile;
 			if ( $i == 0 ) :
@@ -316,22 +300,14 @@ if ( $chair_id_2 ) {
 				if ( is_array( $post_practices ) && in_array( $this_post, $post_practices ) ) :
 					?>
 
-					<?php the_time( 'm/d/y' ); ?><br />
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br /><br />
-
+					<div class="date"><?php the_time( 'm/d/y' ); ?></div>
+					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
 
 					<?php
 					$i ++;
-					$ii ++;
 				endif;
 			endwhile;
-			if ( $i == 0 ) :
-				$related_count ++;
-				?>
-
-			<?php
-			endif;
 			?>
 		</section>
 	</div>

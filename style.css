@@ -828,8 +828,17 @@ body {
       display: block; }
     .bottom-matter section.publications {
       margin-top: 4.65em; }
-    .bottom-matter section.related-content {
+    .bottom-matter section.related-content, .bottom-matter section.news {
       margin-top: 9.3em; }
+    .bottom-matter section.blog-posts {
+      margin-top: 13.95em; }
+    .bottom-matter section .date {
+      margin-bottom: 0;
+      color: #5A5A5A; }
+    .bottom-matter section a {
+      color: #8D8D8D; }
+      .bottom-matter section a:hover {
+        color: #EC513C; }
     .bottom-matter section p {
       font-size: 18px;
       line-height: 1.666em;
@@ -837,6 +846,8 @@ body {
       margin-bottom: 1.5em; }
     .bottom-matter section h1, .bottom-matter section h2, .bottom-matter section h3 {
       color: #EC513C; }
+    .bottom-matter section h4 {
+      color: #5A5A5A; }
     .bottom-matter section ul, .bottom-matter section ol {
       margin: 0 0 1.5em; }
       .bottom-matter section ul ul, .bottom-matter section ul ol, .bottom-matter section ol ul, .bottom-matter section ol ol {
