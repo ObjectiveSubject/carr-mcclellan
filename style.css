@@ -812,21 +812,30 @@ body {
     clear: both; }
   .bottom-matter .menu h3 {
     color: #8D8D8D;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
     .bottom-matter .menu h3.active {
-      color: #EC513C; }
+      color: #EC513C;
+      border-right: none;
+      border-top-color: #EC513C; }
   .bottom-matter section {
     display: none;
     color: #8D8D8D;
     margin-left: 5.12821%; }
     .bottom-matter section.active {
       display: block; }
+    .bottom-matter section.publications {
+      margin-top: 4.65em; }
+    .bottom-matter section.related-content {
+      margin-top: 9.3em; }
     .bottom-matter section p {
       font-size: 18px;
       line-height: 1.666em;
       font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
       margin-bottom: 1.5em; }
-    .bottom-matter section h1, .bottom-matter section h2, .bottom-matter section h3, .bottom-matter section h4 {
+    .bottom-matter section h1, .bottom-matter section h2, .bottom-matter section h3 {
       color: #EC513C; }
     .bottom-matter section ul, .bottom-matter section ol {
       margin: 0 0 1.5em; }
@@ -997,6 +1006,12 @@ body {
       top: 50%;
       right: 15px;
       margin-top: -6px; }
+  .aside ul {
+    margin: 0 0 1em 0; }
+  .aside li {
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+    font-size: 14px; }
   .aside .social-share a {
     color: #FFF; }
 
@@ -1155,12 +1170,6 @@ body {
     border-color: #404060; }
     .border-block.child6 h3 a {
       color: #404060; }
-  .border-block ul {
-    margin: 0 0 1em 0; }
-  .border-block li {
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-    font-size: 14px; }
   .border-block .last-item {
     margin-bottom: 0; }
   .border-block .date {

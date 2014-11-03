@@ -83,7 +83,14 @@ body {
 		h3 {
 			color: $color_gray3;
 			cursor: pointer;
-			&.active { color: $color_red; }
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			&.active {
+				color: $color_red;
+				border-right: none;
+				border-top-color: $color_red;
+			}
 		}
 	}
 	section {
@@ -94,6 +101,14 @@ body {
 			display: block;
 		}
 
+		&.publications {
+			margin-top: 4.65em;
+		}
+
+		&.related-content {
+			margin-top: 9.3em;
+		}
+
 		// These are probably redundant, could use .entry-content
 		p {
 			@include textsize;
@@ -101,7 +116,7 @@ body {
 			margin-bottom: 1.5em;
 		}
 
-		h1, h2, h3, h4 {
+		h1, h2, h3 {
 			color: $color_red;
 		}
 

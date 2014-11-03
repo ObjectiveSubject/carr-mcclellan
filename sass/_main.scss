@@ -61,6 +61,14 @@
 		}
 	}
 
+	ul { margin: 0 0 1em 0; }
+
+	li {
+		line-height: 1.2em;
+		margin-bottom: 0.5em;
+		font-size: 14px;
+	}
+
 	.social-share {
 		a { color: #FFF; }
 	}
@@ -233,15 +241,6 @@
 	&.child6 {
 		border-color: $color_blue4;
 		h3 a { color: $color_blue4; }
-	}
-
-	
-	ul { margin: 0 0 1em 0; }
-
-	li {
-		line-height: 1.2em;
-		margin-bottom: 0.5em;
-		font-size: 14px;
 	}
 	
 	.last-item {

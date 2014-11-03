@@ -92,7 +92,7 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class('span9 push-left'); ?>>
 
 					<div class="entry-content">
-						<?php echo $biography; ?>
+						<?php echo apply_filters( 'the_content', $biography ); ?>
 					</div><!-- .entry-content -->
 
 				</article><!-- #post-## -->
@@ -119,6 +119,219 @@
 					<a class="button">View <?php echo $custom["first_name"][0] . '\'s' ?> Blog Posts <span class="icon-arrow-right"></span></a>
 
 				</aside>
+
+				<section class="bottom-matter">
+
+					<div class="menu span3 push-left">
+						<h3 class="experience-affiliations menu-item border-block top-right active">Experience &amp; Affiliations</h3>
+						<h3 class="publications menu-item border-block top-right">Publications</h3>
+						<h3 class="related-content menu-item border-block top-right">Related Content</h3>
+					</div>
+
+					<div class="sections span6 push-left">
+
+						<section class="experience-affiliations bottom-section border-block top-right-bottom active">
+								<?php if($special_exp) : ?>
+									<h4>Representative Matters</h4>
+									<?php echo $special_exp;?>
+								<?php endif;?>
+
+								<?php if($prof_affilations) : ?>
+									<h4>Professional Organizations</h4>
+									<?php echo $prof_affilations;?>
+								<?php endif;?>
+
+								<?php if($courts_forums) : ?>
+									<h4>Courts and Forums</h4>
+									<?php echo $courts_forums;?>
+								<?php endif; ?>
+
+								<?php if($civic_affiliations) : ?>
+									<h4>Civic and Charitable</h4>
+									<?php echo $civic_affiliations;?>
+								<?php endif; ?>
+
+								<?php if($recent_speaking) : ?>
+									<h4>Recent Speaking Engagements</h4>
+									<?php echo $recent_speaking;?>
+								<?php endif;?>
+
+									<?php if($honors_awards) : ?>
+									<h4>Honors and Awards</h4>
+									<?php echo $honors_awards;?>
+								<?php endif;?>
+
+								<?php if($custom_title && $custom_body) : ?>
+									<h4><?php echo $custom_title;?></h4>
+									<?php echo $custom_body;?>
+								<?php endif;?>
+						</section>
+
+
+						<section class="publications bottom-section border-block top-right-bottom">
+							<?php
+							$loop = new WP_Query(array(
+								'post_type' => 'publications',
+								'orderby' => 'date',
+								'order' => 'DESC',
+								'posts_per_page' => 100
+							));
+							if( $loop->have_posts() ) :
+							?>
+							<h4>Publications</h4>
+							<article>
+								<?php
+								$related_count = 0;
+								$i = 0;
+								while ( $loop->have_posts() ) : $loop->the_post();
+									$custom = get_post_custom($post->ID);
+									$pub_summary = $custom["pub_summary"][0];
+									$type = wp_get_post_terms($post->ID, 'publications');
+									if ( $type ) {
+										$type = $type[0]->name;
+									}
+									$date = get_the_date('m/d/y');
+
+									$pub_summary = strip_tags($pub_summary);
+									if(strlen($pub_summary) > 350){
+										$pub_summary = preg_replace('/\s+?(\S+)?$/', '', substr($pub_summary, 0, 350));
+										$pub_summary .= '…';
+									}
+									$pub_attorneys = get_post_meta($post->ID, 'pub_attorneys', 'single');
+
+
+									if(is_array($pub_attorneys) && in_array($this_post, $pub_attorneys)) :
+										?>
+
+										<?php echo $date;?><br />
+										<a href="<?php the_permalink(); ?>"><?php the_title();?></a><br /><br />
+
+
+										<?php
+										$i++;
+									endif;
+								endwhile;
+								if($i == 0) :
+									$related_count++;
+									?>
+									<script type="text/javascript">
+										$(function(){
+											$('.li-publications').remove();
+										});
+									</script>
+								<?php
+								endif;
+								?>
+							</article>
+							<?php endif; ?>
+						</section>
+
+						<section class="related-content bottom-section border-block top-right-bottom">
+							<h4>News</h4>
+							<article>
+								<?php
+								$loop = new WP_Query(array(
+									'post_type' => 'news',
+									'meta_key' => 'date',
+									'orderby' => 'meta_value',
+									'order' => 'DESC',
+									'posts_per_page' => 100
+								));
+								$i = 0;
+								while ( $loop->have_posts() ) : $loop->the_post();
+									$custom = get_post_custom($post->ID);
+									$date = $custom["date"][0];
+									$fix_date = explode('/', $date);
+									$fix_date = $fix_date[1] . '/' . $fix_date[2] . '/' . $fix_date[0];
+									$source = $custom["source"][0];
+									$source_url = $custom["source_url"][0];
+									$news_attorneys = get_post_meta($post->ID, 'news_attorneys', 'single');
+
+									$news_type_select = $custom["news_type_select"][0];
+									$link_target = ($news_type_select == 'external' || $news_type_select == 'pdf') ? 'target="_blank"' : '';
+
+									$attachments = attachments_get_attachments();
+									if ( $attachments ) {
+										$pdf = $attachments[0]['location'];
+									} else { $pdf = ''; }
+
+									if($pdf){
+										$source_url = $pdf;
+									}
+
+									if(is_array($news_attorneys) && in_array($this_post, $news_attorneys)) :
+										?>
+
+
+										<?php echo $fix_date;?> | Source: <?php echo $source;?><br />
+										<a href="<?php echo $source_url;?>" <?php echo $link_target;?>><?php the_title();?></a>
+
+
+										<?php if($news_type_select == 'external') : ?>
+										<img src="<?php bloginfo('template_url');?>/images/external-icon.png" width="10" height="10" alt="External Icon">
+									<?php elseif($news_type_select == 'pdf' || $pdf) :?>
+										<img src="<?php bloginfo('template_url');?>/images/tiny-pdf.png" width="10" height="10" alt="External Icon">
+									<?php endif; ?>
+										<br /><br />
+
+
+										<?php
+										$i++;
+									endif;
+								endwhile;
+								if($i == 0) :
+									$related_count++;
+									?>
+									<script type="text/javascript">
+										$(function(){
+											$('.li-news').remove();
+										});
+									</script>
+								<?php
+								endif;
+								?>
+							</article>
+
+							<h4>Blog Posts</h4>
+							<article>
+								<?php
+								$loop = new WP_Query(array(
+									'post_type' => 'post',
+									'orderby' => 'date',
+									'order' => 'DESC',
+									'posts_per_page' => 100
+								));
+								$i = 0;
+								while ( $loop->have_posts() ) :
+									$loop->the_post();
+									$post_attorneys = get_post_meta($post->ID, 'post_attorneys', 'single');
+
+
+									if(is_array($post_attorneys) && in_array($this_post, $post_attorneys)) :
+										?>
+
+										<?php the_date('m/d/y');?><br />
+										<a href="<?php the_permalink();?>"><?php the_title();?></a><br /><br />
+
+										<?php
+										$i++;
+									endif;
+								endwhile;
+								if($i == 0) :
+									$related_count++;
+									?>
+									<script type="text/javascript">
+										$(function(){
+											$('.li-blogs').remove();
+										});
+									</script>
+								<?php
+								endif;
+								?>
+							</article>
+
+						</section>
+					</div>
 					
 		</main><!-- #main -->
 
@@ -126,4 +339,4 @@
 
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();

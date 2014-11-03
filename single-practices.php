@@ -176,22 +176,22 @@ if ( $chair_id_2 ) {
 <section class="bottom-matter">
 
 	<div class="menu span3 push-left">
-		<h3 class="rep-matters menu-item active">Representative Matters</h3>
-		<h3 class="publications menu-item">Publications</h3>
-		<h3 class="news menu-item">News</h3>
-		<h3 class="blog-posts menu-item">Blog Posts</h3>
+		<h3 class="rep-matters menu-item border-block top-right active">Representative Matters</h3>
+		<h3 class="publications menu-item border-block top-right">Publications</h3>
+		<h3 class="news menu-item border-block top-right">News</h3>
+		<h3 class="blog-posts menu-item border-block top-right">Blog Posts</h3>
 	</div>
 	<?php $ii = 0; ?>
 
 	<div class="sections span6 push-left">
 		<?php $ii ++; ?>
 
-		<section class="rep-matters bottom-section active">
+		<section class="rep-matters bottom-section border-block top-right-bottom  active">
 			<?php echo $rep_matters; ?>
 		</section>
 
 
-		<section class="publications bottom-section ">
+		<section class="publications bottom-section border-block top-right-bottom ">
 
 			<?php
 			$loop = new WP_Query( array(
@@ -232,7 +232,7 @@ if ( $chair_id_2 ) {
 
 		</section>
 
-		<section class="news bottom-section">
+		<section class="news bottom-section border-block top-right-bottom ">
 
 
 			<?php
@@ -300,7 +300,7 @@ if ( $chair_id_2 ) {
 
 		</section>
 
-		<section class="blog-posts bottom-section">
+		<section class="blog-posts bottom-section border-block top-right-bottom ">
 			<?php
 			$loop = new WP_Query( array(
 				'post_type'      => 'post',
@@ -336,5 +336,7 @@ if ( $chair_id_2 ) {
 		</section>
 	</div>
 </section>
+
+</main>
 
 <?php get_footer();
