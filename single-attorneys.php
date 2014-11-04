@@ -154,8 +154,8 @@ $v_card .= '&url=' . get_permalink();
 				<?php echo $prof_affilations; ?>
 			<?php endif; ?>
 
-			<?php if ( $courts_forums ) : ?>
-				<h4>Courts and Forums</h4>
+			<?php if ( $courts_forums ) : // @todo: could change everything under the hood to use attorneys instead of courts ?>
+				<h4>Attorneys and Forums</h4>
 				<?php echo $courts_forums; ?>
 			<?php endif; ?>
 

@@ -291,7 +291,7 @@
           <ul class="metabox-tabs" id="metabox-tabs">
             <li class="active tab0"><a class="active" href="javascript:void(null);">Representative Matters</a></li>
             <li class="tab1"><a href="javascript:void(null);">Prof Orgs</a></li>
-            <li class="tab2"><a href="javascript:void(null);">Courts &amp; Forums</a></li>
+            <li class="tab2"><a href="javascript:void(null);">Attorneys &amp; Forums</a></li>
             <li class="tab3"><a href="javascript:void(null);">Civic &amp; Charitable</a></li>
             <li class="tab4"><a href="javascript:void(null);">Speaking Engagements</a></li>
             <li class="tab5"><a href="javascript:void(null);">Honors &amp; Awards</a></li>
