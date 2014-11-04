@@ -67,7 +67,7 @@ if ( $chair_id_2 ) {
 
 		<?php if ( $chair_id && get_post( $chair_id ) ) : ?>
 			<h3 class="block-label"><?php echo $attorney_title; ?></h3>
-			<div class="block-person">
+			<div class="block-person border-block top-right">
 				<?php
 				// Get Attorney by Id
 				$practice_chair = get_post_meta( $chair_id );
@@ -82,7 +82,7 @@ if ( $chair_id_2 ) {
 				$chair_url = $get_chair->guid;
 				?>
 				<div class="holder">
-					<a href="<?php echo get_permalink( $chair_id ); ?>"><?php echo $chair_name; ?></a>
+					<h3 class="block-label"><a href="<?php echo get_permalink( $chair_id ); ?>"><?php echo $chair_name; ?></a></h3>
 
 					<p>
 						P: <?php echo $chair_phone; ?>
@@ -113,7 +113,7 @@ if ( $chair_id_2 ) {
 				$chair_url = $get_chair->guid;
 				?>
 				<div class="holder">
-					<a href="<?php echo get_permalink( $chair_id_2 ); ?>"><?php echo $chair_name; ?></a>
+					<h3 class="block-label"><a href="<?php echo get_permalink( $chair_id_2 ); ?>"><?php echo $chair_name; ?></a></h3>
 					<dl>
 						<dt>P:</dt>
 						<dd><?php echo $chair_phone; ?></dd>
@@ -127,8 +127,9 @@ if ( $chair_id_2 ) {
 			</div>
 		<?php endif; ?>
 
-		<h3 class="block-label">Practicing Attorneys</h3>
-		<ul class="list list-2">
+		<div class="border-block top">
+			<h3 class="block-label top">Practicing Attorneys</h3>
+			<ul class="list list-2">
 			<?php
 			// Get current page title, and remove special characters
 			$current_practice = get_the_title();
@@ -169,6 +170,7 @@ if ( $chair_id_2 ) {
 			endwhile;
 			?>
 		</ul>
+		</div>
 
 	</div>
 </aside>

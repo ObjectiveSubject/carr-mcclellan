@@ -263,6 +263,16 @@
 	margin: 0;
 }
 
+.block-person {
+	.block-label {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		a {
+			color: $color_text;
+		}
+	}
+}
+
 
 /* Post Navigation
 ------------------------------------- */

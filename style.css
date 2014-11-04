@@ -1198,6 +1198,12 @@ body {
   padding: 0 0 1em;
   margin: 0; }
 
+.block-person .block-label {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  .block-person .block-label a {
+    color: #595959; }
+
 /* Post Navigation
 ------------------------------------- */
 .post-navigation, .paging-navigation {
