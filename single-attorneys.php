@@ -33,22 +33,6 @@ $areas_practice         = get_post_meta( $post->ID, 'areas_practice', 'single' )
 $areas_related_practice = get_post_meta( $post->ID, 'areas_related_practice', 'single' );
 $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 
-
-
-$v_card = get_bloginfo( 'template_url' ) . '/inc/v_card.php?';
-$v_card .= 'f_name=' . $custom["first_name"][0];
-$v_card .= '&l_name=' . $custom["last_name"][0];
-$v_card .= '&m_name=' . $custom["middle_initial"][0];
-$v_card .= '&company=Carr McClellan P.C.';
-$v_card .= '&title=' . $custom["title"][0];
-$v_card .= '&address=216 Park Road';
-$v_card .= '&city=Burlingame';
-$v_card .= '&state=CA';
-$v_card .= '&postal=94010';
-$v_card .= ( $custom["phone"][0] ) ? '&phone=' . $custom["phone"][0] : '&phone=(650) 342-9600 ';
-$v_card .= ( $custom["fax"][0] ) ? '&fax=' . $custom["fax"][0] : '&fax=(650) 342-7685';
-$v_card .= '&email=' . $custom["email"][0];
-$v_card .= '&url=' . get_permalink();
 ?>
 
 	<div id="primary" class="content-area terminal-page">
