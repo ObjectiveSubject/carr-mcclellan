@@ -43,7 +43,7 @@ function carr_generate_vcard( $id ) {
 
 	$vc->data['email1'] = get_post_meta( $id, 'email', true );
 
-	$vc->data['url'] = get_permalink( $id );
+	$vc->data['url'] = 'http://www.carr-mcclellan.com';
 
 	$vc->data['filename'] = $vc->data['first_name'] . '-' . $vc->data['last_name'];
 
