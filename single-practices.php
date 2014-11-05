@@ -54,11 +54,13 @@ if ( $chair_id_2 ) {
 <section class="span6 push-left">
 
 	<article class="block-2 practice-content">
+		<div class="entry-content">
 		<?php echo ( $tagline ) ? '<h2>' . $tagline . '</h2>' : ''; ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; ?>
 		<?php endif; ?>
+		</div>
 	</article>
 </section>
 

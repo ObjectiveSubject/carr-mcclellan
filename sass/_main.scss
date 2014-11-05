@@ -61,6 +61,14 @@
 		}
 	}
 
+	h3 {
+		font: normal normal bold 14px/14px $font_heading;
+		text-transform: uppercase;
+		color: $color_text;
+		padding: 0 0 1em;
+		margin: 0;
+	}
+
 	ul { margin: 0 0 1em 0; }
 
 	li {

@@ -79,6 +79,7 @@ body {
 .bottom-matter {
 	@include layout-clearfix;
 	clear: both;
+	margin-top: 2em;
 	.menu {
 		h3 {
 			color: $color_gray3;

@@ -804,7 +804,8 @@ body {
   display: none; }
 
 .bottom-matter {
-  clear: both; }
+  clear: both;
+  margin-top: 2em; }
   .bottom-matter:before, .bottom-matter:after {
     content: "";
     display: table; }
@@ -1017,6 +1018,12 @@ body {
       top: 50%;
       right: 15px;
       margin-top: -6px; }
+  .aside h3 {
+    font: normal normal bold 14px/14px "BrandonGrotesque", helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #595959;
+    padding: 0 0 1em;
+    margin: 0; }
   .aside ul {
     margin: 0 0 1em 0; }
   .aside li {
