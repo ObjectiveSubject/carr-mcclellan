@@ -16,9 +16,18 @@ get_header();
 		</header>
 
 		<main id="main" class="site-main span12 aligncenter" role="main">
+			<aside class="aside aside-left span2 push-left">
+				<div class="border-block top">
+					<h3 class="block-label">Categories</h3>
 
-			<section id="content span9 aligncenter">
+					<ul>
+						XX<?php // wp_list_categories( '&title_li=' ); ?>
+					</ul>
 
+				</div>
+			</aside>
+
+			<section class="span9 push-right">
 				<div class="publications">
 
 					<?php
@@ -28,46 +37,29 @@ get_header();
 						'order'          => 'DESC',
 						'posts_per_page' => 100
 					) );
-					$i    = 1;
-					while ( $loop->have_posts() ) : $loop->the_post();
-						$custom = get_post_custom( $post->ID );
 
-						$month = strlen( get_the_date( 'F' ) );
+					// $count = '';
+					$color_class = 'odd';
 
-						$date          = ( $month > 3 ? get_the_date( 'M. j, Y' ) : get_the_date( 'M j, Y' ) );
-						$pub_practices = get_post_meta( $post->ID, 'pub_practices', true );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-						if ( is_array( $pub_practices ) ) {
-							$pub_practices = implode( ',', $pub_practices );
-						}
-
-						$pub_attorneys = get_post_meta( $post->ID, 'pub_attorneys', true );
-						if ( is_array( $pub_attorneys ) ) {
-							$pub_attorneys = implode( ',', $pub_attorneys );
-						}
-
-						$pub_summary = strip_tags( get_the_content() );
-						if ( strlen( $pub_summary ) > 345 ) {
-							$pub_summary = preg_replace( '/\s+?(\S+)?$/', '', substr( $pub_summary, 0, 345 ) );
-							$pub_summary .= '&hellip;';
-						}
-						?>
-						<article class="item" id="<?php echo $i; ?>">
-							<input type="hidden" class="id" value="<?php echo $post->ID; ?>" />
-							<input type="hidden" class="attorneys" value="<?php echo $pub_practices; ?>" />
-							<input type="hidden" class="practices" value="<?php echo $pub_attorneys; ?>" />
-							<span><?php echo $date; ?></span>
-
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-							<p><?php echo $pub_summary; ?></p>
+						<article class="border-block top-right-bottom square blog-post <?php echo $color_class; ?>">
+							<h4 class="timestamp"><?php the_time('M. d, Y'); ?></h4>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						</article>
+
 						<?php
-						$i ++;
-					endwhile;
-					?>
+							if ( 'even' == $color_class ) {
+								$color_class = 'odd';
+							} else {
+								$color_class = 'even';
+							}
+						?>
+					<?php endwhile; ?>
+
 				</div>
 			</section>
-		</main>
+		</main><!-- #main -->
+
 	</div>
 <?php get_footer(); ?>
