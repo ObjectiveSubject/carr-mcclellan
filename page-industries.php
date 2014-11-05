@@ -23,7 +23,9 @@ $industries = new WP_Query( array(
 		<section id="content">
 			<?php while ( $industries->have_posts() ) : $industries->the_post(); ?>
 
-				<?php get_template_part( 'content', '' ); ?>
+				<article class="border-block square industry <?php echo esc_attr( $post->post_name ); ?>">
+					<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+				</article>
 
 			<?php endwhile; // end of the loop. ?>
 		</section>
