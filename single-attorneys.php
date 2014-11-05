@@ -31,6 +31,8 @@ $this_post = $post->ID;
 
 $areas_practice         = get_post_meta( $post->ID, 'areas_practice', 'single' );
 $areas_related_practice = get_post_meta( $post->ID, 'areas_related_practice', 'single' );
+$industries         = get_post_meta( $post->ID, 'industry', 'single' );
+
 
 
 $v_card = get_bloginfo( 'template_url' ) . '/inc/v_card.php?';
@@ -85,7 +87,7 @@ $v_card .= '&url=' . get_permalink();
 					</li>
 				</ul>
 				<h3 class="block-label vcard">
-					<a href="<?php echo $v_card; ?>" class="link-gray3"><span class="small icon-download"></span>&nbsp;&nbsp;Download vCard</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ) . 'v-card/' . $post->post_name; ?>" class="link-gray3"><span class="small icon-download"></span>&nbsp;&nbsp;Download vCard</a>
 				</h3>
 
 				<h3 class="block-label print">
@@ -95,7 +97,7 @@ $v_card .= '&url=' . get_permalink();
 		</aside>
 
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'span9 push-left' ); ?>>
+		<article id="post-<?php the_ID(); ?>" class="span6 push-left">
 
 			<div class="entry-content">
 				<?php echo apply_filters( 'the_content', $biography ); ?>
@@ -108,6 +110,7 @@ $v_card .= '&url=' . get_permalink();
 
 		<aside class="aside aside-right">
 
+			<?php if ( $areas_practice ) : ?>
 			<div class="border-block top practice-areas">
 				<h3 class="block-label">Practice Areas</h3>
 				<ul>
@@ -118,6 +121,20 @@ $v_card .= '&url=' . get_permalink();
 					<?php endforeach; ?>
 				</ul>
 			</div>
+			<?php endif; ?>
+
+			<?php if ( $industries ) : ?>
+			<div class="border-block top industry">
+				<h3 class="block-label">Industries</h3>
+				<ul>
+					<?php foreach ( $industries as $industry ) : ?>
+						<li>
+							<a href="<?php echo get_the_permalink( $industry ); ?>"><?php echo get_the_title( $industry ); ?></a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+			<?php endif; ?>
 
 			<div class="border-block top academic-creds">
 				<h3 class="block-label">Academic Credentials</h3>

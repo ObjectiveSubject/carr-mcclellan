@@ -150,6 +150,8 @@ include( 'inc/reg_news.php' );
 // Posts Tagging of Attorneys
 include( 'inc/posts_meta.php' );
 
+include( 'inc/v_card.php' );
+
 
 // Init all Meta Boxes
 function admin_init() {
