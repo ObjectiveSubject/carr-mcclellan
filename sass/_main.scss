@@ -160,7 +160,7 @@
 		}
 	}
 
-	&.practice {
+	&.practice, &.industry {
 		width: 50%;
 		height: 16em;
 		min-height: 16em;
@@ -168,26 +168,39 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		display: table-cell;
-		vertical-align: middle;
+		display: table;
 		h3 {
 			text-align: center;
 			margin-bottom: 0;
-			// height: 100%;
+			display: table-cell;
+			vertical-align: middle;
 			a {
 				color: white;
 			}
 		}
+	}
+	&.practice {
 		&.business-litigation { background-color: $color_blue4; }
-		&.construction-law { background-color: $color_blue3; }
-		&.corporate-business { background-color: $color_blue2; }
+		&.construction { background-color: $color_blue3; }
+		&.business-corporate { background-color: $color_blue2; }
 		&.creditors-rights-bankruptcy { background-color: $color_blue1; }
-		&.employment-2 { background-color: $color_purple1; }
+		&.employment { background-color: $color_purple1; }
 		&.exempt-organizations { background-color: $color_purple2; }
 		&.intellectual-property { background-color: $color_blue4; }
 		&.real-estate { background-color: $color_blue3; }
-		&.taxation-2 { background-color: $color_blue2; }
-		&.trust-estate-fiduciary { background-color: $color_blue1; }
+		&.tax { background-color: $color_blue2; }
+		&.trust-estates-litigation { background-color: $color_blue1; }
+	}
+	&.industry {
+		&.financial-services {
+			background-color: $color_blue4;
+		}
+		&.food-beverage {
+			background-color: $color_blue3;
+		}
+		&.technology {
+			background-color: $color_blue2;
+		}
 	}
 }
 
@@ -285,7 +298,7 @@
 }
 
 
-.practices {
+.practices, .industries {
 	@include layout_clearfix;
 	position: relative;
 	display: table;
