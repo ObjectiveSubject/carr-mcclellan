@@ -1025,6 +1025,8 @@ body {
     font-size: 14px; }
   .aside .social-share a {
     color: #FFF; }
+  .aside .categories li {
+    margin-bottom: 1.25em; }
 
 .aside-left {
   width: 100%;
@@ -1091,14 +1093,33 @@ body {
     width: 30%;
     margin-left: 3%;
     padding: 1em 0 0;
+    margin-bottom: 2em;
     min-height: 15em;
+    color: #285F8A;
     border-color: #285F8A; }
     .site-main .square.blog-post h3 {
       margin-bottom: 0.1em;
       font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
-      font-size: 1em; }
+      font-size: 1.2em;
+      line-height: 1.4em;
+      font-weight: normal;
+      padding-right: 1em; }
       .site-main .square.blog-post h3 a {
-        color: #8D8D8D; }
+        color: #285F8A; }
+    .site-main .square.blog-post .timestamp {
+      font-weight: normal; }
+    .site-main .square.blog-post.even {
+      color: #703F50;
+      border-color: #703F50; }
+      .site-main .square.blog-post.even h3 a {
+        color: #703F50; }
+    .site-main .square.blog-post:hover {
+      -webkit-transition: all 250ms ease;
+              transition: all 250ms ease;
+      border-color: #EC513C;
+      color: #EC513C; }
+      .site-main .square.blog-post:hover h3 a {
+        color: #EC513C; }
   .site-main .square.practice, .site-main .square.industry {
     width: 50%;
     height: 16em;

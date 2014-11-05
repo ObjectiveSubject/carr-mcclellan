@@ -44,8 +44,8 @@ get_header(); ?>
 			<div class="border-block top">
 				<h3 class="block-label">Categories</h3>
 
-				<ul>
-					<?php wp_list_categories( '&title_li=' ); ?>
+				<ul class="categories">
+					<?php wp_list_categories( '&title_li=&depth=1' ); ?>
 				</ul>
 
 			</div>
@@ -53,12 +53,20 @@ get_header(); ?>
 
 		<section class="span9 push-right">
 			<?php if ( have_posts() ) : ?>
-
+				<?php $color_class = 'odd'; ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<article class="border-block top-right-bottom square blog-post">
-						<h4 class="timestamp"><?php the_time('F j, Y'); ?></h4>
+					<article class="border-block top-right-bottom square blog-post <?php echo $color_class; ?>">
+						<h4 class="timestamp"><?php the_time('M. d, Y'); ?></h4>
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</article>
+
+					<?php
+					if ( 'even' == $color_class ) {
+						$color_class = 'odd';
+					} else {
+						$color_class = 'even';
+					}
+					?>
 
 				<?php endwhile; ?>
 
