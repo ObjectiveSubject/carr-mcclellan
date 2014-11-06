@@ -14,7 +14,8 @@
           'capability_type' => 'post',
           'hierarchical' => false,
           'rewrite' => true,
-          'supports' => array('title', 'editor')
+          'supports' => array('title', 'editor'),
+	      'taxonomies' => array( 'category' )
         );
       register_post_type( 'newsletters' , $args );
   }
