@@ -318,3 +318,47 @@ function cmc_get_newsevents() {
 	</div>
 <?php
 }
+
+/**
+ * Given a page slug and post type, return id
+ *
+ * @param $page_slug
+ * @param $post_type
+ *
+ * @return null
+ */
+function carr_get_post_id_by_slug( $page_slug, $post_type ) {
+	$attorney = get_posts( array(
+		'name' => $page_slug,
+		'post_type' => $post_type,
+		'post_status' => 'publish'
+	));
+
+	if ( $attorney ) {
+		return $attorney[0]->ID;
+	} else {
+		return null;
+	}
+}
+
+/**
+ * Custom query variables for the vcard
+ *
+ * @param $vars
+ *
+ * @return array
+ */
+function carr_add_query_vars( $vars ) {
+	$vars[] = 'vcard';
+
+	return $vars;
+}
+add_filter( 'query_vars', 'carr_add_query_vars' );
+
+/**
+ * Custom paths for the vcard
+ */
+function carr_add_endpoint() {
+	add_rewrite_rule( '^v-card/([^/\.]+)/?$', 'index.php?vcard=$matches[1]', 'top' );
+}
+add_action( 'init', 'carr_add_endpoint' );
