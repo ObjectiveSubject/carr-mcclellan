@@ -138,9 +138,6 @@ include( 'inc/reg_industries.php' );
 // Publications
 include( 'inc/reg_publications.php' );
 
-// Newsletters
-include( 'inc/reg_newsletters.php' );
-
 // Events
 include( 'inc/reg_events.php' );
 
@@ -168,9 +165,6 @@ function admin_init() {
 
 	// Publications
 	add_meta_box( "publications_meta_options", "Publication Information", "publications_meta_options", "publications" );
-
-	// Newsletters
-	add_meta_box( "newsletters_meta_options", "Newsletter Information", "newsletters_meta_options", "newsletters" );
 
 	// Events
 	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "events" );

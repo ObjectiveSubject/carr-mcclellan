@@ -46,23 +46,6 @@
 				<?php cmc_get_practices(); ?>
 			</section>
 
-			<hr>
-			<article class="item">
-				<h2 class="block-1"><a href="<?php echo get_page_link('36'); ?>">Newsletter</a></h2>
-			</article>
-
-			<article class="item article-events">
-				<h2 class="block-1"><a href="<?php echo get_page_link('39'); ?>">Events</a></h2>
-			</article>
-
-			<article class="item">
-				<h2 class="block-1"><a href="<?php echo get_permalink('41'); ?>">In the News</a></h2>
-			</article>
-
-			<article class="item">
-				<h2 class="block-1"><a href="<?php echo get_permalink('34'); ?>">Blog</a></h2>
-			</article>
-
 		</main>
 	</div>
 
