@@ -17,7 +17,13 @@
 
 				<main id="main" class="site-main span12 aligncenter" role="main">
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+
+					</article><!-- #post-## -->
 
 				</main><!-- #main -->
 

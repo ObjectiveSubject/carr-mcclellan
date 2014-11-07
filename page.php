@@ -25,7 +25,13 @@ get_header(); ?>
 			<section id="content">
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+
+					</article><!-- #post-## -->
 
 				<?php endwhile; // end of the loop. ?>
 			</section>

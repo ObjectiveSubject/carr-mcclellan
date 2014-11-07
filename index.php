@@ -40,7 +40,9 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<article>
+				<p>No posts found</p>
+			</article>
 
 		<?php endif; ?>
 

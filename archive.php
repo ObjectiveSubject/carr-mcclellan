@@ -73,9 +73,9 @@ get_header(); ?>
 				<?php cmc_paging_nav(); ?>
 
 			<?php else : ?>
-
-				<?php get_template_part( 'content', 'none' ); ?>
-
+				<article>
+					<p>No posts found</p>
+				</article>
 			<?php endif; ?>
 		</section>
 	</main><!-- #main -->
