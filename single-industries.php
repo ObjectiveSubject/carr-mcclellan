@@ -1,6 +1,8 @@
 <?php
 
-	get_header();
+get_header();
+
+$areas_practice = get_post_meta( $post->ID, 'areas_practice', 'single' );
 
 ?>
 
@@ -18,6 +20,7 @@
 		<div class="border-block top">
 			<h3 class="block-label">Industries</h3>
 
+			<ul>
 			<?php
 			$industries = new WP_Query(array(
 				'post_type' => 'industries',
@@ -26,29 +29,40 @@
 				'posts_per_page' => 100
 			));
 
-			while ( $industries->have_posts() ) : $industries->the_post();
-				?>
-				<ul>
-					<li class="<?php echo $post->post_name; ?>"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></li>
-				</ul>
+			while ( $industries->have_posts() ) : $industries->the_post(); ?>
+
+				<li class="<?php echo $post->post_name; ?>"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></li>
 
 			<?php endwhile; ?>
+			</ul>
 		</div>
 	</aside>
 
 	<section class="span6 push-left">
-
-		<article class="block-2 practice-content">
+		<div class="entry-content">
+		<article class="block-2 industry-content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
 			<?php endwhile; ?>
 			<?php endif; ?>
 		</article>
+		</div>
 	</section>
 
 	<aside class="aside aside-right">
-		<div class="border-block top">
-		</div>
+		<?php if ( $areas_practice ) : ?>
+			<div class="border-block top practice-areas">
+				<h3 class="block-label">Practice Areas</h3>
+				<ul>
+					<?php foreach ( $areas_practice as $practice ) : ?>
+						<li>
+							<a href="<?php echo get_the_permalink( $practice ); ?>"><?php echo get_the_title( $practice ); ?></a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
+
 	</aside>
 
 </main>
