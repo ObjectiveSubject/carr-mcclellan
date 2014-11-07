@@ -156,7 +156,7 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 			<?php endif; ?>
 
 			<?php if ( $courts_forums ) : // @todo: could change everything under the hood to use attorneys instead of courts ?>
-				<h4>Attorneys and Forums</h4>
+				<h4>Addmissions and Forums</h4>
 				<?php echo $courts_forums; ?>
 			<?php endif; ?>
 
