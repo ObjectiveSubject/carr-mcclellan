@@ -16,7 +16,7 @@ get_header(); ?>
 <div id="primary" class="content-area page-default">
 	<header class="page-header">
 		<div class="span12 aligncenter">
-			<h1 class="page-title">Blog</h1>
+			<h1 class="page-title">News & Events</h1>
 		</div>
 	</header>
 
