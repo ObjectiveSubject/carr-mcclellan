@@ -12,6 +12,7 @@ $rep_matters         = $custom["rep_matters"][0];
 $this_post           = $post->ID;
 $areas_focus         = get_post_meta( $post->ID, 'areas_focus', true );
 $practices_attorneys = get_post_meta( $post->ID, 'practices_attorneys', true );
+$industries         = get_post_meta( $post->ID, 'industry', 'single' );
 
 if ( $chair_id_2 ) {
 	$attorney_title = $attorney_title . 's';
@@ -131,7 +132,7 @@ if ( $chair_id_2 ) {
 
 		<div class="border-block top">
 			<h3 class="block-label top">Practicing Attorneys</h3>
-			<ul class="list list-2">
+			<ul>
 			<?php
 			// Get current page title, and remove special characters
 			$current_practice = get_the_title();
@@ -164,7 +165,7 @@ if ( $chair_id_2 ) {
 					?>
 
 					<li>
-						<a href="<?php the_permalink() ?>"><?php echo $name; ?></a><br />
+						<a href="<?php the_permalink() ?>"><?php echo $name; ?></a>
 					</li>
 
 				<?php
@@ -173,6 +174,19 @@ if ( $chair_id_2 ) {
 			?>
 		</ul>
 		</div>
+
+		<?php if ( $industries ) : ?>
+			<div class="border-block top industry">
+				<h3 class="block-label">Industries</h3>
+				<ul>
+					<?php foreach ( $industries as $industry ) : ?>
+						<li>
+							<a href="<?php echo get_the_permalink( $industry ); ?>"><?php echo get_the_title( $industry ); ?></a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
 
 	</div>
 </aside>
