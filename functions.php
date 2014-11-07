@@ -347,6 +347,9 @@ function carr_get_post_id_by_slug( $page_slug, $post_type ) {
  */
 function carr_add_query_vars( $vars ) {
 	$vars[] = 'vcard';
+	$vars[] = 'news_events';
+	$vars[] = 'attorney';
+	$vars[] = 'practice';
 
 	return $vars;
 }
@@ -357,5 +360,28 @@ add_filter( 'query_vars', 'carr_add_query_vars' );
  */
 function carr_add_endpoint() {
 	add_rewrite_rule( '^v-card/([^/\.]+)/?$', 'index.php?vcard=$matches[1]', 'top' );
+	add_rewrite_rule( '^news-events/attorney/([^/\.]+)/?$', 'index.php?news_events=1&attorney=$matches[1]', 'top' );
+	add_rewrite_rule( '^news-events/practice/([^/\.]+)/?$', 'index.php?news_events=1&practice=$matches[1]', 'top' );
 }
 add_action( 'init', 'carr_add_endpoint' );
+
+/**
+ * Output the vcard request
+ */
+function carr_news_events_terminals() {
+	global $wp;
+	global $post;
+
+	if ( isset( $wp->query_vars['news_events'] ) ) {
+		if ( isset( $wp->query_vars['attorney'] ) ) {
+
+			include dirname( __FILE__ ) . '/posts-attorney.php';
+			exit;
+		}
+		if ( isset( $wp->query_vars['practice'] ) ) {
+
+			exit;
+		}
+	}
+}
+add_action( 'parse_request', 'carr_news_events_terminals', 1);
