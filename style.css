@@ -1129,40 +1129,103 @@ body {
         color: #EC513C; }
   .site-main .square.practice, .site-main .square.industry {
     width: 50%;
-    height: 16em;
-    min-height: 16em;
+    height: 163px;
+    min-height: 163px;
     background: #285F8A;
     position: relative;
     padding: 0;
     margin: 0;
-    display: table; }
+    display: table;
+    padding: 30px 0;
+    text-align: center; }
     .site-main .square.practice h3, .site-main .square.industry h3 {
       text-align: center;
       margin-bottom: 0;
       display: table-cell;
       vertical-align: middle; }
       .site-main .square.practice h3 a, .site-main .square.industry h3 a {
-        color: white; }
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: block; }
+  .site-main .square.practice h3 {
+    /* Image replacement code */
+    display: block;
+    min-width: 198px;
+    height: 163px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center; }
   .site-main .square.practice.business-litigation {
     background-color: #404060; }
+    .site-main .square.practice.business-litigation h3 {
+      background-image: url("images/practices_assets/practice_business.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.business-litigation h3 {
+          background-image: url("images/practices_assets/practice_business@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.construction {
     background-color: #4B4B72; }
+    .site-main .square.practice.construction h3 {
+      background-image: url("images/practices_assets/practice_construction.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.construction h3 {
+          background-image: url("images/practices_assets/practice_construction@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.business-corporate {
     background-color: #32507C; }
+    .site-main .square.practice.business-corporate h3 {
+      background-image: url("images/practices_assets/practice_corporate.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.business-corporate h3 {
+          background-image: url("images/practices_assets/practice_corporate@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.creditors-rights-bankruptcy {
     background-color: #285F8A; }
+    .site-main .square.practice.creditors-rights-bankruptcy h3 {
+      text-indent: 0; }
   .site-main .square.practice.employment {
     background-color: #703F50; }
+    .site-main .square.practice.employment h3 {
+      background-image: url("images/practices_assets/practice_employment.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.employment h3 {
+          background-image: url("images/practices_assets/practice_employment@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.exempt-organizations {
     background-color: #604752; }
+    .site-main .square.practice.exempt-organizations h3 {
+      text-indent: 0; }
   .site-main .square.practice.intellectual-property {
     background-color: #404060; }
+    .site-main .square.practice.intellectual-property h3 {
+      background-image: url("images/practices_assets/practice_intellectual_property.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.intellectual-property h3 {
+          background-image: url("images/practices_assets/practice_intellectual_property@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.real-estate {
     background-color: #4B4B72; }
+    .site-main .square.practice.real-estate h3 {
+      background-image: url("images/practices_assets/practice_real_estate.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.real-estate h3 {
+          background-image: url("images/practices_assets/practice_real_estate@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.tax {
     background-color: #32507C; }
-  .site-main .square.practice.trust-estates-litigation {
+    .site-main .square.practice.tax h3 {
+      background-image: url("images/practices_assets/practice_taxation.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.tax h3 {
+          background-image: url("images/practices_assets/practice_taxation@2x.png");
+          background-size: 198px 163px; } }
+  .site-main .square.practice.trusts-estates-litigation {
     background-color: #285F8A; }
+    .site-main .square.practice.trusts-estates-litigation h3 {
+      text-indent: 0; }
   .site-main .square.industry.financial-services {
     background-color: #404060; }
   .site-main .square.industry.food-beverage {

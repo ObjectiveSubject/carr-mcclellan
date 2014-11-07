@@ -195,13 +195,15 @@
 
 	&.practice, &.industry {
 		width: 50%;
-		height: 16em;
-		min-height: 16em;
+		height: 163px;
+		min-height: 163px;
 		background: $color_blue1;
 		position: relative;
 		padding: 0;
 		margin: 0;
 		display: table;
+		padding: 30px 0;
+		text-align: center;
 		h3 {
 			text-align: center;
 			margin-bottom: 0;
@@ -209,20 +211,88 @@
 			vertical-align: middle;
 			a {
 				color: white;
+				height: 100%;
+				width: 100%;
+				display: block;
 			}
 		}
 	}
 	&.practice {
-		&.business-litigation { background-color: $color_blue4; }
-		&.construction { background-color: $color_blue3; }
-		&.business-corporate { background-color: $color_blue2; }
-		&.creditors-rights-bankruptcy { background-color: $color_blue1; }
-		&.employment { background-color: $color_purple1; }
-		&.exempt-organizations { background-color: $color_purple2; }
-		&.intellectual-property { background-color: $color_blue4; }
-		&.real-estate { background-color: $color_blue3; }
-		&.tax { background-color: $color_blue2; }
-		&.trust-estates-litigation { background-color: $color_blue1; }
+		h3 {
+			/* Image replacement code */
+			display: block;
+			min-width: 198px;
+			height: 163px;
+			text-indent: -9999px;
+			white-space: nowrap;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&.business-litigation {
+			background-color: $color_blue4;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_business', png, 198px, 163px);
+			}
+		}
+		&.construction {
+			background-color: $color_blue3;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+			}
+		}
+		&.business-corporate {
+			background-color: $color_blue2;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_corporate', png, 198px, 163px);
+			}
+		}
+		&.creditors-rights-bankruptcy {
+			background-color: $color_blue1;
+			h3 {
+				text-indent: 0;
+				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+			}
+		}
+		&.employment {
+			background-color: $color_purple1;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_employment', png, 198px, 163px);
+			}
+		}
+		&.exempt-organizations {
+			background-color: $color_purple2;
+			h3 {
+				text-indent: 0;
+				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+			}
+		}
+		&.intellectual-property {
+			background-color: $color_blue4;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_intellectual_property', png, 198px, 163px);
+			}
+		}
+		&.real-estate {
+			background-color: $color_blue3;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_real_estate', png, 198px, 163px);
+			}
+		}
+		&.tax {
+			background-color: $color_blue2;
+			h3 {
+				@include background-image-retina('images/practices_assets/practice_taxation', png, 198px, 163px);
+			}
+		}
+		&.trusts-estates-litigation {
+			background-color: $color_blue1;
+			h3 {
+				text-indent: 0;
+				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+			}
+		}
 	}
 	&.industry {
 		&.financial-services {
