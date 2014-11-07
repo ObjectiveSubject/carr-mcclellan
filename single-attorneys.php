@@ -139,7 +139,6 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 
 			<h3 class="publications menu-item border-block top-right">Publications</h3>
 
-			<h3 class="related-content menu-item border-block top-right">Related Content</h3>
 		</div>
 
 		<div class="sections span6 push-left">
@@ -240,106 +239,6 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 			<?php endif; ?>
 		</section>
 
-		<section class="related-content bottom-section border-block top-right-bottom">
-			<h4>News</h4>
-			<article>
-				<?php
-				$loop = new WP_Query( array(
-					'post_type'      => 'news',
-					'meta_key'       => 'date',
-					'orderby'        => 'meta_value',
-					'order'          => 'DESC',
-					'posts_per_page' => 100
-				) );
-				$i    = 0;
-				while ( $loop->have_posts() ) : $loop->the_post();
-					$custom         = get_post_custom( $post->ID );
-					$date           = $custom["date"][0];
-					$fix_date       = explode( '/', $date );
-					$fix_date       = $fix_date[1] . '/' . $fix_date[2] . '/' . $fix_date[0];
-					$source         = $custom["source"][0];
-					$source_url     = $custom["source_url"][0];
-					$news_attorneys = get_post_meta( $post->ID, 'news_attorneys', 'single' );
-
-					$news_type_select = $custom["news_type_select"][0];
-					$link_target      = ( $news_type_select == 'external' || $news_type_select == 'pdf' ) ? 'target="_blank"' : '';
-
-					$attachments = attachments_get_attachments();
-					if ( $attachments ) {
-						$pdf = $attachments[0]['location'];
-					} else {
-						$pdf = '';
-					}
-
-					if ( $pdf ) {
-						$source_url = $pdf;
-					}
-
-					if ( is_array( $news_attorneys ) && in_array( $this_post, $news_attorneys ) ) :
-						?>
-
-
-						<div class="date"><?php echo $fix_date; ?> | Source: <?php echo $source; ?></div>
-						<h5><a href="<?php echo $source_url; ?>" <?php echo $link_target; ?>><?php the_title(); ?></a></h5>
-
-
-						<?php
-						$i ++;
-					endif;
-				endwhile;
-				if ( $i == 0 ) :
-					$related_count ++;
-					?>
-					<script type="text/javascript">
-						$(function () {
-							$('.li-news').remove();
-						});
-					</script>
-				<?php
-				endif;
-				?>
-			</article>
-
-			<h4>Blog Posts</h4>
-
-				<?php
-				$loop = new WP_Query( array(
-					'post_type'      => 'post',
-					'orderby'        => 'date',
-					'order'          => 'DESC',
-					'posts_per_page' => 100
-				) );
-				$i    = 0;
-				while ( $loop->have_posts() ) :
-					$loop->the_post();
-					$post_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' );
-
-
-					if ( is_array( $post_attorneys ) && in_array( $this_post, $post_attorneys ) ) :
-						?>
-						<article>
-							<div class="date"><?php the_date( 'm/d/y' ); ?></div>
-							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-						</article>
-
-						<?php
-						$i ++;
-					endif;
-				endwhile;
-				if ( $i == 0 ) :
-					$related_count ++;
-					?>
-					<script type="text/javascript">
-						$(function () {
-							$('.li-blogs').remove();
-						});
-					</script>
-				<?php
-				endif;
-				?>
-			</article>
-
-		</section>
 		</div>
 
 		</main><!-- #main -->
