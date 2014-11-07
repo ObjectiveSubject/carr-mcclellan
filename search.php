@@ -21,12 +21,34 @@ get_header(); ?>
 
 				<?php
 				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
+				 * The template part for displaying results in search pages.
+				 *
+				 * Learn more: http://codex.wordpress.org/Template_Hierarchy
+				 *
+				 * @package Carr McClellan
 				 */
-				get_template_part( 'content', 'search' );
 				?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
+						<?php if ( 'post' == get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php cmc_posted_on(); ?>
+							</div><!-- .entry-meta -->
+						<?php endif; ?>
+					</header><!-- .entry-header -->
+
+					<div class="entry-summary">
+						<?php the_excerpt(); ?>
+					</div><!-- .entry-summary -->
+
+					<footer class="entry-footer">
+						<?php cmc_entry_footer(); ?>
+					</footer><!-- .entry-footer -->
+				</article><!-- #post-## -->
+
 
 			<?php endwhile; ?>
 
