@@ -130,7 +130,19 @@ function carr_post_event_data( $post ) {
 	if ( ! $display_date && $original_event_date ) {
 		// $display_date = $original_event_date;
 	}
+
+	// This JS could probably be moved into an admin script
 	?>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("input[name='display_date']").datepicker({
+				dateFormat: 'mm/dd/yy',
+				changeYear: true
+			});
+			$("#ui-datepicker-div").hide();
+		});
+	</script>
+
 	<div class="edit-form-section">
 		<label for="display_date">Display Date:</label>
 

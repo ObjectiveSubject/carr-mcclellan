@@ -138,9 +138,6 @@ include( 'inc/reg_industries.php' );
 // Publications
 include( 'inc/reg_publications.php' );
 
-// Events
-include( 'inc/reg_events.php' );
-
 // News
 include( 'inc/reg_news.php' );
 
@@ -169,17 +166,13 @@ function admin_init() {
 	// Publications
 	add_meta_box( "publications_meta_options", "Publication Information", "publications_meta_options", "publications" );
 
-	// Events
-	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "events" );
-	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "post" );
-	add_meta_box( 'carr_post_event_data', 'Event Options', 'carr_post_event_data', 'post', 'side' );
-
 	// News
 	add_meta_box( "news_meta_options", "News Information", "news_meta_options", "news" );
 
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
 	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
+	add_meta_box( 'carr_post_event_data', 'Event Options', 'carr_post_event_data', 'post', 'side' );
 
 	// Pages
 	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );

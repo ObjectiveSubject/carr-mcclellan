@@ -226,10 +226,13 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 					endwhile;
 					if ( $i == 0 ) :
 						$related_count ++;
+						// this JS could probably be moved into the core script
 						?>
 						<script type="text/javascript">
-							$(function () {
-								$('.li-publications').remove();
+							jQuery(function ($) {
+								$(function () {
+									$('.publications').remove();
+								});
 							});
 						</script>
 					<?php
