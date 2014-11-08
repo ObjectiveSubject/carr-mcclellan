@@ -134,7 +134,7 @@
           changeYear: true
         });
 	  $("input[name='display_date']").datepicker({
-		  dateFormat: 'mm/dd/y',
+		  dateFormat: 'mm/dd/yy',
 		  changeYear: true
 	  });
       $("#ui-datepicker-div").hide();

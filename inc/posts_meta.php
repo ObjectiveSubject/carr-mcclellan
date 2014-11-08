@@ -128,7 +128,7 @@ function carr_post_event_data( $post ) {
 	$display_date = get_post_meta( $post->ID, 'display_date', true );
 
 	if ( ! $display_date && $original_event_date ) {
-		$display_date = $original_event_date;
+		// $display_date = $original_event_date;
 	}
 	?>
 	<div class="edit-form-section">
