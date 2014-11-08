@@ -14,7 +14,8 @@
           'capability_type' => 'post',
           'hierarchical' => false,
           'rewrite' => true,
-          'supports' => array('title', 'thumbnail', 'revisions' )
+          'supports' => array('title', 'thumbnail', 'revisions' ),
+	      'taxonomies' => array( 'category' )
         );
       register_post_type( 'events' , $args );
   }
@@ -81,18 +82,30 @@
 
   function events_meta_options(){
     global $post;
+
+	$date = '';
+	  $expired = '';
+	  $time = '';
+	  $location = '';
+	  $description = '';
+	  $rsvp = '';
+	  $wufoo = '';
+	  $event_attorneys = '';
+	  $event_practices = '';
+	  $fix_date = '';
+
     $custom = get_post_custom($post->ID);
-    $date = $custom["date"][0];
+    $date = get_post_meta($post->ID, "date", true );
     if($date){
       $fix_date = explode('/', $date);
       $fix_date = $fix_date[1] . '/' . $fix_date[2] . '/' . $fix_date[0];
     }
-    $expired = $custom["expired"][0];
+    $expired = get_post_meta( $post->ID, "expired", true );
 
-    $time = $custom["time"][0];
-    $location = $custom["location"][0];
-    $description = $custom["description"][0];
-    $rsvp = $custom["rsvp"][0];
+    $time = get_post_meta($post->ID, "time", true );
+    $location = get_post_meta($post->ID, "location", true );
+    $description = get_post_meta($post->ID, "description", true );
+    $rsvp = get_post_meta($post->ID, "rsvp", true );
     $wufoo = get_post_meta($post->ID, 'wufoo', true);
     $event_attorneys = get_post_meta($post->ID, 'event_attorneys', true);
     $event_practices = get_post_meta($post->ID, 'event_practices', true);
@@ -120,6 +133,10 @@
           dateFormat: 'mm/dd/y',
           changeYear: true
         });
+	  $("input[name='display_date']").datepicker({
+		  dateFormat: 'mm/dd/y',
+		  changeYear: true
+	  });
       $("#ui-datepicker-div").hide();
   });
   </script>

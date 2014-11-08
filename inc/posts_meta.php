@@ -119,6 +119,27 @@ function save_post_subtitle( $post_id, $post ) {
 	}
 }
 
+function carr_post_event_data( $post ) {
+	if ( ! in_array( get_post_type( $post ), array( 'post' ) ) ) {
+		return;
+	}
+
+	$original_event_date = get_post_meta( $post->ID, 'date', true );
+	$display_date = get_post_meta( $post->ID, 'display_date', true );
+
+	if ( ! $display_date && $original_event_date ) {
+		$display_date = $original_event_date;
+	}
+	?>
+	<div class="edit-form-section">
+		<label for="display_date">Display Date:</label>
+
+		<input id="display_date" name="display_date" value="<?php echo $display_date; ?>">
+
+		<?php wp_nonce_field( 'save', 'carr_post_event_data' ); ?>
+	</div>
+<?php
+}
 
 function carr_page_sidebars( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'page' ) ) ) {
@@ -141,6 +162,27 @@ function carr_page_sidebars( $post ) {
 		<?php wp_nonce_field( 'save', 'carr_post_sidebars' ); ?>
 	</div>
 <?php
+}
+
+
+add_action( 'save_post', 'save_post_event_data', 15, 2 );
+
+function save_post_event_data( $post_id, $post ) {
+	// Bail if doing autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+
+	// Bail if nonce isn't set
+	if ( ! isset( $_POST['carr_post_event_data'] ) || ! wp_verify_nonce( $_POST['carr_post_event_data'], 'save' ) ) { return; }
+
+	// Bail if the user isn't allowed to edit the post
+	if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	// Bail if not a page
+	if ( 'post' !== $post->post_type ) { return; }
+
+	if ( isset( $_POST["display_date"] ) ) {
+		update_post_meta( $post->ID, "display_date", $_POST['display_date'] );
+	}
 }
 
 add_action( 'save_post', 'save_page_sidebar', 15, 2 );

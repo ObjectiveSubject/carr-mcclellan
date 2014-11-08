@@ -171,6 +171,8 @@ function admin_init() {
 
 	// Events
 	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "events" );
+	add_meta_box( "events_meta_options", "Event Information", "events_meta_options", "post" );
+	add_meta_box( 'carr_post_event_data', 'Event Options', 'carr_post_event_data', 'post', 'side' );
 
 	// News
 	add_meta_box( "news_meta_options", "News Information", "news_meta_options", "news" );
@@ -187,7 +189,7 @@ function admin_init() {
 // Register datepicker ui for properties
 function datepicker_js() {
 	global $post;
-	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
+	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' || $post->post_type == 'post' ) && is_admin() ) {
 		wp_enqueue_script( 'jquery-ui-datepicker' );
 	}
 }
@@ -197,7 +199,7 @@ add_action( 'admin_print_scripts', 'datepicker_js' );
 // Register ui styles for properties
 function datepicker_css() {
 	global $post;
-	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' ) && is_admin() ) {
+	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' || $post->post_type == 'post' ) && is_admin() ) {
 		wp_enqueue_style( 'jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css  ' );
 	}
 }
