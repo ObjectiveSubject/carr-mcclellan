@@ -188,6 +188,12 @@ if ( $chair_id_2 ) {
 			</div>
 		<?php endif; ?>
 
+
+		<?php wp_reset_postdata(); ?>
+		<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/practice/' . $post->post_name . '/'; ?>">View <?php the_title(); ?> Blog Posts
+			<span class="icon-arrow-right"></span>
+		</a>
+
 	</div>
 </aside>
 
@@ -197,7 +203,6 @@ if ( $chair_id_2 ) {
 		<h3 class="rep-matters menu-item border-block top-right active">Representative Matters</h3>
 		<h3 class="publications menu-item border-block top-right">Publications</h3>
 		<h3 class="news menu-item border-block top-right">News</h3>
-		<h3 class="blog-posts menu-item border-block top-right">Blog Posts</h3>
 	</div>
 
 	<div class="sections span6 push-left">
@@ -205,6 +210,16 @@ if ( $chair_id_2 ) {
 		<section class="rep-matters bottom-section border-block top-right-bottom  active">
 			<?php echo $rep_matters; ?>
 		</section>
+
+		<?php if ( ! $rep_matters ) : ?>
+		<script type="text/javascript">
+			jQuery(function ($) {
+				$(function () {
+					$('.rep-matters').remove();
+				});
+			});
+		</script>
+		<?php endif; ?>
 
 		<section class="publications bottom-section border-block top-right-bottom ">
 
@@ -239,8 +254,15 @@ if ( $chair_id_2 ) {
 					$i ++;
 				endif;
 			endwhile;
-			?>
-
+			if ( $i == 0 ) : ?>
+				<script type="text/javascript">
+					jQuery(function ($) {
+						$(function () {
+							$('.publications').remove();
+						});
+					});
+				</script>
+			<?php endif; ?>
 		</section>
 
 		<section class="news bottom-section border-block top-right-bottom ">
@@ -289,44 +311,16 @@ if ( $chair_id_2 ) {
 					$i ++;
 				endif;
 			endwhile;
-			if ( $i == 0 ) :
-				?>
+			if ( $i == 0 ) : ?>
 				<script type="text/javascript">
-					$(function () {
-						$('.li-news').remove();
+					jQuery(function ($) {
+						$(function () {
+							$('.news').remove();
+						});
 					});
 				</script>
-			<?php
-			endif;
-			?>
+			<?php endif; ?>
 
-		</section>
-
-		<section class="blog-posts bottom-section border-block top-right-bottom ">
-			<?php
-			$loop = new WP_Query( array(
-				'post_type'      => 'post',
-				'orderby'        => 'date',
-				'order'          => 'DESC',
-				'posts_per_page' => 100
-			) );
-			$i    = 0;
-			while ( $loop->have_posts() ) :
-				$loop->the_post();
-				$post_practices = get_post_meta( $post->ID, 'post_practices', true );
-
-				if ( is_array( $post_practices ) && in_array( $this_post, $post_practices ) ) :
-					?>
-
-					<div class="date"><?php the_time( 'm/d/y' ); ?></div>
-					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-
-
-					<?php
-					$i ++;
-				endif;
-			endwhile;
-			?>
 		</section>
 	</div>
 </section>
