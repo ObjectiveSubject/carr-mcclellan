@@ -1032,6 +1032,8 @@ body {
     font-size: 14px; }
   .aside .social-share a {
     color: #FFF; }
+  .aside .social-share li {
+    margin-bottom: 0; }
   .aside .categories li {
     margin-bottom: 1.25em; }
 
