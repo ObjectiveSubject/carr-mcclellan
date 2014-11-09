@@ -128,7 +128,8 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 			</div>
 
 			<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">View <?php echo $custom["first_name"][0] . '\'s' ?> Blog Posts
-				<span class="icon-arrow-right"></span></a>
+				<span class="icon-arrow-right"></span>
+			</a>
 
 		</aside>
 
