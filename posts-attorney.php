@@ -61,7 +61,7 @@ get_header();
 				'post_type'      => 'post',
 				'orderby'        => 'date',
 				'order'          => 'DESC',
-				'posts_per_page' => 200
+				'posts_per_page' => 300
 			) );
 			$i    = 0;
 			$color_class = 'odd';
