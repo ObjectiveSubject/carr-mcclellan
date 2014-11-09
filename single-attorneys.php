@@ -74,7 +74,7 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 				</h3>
 
 				<h3 class="block-label print">
-					<a href="#" class="link-gray3"><span class="icon-print"></span>&nbsp;&nbsp;Print Profile</a></h3>
+					<a href="javascript:if(window.print)window.print();" class="link-gray3"><span class="icon-print"></span>&nbsp;&nbsp;Print Profile</a></h3>
 			</div>
 
 		</aside>
