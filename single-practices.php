@@ -99,7 +99,7 @@ if ( $chair_id_2 ) {
 			</div>
 		<?php endif; ?>
 		<?php if ( $chair_id_2 && get_post( $chair_id_2 ) ) : ?>
-			<div class="block-person" style="margin-top: 10px;">
+			<div class="block-person border-block top-right">
 				<?php
 				// Secondary Practice Contact
 
@@ -115,12 +115,11 @@ if ( $chair_id_2 ) {
 				$get_chair = get_post( $chair_id_2 );
 				$chair_url = $get_chair->guid;
 				?>
-				<div class="holder">
+				<div class="holder ">
 					<h3 class="block-label"><a href="<?php echo get_permalink( $chair_id_2 ); ?>"><?php echo $chair_name; ?></a></h3>
-					<dl>
-						<dt>P:</dt>
-						<dd><?php echo $chair_phone; ?></dd>
-					</dl>
+					<p>
+						P: <?php echo $chair_phone; ?>
+					</p>
 					<ul class="links">
 						<?php if ( $chair_email ) : ?>
 							<li class="link-mail"><a href="mailto:<?php echo $chair_email; ?>">Email</a></li>
