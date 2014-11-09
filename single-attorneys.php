@@ -1,31 +1,30 @@
 <?php
 get_header();
 
-$custom = get_post_custom( $post->ID );
-$name   = $custom["first_name"][0] . ' ';
-$name .= ( $custom["middle_initial"][0] ) ? $custom["middle_initial"][0] . ' ' : '';
-$name .= $custom["last_name"][0];
-$title     = $custom["title"][0];
-$sec_title = $custom["secondary_title"][0];
-$phone     = $custom["phone"][0];
-$fax       = $custom["fax"][0];
-$email     = $custom["email"][0];
-$linkedin  = $custom["linkedin"][0];
-$biography = $custom["biography"][0];
-$title     = $custom["title"][0];
+$name   = get_post_meta( $post->ID, "first_name", true) . ' ';
+$name .= ( get_post_meta( $post->ID, "middle_initial", true) ) ? get_post_meta( $post->ID, "middle_initial", true) . ' ' : '';
+$name .= get_post_meta( $post->ID, "last_name", true);
+$title     = get_post_meta( $post->ID, "title", true);
+$sec_title = get_post_meta( $post->ID, "secondary_title", true);
+$phone     = get_post_meta( $post->ID, "phone", true);
+$fax       = get_post_meta( $post->ID, "fax", true);
+$email     = get_post_meta( $post->ID, "email", true);
+$linkedin  = get_post_meta( $post->ID, "linkedin", true);
+$biography = get_post_meta( $post->ID, "biography", true);
+$title     = get_post_meta( $post->ID, "title", true);
 
-$quote              = $custom["quote"][0];
-$academic_creds     = $custom["academic_creds"][0];
-$attorney_languages = $custom["attorney_languages"][0];
-$special_exp        = $custom["special_exp"][0];
-$prof_affilations   = $custom["prof_affilations"][0];
-$courts_forums      = $custom["courts_forums"][0];
-$civic_affiliations = $custom["civic_affiliations"][0];
-$honors_awards      = $custom["honors_awards"][0];
-$custom_title       = $custom["custom_title"][0];
-$custom_body        = $custom["custom_body"][0];
-$recent_exp         = $custom["recent_exp"][0];
-$recent_speaking    = $custom["recent_speaking"][0];
+$quote              = get_post_meta( $post->ID, "quote", true );
+$academic_creds     = get_post_meta( $post->ID, "academic_creds", true);
+$attorney_languages = get_post_meta( $post->ID, "attorney_languages", true);
+$special_exp        = get_post_meta( $post->ID, "special_exp", true);
+$prof_affilations   = get_post_meta( $post->ID, "prof_affilations", true);
+$courts_forums      = get_post_meta( $post->ID, "courts_forums", true);
+$civic_affiliations = get_post_meta( $post->ID, "civic_affiliations", true);
+$honors_awards      = get_post_meta( $post->ID, "honors_awards", true);
+$custom_title       = get_post_meta( $post->ID, "custom_title", true);
+$custom_body        = get_post_meta( $post->ID, "custom_body", true);
+$recent_exp         = get_post_meta( $post->ID, "recent_exp", true);
+$recent_speaking    = get_post_meta( $post->ID, "recent_speaking", true);
 
 $this_post = $post->ID;
 
@@ -127,7 +126,7 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 				</ul>
 			</div>
 
-			<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">View <?php echo $custom["first_name"][0] . '\'s' ?> Blog Posts
+			<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">View <?php echo get_post_meta( $post->ID, "first_name", true) . '\'s' ?> Blog Posts
 				<span class="icon-arrow-right"></span>
 			</a>
 
@@ -199,7 +198,7 @@ $industries         = get_post_meta( $post->ID, 'industry', 'single' );
 					$i             = 0;
 					while ( $loop->have_posts() ) : $loop->the_post();
 						$custom      = get_post_custom( $post->ID );
-						$pub_summary = $custom["pub_summary"][0];
+						$pub_summary = get_post_meta( $post->ID, "pub_summary", true);
 						$type        = wp_get_post_terms( $post->ID, 'publications' );
 						if ( $type ) {
 							$type = $type[0]->name;
