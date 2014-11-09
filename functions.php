@@ -369,12 +369,11 @@ function carr_news_events_terminals() {
 
 	if ( isset( $wp->query_vars['news_events'] ) ) {
 		if ( isset( $wp->query_vars['attorney'] ) ) {
-
 			include dirname( __FILE__ ) . '/posts-attorney.php';
 			exit;
 		}
 		if ( isset( $wp->query_vars['practice'] ) ) {
-
+			include dirname( __FILE__ ) . '/posts-practice.php';
 			exit;
 		}
 	}
