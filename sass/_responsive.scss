@@ -64,8 +64,25 @@
 		}
 	}
 
+	.bottom-matter {
+		.menu {
+			margin-top: 1.5em;
+			h3 {
+				padding: 0.75em 0 0.5em;
+			}
+		}
+		section {
+			margin-left: 0;
+			padding-right: 1em;
+			&.publications {
+				margin-top: 0;
+			}
+		}
+	}
+
 	.attorney-pic {
 		position: relative;
+		bottom: -7px; // hackish; couldn't figure out where white-space was coming from
 	}
 }
 
