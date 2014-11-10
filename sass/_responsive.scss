@@ -84,6 +84,10 @@
 		position: relative;
 		bottom: -7px; // hackish; couldn't figure out where white-space was coming from
 	}
+
+	footer {
+		.row { width: 90%; }
+	}
 }
 
 /* Smartphones (landscape) ----------- */

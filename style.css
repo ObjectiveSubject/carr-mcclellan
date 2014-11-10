@@ -1598,7 +1598,10 @@ body {
 
   .attorney-pic {
     position: relative;
-    bottom: -7px; } }
+    bottom: -7px; }
+
+  footer .row {
+    width: 90%; } }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
   /* Styles */ }
