@@ -195,7 +195,7 @@
 	}
 
 	&.practice, &.industry {
-		width: 50%;
+		width: 33.333%;
 		height: 163px;
 		min-height: 163px;
 		background: $color_blue1;
@@ -252,8 +252,8 @@
 		&.creditors-rights-bankruptcy {
 			background-color: $color_blue1;
 			h3 {
-				text-indent: 0;
-				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+				// text-indent: 0;
+				@include background-image-retina('images/practices_assets/practice_executive', png, 198px, 163px);
 			}
 		}
 		&.employment {
@@ -290,8 +290,8 @@
 		&.trusts-estates-litigation {
 			background-color: $color_blue1;
 			h3 {
-				text-indent: 0;
-				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
+				// text-indent: 0;
+				@include background-image-retina('images/practices_assets/practice_mergers', png, 198px, 163px);
 			}
 		}
 	}

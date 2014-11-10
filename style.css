@@ -1131,7 +1131,7 @@ body {
       .site-main .square.blog-post:hover h3 a {
         color: #EC513C; }
   .site-main .square.practice, .site-main .square.industry {
-    width: 50%;
+    width: 33.333%;
     height: 163px;
     min-height: 163px;
     background: #285F8A;
@@ -1188,7 +1188,11 @@ body {
   .site-main .square.practice.creditors-rights-bankruptcy {
     background-color: #285F8A; }
     .site-main .square.practice.creditors-rights-bankruptcy h3 {
-      text-indent: 0; }
+      background-image: url("images/practices_assets/practice_executive.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.creditors-rights-bankruptcy h3 {
+          background-image: url("images/practices_assets/practice_executive@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.practice.employment {
     background-color: #703F50; }
     .site-main .square.practice.employment h3 {
@@ -1228,7 +1232,11 @@ body {
   .site-main .square.practice.trusts-estates-litigation {
     background-color: #285F8A; }
     .site-main .square.practice.trusts-estates-litigation h3 {
-      text-indent: 0; }
+      background-image: url("images/practices_assets/practice_mergers.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.trusts-estates-litigation h3 {
+          background-image: url("images/practices_assets/practice_mergers@2x.png");
+          background-size: 198px 163px; } }
   .site-main .square.industry.financial-services {
     background-color: #404060; }
   .site-main .square.industry.food-beverage {
