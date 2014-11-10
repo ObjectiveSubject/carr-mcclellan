@@ -790,9 +790,15 @@ body {
   .history .milestone h2 {
     display: none; }
 
-.our-firm .border-block p {
-  font-size: 16px;
-  color: #8D8D8D; }
+.site-main .our-firm h3 {
+  text-transform: uppercase; }
+.site-main .our-firm .border-block {
+  padding-right: 1em; }
+  .site-main .our-firm .border-block p {
+    font-size: 16px;
+    color: #8D8D8D; }
+.site-main .our-firm .square {
+  min-height: 22em; }
 
 .practice-list li {
   margin-bottom: 1em;

@@ -53,10 +53,20 @@ body {
 	}
 }
 
-.our-firm {
-	.border-block p {
-		font-size: 16px;
-		color: $color_gray3;
+.site-main .our-firm {
+	h3 {
+		text-transform: uppercase;
+	}
+
+	.border-block {
+		padding-right: 1em;
+		p {
+			font-size: 16px;
+			color: $color_gray3;
+		}
+	}
+	.square {
+		min-height: 22em;
 	}
 }
 

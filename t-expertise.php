@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-			<ul>
+			<ul class="our-firm">
 				<li class="solid-block square child1">
 					<?php the_excerpt(); ?>
 				</li>
