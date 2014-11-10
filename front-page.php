@@ -30,7 +30,9 @@ $home_featured = z_get_zone_query( 'home-featured' );
 					<h1 class="page-title"><?php the_title(); ?></h1>
 					<div class="page-subtitle"><?php the_excerpt(); ?></div>
 
-					<a class="button" href="<?php the_permalink(); ?>">Event Registration</a>
+					<?php if ( in_category( 'events' ) ) : ?>
+						<a class="button" href="<?php the_permalink(); ?>">Event Registration</a>
+					<?php endif; ?>
 				</div>
 			<?php else : ?>
 				<h1 class="page-title">We Make<br/>It Happen</h1>
