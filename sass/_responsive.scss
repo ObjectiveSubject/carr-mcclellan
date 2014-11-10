@@ -9,6 +9,36 @@
 	.hentry {
 		max-width: 90%;
 	}
+
+	// Not sure about the best approach to dealing with the grid
+	.aside-right, .aside-left,
+	.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
+		width: 100%;
+	}
+	.span12 {
+		padding: 0;
+	}
+	.aside-left { margin: 0; padding: 0; }
+
+  .page-header { padding-top: 13em; }
+	.site-branding { padding: 1em 0; }
+	.page-title {
+		font-size: 36px;
+	}
+	.site-main {
+		width: 90%;
+		.square {
+			width: 100%;
+			margin-left: 0;
+			&.attorney, &.blog-post {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+	.attorney-pic {
+		position: relative;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -19,10 +49,7 @@
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
 	/* Styles */
-	.site-main .square {
-		width: 100%;
-		margin-left: 0;
-	}
+
 }
 
 /* iPads (portrait and landscape) ----------- */

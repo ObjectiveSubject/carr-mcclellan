@@ -1533,16 +1533,45 @@ body {
       width: 100%; }
 
   .hentry {
-    max-width: 90%; } }
+    max-width: 90%; }
+
+  .aside-right, .aside-left,
+  .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
+    width: 100%; }
+
+  .span12 {
+    padding: 0; }
+
+  .aside-left {
+    margin: 0;
+    padding: 0; }
+
+  .page-header {
+    padding-top: 13em; }
+
+  .site-branding {
+    padding: 1em 0; }
+
+  .page-title {
+    font-size: 36px; }
+
+  .site-main {
+    width: 90%; }
+    .site-main .square {
+      width: 100%;
+      margin-left: 0; }
+      .site-main .square.attorney, .site-main .square.blog-post {
+        width: 100%;
+        margin-left: 0; }
+
+  .attorney-pic {
+    position: relative; } }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
   /* Styles */ }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
-  /* Styles */
-  .site-main .square {
-    width: 100%;
-    margin-left: 0; } }
+  /* Styles */ }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */ }
