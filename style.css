@@ -1607,6 +1607,12 @@ body {
     position: relative;
     bottom: -7px; }
 
+  .history .milestones li {
+    width: 30%;
+    margin: 0 0 1em 0; }
+    .history .milestones li.active {
+      border: none; }
+
   footer .row {
     width: 90%; } }
 /* Smartphones (landscape) ----------- */

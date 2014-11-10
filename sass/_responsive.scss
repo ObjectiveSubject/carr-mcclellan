@@ -84,7 +84,13 @@
 		position: relative;
 		bottom: -7px; // hackish; couldn't figure out where white-space was coming from
 	}
-
+	.history .milestones {
+		li {
+			width: 30%;
+			margin: 0 0 1em 0;
+			&.active { border: none; }
+		}
+	}
 	footer {
 		.row { width: 90%; }
 	}
