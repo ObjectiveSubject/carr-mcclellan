@@ -49,7 +49,6 @@ function industries_meta_options(){
 	?>
 
 	<tr>
-		<th style="width: 20%;"><label for="areas_practice">Related Practices</label></th>
 		<td>
 			<div style="background:#fff;border:1px solid #ccc;padding:10px;">
 				<?php

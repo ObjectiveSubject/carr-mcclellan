@@ -157,7 +157,7 @@ function admin_init() {
 	add_meta_box( "attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys" );
 
 	// Industries
-	add_meta_box( "industries_meta_options", "Industry Information", "industries_meta_options", "industries" );
+	add_meta_box( "industries_meta_options", "Related Practices", "industries_meta_options", "industries" );
 
 	// Practices
 	add_meta_box( "practices_meta_options", "Practice Information", "practices_meta_options", "practices" );
