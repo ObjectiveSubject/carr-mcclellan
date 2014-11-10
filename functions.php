@@ -233,12 +233,18 @@ function cmc_get_practices() {
  */
 function cmc_get_attorneys() {
 
-	$attorneys = new WP_Query( array(
-		'post_type'      => 'attorneys',
-		'orderby'        => 'menu_order',
-		'order'          => 'ASC',
-		'posts_per_page' => 3
-	) );
+	$attorneys_zone = z_get_zone_query( 'home-attorneys' );
+
+	if ( $attorneys_zone->have_posts() ) {
+		$attorneys = $attorneys_zone;
+	} else {
+		$attorneys = new WP_Query( array(
+			'post_type'      => 'attorneys',
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
+			'posts_per_page' => 3
+		) );
+	}
 
 	?>
 	<div class="attorneys">
@@ -379,3 +385,11 @@ function carr_news_events_terminals() {
 	}
 }
 add_action( 'parse_request', 'carr_news_events_terminals', 1);
+
+/**
+ * Add Attorney posts to Zoninator
+ */
+function carr_add_zoninator_post_types() {
+	add_post_type_support( 'attorneys', 'zoninator_zones' );
+}
+add_action( 'init', 'carr_add_zoninator_post_types' );
