@@ -563,6 +563,13 @@ textarea {
   width: 100%;
   height: 100%; }
 
+/**
+ * Adding styling for Gravity Forms
+ */
+.gform_wrapper {
+  background: white;
+  padding: 1em; }
+
 /* Text meant only for screen readers */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
