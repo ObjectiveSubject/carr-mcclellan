@@ -14,7 +14,8 @@
           'capability_type' => 'post',
           'hierarchical' => false,
           'rewrite' => true,
-          'supports' => array('title', 'thumbnail')
+          'supports' => array('title', 'thumbnail'),
+	      'taxonomies' => array( 'category' )
         );
       register_post_type( 'news' , $args );
   }
@@ -93,20 +94,22 @@
   function news_meta_options(){
     global $post;
     $custom = get_post_custom($post->ID);
-    $date = $custom["date"][0];
-    if($date){
+    $date = get_post_meta($post->ID, "date", true );
+    $fix_date = '';
+
+	if( $date ) {
       $fix_date = explode('/', $date);
       $fix_date = $fix_date[1] . '/' . $fix_date[2] . '/' . $fix_date[0];
     }
 
-    $news_type_select = $custom["news_type_select"][0];
-    $news_type = get_post_meta($post->ID, 'news_type', 'single');
-    $source = $custom["source"][0];
-    $source_url = $custom["source_url"][0];
-    $summary = $custom["summary"][0];
+    $news_type_select = get_post_meta($post->ID, "news_type_select", true );
+    $news_type = get_post_meta($post->ID, 'news_type', true );
+    $source = get_post_meta($post->ID, "source", true );
+    $source_url = get_post_meta($post->ID, "source_url", true );
+    $summary = get_post_meta($post->ID, "summary", true);
 
-    $news_attorneys = get_post_meta($post->ID, 'news_attorneys', true);
-    $news_practices = get_post_meta($post->ID, 'news_practices', true);
+    $news_attorneys = get_post_meta( $post->ID, 'news_attorneys', true );
+    $news_practices = get_post_meta( $post->ID, 'news_practices', true );
 
   ?>
 
@@ -157,44 +160,7 @@
         <small>Ex: 09/25/11</small>
       </td>
     </tr>
-    <tr>
-      <th style="width: 20%;"><label for="news_type">News Type:</label></th>
-      <td>
-        <select name="news_type_select">
-          <option value="internal" <?php if($news_type_select == 'internal'){echo 'selected="selected"';}?>>Press Release (Internal)</option>
-          <option value="external" <?php if($news_type_select == 'external'){echo 'selected="selected"';}?>>External Site</option>
-          <option value="pdf" <?php if($news_type_select == 'pdf'){echo 'selected="selected"';}?>>PDF</option>
-        </select>
-      </td>
 
-      <td style="display:none;">
-        <?php
-          function set_check($value,$array){
-            if(in_array($value,$array)){
-              echo 'checked="checked"';
-            }
-          }
-        ?>
-        <input type="checkbox" name="news_type[]" <?php set_check('Media Coverage',$news_type);?> value="Media Coverage"> Media Coverage<br />
-        <input type="checkbox" name="news_type[]" <?php set_check('In The News',$news_type);?> value="In The News"> In The News<br />
-        <input type="checkbox" name="news_type[]" <?php set_check('Press Release',$news_type);?> value="Press Release"> Press Release
-      </td>
-    </tr>
-    <tr>
-      <th style="width: 20%;"><label for="source">Source Title</label></th>
-      <td>
-        <input type="text" class="text_input" name="source" value="<?php echo $source; ?>" style="width:100%" /><br />
-        <small>Ex: Google</small>
-      </td>
-    </tr>
-    <tr>
-      <th style="width: 20%;"><label for="source_url">Source URL</label></th>
-      <td>
-        <input type="text" class="text_input" name="source_url" value="<?php echo $source_url; ?>" style="width:100%" /><br />
-        <small>Ex: http://www.google.com/</small><br />
-        <small>Note: If PDF file is attached below, this link will be overriden with a link to the PDF.</small>
-      </td>
-    </tr>
     <tr>
       <th style="width: 20%;"><label for="summary">Press Release</label></th>
       <td>

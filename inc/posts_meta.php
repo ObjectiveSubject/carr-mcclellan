@@ -119,7 +119,7 @@ function save_post_subtitle( $post_id, $post ) {
 	}
 }
 
-function carr_post_event_data( $post ) {
+function carr_post_options( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'post' ) ) ) {
 		return;
 	}
@@ -153,6 +153,52 @@ function carr_post_event_data( $post ) {
 <?php
 }
 
+function carr_post_news_options( $post ) {
+	if ( ! in_array( get_post_type( $post ), array( 'post' ) ) ) {
+		return;
+	}
+
+	global $post;
+
+	$news_type_select = get_post_meta($post->ID, "news_type_select", true );
+	$source = get_post_meta($post->ID, "source", true );
+	$source_url = get_post_meta($post->ID, "source_url", true );
+
+	?>
+
+	<table class="form-table">
+		<tr>
+			<th style="width: 20%;"><label for="news_type">News Type:</label></th>
+			<td>
+				<select name="news_type_select">
+					<option value=""></option>
+					<option value="internal" <?php if($news_type_select == 'internal'){echo 'selected="selected"';}?>>Press Release (Internal)</option>
+					<option value="external" <?php if($news_type_select == 'external'){echo 'selected="selected"';}?>>External Site</option>
+					<option value="pdf" <?php if($news_type_select == 'pdf'){echo 'selected="selected"';}?>>PDF</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th style="width: 20%;"><label for="source">Source Title</label></th>
+			<td>
+				<input type="text" class="text_input" name="source" id="source" value="<?php echo $source; ?>" style="width:100%" /><br />
+				<small>Ex: Google</small>
+			</td>
+		</tr>
+		<tr>
+			<th style="width: 20%;"><label for="source_url">Source URL</label></th>
+			<td>
+				<input type="text" class="text_input" name="source_url" id="source_url" value="<?php echo $source_url; ?>" style="width:100%" /><br />
+				<small>Ex: http://www.google.com/</small><br />
+				<!-- <small>Note: If PDF file is attached below, this link will be overriden with a link to the PDF.</small> -->
+			</td>
+		</tr>
+		<?php wp_nonce_field( 'save', 'carr_news_options' ); ?>
+	</table>
+
+<?php
+}
+
 function carr_page_sidebars( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'page' ) ) ) {
 		return;
@@ -177,9 +223,9 @@ function carr_page_sidebars( $post ) {
 }
 
 
-add_action( 'save_post', 'save_post_event_data', 15, 2 );
+add_action( 'save_post', 'save_post_options_data', 15, 2 );
 
-function save_post_event_data( $post_id, $post ) {
+function save_post_options_data( $post_id, $post ) {
 	// Bail if doing autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
 
@@ -197,6 +243,41 @@ function save_post_event_data( $post_id, $post ) {
 	}
 }
 
+add_action( 'save_post', 'save_post_news_options_data', 15, 2 );
+
+function save_post_news_options_data( $post_id, $post ) {
+	// Bail if doing autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
+
+	// Bail if nonce isn't set
+	if ( ! isset( $_POST['carr_news_options'] ) || ! wp_verify_nonce( $_POST['carr_news_options'], 'save' ) ) { return; }
+
+	// Bail if the user isn't allowed to edit the post
+	if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
+
+	// Bail if not an asset
+	if ( 'post' !== $post->post_type ) { return; }
+
+	// Save custom fields
+	if( isset( $_POST["news_type_select"] ) ) {
+		update_post_meta($post->ID, "news_type_select", $_POST["news_type_select"]);
+	} else {
+		update_post_meta($post->ID, "news_type_select", '' );
+	}
+
+	if( isset( $_POST["source"] ) ) {
+		update_post_meta($post->ID, "source", $_POST["source"]);
+	} else {
+		update_post_meta($post->ID, "source", '' );
+	}
+
+	if( isset( $_POST["source_url"] ) ) {
+		update_post_meta($post->ID, "source_url", $_POST["source_url"]);
+	} else {
+		update_post_meta($post->ID, "source_url", '' );
+	}
+}
+
 add_action( 'save_post', 'save_page_sidebar', 15, 2 );
 
 function save_page_sidebar( $post_id, $post ) {
@@ -210,7 +291,7 @@ function save_page_sidebar( $post_id, $post ) {
 	if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
 
 	// Bail if not a page
-	// if ( 'attorneys' !== $post->post_type ) { return; }
+	if ( 'page' !== $post->post_type ) { return; }
 
 	if ( isset( $_POST["post_sidebar_1"] ) ) {
 		update_post_meta( $post->ID, "post_sidebar_1", $_POST["post_sidebar_1"] );

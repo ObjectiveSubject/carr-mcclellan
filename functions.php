@@ -172,7 +172,9 @@ function admin_init() {
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
 	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
-	add_meta_box( 'carr_post_event_data', 'Event Options', 'carr_post_event_data', 'post', 'side' );
+	add_meta_box( 'carr_post_options', 'Options', 'carr_post_options', 'post', 'side' );
+	add_meta_box( 'carr_post_news_options', 'News Options', 'carr_post_news_options', 'post' );
+	add_meta_box( "news_meta_options", "News (Old custom fields)", "news_meta_options", "post" );
 
 	// Pages
 	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
