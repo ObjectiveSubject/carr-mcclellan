@@ -424,3 +424,21 @@ function carr_body_classes( $classes ) {
 }
 // add_filter( 'body_class', 'carr_body_classes' );
 
+/**
+ * Check if an In the News post has a clickthrough set and redirect there.
+ *
+ * @todo would it be better to change the permalink, rather than do a redirect?
+ */
+function carr_redirect() {
+	global $post;
+	$post_type = get_post_type();
+
+	if ( is_single() && $post_type == 'post' ) {
+		$clickthrough = get_post_meta( $post->ID, 'source_url', true );
+		if ( $clickthrough ) {
+			wp_redirect( $clickthrough );
+			exit;
+		}
+	}
+}
+add_action( 'template_redirect', 'carr_redirect' );
