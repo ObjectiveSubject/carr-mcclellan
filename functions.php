@@ -286,18 +286,24 @@ function cmc_get_attorneys() {
  */
 function cmc_get_newsevents() {
 
-	$practices = new WP_Query( array(
-		'post_type'      => array( 'post', 'event' ),
-		'orderby'        => 'date',
-		'posts_per_page' => 6
-	) );
+	$news_events_zone = z_get_zone_query( 'home-news-events' );
+
+	if ( $news_events_zone->have_posts() ) {
+		$news_events = $news_events_zone;
+	} else {
+		$news_events = new WP_Query( array(
+			'post_type'      => array( 'post' ),
+			'orderby'        => 'date',
+			'posts_per_page' => 6
+		) );
+	}
 
 	$count = 1;
 
 	?>
 	<div class="news-events">
 
-		<?php while ( $practices->have_posts() ) : $practices->the_post();
+		<?php while ( $news_events->have_posts() ) : $news_events->the_post();
 			global $post; ?>
 
 			<?php if ( $count % 3 == 1 ) : ?>
