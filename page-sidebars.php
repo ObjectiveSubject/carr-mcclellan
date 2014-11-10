@@ -20,8 +20,9 @@ $post_sidebar_2 = get_post_meta( $post->ID, 'post_sidebar_2', true );
 		<main id="main" class="site-main span12 aligncenter" role="main">
 
 			<aside class="aside aside-left span2 push-left">
-				<!-- <div class="border-block top"></div> -->
-				<?php echo apply_filters( 'the_content', $post_sidebar_1 ); ?>
+				<div class="border-block top">
+					<?php echo apply_filters( 'the_content', $post_sidebar_1 ); ?>
+				</div>
 			</aside>
 
 			<section class="span6 push-left">
@@ -35,8 +36,9 @@ $post_sidebar_2 = get_post_meta( $post->ID, 'post_sidebar_2', true );
 			</section>
 
 			<aside class="aside aside-right span2">
-				<!-- <div class="border-block top"></div> -->
-				<?php echo apply_filters( 'the_content', $post_sidebar_2 ); ?>
+				<div class="border-block top">
+					<?php echo apply_filters( 'the_content', $post_sidebar_2 ); ?>
+				</div>
 			</aside>
 		</main><!-- #main -->
 	</div><!-- #primary -->
