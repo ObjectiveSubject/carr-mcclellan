@@ -18,35 +18,29 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<main id="main" class="site-main span12 aligncenter clear" role="main">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cmc' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<section class="entry-content span8 aligncenter">
+						<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cmc' ); ?></p>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+						<?php get_search_form(); ?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'cmc' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+						<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'cmc' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
+						<div class="widget widget_categories">
+							<h2 class="widget-title"><?php _e( 'Most Used Categories', 'cmc' ); ?></h2>
+							<ul>
+							<?php
+								wp_list_categories( array(
+									'orderby'    => 'count',
+									'order'      => 'DESC',
+									'show_count' => 1,
+									'title_li'   => '',
+									'number'     => 10,
+								) );
+							?>
+							</ul>
+						</div><!-- .widget -->
+					</section>
 				</main><!-- .page-content -->
 			</section><!-- .error-404 -->
 
