@@ -61,7 +61,15 @@ add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+/**
+ * Custom functions that act independently of the theme templates.
+ */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Custom functions that for the admin area.
+ */
+require get_template_directory() . '/inc/admin.php';
 
 
 /*----------------------------------------------------------
@@ -401,3 +409,18 @@ function carr_add_zoninator_post_types() {
 	add_post_type_support( 'attorneys', 'zoninator_zones' );
 }
 add_action( 'init', 'carr_add_zoninator_post_types' );
+
+/**
+ * Adds custom classes to the array of body classes.
+ */
+function carr_body_classes( $classes ) {
+	global $post;
+	foreach( $classes as &$str ){
+		if( strpos( $str, "page-id-" ) > -1 ){
+			$str = "page-" . $post->post_name;
+		}
+	}
+	return $classes;
+}
+// add_filter( 'body_class', 'carr_body_classes' );
+
