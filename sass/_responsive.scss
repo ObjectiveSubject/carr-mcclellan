@@ -9,6 +9,9 @@
 	.hentry {
 		max-width: 90%;
 	}
+	.hentry[class*=" span"] {
+		padding-right: 0;
+	}
 
 	// Not sure about the best approach to dealing with the grid
 	.aside-right, .aside-left,
@@ -36,6 +39,24 @@
 			}
 		}
 	}
+
+	.aside {
+		.social-share {
+			ul {
+				@include layout-clearfix;
+				margin-bottom: 0;
+			}
+			li {
+				float: left;
+				.social-icon {
+					width: 55px;
+					height: 55px;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+
 	.attorney-pic {
 		position: relative;
 	}

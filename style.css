@@ -1535,6 +1535,9 @@ body {
   .hentry {
     max-width: 90%; }
 
+  .hentry[class*=" span"] {
+    padding-right: 0; }
+
   .aside-right, .aside-left,
   .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
     width: 100%; }
@@ -1563,6 +1566,20 @@ body {
       .site-main .square.attorney, .site-main .square.blog-post {
         width: 100%;
         margin-left: 0; }
+
+  .aside .social-share ul {
+    margin-bottom: 0; }
+    .aside .social-share ul:before, .aside .social-share ul:after {
+      content: "";
+      display: table; }
+    .aside .social-share ul:after {
+      clear: both; }
+  .aside .social-share li {
+    float: left; }
+    .aside .social-share li .social-icon {
+      width: 55px;
+      height: 55px;
+      font-size: 24px; }
 
   .attorney-pic {
     position: relative; } }
