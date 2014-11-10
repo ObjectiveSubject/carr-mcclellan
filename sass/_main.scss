@@ -443,3 +443,18 @@
 		display: inline-block;
 	}
 }
+
+.home .featured {
+	.date {
+		font-weight: normal;
+		color: $color_blue4;
+	}
+	.button {
+		border-color: $color_red;
+		color: $color_red;
+		&:hover {
+			border-color: $color_blue3;
+			color: $color_blue3;
+		}
+	}
+}

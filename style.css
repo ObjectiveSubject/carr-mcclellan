@@ -1356,6 +1356,16 @@ body {
   margin-right: 0 !important;
   display: inline-block; }
 
+.home .featured .date {
+  font-weight: normal;
+  color: #404060; }
+.home .featured .button {
+  border-color: #EC513C;
+  color: #EC513C; }
+  .home .featured .button:hover {
+    border-color: #4B4B72;
+    color: #4B4B72; }
+
 .footer-nav {
   float: left; }
   .footer-nav ul {

@@ -3,28 +3,52 @@
  * The template for the home page
  */
 
-get_header(); ?>
+get_header();
+
+$home_featured = z_get_zone_query( 'home-featured' );
+
+?>
 
 <div id="primary" class="content-area">
 
 	<header class="page-header">
 		<div class="centered">
-			<?php get_template_part('t-site-branding'); ?>
-			<h1 class="page-title">We Make<br/>It Happen</h1>
-			<div class="page-subtitle"><?php the_content(); ?></div>
+			<?php if ( $home_featured->have_posts() ) : $home_featured->the_post(); ?>
+				<?php
+					$display_date = get_post_meta( $post->ID, 'display_date', true );
+					if ( $display_date ) {
+						$fix_date = explode( '/', $display_date );
+						$fix_date = date( 'F', $fix_date[1] ) . ' ' . $fix_date[1] . ', ' . $fix_date[2];
+						$date = $fix_date;
+					} else {
+						$date = get_the_date( 'F j, Y' );
+					}
+				?>
+				<div class="featured">
+					<h4 class="date"><?php echo $date; ?></h4>
+
+					<h1 class="page-title"><?php the_title(); ?></h1>
+					<div class="page-subtitle"><?php the_excerpt(); ?></div>
+
+					<a class="button" href="<?php the_permalink(); ?>">Event Registration</a>
+				</div>
+			<?php else : ?>
+				<h1 class="page-title">We Make<br/>It Happen</h1>
+				<div class="page-subtitle"><?php the_content(); ?></div>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+
+					</article><!-- #post-## -->
+
+				<?php endwhile; // end of the loop. ?>
+			<?php endif; ?>
 		</div>
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div><!-- .entry-content -->
-
-			</article><!-- #post-## -->
-
-		<?php endwhile; // end of the loop. ?>
 	</header>
 
 	<main id="main" class="site-main span12 aligncenter" role="main">
