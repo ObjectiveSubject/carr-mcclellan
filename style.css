@@ -1533,7 +1533,7 @@ body {
       width: 100%; }
 
   .hentry {
-    max-width: 90%; }
+    max-width: 100%; }
 
   .hentry[class*=" span"] {
     padding-right: 0; }
@@ -1558,6 +1558,9 @@ body {
   .page-title {
     font-size: 36px; }
 
+  .page-subtitle {
+    max-width: 90%; }
+
   .site-main {
     width: 90%; }
     .site-main .square {
@@ -1566,6 +1569,8 @@ body {
       .site-main .square.attorney, .site-main .square.blog-post {
         width: 100%;
         margin-left: 0; }
+    .site-main .border-block, .site-main .solid-block {
+      margin-bottom: 15px; }
 
   .aside .social-share ul {
     margin-bottom: 0; }

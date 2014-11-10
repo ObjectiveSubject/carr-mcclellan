@@ -7,7 +7,7 @@
 		}
 	}
 	.hentry {
-		max-width: 90%;
+		max-width: 100%;
 	}
 	.hentry[class*=" span"] {
 		padding-right: 0;
@@ -28,6 +28,10 @@
 	.page-title {
 		font-size: 36px;
 	}
+	.page-subtitle {
+		max-width: 90%;
+	}
+
 	.site-main {
 		width: 90%;
 		.square {
@@ -37,6 +41,9 @@
 				width: 100%;
 				margin-left: 0;
 			}
+		}
+		.border-block, .solid-block {
+			margin-bottom: 15px;
 		}
 	}
 
