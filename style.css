@@ -944,16 +944,18 @@ body {
     display: table; }
   .bottom-matter:after {
     clear: both; }
-  .bottom-matter .menu h3 {
+  .bottom-matter .menu h3, .bottom-matter .sections .section-title {
     color: #8D8D8D;
     cursor: pointer;
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase; }
-    .bottom-matter .menu h3.active {
+    .bottom-matter .menu h3.active, .bottom-matter .sections .section-title.active {
       color: #EC513C;
       border-right: none;
       border-top-color: #EC513C; }
+  .bottom-matter .sections .section-title {
+    display: none; }
   .bottom-matter section {
     display: none;
     color: #8D8D8D;
@@ -1747,9 +1749,13 @@ body {
       font-size: 24px; }
 
   .bottom-matter .menu {
+    display: none; }
+  .bottom-matter .sections {
     margin-top: 1.5em; }
-    .bottom-matter .menu h3 {
-      padding: 0.75em 0 0.5em; }
+    .bottom-matter .sections .section-title {
+      display: block; }
+      .bottom-matter .sections .section-title h3 {
+        padding: 0.75em 0 0.5em; }
   .bottom-matter section {
     margin-left: 0;
     padding-right: 1em; }

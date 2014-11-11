@@ -90,19 +90,20 @@ body {
 	@include layout-clearfix;
 	clear: both;
 	margin-top: 2em;
-	.menu {
-		h3 {
-			color: $color_gray3;
-			cursor: pointer;
-			font-size: 16px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			&.active {
-				color: $color_red;
-				border-right: none;
-				border-top-color: $color_red;
-			}
+	.menu h3, .sections .section-title {
+		color: $color_gray3;
+		cursor: pointer;
+		font-size: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		&.active {
+			color: $color_red;
+			border-right: none;
+			border-top-color: $color_red;
 		}
+	}
+	.sections {
+		.section-title { display: none; }
 	}
 	section {
 		display: none;

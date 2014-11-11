@@ -98,9 +98,16 @@
 
 	.bottom-matter {
 		.menu {
+			display: none;
+		}
+		.sections {
 			margin-top: 1.5em;
-			h3 {
-				padding: 0.75em 0 0.5em;
+
+			.section-title {
+				display: block;
+				h3 {
+					padding: 0.75em 0 0.5em;
+				}
 			}
 		}
 		section {

@@ -144,6 +144,8 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 
 				<div class="sections span6 push-left">
 
+					<h3 class="experience-affiliations section-title border-block top active">Experience &amp; Affiliations</h3>
+
 					<section class="experience-affiliations bottom-section border-block top-right-bottom active">
 						<?php if ( $special_exp ) : ?>
 							<h4>Representative Matters</h4>
@@ -156,7 +158,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 
 						<?php if ( $courts_forums ) : // @todo: could change everything under the hood to use attorneys instead of courts {?>
-							<h4>Addmissions and Forums</h4>
+							<h4>Admissions and Forums</h4>
 							<?php echo $courts_forums; ?>
 							<?php endif; ?>
 
@@ -181,8 +183,9 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 					</section>
 
-
+					<h3 class="publications border-block section-title top">Publications</h3>
 					<section class="publications bottom-section border-block top-right-bottom">
+
 						<?php
 						$loop = new WP_Query( array(
 							'post_type'      => 'publications',
@@ -192,7 +195,6 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						) );
 						if ( $loop->have_posts() ) :
 							?>
-							<h4>Publications</h4>
 							<article>
 								<?php
 								$related_count = 0;

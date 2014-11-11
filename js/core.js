@@ -1,6 +1,6 @@
 var Carr = {
 
-	// Avoid <img title> tooltips.
+	// Setup menu and sections in Our Firm History
 	setupFirmHistory: function () {
 		var area = $('.history'),
 			milestones = area.find('.year'),
@@ -24,7 +24,7 @@ var Carr = {
 		});
 	},
 
-	// Avoid <img title> tooltips.
+	// Practice filter for Attorney page
 	setupAttorneys: function () {
 		var practiceList = $('.practice-list'),
 			attorneyList = $('.attorneys'),
@@ -53,7 +53,8 @@ var Carr = {
 	setupBottomMatter: function () {
 		var area = $('.bottom-matter'),
 			menuItems = area.find('.menu-item'),
-			sections = area.find('.bottom-section');
+			sections = area.find('.bottom-section'),
+			sectionTitles = area.find('.section-title');
 
 		function updateActive(target) {
 			var targetSection = sections.filter('.' + target),
@@ -67,10 +68,36 @@ var Carr = {
 			}
 		}
 
+		function mobileCheck() {
+			if ( $('.section-title').css('display') === 'block' ) {
+				sections.removeClass('active');
+				sectionTitles.removeClass('active');
+			}
+		}
+
 		menuItems.on('click', function () {
 			var target_class = $(this).attr("class").split(' ')[0];
 			updateActive(target_class);
-			console.log('!!!');
+		});
+
+		sectionTitles.on('click', function () {
+			var targetClass = $(this).attr("class").split(' ')[0],
+				targetSection = sections.filter('.' + targetClass );
+
+			if ( ( $(this).hasClass('active') && targetSection.hasClass('active') ) ) {
+				$(this).removeClass('active');
+				targetSection.removeClass('active');
+			} else {
+				$(this).addClass('active');
+				targetSection.addClass('active');
+			}
+		});
+
+		$(document).ready(function () {
+			$(window).resize(function() {
+				mobileCheck();
+			});
+			mobileCheck();
 		});
 	},
 	
@@ -115,7 +142,7 @@ var Carr = {
 				menu.setAttribute( 'aria-expanded', 'true' );
 			}
 		};
-	},
+	}
 	
 	
 }; // Carr object

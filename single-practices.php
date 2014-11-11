@@ -206,6 +206,8 @@ if ( $chair_id_2 ) {
 
 	<div class="sections span6 push-left">
 
+		<h3 class="rep-matters section-title border-block top-right active">Representative Matters</h3>
+
 		<section class="rep-matters bottom-section border-block top-right-bottom  active">
 			<?php echo $rep_matters; ?>
 		</section>
@@ -219,6 +221,8 @@ if ( $chair_id_2 ) {
 			});
 		</script>
 		<?php endif; ?>
+
+		<h3 class="publications section-title border-block top-right">Publications</h3>
 
 		<section class="publications bottom-section border-block top-right-bottom ">
 
@@ -263,6 +267,8 @@ if ( $chair_id_2 ) {
 				</script>
 			<?php endif; ?>
 		</section>
+
+		<h3 class="news section-title border-block top-right">News</h3>
 
 		<section class="news bottom-section border-block top-right-bottom ">
 
