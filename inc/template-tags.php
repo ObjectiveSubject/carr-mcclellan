@@ -157,8 +157,6 @@ function cmc_share_links() {
 			<li><a href="https://twitter.com/share?url=<?php echo $permalink; ?>&title=<?php echo $title; ?>" class="social-icon icon-twitter"><span class="hide-text">Twitter</span></a></li>
 			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $permalink; ?>&title=<?php echo $title; ?>&source=carrmcclellan.com" class="social-icon icon-linkedin"><span class="hide-text">Linkedin</span></a></li>
 			<li><a href="http://www.facebook.com/share.php?u=<?php echo $permalink; ?>&title=<?php echo $title; ?>" class="social-icon icon-facebook"><span class="hide-text">Facebook</span></a></li>
-			<li><a href="http://www.tumblr.com/share?v=3&u=<?php echo $permalink; ?>&t=<?php echo $title; ?>" class="social-icon icon-tumblr"><span class="hide-text">Tumblr</span></a></li>
-			<li><a href="https://plus.google.com/share?url=<?php echo $permalink; ?>" class="social-icon icon-googleplus"><span class="hide-text">Google Plus</span></a></li>
 		</ul>
 	</div>
 
