@@ -566,9 +566,138 @@ textarea {
 /**
  * Adding styling for Gravity Forms
  */
+.entry-content .gform_wrapper ul {
+  margin: 0; }
+
+.entry-content .gform_wrapper li:before {
+  content: "";
+  margin: 0; }
+
 .gform_wrapper {
   background: white;
-  padding: 1em; }
+  padding: 1em;
+  margin-bottom: 1em; }
+  .gform_wrapper form {
+    margin: 0; }
+  .gform_wrapper input[type="text"],
+  .gform_wrapper input[type="email"],
+  .gform_wrapper input[type="url"],
+  .gform_wrapper input[type="tel"],
+  .gform_wrapper input[type="password"],
+  .gform_wrapper input[type="search"],
+  .gform_wrapper textarea {
+    border-bottom: 4px solid #F4F5F6;
+    margin-bottom: 0;
+    padding: 10px 15px 10px 0;
+    color: #5A5A5A; }
+    .gform_wrapper input[type="text"]:hover, .gform_wrapper input[type="text"]:focus,
+    .gform_wrapper input[type="email"]:hover,
+    .gform_wrapper input[type="email"]:focus,
+    .gform_wrapper input[type="url"]:hover,
+    .gform_wrapper input[type="url"]:focus,
+    .gform_wrapper input[type="tel"]:hover,
+    .gform_wrapper input[type="tel"]:focus,
+    .gform_wrapper input[type="password"]:hover,
+    .gform_wrapper input[type="password"]:focus,
+    .gform_wrapper input[type="search"]:hover,
+    .gform_wrapper input[type="search"]:focus,
+    .gform_wrapper textarea:hover,
+    .gform_wrapper textarea:focus {
+      border-color: #E0E0E0; }
+  .gform_wrapper input[type="submit"] {
+    border-left: 4px solid #F4F5F6; }
+    .gform_wrapper input[type="submit"]:hover, .gform_wrapper input[type="submit"]:focus {
+      border-color: #EC513C; }
+
+.gform_title {
+  margin: 0.5em 0 0.75em;
+  color: #542E4B !important; }
+
+.gform_description {
+  display: block;
+  margin-bottom: 2em;
+  color: #703F50; }
+
+.gfield {
+  margin: 0 0 1.5em; }
+
+.ginput_complex:before, .ginput_complex:after {
+  content: "";
+  display: table; }
+.ginput_complex:after {
+  clear: both; }
+.ginput_complex .ginput_left,
+.ginput_complex .ginput_right {
+  width: 48%;
+  float: left; }
+.ginput_complex .ginput_left {
+  margin-right: 4%; }
+
+.gfield_label,
+.ginput_complex label,
+.gfield_description {
+  display: block;
+  font-size: 14px; }
+
+.gfield_label {
+  color: #542E4B;
+  font-family: "BrandonGrotesque", helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.ginput_complex label,
+.gfield_description {
+  font-style: italic;
+  color: #8D8D8D;
+  margin: 2px 0 0; }
+
+.gfield_checkbox,
+.gfield_radio {
+  margin: 0; }
+  .gfield_checkbox input,
+  .gfield_radio input {
+    margin: 0 5px 0 0; }
+  .gfield_checkbox label,
+  .gfield_radio label {
+    font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
+    color: #5A5A5A;
+    font-size: 16px;
+    cursor: pointer; }
+    .gfield_checkbox label:hover,
+    .gfield_radio label:hover {
+      color: #EC513C; }
+
+.gfield_list_cell {
+  width: 48%; }
+
+.gform_confirmation_message {
+  border: 4px solid #285F8A;
+  padding: 1em 1em 1em 0;
+  border-left: 0;
+  font-size: 1.5em;
+  line-height: 1.2em; }
+
+.validation_error {
+  background: #EC513C;
+  color: #FFF;
+  padding: 1em;
+  margin: 0 -1em 2em;
+  font-family: "BrandonGrotesque", helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.2em; }
+
+.gfield_error .gfield_label {
+  color: #EC513C; }
+.gfield_error input[type="text"],
+.gfield_error input[type="email"],
+.gfield_error input[type="url"],
+.gfield_error input[type="tel"],
+.gfield_error input[type="password"],
+.gfield_error input[type="search"],
+.gfield_error textarea {
+  border-color: #EC513C; }
 
 /* Text meant only for screen readers */
 .screen-reader-text {
