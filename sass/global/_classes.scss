@@ -41,11 +41,13 @@
 
 .social-icon {
 	display: block;
-	padding: 16px;
-	width: $grid_width_static;
-	height: $grid_width_static;
+	padding: 12px;
+	// width: $grid_width_static;
+	// height: $grid_width_static;
+	width: 54px;
+	height: 54px;
 	text-align: center;
-	font-size: 32px;
+	font-size: 24px;
 	color: #FFF;
 	&.icon-twitter { 
 		background: $color_twitter;
@@ -55,17 +57,9 @@
 		background: $color_facebook; 
 		&:hover { background: #FFF; color: $color_facebook; }
 	}
-	&.icon-tumblr { 
-		background: $color_tumblr; 
-		&:hover { background: #FFF; color: $color_tumblr; }
-	}
 	&.icon-linkedin { 
 		background: $color_linkedin; 
 		&:hover { background: #FFF; color: $color_linkedin; }
-	}
-	&.icon-googleplus { 
-		background: $color_googleplus; 
-		&:hover { background: #FFF; color: $color_googleplus; }
 	}
 }
 

@@ -801,11 +801,11 @@ object {
 
 .social-icon {
   display: block;
-  padding: 16px;
-  width: 70px;
-  height: 70px;
+  padding: 12px;
+  width: 54px;
+  height: 54px;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   color: #FFF; }
   .social-icon.icon-twitter {
     background: #5594CF; }
@@ -817,21 +817,11 @@ object {
     .social-icon.icon-facebook:hover {
       background: #FFF;
       color: #2D4B86; }
-  .social-icon.icon-tumblr {
-    background: #2B374A; }
-    .social-icon.icon-tumblr:hover {
-      background: #FFF;
-      color: #2B374A; }
   .social-icon.icon-linkedin {
     background: #256BA6; }
     .social-icon.icon-linkedin:hover {
       background: #FFF;
       color: #256BA6; }
-  .social-icon.icon-googleplus {
-    background: #C04A38; }
-    .social-icon.icon-googleplus:hover {
-      background: #FFF;
-      color: #C04A38; }
 
 .monogram {
   display: block;
