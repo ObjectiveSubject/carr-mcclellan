@@ -928,7 +928,7 @@ body {
     color: #EC513C; }
 
 /* Small menu */
-.main-nav .menu-toggle {
+.menu-toggle {
   display: none; }
 
 /* Page Header
@@ -1534,10 +1534,29 @@ body {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .menu-toggle,
+  .main-nav.toggled .nav-menu {
+    display: block; }
+
+  .menu-toggle {
+    border: none;
+    color: #404060;
+    background: white; }
+
   .main-nav {
-    padding: 0; }
-    .main-nav ul li {
-      width: 100%; }
+    padding: 0;
+    margin-top: 0; }
+    .main-nav ul {
+      display: none;
+      z-index: 1;
+      position: absolute;
+      top: 50px;
+      background: white;
+      border-top: 2px solid #8D8D8D; }
+      .main-nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        border-bottom: 2px solid #8D8D8D; }
 
   .hentry {
     max-width: 100%; }

@@ -1,11 +1,36 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.menu-toggle,
+	.main-nav.toggled .nav-menu {
+		display: block;
+	}
+	.menu-toggle {
+		border: none;
+		color: $color_blue4;
+		background: white;
+	}
+	.main-nav {
+
+	}
+
 	.main-nav {
 		padding: 0;
-		ul li {
-			width: 100%;
+		margin-top: 0;
+		ul {
+			display: none;
+			z-index: 1;
+			position: absolute;
+			top: 50px;
+			background: white;
+			border-top: 2px solid $color_gray3;
+			li {
+				width: 100%;
+				padding: 7px 0;
+				border-bottom: 2px solid $color_gray3;
+			}
 		}
 	}
+
 	.hentry {
 		max-width: 100%;
 	}

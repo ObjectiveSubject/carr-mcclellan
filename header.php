@@ -25,8 +25,8 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-nav span12 clear" role="navigation">
-			<a href="#" class="menu-toggle"><span class="icon-menu"></span><span class="hide-text">Menu</span></a>
+		<nav id="site-navigation" class="main-nav span12 clear main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', '_s' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
 		</nav><!-- #site-navigation -->
 		
