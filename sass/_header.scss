@@ -33,9 +33,11 @@
 	width: 100%;
 	margin: 1.3em auto;
 	padding: 0 $grid_margin_static;
+	box-sizing: border-box;
 }
 
 .main-nav ul {
+	@include layout-clearfix;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
