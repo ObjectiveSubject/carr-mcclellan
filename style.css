@@ -605,7 +605,8 @@ textarea {
     .gform_wrapper textarea:focus {
       border-color: #E0E0E0; }
   .gform_wrapper input[type="submit"] {
-    border: 4px solid #285F8A; }
+    border: 4px solid #285F8A;
+    padding: 21px 18px 18px; }
     .gform_wrapper input[type="submit"]:hover, .gform_wrapper input[type="submit"]:focus {
       border-color: #EC513C; }
 
