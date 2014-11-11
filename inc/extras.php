@@ -35,7 +35,7 @@ function cmc_wp_title( $title, $sep ) {
 		return $title;
 	}
 
-	global $page, $paged;
+	global $page, $paged, $wp;
 
 	// Add the blog name
 	$title .= get_bloginfo( 'name', 'display' );
@@ -49,6 +49,24 @@ function cmc_wp_title( $title, $sep ) {
 	// Add a page number if necessary:
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
 		$title .= " $sep " . sprintf( __( 'Page %s', 'cmc' ), max( $paged, $page ) );
+	}
+
+	$query_vars = $wp->query_vars;
+
+	if ( isset( $query_vars['attorney'] ) ) {
+		$attorney    = $query_vars['attorney'];
+		$attorney_id = carr_get_post_id_by_slug( $attorney, 'attorneys' );
+		$attorney_post = get_post( $attorney_id );
+
+		$title .= ' | News &amp; Events | ' . $attorney_post->post_title;
+	}
+
+	if ( isset( $query_vars['practice'] ) ) {
+		$practice    = $query_vars['practice'];
+		$practice_id = carr_get_post_id_by_slug( $practice, 'practices' );
+		$practice_post = get_post( $practice_id );
+
+		$title .= ' | News &amp; Events | ' . $practice_post->post_title;
 	}
 
 	return $title;
