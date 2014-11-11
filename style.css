@@ -1533,10 +1533,13 @@ body {
       margin: 0; }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
   .menu-toggle,
   .main-nav.toggled .nav-menu {
-    display: block; }
+    display: block;
+    border-color: #EC513C;
+    height: auto;
+    max-height: 1000px; }
 
   .menu-toggle {
     border: none;
@@ -1547,16 +1550,21 @@ body {
     padding: 0;
     margin-top: 0; }
     .main-nav ul {
-      display: none;
       z-index: 1;
       position: absolute;
       top: 50px;
+      height: 0;
+      max-height: 0;
+      width: 100%;
       background: white;
-      border-top: 2px solid #8D8D8D; }
+      border-bottom: 5px solid #F4F5F6;
+      -webkit-transition: all 500ms ease;
+              transition: all 500ms ease;
+      overflow: hidden; }
       .main-nav ul li {
         width: 100%;
-        padding: 7px 0;
-        border-bottom: 2px solid #8D8D8D; }
+        padding: 15px 0;
+        border-top: 1px solid #E0E0E0; }
 
   .hentry {
     max-width: 100%; }
