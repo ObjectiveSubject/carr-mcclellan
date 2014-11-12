@@ -1517,6 +1517,27 @@ body {
     border-color: #4B4B72;
     color: #4B4B72; }
 
+/* Special Page styles
+------------------------------------- */
+.page-affiliations-memberships .entry-content > ul > li,
+.page-community-involvement .entry-content > ul > li {
+  border-bottom: 1px solid #EEE;
+  padding: 0.75em 0px;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  color: #542E4B; }
+  .page-affiliations-memberships .entry-content > ul > li:before,
+  .page-community-involvement .entry-content > ul > li:before {
+    content: "";
+    margin: 0; }
+.page-affiliations-memberships .entry-content ul ul,
+.page-community-involvement .entry-content ul ul {
+  margin: 0.5em 0px 0px 0.5em; }
+  .page-affiliations-memberships .entry-content ul ul li,
+  .page-community-involvement .entry-content ul ul li {
+    font-size: 16px;
+    color: #5A5A5A; }
+
 .footer-nav {
   float: left; }
   .footer-nav ul {
