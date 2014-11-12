@@ -46,6 +46,18 @@
 		max-width: 250px;
 	}
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+	.home .page-header, .page-id-32 .page-header {
+		background: url(images/large-monogram@2x.png) no-repeat center center $color_gray0;
+		background-size: 537px;
+	}
+}
+
 /* Main
 ----------------------------------- */
 #main {
