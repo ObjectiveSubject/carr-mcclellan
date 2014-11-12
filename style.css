@@ -1173,6 +1173,11 @@ body {
       top: 50%;
       right: 15px;
       margin-top: -6px; }
+  .aside.aside-left .button {
+    padding-right: 15px;
+    padding-left: 30px; }
+    .aside.aside-left .button [class*="icon-"] {
+      left: 0; }
   .aside h3 {
     font: normal normal bold 14px/14px "BrandonGrotesque", helvetica, sans-serif;
     text-transform: uppercase;

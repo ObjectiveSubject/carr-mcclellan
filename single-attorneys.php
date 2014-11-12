@@ -53,6 +53,11 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 		<main id="main" class="site-main span12 aligncenter clear" role="main">
 
 			<aside class="aside aside-left span2 push-left">
+				<div class="border-block">
+					<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'attorneys/'; ?>">View all attorneys
+						<span class="icon-arrow-left"></span>
+					</a>
+				</div>
 
 				<div class="border-block top contact-info">
 					<h3 class="block-label phone">Phone</h3>

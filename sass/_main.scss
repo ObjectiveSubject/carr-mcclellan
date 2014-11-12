@@ -61,6 +61,16 @@
 		}
 	}
 
+	&.aside-left {
+		.button {
+			padding-right: 15px;
+			padding-left: 30px;
+			[class*="icon-"] {
+				left: 0;
+			}
+		}
+	}
+
 	h3 {
 		font: normal normal bold 14px/14px $font_heading;
 		text-transform: uppercase;
