@@ -1876,7 +1876,10 @@ body {
     color: #5A5A5A; }
     .bottom-matter .sections section h4 {
       color: #5A5A5A;
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.5em;
+      font-variant: normal;
+      text-transform: uppercase;
+      font-size: 14px; }
   .bottom-matter .border-block.top-right-bottom {
     border: none;
     padding: 0; }
