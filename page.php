@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area page-default">
+	<div id="primary" class="content-area page-default <?php echo 'page-'.$post->post_name; ?>">
 	
 		<header class="page-header">
 			<div class="span12 aligncenter">
