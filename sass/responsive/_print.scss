@@ -1,0 +1,137 @@
+@media only print {
+	
+	.print-only { display: block; }
+	
+	body {
+		border: none;
+		background: #FFF;
+	}
+	
+	.main-nav {
+		display: none;
+	}
+
+	.site-branding {
+		padding: 3em 0;
+	}
+	
+	.site-title a {
+		background: none;
+		text-indent: 0;
+		width: auto;
+		margin: 0 auto;
+		height: auto;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	#primary.terminal-page { background: #FFF; margin-bottom: 5em;}
+	
+	.page-header {
+		padding: 8em 0 0;
+		}	
+		.attorney-pic {
+			position: static;
+			display: block;
+			margin: 0 auto;
+			}
+	
+	.push-left {
+		float: none;
+		}
+
+	.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
+		width: auto;
+		max-width: 600px;
+		margin: 0 auto;
+	}	
+		
+	#main {
+		padding: 0;
+		}
+		
+		.aside {
+			a,
+			li { color: $color_gray4; font-size: 1em;}
+		}
+		
+		.aside-left,
+		.aside-right {
+			float: none;
+			width: auto;
+			margin: 0;
+			padding: 0;
+			
+			.button { display: none; }
+			}
+		.aside-left {
+			text-align: center;
+			}
+			.block-label.vcard, 
+			.block-label.print {
+				display: none;
+				}
+
+		.bottom-matter {
+			
+			.menu { display: none; }
+		
+			.sections {
+				
+				.section-title {
+					display: block;
+					padding: 20px 0;
+					margin: 0;
+					color: $color_gray4;
+				}
+				section {
+					display: block;
+					margin: 0 0 4em;
+					color: $color_gray4;
+					
+					h4 {
+						color: $color_gray4;
+						margin-bottom: 0.5em;
+						}
+				}
+			}
+			
+			.border-block.top-right-bottom { border: none; padding: 0; }
+			
+		}// bottom-matter
+	
+	.site-footer {
+		background: #FFF;
+		
+		.row1,
+		#mc_embed_signup { display: none; }
+	
+		.contact {
+			margin: 0;
+			width: 100%;
+			
+			a,
+			.font-text a { color: $color_gray4; }
+			
+			.info,
+			address.info {
+				width: 100%;
+				margin: 0;
+				color: $color_gray4;
+			}
+		}
+		
+		.social-nav,
+		.utility-nav { display: none; }
+		
+		.copyright {
+			float: none;
+			color: $color_gray4;
+		}
+	}
+
+
+
+
+
+}// print

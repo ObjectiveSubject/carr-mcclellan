@@ -1795,3 +1795,111 @@ body {
 
   footer .row {
     width: 90%; } }
+@media only print {
+  .print-only {
+    display: block; }
+
+  body {
+    border: none;
+    background: #FFF; }
+
+  .main-nav {
+    display: none; }
+
+  .site-branding {
+    padding: 3em 0; }
+
+  .site-title a {
+    background: none;
+    text-indent: 0;
+    width: auto;
+    margin: 0 auto;
+    height: auto;
+    font-size: 24px;
+    text-align: center; }
+
+  #primary.terminal-page {
+    background: #FFF;
+    margin-bottom: 5em; }
+
+  .page-header {
+    padding: 8em 0 0; }
+
+  .attorney-pic {
+    position: static;
+    display: block;
+    margin: 0 auto; }
+
+  .push-left {
+    float: none; }
+
+  .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
+    width: auto;
+    max-width: 600px;
+    margin: 0 auto; }
+
+  #main {
+    padding: 0; }
+
+  .aside a,
+  .aside li {
+    color: #5A5A5A;
+    font-size: 1em; }
+
+  .aside-left,
+  .aside-right {
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 0; }
+    .aside-left .button,
+    .aside-right .button {
+      display: none; }
+
+  .aside-left {
+    text-align: center; }
+
+  .block-label.vcard,
+  .block-label.print {
+    display: none; }
+
+  .bottom-matter .menu {
+    display: none; }
+  .bottom-matter .sections .section-title {
+    display: block;
+    padding: 20px 0;
+    margin: 0;
+    color: #5A5A5A; }
+  .bottom-matter .sections section {
+    display: block;
+    margin: 0 0 4em;
+    color: #5A5A5A; }
+    .bottom-matter .sections section h4 {
+      color: #5A5A5A;
+      margin-bottom: 0.5em; }
+  .bottom-matter .border-block.top-right-bottom {
+    border: none;
+    padding: 0; }
+
+  .site-footer {
+    background: #FFF; }
+    .site-footer .row1,
+    .site-footer #mc_embed_signup {
+      display: none; }
+    .site-footer .contact {
+      margin: 0;
+      width: 100%; }
+      .site-footer .contact a,
+      .site-footer .contact .font-text a {
+        color: #5A5A5A; }
+      .site-footer .contact .info,
+      .site-footer .contact address.info {
+        width: 100%;
+        margin: 0;
+        color: #5A5A5A; }
+    .site-footer .social-nav,
+    .site-footer .utility-nav {
+      display: none; }
+    .site-footer .copyright {
+      float: none;
+      color: #5A5A5A; } }
