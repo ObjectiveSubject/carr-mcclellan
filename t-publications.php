@@ -23,8 +23,8 @@ get_header();
 					<ul>
 						XX<?php // wp_list_categories( '&title_li=' ); ?>
 					</ul>
-				-->
-				</div>
+
+				</div> -->
 			</aside>
 
 			<section class="span9 push-right">
