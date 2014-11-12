@@ -66,10 +66,8 @@
     $recent_speaking = get_post_meta( $post->ID, "recent_speaking", true );
     $areas_practice_hidden = get_post_meta( $post->ID, "areas_practice_hidden", true );
     $areas_practice = get_post_meta($post->ID, 'areas_practice', true);
-    $areas_related_practice_hidden = get_post_meta( $post->ID, "areas_related_practice_hidden", true );
-    $areas_related_practice = get_post_meta($post->ID, 'areas_related_practice', true);
-	  $industry_hidden = get_post_meta( $post->ID, "industry_hidden", true );
-	  $industry = get_post_meta($post->ID, 'industry', true);
+	 $industry_hidden = get_post_meta( $post->ID, "industry_hidden", true );
+	 $industry = get_post_meta($post->ID, 'industry', true);
   ?>
 
   <script type="text/javascript">
@@ -227,35 +225,6 @@
       </td>
     </tr>
 
-
-
-    <tr>
-      <th style="width: 20%;"><label for="areas_related_practice">Related Practice Areas</label></th>
-      <td>
-        <div style="height:90px;overflow:scroll;background:#fff;border:1px solid #ccc;padding:10px;">
-        <?php
-          $loop = new WP_Query(array(
-              'post_type' => 'practices',
-              'orderby' => 'title',
-              'order' => 'ASC',
-              'posts_per_page' => 100
-            ));
-          while ( $loop->have_posts() ) {
-            $loop->the_post();
-            $custom = get_post_custom($post->ID);
-            $name = get_the_title();
-            $cust_name_related = str_replace(',','', $name);
-            $cust_name_related = str_replace('&','', $cust_name_related);
-            $selected = ( is_array($areas_related_practice) && in_array($cust_name_related, $areas_related_practice)) ? 'checked="checked"' : '';
-            echo '<input type="checkbox" class="areas" name="areas_related_practice[]"';
-            echo 'value="' . $cust_name_related . '" ' . $selected . '/> ' . $name . ' <br />';
-          }
-        ?>
-        </div>
-        <input type="hidden" class="text_input" name="areas_related_practice_hidden" value="<?php echo $areas_related_practice_hidden; ?>" size="30" />
-      </td>
-    </tr>
-
     <tr>
 	    <th style="width: 20%;"><label for="industry">Industries</label></th>
 	    <td>
@@ -376,18 +345,11 @@
       update_post_meta($post->ID, "areas_practice", '');
     }
 
-
-    if(isset($_POST["areas_related_practice"])) {
-      update_post_meta($post->ID, "areas_related_practice", $_POST["areas_related_practice"]);
-    } else {
-      update_post_meta($post->ID, "areas_related_practice", '');
-    }
-
-	  if(isset($_POST["industry"])) {
+	if(isset($_POST["industry"])) {
 		  update_post_meta($post->ID, "industry", $_POST["industry"]);
 	  } else {
 		  update_post_meta($post->ID, "industry", '');
-	  }
+	}
 
     if(isset($_POST["test_input"])) update_post_meta($post->ID, "test_input", $_POST["test_input"]);
 
