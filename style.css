@@ -1161,6 +1161,8 @@ body {
     line-height: 1.2em; }
     .aside a:hover {
       color: #EC513C; }
+  .aside .view-all {
+    margin-bottom: 20px; }
   .aside .button {
     position: relative;
     border-color: #E0E0E0;
