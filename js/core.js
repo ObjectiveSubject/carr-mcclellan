@@ -38,8 +38,10 @@ var Carr = {
 			if (targetAttorney.length > 0) {
 				practices.removeClass('active');
 				attorneys.removeClass('active');
+				attorneyList.hide();
 				targetPractice.addClass('active');
 				targetAttorney.addClass('active');
+				attorneyList.fadeIn('850');
 			}
 		}
 
