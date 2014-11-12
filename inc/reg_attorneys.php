@@ -130,7 +130,7 @@ function attorneys_meta_options() {
 			<td>
 				<select name="title">
 					<option value="" <?php echo ( $title == '' ) ? 'selected="selected"' : ''; ?>>No Title</option>
-					<!-- <option value="Member" <?php echo ( $title == 'Member' ) ? 'selected="selected"' : ''; ?>>Member</option> -->
+					<option value="Attorney" <?php echo ( $title == 'Attorney' ) ? 'selected="selected"' : ''; ?>>Attorney</option>
 					<option value="Director" <?php echo ( $title == 'Director' ) ? 'selected="selected"' : ''; ?>>Director</option>
 					<option value="Special Counsel" <?php echo ( $title == 'Special Counsel' ) ? 'selected="selected"' : ''; ?>>Special Counsel</option>
 					<option value="Senior Counsel" <?php echo ( $title == 'Senior Counsel' ) ? 'selected="selected"' : ''; ?>>Senior Counsel</option>
