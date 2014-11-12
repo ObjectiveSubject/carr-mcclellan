@@ -162,3 +162,50 @@ function cmc_share_links() {
 
 	<?php
 }
+
+/**
+ * Sidebar for News & Events pages
+ */
+function carr_news_events_sidebar() {
+
+	global $post;
+
+	$attorneys = new WP_Query(array(
+		'post_type' => 'attorneys',
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
+		'posts_per_page' => 80
+	));
+
+	?>
+	<div class="border-block top">
+		<h3 class="block-label">Categories</h3>
+
+		<ul class="categories">
+			<?php wp_list_categories( '&title_li=&depth=1' ); ?>
+		</ul>
+	</div>
+
+	<div class="border-block top">
+		<h3>Attorneys</h3>
+		<ul class="attorneys">
+
+			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+
+				<?php
+
+				$name = get_post_meta( $post->ID, 'first_name', true ) . ' ';
+				$name .= get_post_meta( $post->ID, 'middle_initial', true ) . ' ';
+				$name .= get_post_meta( $post->ID, 'last_name', true);
+
+				?>
+
+				<li class="">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>/news-events/attorney/<?php echo $post->post_name; ?>"><?php echo $name; ?></a>
+				</li>
+
+			<?php endwhile; ?>
+		</ul>
+	</div>
+	<?php
+}
