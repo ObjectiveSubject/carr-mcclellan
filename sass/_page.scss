@@ -165,3 +165,8 @@ body {
 		}
 	}
 }
+
+.industry-row {
+	width: 100%;
+	@include layout-clearfix;
+}

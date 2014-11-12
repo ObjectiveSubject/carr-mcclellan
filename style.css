@@ -997,6 +997,14 @@ body {
       content: "›";
       margin-right: 10px; }
 
+.industry-row {
+  width: 100%; }
+  .industry-row:before, .industry-row:after {
+    content: "";
+    display: table; }
+  .industry-row:after {
+    clear: both; }
+
 .site-header {
   position: absolute;
   z-index: 1;
