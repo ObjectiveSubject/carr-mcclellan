@@ -428,9 +428,30 @@ function carr_redirect() {
 
 	if ( is_single() && $post_type == 'post' ) {
 		$clickthrough = get_post_meta( $post->ID, 'source_url', true );
+
 		if ( $clickthrough ) {
 			wp_redirect( $clickthrough );
 			exit;
+		}
+
+		if ( has_category( 'in-the-news') ) {
+			$news_type_select = get_post_meta($post->ID, "news_type_select", true );
+
+			if ( 'pdf' == $news_type_select ) {
+				$attachments = attachments_get_attachments();
+				if ( $attachments ) {
+					$pdf = $attachments[0]['location'];
+
+					wp_redirect( $pdf );
+					exit;
+				}
+
+			} elseif ( 'external' == $news_type_select ) {
+				$source_url = get_post_meta($post->ID, "source_url", true );
+
+				wp_redirect( $source_url );
+				exit;
+			}
 		}
 	}
 
