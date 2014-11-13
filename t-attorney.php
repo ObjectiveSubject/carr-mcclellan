@@ -37,10 +37,9 @@ $attorneys = new WP_Query(array(
 					));
 				?>
 				<ul class="practice-list">
+						<li class="practice all active">All Practices</li>
 					<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
-
-							<li class="practice <?php echo $post->post_name; ?>"><?php the_title();?></li>
-
+						<li class="practice <?php echo $post->post_name; ?>"><?php the_title();?></li>
 					<?php endwhile; ?>
 				</ul>
 			</div>
@@ -69,7 +68,7 @@ $attorneys = new WP_Query(array(
 
 				?>
 
-				<article class="border-block top-right-bottom square attorney sortable <?php echo $practice_areas; ?> active">
+				<article class="border-block top-right-bottom square attorney sortable all <?php echo $practice_areas; ?> active">
 					<h3><a href="<?php the_permalink() ?>"><?php echo $name; ?></a></h3>
 
 					<p class="titles">
