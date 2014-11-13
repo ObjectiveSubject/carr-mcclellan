@@ -131,8 +131,8 @@ function my_login_head() {
  * Register Custom Post Types
  */
 
-// Milestones
-include( 'inc/reg_milestones.php' );
+// Articles
+include( 'inc/reg_articles.php' );
 
 // Attorneys
 include( 'inc/reg_attorneys.php' );
@@ -143,11 +143,8 @@ include( 'inc/reg_practices.php' );
 // Industries
 include( 'inc/reg_industries.php' );
 
-// Publications
-include( 'inc/reg_publications.php' );
-
-// Articles
-include( 'inc/reg_articles.php' );
+// Milestones
+include( 'inc/reg_milestones.php' );
 
 // Posts Tagging of Attorneys
 include( 'inc/posts_meta.php' );
@@ -170,9 +167,6 @@ function admin_init() {
 	// Practices
 	add_meta_box( "practices_meta_options", "Practice Information", "practices_meta_options", "practices" );
 	add_meta_box( "practices_attorneys_meta_options", "Practicing Attorneys", "practices_attorneys_meta_options", "practices", "side" );
-
-	// Publications
-	add_meta_box( "publications_meta_options", "Publication Information", "publications_meta_options", "publications" );
 
 	// Articles
 	add_meta_box( "articles_meta_options", "Article Information", "articles_meta_options", "articles" );

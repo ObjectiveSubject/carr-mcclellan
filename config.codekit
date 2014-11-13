@@ -96,6 +96,226 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/practices_assets\/practice_business.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1997,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_business.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_business.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_business@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4552,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_business@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_business@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_construction.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1710,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_construction.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_construction.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_construction@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3584,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_construction@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_construction@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_corporate.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1887,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_corporate@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3708,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_creditors_rights.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2403,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_creditors_rights@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4893,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_employment.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1628,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_employment.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_employment.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_employment@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3704,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_employment@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_employment@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_intellectual_property.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2117,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_intellectual_property@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3953,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_pro_bono.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2223,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_pro_bono@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4807,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_real_estate.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1603,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_real_estate@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3062,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_taxation.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1147,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_taxation@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2261,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_trusts_estate.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2162,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_trusts_estate@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4682,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/sprite.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -154,6 +374,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/inc\/reg_articles.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/reg_articles.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/inc\/reg_attorneys.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -186,15 +415,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/inc\/reg_practices.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/inc\/reg_publications.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_publications.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -279,6 +499,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/page-articles.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-articles.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-industries.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -361,6 +590,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/_header.scss",
 		"outputAbbreviatedPath": "\/css\/_header.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/_main.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/_main.scss",
+		"outputAbbreviatedPath": "\/css\/_main.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -733,6 +978,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/single-articles.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/single-articles.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/single-attorneys.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -760,20 +1014,20 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/single-publications.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/single-publications.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/single.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/single.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/style.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -810,6 +1064,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/t-our-firm.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/t-practices.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/t-practices.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
