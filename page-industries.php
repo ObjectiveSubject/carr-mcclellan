@@ -48,7 +48,7 @@ $industries = new WP_Query( array(
 				<div class="industry-row">
 					<div class="entry-content span7 push-left">
 						<article id="<?php echo esc_attr( $post->post_name ); ?>" class="industry-content">
-							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+							<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>
 						</article>
 					</div>
