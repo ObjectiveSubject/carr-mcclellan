@@ -1,7 +1,6 @@
 <?php
 get_header();
 
-$custom = get_post_custom( $post->ID );
 $type   = wp_get_post_terms( $post->ID, 'publications' );
 $type   = $type[0]->name;
 //$date = get_the_date('m/d/y');
@@ -36,7 +35,7 @@ if ( $attachments ) {
 				<div class="border-block top categories">
 					<h3 class="block-label">Attorneys</h3>
 
-					<ul class="list list-2 attorney_publication">
+					<ul class="list list-2 attorney_article">
 						<?php
 						$loop = new WP_Query( array(
 							'post_type'      => 'attorneys',

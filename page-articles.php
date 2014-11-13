@@ -1,15 +1,15 @@
 <?php
 /**
- * Template Name: Publications
+ * Template Name: Articles
  **/
 get_header();
 ?>
 
-	<div id="primary" class="content-area content-publications">
+	<div id="primary" class="content-area content-articles">
 
 		<header class="page-header">
 			<div class="centered">
-				<h1 class="page-title">Publications</h1>
+				<h1 class="page-title">Articles</h1>
 
 				<div class="page-subtitle"><?php the_content(); ?></div>
 			</div>
@@ -28,13 +28,13 @@ get_header();
 			</aside> -->
 
 			<!-- <section class="span9 push-right"> -->
-			<section class="publications_wrap">
+			<section class="articles_wrap">
 				<a href="<?php echo get_bloginfo( 'url' ); ?>/expertise/" class="see-all"><span class="icon-arrow-left"></span> Back to Expertise</a>
-				<div class="publications">
+				<div class="articles">
 
 					<?php
 					$loop = new WP_Query( array(
-						'post_type'      => 'publications',
+						'post_type'      => 'articles',
 						'orderby'        => 'date',
 						'order'          => 'DESC',
 						'posts_per_page' => 100

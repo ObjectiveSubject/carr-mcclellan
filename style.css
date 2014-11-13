@@ -967,7 +967,7 @@ body {
     padding-right: 2em; }
     .bottom-matter section.active {
       display: block; }
-    .bottom-matter section.publications {
+    .bottom-matter section.articles {
       margin-top: 4.65em; }
     .bottom-matter section.related-content, .bottom-matter section.news {
       margin-top: 9.3em; }
@@ -1529,7 +1529,8 @@ body {
       margin-top: -10px; }
 
 .practices_wrap .see-all,
-.publications_wrap .see-all {
+.articles_wrap .see-all,
+.industries_wrap .see-all {
   position: relative;
   color: #C0C0C0;
   display: inline-block;
@@ -1539,10 +1540,12 @@ body {
   text-transform: uppercase;
   margin: 0 0 10px 0; }
   .practices_wrap .see-all:hover,
-  .publications_wrap .see-all:hover {
+  .articles_wrap .see-all:hover,
+  .industries_wrap .see-all:hover {
     color: #EC513C; }
   .practices_wrap .see-all [class*="icon-"],
-  .publications_wrap .see-all [class*="icon-"] {
+  .articles_wrap .see-all [class*="icon-"],
+  .industries_wrap .see-all [class*="icon-"] {
     vertical-align: -1px;
     margin: 0 5px 0px 0; }
 
@@ -1586,10 +1589,10 @@ body {
     font-size: 16px;
     color: #5A5A5A; }
 
-.content-publications .site-main .square.blog-post {
+.content-articles .site-main .square.blog-post {
   width: 22%;
   margin-left: 4%; }
-  .content-publications .site-main .square.blog-post.place1 {
+  .content-articles .site-main .square.blog-post.place1 {
     margin-left: 0; }
 
 .footer-nav {

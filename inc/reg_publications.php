@@ -18,18 +18,6 @@
         );
     	register_post_type( 'publications' , $args );
 
-    	register_taxonomy(
-			'publications',
-			'publications',
-			array(
-				'label' =>'Publication Type',
-				'sort' => true,
-				'args' => array('orderby' => 'term_order'),
-				//'rewrite' => array('slug' => 'pub_type'),
-				'rewrite' => array('slug' => 'publications'),
-				'hierarchical'=>true
-			)
-		);
 	}
 
 /*********************************************************

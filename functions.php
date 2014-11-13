@@ -146,6 +146,9 @@ include( 'inc/reg_industries.php' );
 // Publications
 include( 'inc/reg_publications.php' );
 
+// Articles
+include( 'inc/reg_articles.php' );
+
 // Posts Tagging of Attorneys
 include( 'inc/posts_meta.php' );
 
@@ -170,6 +173,9 @@ function admin_init() {
 
 	// Publications
 	add_meta_box( "publications_meta_options", "Publication Information", "publications_meta_options", "publications" );
+
+	// Articles
+	add_meta_box( "articles_meta_options", "Article Information", "articles_meta_options", "articles" );
 
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );

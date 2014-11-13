@@ -143,7 +143,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 				<div class="menu span3 push-left">
 					<h3 class="experience-affiliations menu-item border-block top-right active">Experience &amp; Affiliations</h3>
 
-					<h3 class="publications menu-item border-block top-right">Publications</h3>
+					<h3 class="articles menu-item border-block top-right">Articles</h3>
 
 				</div>
 
@@ -188,12 +188,12 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 					</section>
 
-					<h3 class="publications border-block section-title top">Publications</h3>
-					<section class="publications bottom-section border-block top-right-bottom">
+					<h3 class="articles border-block section-title top">Articles</h3>
+					<section class="articles bottom-section border-block top-right-bottom">
 
 						<?php
 						$loop = new WP_Query( array(
-							'post_type'      => 'publications',
+							'post_type'      => 'articles',
 							'orderby'        => 'date',
 							'order'          => 'DESC',
 							'posts_per_page' => 100
@@ -207,7 +207,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 								while ( $loop->have_posts() ) : $loop->the_post();
 									$custom      = get_post_custom( $post->ID );
 									$pub_summary = get_post_meta( $post->ID, "pub_summary", true );
-									$type        = wp_get_post_terms( $post->ID, 'publications' );
+									$type        = wp_get_post_terms( $post->ID, 'articles' );
 									if ( $type ) {
 										$type = $type[0]->name;
 									}
@@ -239,7 +239,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 									<script type="text/javascript">
 										jQuery(function ($) {
 											$(function () {
-												$('.publications').remove();
+												$('.articles').remove();
 											});
 										});
 									</script>
