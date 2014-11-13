@@ -155,9 +155,6 @@ include( 'inc/v_card.php' );
 // Init all Meta Boxes
 function admin_init() {
 
-	// Milestones
-	add_meta_box( "milestones_meta_options", "Options", "milestones_meta_options", "milestones" );
-
 	// Attorneys
 	add_meta_box( "attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys" );
 
