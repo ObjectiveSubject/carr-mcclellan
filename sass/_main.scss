@@ -446,7 +446,8 @@
 		}
 	}
 }
-.practices_wrap {
+.practices_wrap,
+.publications_wrap {
 
 	.see-all {
 		position: relative;
@@ -521,7 +522,18 @@
 	}
 }
 
-
+.content-publications {
+	
+	.site-main {
+		
+		.square.blog-post {
+			width: 22%;
+			margin-left: 4%;
+		
+			&.place1 { margin-left: 0; }
+		}
+	}
+}
 
 
 
