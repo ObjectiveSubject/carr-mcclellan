@@ -1513,17 +1513,35 @@ body {
     position: absolute;
     color: #C0C0C0;
     display: block;
-    top: 0;
+    top: 8px;
     right: 0;
     padding-right: 20px;
     font-family: "BrandonGrotesque", helvetica, sans-serif;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase; }
+    .attorneys .see-all:hover, .news-events .see-all:hover {
+      color: #EC513C; }
     .attorneys .see-all [class*="icon-"], .news-events .see-all [class*="icon-"] {
       position: absolute;
       top: 50%;
       right: 0;
       margin-top: -10px; }
+
+.practices_wrap .see-all {
+  position: relative;
+  color: #C0C0C0;
+  display: inline-block;
+  font-family: "BrandonGrotesque", helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 10px 0; }
+  .practices_wrap .see-all:hover {
+    color: #EC513C; }
+  .practices_wrap .see-all [class*="icon-"] {
+    vertical-align: -1px;
+    margin: 0 5px 0px 0; }
 
 .news-events section {
   display: none; }

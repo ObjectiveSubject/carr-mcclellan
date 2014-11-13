@@ -429,17 +429,39 @@
 		position: absolute;
 	  color: $color_gray2;
 		display: block;
-		top: 0;
+		top: 8px;
 		right: 0;
 		padding-right: 20px;
 		font-family: $font_heading;
+		font-size: 14px;
 		font-weight: bold;
 		text-transform: uppercase;
+		&:hover { color: $color_red; }
+		
 		[class*="icon-"] {
 			position: absolute;
 			top: 50%;
 			right: 0;
 			margin-top: -10px;
+		}
+	}
+}
+.practices_wrap {
+
+	.see-all {
+		position: relative;
+	  color: $color_gray2;
+		display: inline-block;
+		font-family: $font_heading;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0 0 10px 0;
+		&:hover { color: $color_red; }
+		
+		[class*="icon-"] {
+			vertical-align: -1px;
+			margin: 0 5px 0px 0;
 		}
 	}
 }

@@ -13,7 +13,8 @@
 
 	<main id="main" class="site-main span12 aligncenter clear" role="main">
 
-		<section id="content">
+		<section id="content" class="practices_wrap">
+			<a href="<?php echo get_bloginfo( 'url' ); ?>/expertise/" class="see-all"><span class="icon-arrow-left"></span> Back to Expertise</a>
 			<?php cmc_get_practices(); ?>
 		</section>
 
