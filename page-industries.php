@@ -18,9 +18,11 @@ $industries = new WP_Query( array(
 		</div>
 	</header>
 
-	<main id="main" class="site-main span12 aligncenter clear" role="main">
+	<main id="main" class="site-main span12 aligncenter clear industries_wrap" role="main">
 
 		<aside class="aside aside-left span2 push-left">
+			<a href="<?php echo get_bloginfo( 'url' ); ?>/expertise/" class="see-all"><span class="icon-arrow-left"></span> Back to Expertise</a>
+
 			<div class="border-block top">
 				<h3 class="block-label">Industries</h3>
 
