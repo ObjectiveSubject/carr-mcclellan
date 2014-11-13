@@ -15,7 +15,8 @@
         	//'capability_type' => 'post',
         	'hierarchical' => false,
         	'rewrite' => true,
-        	'supports' => array('title', 'editor')
+        	'supports' => array('title', 'editor'),
+	        'menu_icon'       => 'dashicons-portfolio'
         );
     	register_post_type( 'practices' , $args );
   }

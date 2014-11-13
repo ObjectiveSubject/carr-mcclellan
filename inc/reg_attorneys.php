@@ -15,7 +15,8 @@ function attorneys_register() {
 		//'capability_type' => 'post',
 		'hierarchical'   => false,
 		//'rewrite' => true,
-		'supports'       => array( 'title', 'thumbnail' )
+		'supports'       => array( 'title', 'thumbnail' ),
+		'menu_icon'       => 'dashicons-businessman'
 	);
 	register_post_type( 'attorneys', $args );
 }

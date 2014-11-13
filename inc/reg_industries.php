@@ -14,7 +14,8 @@
           'capability_type' => 'post',
           'hierarchical' => false,
           'rewrite' => true,
-          'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
+          'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+          'menu_icon'       => 'dashicons-hammer'
         );
       register_post_type( 'industries' , $args );
   }
