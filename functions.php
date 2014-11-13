@@ -433,5 +433,10 @@ function carr_redirect() {
 			exit;
 		}
 	}
+
+	if ( is_single() && $post_type == 'industries' ) {
+		$new_url = esc_url( home_url( '/' ) ) . 'industries/#' . $post->post_name;
+		wp_redirect( $new_url );
+	}
 }
 add_action( 'template_redirect', 'carr_redirect' );
