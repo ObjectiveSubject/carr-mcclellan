@@ -128,6 +128,17 @@
 	&.child6 { background: $color_blue4; }
 }
 
+// Limit hover effects to solid blocks on homepage
+.home .solid-block {
+	transition: background-color 250ms ease;
+	&.child1:hover { background-color: shade($color_blue1, 20%); }
+	&.child2:hover { background-color: shade($color_purple1, 20%); }
+	&.child3:hover { background-color: shade($color_blue2, 20%); }
+	&.child4:hover { background-color: shade($color_purple2, 20%); }
+	&.child5:hover { background-color: shade($color_blue3, 20%); }
+	&.child6:hover { background-color: shade($color_blue4, 20%); }
+}
+
 .site-main .square {
 	width: 48%;
 	float: left;

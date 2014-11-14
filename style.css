@@ -1254,6 +1254,22 @@ body {
   .solid-block.child6 {
     background: #404060; }
 
+.home .solid-block {
+  -webkit-transition: background-color 250ms ease;
+          transition: background-color 250ms ease; }
+  .home .solid-block.child1:hover {
+    background-color: #204c6e; }
+  .home .solid-block.child2:hover {
+    background-color: #593240; }
+  .home .solid-block.child3:hover {
+    background-color: #284063; }
+  .home .solid-block.child4:hover {
+    background-color: #4c3841; }
+  .home .solid-block.child5:hover {
+    background-color: #3c3c5b; }
+  .home .solid-block.child6:hover {
+    background-color: #33334c; }
+
 .site-main .square {
   width: 48%;
   float: left;
