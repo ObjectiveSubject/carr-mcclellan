@@ -1223,6 +1223,10 @@ body {
     margin-bottom: 0; }
   .aside .categories li {
     margin-bottom: 1.25em; }
+  .aside .contact-info .block-label {
+    padding-bottom: 0.5em; }
+  .aside .contact-info ul {
+    margin-bottom: 1.5em; }
 
 .aside-left {
   width: 100%;
