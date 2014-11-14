@@ -178,6 +178,14 @@ function carr_news_events_sidebar() {
 	));
 
 	?>
+	<?php if ( ! is_home() ) : ?>
+		<div class="view-all">
+			<a class="button point-left" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/'; ?>">Back to <br> News &amp; Events
+				<span class="icon-arrow-left"></span>
+			</a>
+		</div>
+	<?php endif; ?>
+
 	<div class="border-block top">
 		<h3 class="block-label">Categories</h3>
 
