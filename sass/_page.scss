@@ -96,6 +96,7 @@ body {
 		font-size: 16px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+		padding: 1.8em 0 0.8em;
 		&.active {
 			color: $color_red;
 			border-right: none;
@@ -158,9 +159,15 @@ body {
 		}
 
 		ul li {
+			padding-left: 15px;
+			margin: 0 0 0.25em;
+		
 			&:before {
+				display: inline-block;
 				content: "›";
-				margin-right: 10px;
+				width: 15px;
+				margin-left: -15px;
+				vertical-align: 0.1em;
 			}
 		}
 	}
