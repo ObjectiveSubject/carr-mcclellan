@@ -249,9 +249,6 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0.25em; }
-  h2.front-page {
-    text-align: center;
-    color: #EC513C; }
 
 h3 {
   font-size: 24px;
@@ -1300,6 +1297,7 @@ body {
       color: #5A5A5A;
       text-transform: uppercase;
       letter-spacing: 0.01em;
+      line-height: 1em;
       -webkit-transition: all 250ms ease;
               transition: all 250ms ease; }
     .site-main .square.attorney .wp-post-image {
@@ -1613,6 +1611,11 @@ body {
 
 /* Special Page styles
 ------------------------------------- */
+.home h3.front-page {
+  text-align: center;
+  color: #EC513C;
+  text-transform: uppercase;
+  margin: 0 0 1.5em; }
 .home .featured .date {
   font-weight: normal;
   color: #404060; }
@@ -1622,6 +1625,10 @@ body {
   .home .featured .button:hover {
     border-color: #4B4B72;
     color: #4B4B72; }
+.home .site-main .square.attorney {
+  min-height: 17em; }
+.home .site-main .square.attorney a {
+  padding-top: 1.5em; }
 
 .news-events section {
   display: none; }

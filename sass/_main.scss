@@ -179,6 +179,7 @@
 			color: $color_gray4;
 			text-transform: uppercase;
 			letter-spacing: 0.01em;
+			line-height: 1em;
 			transition: all 250ms ease;
 		}
 
@@ -527,21 +528,34 @@
 
 /* Special Page styles
 ------------------------------------- */
-.home .featured {
-	.date {
-		font-weight: normal;
-		color: $color_blue4;
-	}
-	.button {
-		border-color: $color_red;
+.home {
+
+	h3.front-page {
+		text-align: center;
 		color: $color_red;
-		&:hover {
-			border-color: $color_blue3;
-			color: $color_blue3;
+		text-transform: uppercase;
+		margin: 0 0 1.5em;
+	}
+
+	
+	.featured {
+		.date {
+			font-weight: normal;
+			color: $color_blue4;
+		}
+		.button {
+			border-color: $color_red;
+			color: $color_red;
+			&:hover {
+				border-color: $color_blue3;
+				color: $color_blue3;
+			}
 		}
 	}
+	
+	.site-main .square.attorney { min-height: 17em; }
+	.site-main .square.attorney a { padding-top: 1.5em; }
 }
-
 
 .news-events {
 	section {

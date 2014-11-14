@@ -29,10 +29,6 @@ h2 {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 0.25em;
-	&.front-page {
-		text-align: center;
-		color: $color_red;
-	}
 }
 h3 {
 	@include h3size;
