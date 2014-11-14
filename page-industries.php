@@ -48,7 +48,7 @@ $industries = new WP_Query( array(
 			<?php while ( $industries->have_posts() ) : $industries->the_post(); ?>
 				<?php $areas_practice = get_post_meta( $post->ID, 'areas_practice', 'single' ); ?>
 				<div class="industry-row">
-					<div class="entry-content span7 push-left">
+					<div class="entry-content span8 push-left border-block top">
 						<article id="<?php echo esc_attr( $post->post_name ); ?>" class="industry-content">
 							<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>
