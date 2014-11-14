@@ -163,7 +163,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 
 						<?php if ( $courts_forums ) : // @todo: could change everything under the hood to use attorneys instead of courts {?>
-							<h4>Admissions and Forums</h4>
+							<h4>Admissions</h4>
 							<?php echo $courts_forums; ?>
 							<?php endif; ?>
 
