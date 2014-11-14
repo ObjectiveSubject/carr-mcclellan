@@ -262,17 +262,19 @@ function cmc_get_attorneys() {
 			?>
 
 			<article class="border-block top-right-bottom square attorney">
-				<h3><a href="<?php the_permalink() ?>"><?php echo $name; ?></a></h3>
-
-				<p class="titles">
-					<?php echo $title; ?>
-					<?php if ( $title && $sec_title ) {
-						echo '<br>';
-					} ?>
-					<?php echo $sec_title; ?>
-				</p>
-
-				<?php the_post_thumbnail( 'attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
+				<a href="<?php the_permalink() ?>">
+					<h3><?php echo $name; ?></h3>
+	
+					<p class="titles">
+						<?php echo $title; ?>
+						<?php if ( $title && $sec_title ) {
+							echo '<br>';
+						} ?>
+						<?php echo $sec_title; ?>
+					</p>
+	
+					<?php the_post_thumbnail( 'attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
+				</a>
 			</article>
 
 		<?php endwhile; ?>
