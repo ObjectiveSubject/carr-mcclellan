@@ -5,7 +5,10 @@
 	body {
 		border: none;
 		background: #FFF;
+		font-size: 12px;
 	}
+	
+	p { font-size: 14px; }
 	
 	.main-nav {
 		display: none;
@@ -13,60 +16,94 @@
 
 	.site-branding {
 		padding: 3em 0;
-	}
-	
-	.site-title a {
-		background: none;
-		text-indent: 0;
-		width: auto;
-		margin: 0 auto;
-		height: auto;
-		font-size: 24px;
-		text-align: center;
-	}
+		}
+		.site-title {
+			margin: 0 5%;
+			padding: 0 30px;
+			}
+			.site-title a {
+				background: none;
+				text-indent: 0;
+				width: 65%;
+				float: right;
+				height: auto;
+				font-size: 24px;
+				}
 
 	#primary.terminal-page { background: #FFF; margin-bottom: 5em;}
 	
 	.page-header {
-		padding: 8em 0 0;
-		}	
+		padding: 7.5em 0 0;
+		margin: 0 5%;
+		
+			& > .span12 { 
+				@include layout-clearfix;
+			}
+		}
+		.page-title {
+			font-size: 2.5em;
+			text-align: left;
+			width: 65%;
+			float: right;
+		}
+		.entry-meta {
+			text-align: left;
+			width: 65%;
+			float: right;
+		}
 		.attorney-pic {
-			position: static;
-			display: block;
-			margin: 0 auto;
+			left: 30px;
+			max-width: 150px;
 			}
 	
 	.push-left {
-		float: none;
+
 		}
 
 	.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
 		width: auto;
-		max-width: 600px;
-		margin: 0 auto;
+		margin: 0;
 	}	
 		
 	#main {
-		padding: 0;
+		padding: 0 30px 0 30px;
+		margin: 0 5%;
+		
+		& > article {
+			padding-top: 40px;
+			margin-bottom: 30px;
+			width: 65%; 
+			border-top: 5px solid $color_gray1; 
+		}
 		}
 		
 		.aside {
 			a,
 			li { color: $color_gray4; font-size: 1em;}
+			
+			.view-all { display: none; }
+
 		}
 		
 		.aside-left,
 		.aside-right {
-			float: none;
-			width: auto;
-			margin: 0;
+			float: left;
 			padding: 0;
 			
 			.button { display: none; }
 			}
+
 		.aside-left {
-			text-align: center;
-			}
+			width: 35%;
+			padding: 40px 5% 0 0;
+			border-top: 5px solid $color_gray1;
+			
+			.border-block.top { border: 0; padding-top: 10px; }
+		}
+		.aside-right {
+			width: 100%;
+		}
+
 			.block-label.vcard, 
 			.block-label.print {
 				display: none;
@@ -77,6 +114,7 @@
 			.menu { display: none; }
 		
 			.sections {
+				width: 100%;
 				
 				.section-title {
 					display: block;
@@ -105,6 +143,7 @@
 	
 	.site-footer {
 		background: #FFF;
+		margin: 0 5%;
 		
 		.row1,
 		#mc_embed_signup { display: none; }

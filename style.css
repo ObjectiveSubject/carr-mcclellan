@@ -1927,7 +1927,11 @@ body {
 
   body {
     border: none;
-    background: #FFF; }
+    background: #FFF;
+    font-size: 12px; }
+
+  p {
+    font-size: 14px; }
 
   .main-nav {
     display: none; }
@@ -1935,55 +1939,84 @@ body {
   .site-branding {
     padding: 3em 0; }
 
+  .site-title {
+    margin: 0 5%;
+    padding: 0 30px; }
+
   .site-title a {
     background: none;
     text-indent: 0;
-    width: auto;
-    margin: 0 auto;
+    width: 65%;
+    float: right;
     height: auto;
-    font-size: 24px;
-    text-align: center; }
+    font-size: 24px; }
 
   #primary.terminal-page {
     background: #FFF;
     margin-bottom: 5em; }
 
   .page-header {
-    padding: 8em 0 0; }
+    padding: 7.5em 0 0;
+    margin: 0 5%; }
+    .page-header > .span12:before, .page-header > .span12:after {
+      content: "";
+      display: table; }
+    .page-header > .span12:after {
+      clear: both; }
+
+  .page-title {
+    font-size: 2.5em;
+    text-align: left;
+    width: 65%;
+    float: right; }
+
+  .entry-meta {
+    text-align: left;
+    width: 65%;
+    float: right; }
 
   .attorney-pic {
-    position: static;
-    display: block;
-    margin: 0 auto; }
-
-  .push-left {
-    float: none; }
+    left: 30px;
+    max-width: 150px; }
 
   .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span12 {
     width: auto;
-    max-width: 600px;
-    margin: 0 auto; }
+    margin: 0; }
 
   #main {
-    padding: 0; }
+    padding: 0 30px 0 30px;
+    margin: 0 5%; }
+    #main > article {
+      padding-top: 40px;
+      margin-bottom: 30px;
+      width: 65%;
+      border-top: 5px solid #E0E0E0; }
 
   .aside a,
   .aside li {
     color: #5A5A5A;
     font-size: 1em; }
+  .aside .view-all {
+    display: none; }
 
   .aside-left,
   .aside-right {
-    float: none;
-    width: auto;
-    margin: 0;
+    float: left;
     padding: 0; }
     .aside-left .button,
     .aside-right .button {
       display: none; }
 
   .aside-left {
-    text-align: center; }
+    width: 35%;
+    padding: 40px 5% 0 0;
+    border-top: 5px solid #E0E0E0; }
+    .aside-left .border-block.top {
+      border: 0;
+      padding-top: 10px; }
+
+  .aside-right {
+    width: 100%; }
 
   .block-label.vcard,
   .block-label.print {
@@ -1991,27 +2024,30 @@ body {
 
   .bottom-matter .menu {
     display: none; }
-  .bottom-matter .sections .section-title {
-    display: block;
-    padding: 20px 0;
-    margin: 0;
-    color: #5A5A5A; }
-  .bottom-matter .sections section {
-    display: block;
-    margin: 0 0 4em;
-    color: #5A5A5A; }
-    .bottom-matter .sections section h4 {
-      color: #5A5A5A;
-      margin-bottom: 0.5em;
-      font-variant: normal;
-      text-transform: uppercase;
-      font-size: 14px; }
+  .bottom-matter .sections {
+    width: 100%; }
+    .bottom-matter .sections .section-title {
+      display: block;
+      padding: 20px 0;
+      margin: 0;
+      color: #5A5A5A; }
+    .bottom-matter .sections section {
+      display: block;
+      margin: 0 0 4em;
+      color: #5A5A5A; }
+      .bottom-matter .sections section h4 {
+        color: #5A5A5A;
+        margin-bottom: 0.5em;
+        font-variant: normal;
+        text-transform: uppercase;
+        font-size: 14px; }
   .bottom-matter .border-block.top-right-bottom {
     border: none;
     padding: 0; }
 
   .site-footer {
-    background: #FFF; }
+    background: #FFF;
+    margin: 0 5%; }
     .site-footer .row1,
     .site-footer #mc_embed_signup {
       display: none; }
