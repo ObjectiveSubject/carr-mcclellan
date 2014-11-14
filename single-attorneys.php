@@ -54,7 +54,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 
 			<aside class="aside aside-left span2 push-left">
 				<div class="view-all">
-					<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'attorneys/'; ?>">View all attorneys
+					<a class="button point-left" href="<?php echo esc_url( home_url( '/' ) ) . 'attorneys/'; ?>">View all attorneys
 						<span class="icon-arrow-left"></span>
 					</a>
 				</div>

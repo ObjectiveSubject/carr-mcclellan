@@ -470,7 +470,7 @@ input[type="submit"] {
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: none;
   font: normal normal bold 14px/14px "BrandonGrotesque", helvetica, sans-serif;
-  padding: 18px;
+  padding: 18px 0 14px;
   text-transform: uppercase;
   -webkit-transition: all 250ms ease;
           transition: all 250ms ease; }
@@ -490,6 +490,12 @@ input[type="submit"] {
     outline: none;
     border-color: #EC513C;
     color: #EC513C; }
+  button.point-left, .button.point-left,
+  input[type="button"].point-left,
+  input[type="reset"].point-left,
+  input[type="submit"].point-left {
+    border: 4px solid;
+    border-right: none; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -1187,7 +1193,7 @@ body {
   .aside .button {
     position: relative;
     border-color: #E0E0E0;
-    padding-right: 50px;
+    padding-right: 40px;
     padding-left: 0; }
     .aside .button:hover {
       border-color: #EC513C; }
@@ -1196,11 +1202,12 @@ body {
       top: 50%;
       right: 15px;
       margin-top: -6px; }
-  .aside.aside-left .button {
-    padding-right: 15px;
-    padding-left: 30px; }
-    .aside.aside-left .button [class*="icon-"] {
-      left: 0; }
+    .aside .button.point-left {
+      padding-right: 0;
+      padding-left: 40px; }
+      .aside .button.point-left [class*="icon-"] {
+        left: 15px;
+        right: auto; }
   .aside h3 {
     font: normal normal bold 14px/14px "BrandonGrotesque", helvetica, sans-serif;
     text-transform: uppercase;
