@@ -23,6 +23,14 @@ get_header(); ?>
 		<main id="main" class="site-main span12 aligncenter clear" role="main">
 
 				<aside class="aside aside-left aside-author-share">
+					<?php if ( is_singular( 'post' ) ) : ?>
+						<div class="view-all">
+							<a class="button point-left" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/'; ?>">
+								Back to <br> News &amp; Events
+								<span class="icon-arrow-left"></span>
+							</a>
+						</div>
+					<?php endif; ?>
 
 					<?php $related_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' ); ?>
 					
