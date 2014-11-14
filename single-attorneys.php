@@ -132,7 +132,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 					</ul>
 				</div>
 
-				<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">Read <?php echo get_post_meta( $post->ID, "first_name", true ) . '\'s' ?> Blog
+				<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">Read <?php echo get_post_meta( $post->ID, "first_name", true ) . '\'s' ?> News
 					<span class="icon-arrow-right"></span>
 				</a>
 
