@@ -21,14 +21,14 @@ h1 {
 	font-family: $font_heading;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 }
 h2 {
 	@include h2size;
 	font-family: $font_heading;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-bottom: 1em;
+	margin-bottom: 0.25em;
 	&.front-page {
 		text-align: center;
 		color: $color_red;
@@ -38,12 +38,12 @@ h3 {
 	@include h3size;
 	font-family: $font_heading;
 	font-weight: bold;
-	margin-bottom: 1em;
+	margin-bottom: 0.25em;
 }
 h4 {
 	@include h4size;
 	font-family: $font_text;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 	font-variant: small-caps;
 	text-transform: lowercase;
 	font-weight: bold;

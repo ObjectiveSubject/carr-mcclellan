@@ -25,9 +25,15 @@
 	}
 
 	ul li {
+		padding-left: 15px;
+		margin: 0 0 0.25em;
+
 		&:before {
+			display: inline-block;
 			content: "›";
-			margin-right: 10px;
+			width: 15px;
+			margin-left: -15px;
+			vertical-align: 0.1em;
 		}
 	}
 

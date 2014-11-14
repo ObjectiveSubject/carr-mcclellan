@@ -240,7 +240,7 @@ h1 {
   font-family: "BrandonGrotesque", helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.25em; }
 
 h2 {
   font-size: 28px;
@@ -248,7 +248,7 @@ h2 {
   font-family: "BrandonGrotesque", helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1em; }
+  margin-bottom: 0.25em; }
   h2.front-page {
     text-align: center;
     color: #EC513C; }
@@ -258,13 +258,13 @@ h3 {
   line-height: 1.25em;
   font-family: "BrandonGrotesque", helvetica, sans-serif;
   font-weight: bold;
-  margin-bottom: 1em; }
+  margin-bottom: 0.25em; }
 
 h4 {
   font-size: 20px;
   line-height: 1em;
   font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   font-variant: small-caps;
   text-transform: lowercase;
   font-weight: bold;
@@ -1155,9 +1155,15 @@ body {
     margin: 0 0 1.5em; }
     .entry-content ul ul, .entry-content ul ol, .entry-content ol ul, .entry-content ol ol {
       margin: 0 0 0 1.5em; }
-  .entry-content ul li:before {
-    content: "›";
-    margin-right: 10px; }
+  .entry-content ul li {
+    padding-left: 15px;
+    margin: 0 0 0.25em; }
+    .entry-content ul li:before {
+      display: inline-block;
+      content: "›";
+      width: 15px;
+      margin-left: -15px;
+      vertical-align: 0.1em; }
 
 /* Aside
 ------------------------------------- */
