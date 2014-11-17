@@ -234,7 +234,11 @@ function carr_display_date() {
 		$date_string = 'M. d, Y';
 	}
 
-	$display_date = get_post_meta( $post->ID, 'display_date', true );
+	/* Kirk's string for timestamps on Archive/Category pages
+	 * <h4 class="timestamp"><span class="month"><?php the_time('M. '); ?></span><span class="day-year"><?php the_time('d, Y'); ?></span></h4>
+	 */
+
+$display_date = get_post_meta( $post->ID, 'display_date', true );
 	$display_date_manual = get_post_meta( $post->ID, 'display_date_manual', true );
 
 	if ( $display_date_manual ) {
