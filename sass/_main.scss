@@ -297,7 +297,7 @@
 		&.business-litigation {
 			background-color: $color_blue4;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_business', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_business', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue4, 20%);
@@ -306,7 +306,7 @@
 		&.construction {
 			background-color: $color_blue3;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_construction', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_construction', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue3, 20%);
@@ -315,7 +315,7 @@
 		&.business-corporate {
 			background-color: $color_blue2;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_corporate', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_corporate', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue2, 20%);
@@ -325,7 +325,7 @@
 			background-color: $color_blue1;
 			h3 {
 				// text-indent: 0;
-				@include background-image-retina('images/practices_assets/practice_creditors_rights', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_creditors_rights', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue1, 20%);
@@ -334,7 +334,7 @@
 		&.employment {
 			background-color: $color_purple1;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_employment', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_employment', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_purple1, 20%);
@@ -353,7 +353,7 @@
 		&.intellectual-property {
 			background-color: $color_blue4;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_intellectual_property', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_intellectual_property', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue4, 20%);
@@ -362,7 +362,7 @@
 		&.real-estate {
 			background-color: $color_blue3;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_real_estate', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_real_estate', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue3, 20%);
@@ -371,7 +371,7 @@
 		&.tax {
 			background-color: $color_blue2;
 			h3 {
-				@include background-image-retina('images/practices_assets/practice_taxation', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_taxation', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue2, 20%);
@@ -381,7 +381,7 @@
 			background-color: $color_blue1;
 			h3 {
 				// text-indent: 0;
-				@include background-image-retina('images/practices_assets/practice_trusts_estate', png, 215px, 163px);
+				@include background-image-retina('../images/practices_assets/practice_trusts_estate', png, 215px, 163px);
 			}
 			&:hover {
 				background-color: shade($color_blue1, 20%);

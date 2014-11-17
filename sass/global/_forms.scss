@@ -120,7 +120,7 @@ select {
 	cursor: pointer;
 	box-sizing: border-box;
 	-webkit-appearance: none;
-	@include background-image-retina('images/down-arrow', 'png', 34px, 8px);
+	@include background-image-retina('../images/down-arrow', 'png', 34px, 8px);
 	background-repeat: no-repeat;
 	background-position: right -20px;
 	background-origin: content-box;

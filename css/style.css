@@ -138,8 +138,8 @@ a img {
   font-weight: bold; }
 @font-face {
   font-family: 'cmc-icons';
-  src: url("sass/global/webfonts/cmc-icons.eot?e2y442");
-  src: url("sass/global/webfonts/cmc-icons.eot?#iefixe2y442") format("embedded-opentype"), url("sass/global/webfonts/cmc-icons.woff?e2y442") format("woff"), url("sass/global/webfonts/cmc-icons.ttf?e2y442") format("truetype"), url("sass/global/webfonts/cmc-icons.svg?e2y442#cmc-icons") format("svg");
+  src: url("../fonts/cmc-icons.eot?e2y442");
+  src: url("../fonts/cmc-icons.eot?#iefixe2y442") format("embedded-opentype"), url("../fonts/cmc-icons.woff?e2y442") format("woff"), url("../fonts/cmc-icons.ttf?e2y442") format("truetype"), url("../fonts/cmc-icons.svg?e2y442#cmc-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -288,7 +288,7 @@ blockquote {
     left: 15px;
     width: 32px;
     height: 31px;
-    background: url(images/sprite.png) no-repeat;
+    background: url(../images/sprite.png) no-repeat;
     background-position: 0 -25px; }
   blockquote p {
     margin: 0;
@@ -556,7 +556,7 @@ select {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   -webkit-appearance: none;
-  background-image: url("images/down-arrow.png");
+  background-image: url("../images/down-arrow.png");
   background-repeat: no-repeat;
   background-position: right -20px;
   background-origin: content-box;
@@ -564,7 +564,7 @@ select {
           transition: border-color 250ms ease; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     select {
-      background-image: url("images/down-arrow@2x.png");
+      background-image: url("../images/down-arrow@2x.png");
       background-size: 34px 8px; } }
   select:hover {
     border-color: #EC513C;
@@ -890,7 +890,7 @@ object {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .sprite {
-    background-image: url(images/sprite@2x.png);
+    background-image: url(../images/sprite@2x.png);
     background-size: 240px; } }
 body {
   border: 10px solid #EC513C;
@@ -1042,14 +1042,14 @@ body {
     display: block;
     text-indent: -99999px;
     overflow: hidden;
-    background: url(images/sprite.png) no-repeat center top;
+    background: url(../images/sprite.png) no-repeat center top;
     width: 240px;
     height: 22px;
     margin: 0 auto; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .site-title a {
-    background: url(images/sprite@2x.png) no-repeat center top;
+    background: url(../images/sprite@2x.png) no-repeat center top;
     background-size: 240px; } }
 /* Main Nav
 ----------------------------------- */
@@ -1111,7 +1111,7 @@ body {
     clear: both; }
 
 .home .page-header, .page-id-32 .page-header {
-  background: url(images/large-monogram.png) no-repeat center center #F4F5F6;
+  background: url(../images/large-monogram.png) no-repeat center center #F4F5F6;
   padding-bottom: 5em; }
 
 .terminal-page .page-header {
@@ -1152,7 +1152,7 @@ body {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .home .page-header, .page-id-32 .page-header {
-    background: url(images/large-monogram@2x.png) no-repeat center center #F4F5F6;
+    background: url(../images/large-monogram@2x.png) no-repeat center center #F4F5F6;
     background-size: 537px; } }
 /* Main
 ----------------------------------- */
@@ -1410,50 +1410,50 @@ body {
     .site-main .square.practice.business-litigation {
       background-color: #404060; }
       .site-main .square.practice.business-litigation h3 {
-        background-image: url("images/practices_assets/practice_business.png"); }
+        background-image: url("../images/practices_assets/practice_business.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.business-litigation h3 {
-            background-image: url("images/practices_assets/practice_business@2x.png");
+            background-image: url("../images/practices_assets/practice_business@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.business-litigation:hover {
         background-color: #33334c; }
     .site-main .square.practice.construction {
       background-color: #4B4B72; }
       .site-main .square.practice.construction h3 {
-        background-image: url("images/practices_assets/practice_construction.png"); }
+        background-image: url("../images/practices_assets/practice_construction.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.construction h3 {
-            background-image: url("images/practices_assets/practice_construction@2x.png");
+            background-image: url("../images/practices_assets/practice_construction@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.construction:hover {
         background-color: #3c3c5b; }
     .site-main .square.practice.business-corporate {
       background-color: #32507C; }
       .site-main .square.practice.business-corporate h3 {
-        background-image: url("images/practices_assets/practice_corporate.png"); }
+        background-image: url("../images/practices_assets/practice_corporate.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.business-corporate h3 {
-            background-image: url("images/practices_assets/practice_corporate@2x.png");
+            background-image: url("../images/practices_assets/practice_corporate@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.business-corporate:hover {
         background-color: #284063; }
     .site-main .square.practice.creditors-rights-bankruptcy {
       background-color: #285F8A; }
       .site-main .square.practice.creditors-rights-bankruptcy h3 {
-        background-image: url("images/practices_assets/practice_creditors_rights.png"); }
+        background-image: url("../images/practices_assets/practice_creditors_rights.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.creditors-rights-bankruptcy h3 {
-            background-image: url("images/practices_assets/practice_creditors_rights@2x.png");
+            background-image: url("../images/practices_assets/practice_creditors_rights@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.creditors-rights-bankruptcy:hover {
         background-color: #204c6e; }
     .site-main .square.practice.employment {
       background-color: #703F50; }
       .site-main .square.practice.employment h3 {
-        background-image: url("images/practices_assets/practice_employment.png"); }
+        background-image: url("../images/practices_assets/practice_employment.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.employment h3 {
-            background-image: url("images/practices_assets/practice_employment@2x.png");
+            background-image: url("../images/practices_assets/practice_employment@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.employment:hover {
         background-color: #593240; }
@@ -1466,40 +1466,40 @@ body {
     .site-main .square.practice.intellectual-property {
       background-color: #404060; }
       .site-main .square.practice.intellectual-property h3 {
-        background-image: url("images/practices_assets/practice_intellectual_property.png"); }
+        background-image: url("../images/practices_assets/practice_intellectual_property.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.intellectual-property h3 {
-            background-image: url("images/practices_assets/practice_intellectual_property@2x.png");
+            background-image: url("../images/practices_assets/practice_intellectual_property@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.intellectual-property:hover {
         background-color: #33334c; }
     .site-main .square.practice.real-estate {
       background-color: #4B4B72; }
       .site-main .square.practice.real-estate h3 {
-        background-image: url("images/practices_assets/practice_real_estate.png"); }
+        background-image: url("../images/practices_assets/practice_real_estate.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.real-estate h3 {
-            background-image: url("images/practices_assets/practice_real_estate@2x.png");
+            background-image: url("../images/practices_assets/practice_real_estate@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.real-estate:hover {
         background-color: #3c3c5b; }
     .site-main .square.practice.tax {
       background-color: #32507C; }
       .site-main .square.practice.tax h3 {
-        background-image: url("images/practices_assets/practice_taxation.png"); }
+        background-image: url("../images/practices_assets/practice_taxation.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.tax h3 {
-            background-image: url("images/practices_assets/practice_taxation@2x.png");
+            background-image: url("../images/practices_assets/practice_taxation@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.tax:hover {
         background-color: #284063; }
     .site-main .square.practice.trusts-estates-litigation {
       background-color: #285F8A; }
       .site-main .square.practice.trusts-estates-litigation h3 {
-        background-image: url("images/practices_assets/practice_trusts_estate.png"); }
+        background-image: url("../images/practices_assets/practice_trusts_estate.png"); }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .site-main .square.practice.trusts-estates-litigation h3 {
-            background-image: url("images/practices_assets/practice_trusts_estate@2x.png");
+            background-image: url("../images/practices_assets/practice_trusts_estate@2x.png");
             background-size: 215px 163px; } }
       .site-main .square.practice.trusts-estates-litigation:hover {
         background-color: #204c6e; }

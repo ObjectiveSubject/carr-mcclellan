@@ -16,7 +16,7 @@
 		display: block;
 		text-indent: -99999px;
 		overflow: hidden;
-		background: url(images/sprite.png) no-repeat center top;
+		background: url(../images/sprite.png) no-repeat center top;
 		width: 240px;
 		height: 22px;
 		margin: 0 auto;
@@ -30,7 +30,7 @@ only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 	.site-title a {
-		background: url(images/sprite@2x.png) no-repeat center top;
+		background: url(../images/sprite@2x.png) no-repeat center top;
 		background-size: 240px;
 	}
 }
