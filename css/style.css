@@ -128,13 +128,13 @@ a img {
 /* @import must be at top of file, otherwise CSS will not work */
 @font-face {
   font-family: 'BrandonGrotesque';
-  src: url("sass/global/webfonts/2BD8D5_0_0.eot");
-  src: url("sass/global/webfonts/2BD8D5_0_0.eot?#iefix") format("embedded-opentype"), url("sass/global/webfonts/2BD8D5_0_0.woff") format("woff"), url("sass/global/webfonts/2BD8D5_0_0.ttf") format("truetype");
+  src: url("../fonts/2BD8D5_0_0.eot");
+  src: url("../fonts/2BD8D5_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2BD8D5_0_0.woff") format("woff"), url("../fonts/2BD8D5_0_0.ttf") format("truetype");
   font-weight: normal; }
 @font-face {
   font-family: 'BrandonGrotesque';
-  src: url("sass/global/webfonts/2BD8D5_1_0.eot");
-  src: url("sass/global/webfonts/2BD8D5_1_0.eot?#iefix") format("embedded-opentype"), url("sass/global/webfonts/2BD8D5_1_0.woff") format("woff"), url("sass/global/webfonts/2BD8D5_1_0.ttf") format("truetype");
+  src: url("../fonts/2BD8D5_1_0.eot");
+  src: url("../fonts/2BD8D5_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2BD8D5_1_0.woff") format("woff"), url("../fonts/2BD8D5_1_0.ttf") format("truetype");
   font-weight: bold; }
 @font-face {
   font-family: 'cmc-icons';
