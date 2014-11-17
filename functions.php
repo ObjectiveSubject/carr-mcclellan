@@ -167,6 +167,8 @@ function admin_init() {
 
 	// Articles
 	add_meta_box( "articles_meta_options", "Article Information", "articles_meta_options", "articles" );
+	add_meta_box( 'carr_post_options', 'Options', 'carr_post_options', 'articles', 'side' );
+
 
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );

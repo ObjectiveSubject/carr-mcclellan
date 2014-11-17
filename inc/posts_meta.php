@@ -120,12 +120,14 @@ function save_post_subtitle( $post_id, $post ) {
 }
 
 function carr_post_options( $post ) {
-	if ( ! in_array( get_post_type( $post ), array( 'post' ) ) ) {
+	if ( ! in_array( get_post_type( $post ), array( 'post', 'articles' ) ) ) {
 		return;
 	}
 
 	$original_event_date = get_post_meta( $post->ID, 'date', true );
 	$display_date = get_post_meta( $post->ID, 'display_date', true );
+	$display_date_manual = get_post_meta( $post->ID, 'display_date_manual', true );
+
 
 	if ( ! $display_date && $original_event_date ) {
 		// $display_date = $original_event_date;
@@ -145,8 +147,11 @@ function carr_post_options( $post ) {
 
 	<div class="edit-form-section">
 		<label for="display_date">Display Date:</label>
-
 		<input id="display_date" name="display_date" value="<?php echo $display_date; ?>">
+
+		<label for="display_date_manual">Display Date (Manual):</label>
+		<input id="display_date_manual" name="display_date_manual" value="<?php echo $display_date_manual; ?>">
+		<small>Override the date (Spring 2012, May 2014, etc.)</small>
 
 		<?php wp_nonce_field( 'save', 'carr_post_event_data' ); ?>
 	</div>
@@ -240,6 +245,12 @@ function save_post_options_data( $post_id, $post ) {
 
 	if ( isset( $_POST["display_date"] ) ) {
 		update_post_meta( $post->ID, "display_date", $_POST['display_date'] );
+	}
+
+	if ( isset( $_POST["display_date_manual"] ) ) {
+		update_post_meta( $post->ID, "display_date_manual", $_POST['display_date'] );
+	} else {
+		delete_post_meta( $post->ID, 'display_date_manual' );
 	}
 }
 
