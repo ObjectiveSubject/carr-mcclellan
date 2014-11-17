@@ -22,18 +22,18 @@
 		ul {
 			z-index: 1;
 			position: absolute;
-			top: 50px;
+			top: 46px;
 			height: 0;
 			max-height: 0;
 			width: 100%;
 			background: white;
-			border-bottom: 5px solid $color_gray0;
+			border-bottom: 4px solid $color_gray0;
 			transition: all 500ms ease;
 			overflow: hidden;
 			li {
 				width: 100%;
 				padding: 15px 0;
-				border-top: 1px solid $color_gray1;
+				border-top: 4px solid $color_gray0;
 			}
 		}
 	}
