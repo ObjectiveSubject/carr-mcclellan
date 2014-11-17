@@ -231,7 +231,7 @@ function carr_display_date() {
 	if ( is_single() || is_front_page() ) {
 		$date_string = 'F j, Y';
 	} else {
-		$date_string = 'M. d, Y';
+		$date_string = 'M d, Y';
 	}
 
 	/* Kirk's string for timestamps on Archive/Category pages

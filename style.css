@@ -1378,7 +1378,9 @@ body {
       .site-main .square.blog-post h3 a {
         color: #285F8A; }
     .site-main .square.blog-post .timestamp {
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 14px;
+      text-transform: uppercase; }
       .site-main .square.blog-post .timestamp .day-year {
         font-size: 14px; }
     .site-main .square.blog-post.even {
