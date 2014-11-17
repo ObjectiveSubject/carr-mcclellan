@@ -218,3 +218,33 @@ function carr_news_events_sidebar() {
 	</div>
 	<?php
 }
+
+/**
+ * Function to display a posts' date. Priority goes to the manual entry field,
+ * then date picker, then original post date.
+ *
+ * @return bool|mixed|string Display date
+ */
+function carr_display_date() {
+	global $post;
+
+	if ( is_single() || is_front_page() ) {
+		$date_string = 'F j, Y';
+	} else {
+		$date_string = 'M. d, Y';
+	}
+
+	$display_date = get_post_meta( $post->ID, 'display_date', true );
+	$display_date_manual = get_post_meta( $post->ID, 'display_date_manual', true );
+
+	if ( $display_date_manual ) {
+		$date = $display_date_manual;
+	} elseif ( $display_date ) {
+		$epoch_time = strtotime( $display_date );
+		$date = date( $date_string, $epoch_time );
+	} else {
+		$date = get_the_date( $date_string );
+	}
+
+	return $date;
+}

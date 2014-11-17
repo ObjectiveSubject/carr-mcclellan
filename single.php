@@ -15,7 +15,7 @@ get_header(); ?>
 			<div class="span12 aligncenter">
 				<h1 class="page-title"><?php the_title(); ?></h1>	
 				<div class="entry-meta">
-					<strong class="meta-date font-heading caps"><?php echo get_the_date('M. j, Y'); ?></strong>
+					<strong class="meta-date font-heading caps"><?php echo carr_display_date(); ?></strong>
 				</div><!-- .entry-meta -->
 			</div>
 		</header><!-- .entry-header -->

@@ -248,7 +248,7 @@ function save_post_options_data( $post_id, $post ) {
 	}
 
 	if ( isset( $_POST["display_date_manual"] ) ) {
-		update_post_meta( $post->ID, "display_date_manual", $_POST['display_date'] );
+		update_post_meta( $post->ID, "display_date_manual", $_POST['display_date_manual'] );
 	} else {
 		delete_post_meta( $post->ID, 'display_date_manual' );
 	}
