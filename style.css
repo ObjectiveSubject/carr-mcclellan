@@ -527,7 +527,7 @@ textarea {
   width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #8D8D8D;
+  color: #6F6F6F;
   background: none;
   border: none;
   border-top: 4px solid #F4F5F6;
@@ -566,15 +566,48 @@ textarea {
   width: 100%;
   height: 100%; }
 
+select {
+  width: auto;
+  min-width: 80px;
+  max-width: 100%;
+  border-radius: 0;
+  border: 4px solid #F4F5F6;
+  background: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-appearance: none;
+  background-image: url("images/down-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right -20px;
+  background-origin: content-box;
+  -webkit-transition: border-color 250ms ease;
+          transition: border-color 250ms ease; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    select {
+      background-image: url("images/down-arrow@2x.png");
+      background-size: 34px 8px; } }
+  select:hover {
+    border-color: #EC513C;
+    background-position: right 8px; }
+  select:focus {
+    border-color: #EC513C;
+    background-position: right 8px;
+    color: #EC513C;
+    outline: none; }
+
 /**
  * Adding styling for Gravity Forms
  */
 .entry-content .gform_wrapper ul {
   margin: 0; }
-
-.entry-content .gform_wrapper li:before {
-  content: "";
-  margin: 0; }
+.entry-content .gform_wrapper li {
+  padding-left: 0; }
+  .entry-content .gform_wrapper li:before {
+    content: "";
+    margin: 0;
+    width: 0; }
 
 .gform_wrapper {
   background: white;
@@ -652,7 +685,7 @@ textarea {
 .ginput_complex label,
 .gfield_description {
   font-style: italic;
-  color: #8D8D8D;
+  color: #6F6F6F;
   margin: 2px 0 0; }
 
 .gfield_checkbox,
@@ -836,7 +869,7 @@ object {
   background-repeat: no-repeat; }
 
 .link-gray3 {
-  color: #8D8D8D; }
+  color: #6F6F6F; }
   .link-gray3:hover {
     color: #EC513C; }
 
@@ -883,7 +916,7 @@ object {
     background-size: 240px; } }
 body {
   border: 10px solid #EC513C;
-  border-left: none; }
+  border-bottom: none; }
 
 #page {
   position: relative; }
@@ -930,7 +963,7 @@ body {
   padding-right: 1em; }
   .site-main .our-firm .border-block p {
     font-size: 16px;
-    color: #8D8D8D; }
+    color: #6F6F6F; }
 .site-main .our-firm .square {
   min-height: 22em; }
 
@@ -952,7 +985,7 @@ body {
   .bottom-matter:after {
     clear: both; }
   .bottom-matter .menu h3, .bottom-matter .sections .section-title {
-    color: #8D8D8D;
+    color: #6F6F6F;
     cursor: pointer;
     font-size: 16px;
     letter-spacing: 1px;
@@ -966,7 +999,7 @@ body {
     display: none; }
   .bottom-matter section {
     display: none;
-    color: #8D8D8D;
+    color: #6F6F6F;
     margin-left: 5.12821%;
     padding-right: 2em; }
     .bottom-matter section.active {
@@ -981,7 +1014,7 @@ body {
       margin-bottom: 0;
       color: #5A5A5A; }
     .bottom-matter section a {
-      color: #8D8D8D; }
+      color: #6F6F6F; }
       .bottom-matter section a:hover {
         color: #EC513C; }
     .bottom-matter section p {
@@ -1105,6 +1138,8 @@ body {
 
 .terminal-page .page-header {
   background: #FFF; }
+  .terminal-page .page-header .meta-date {
+    color: #C0C0C0; }
 
 .page-title {
   color: #542E4B;
@@ -1129,7 +1164,7 @@ body {
   color: #C0C0C0; }
 
 .meta-title {
-  color: #542E4B; }
+  color: #6F6F6F; }
 
 .attorney-pic {
   position: absolute;
@@ -1178,10 +1213,10 @@ body {
 /* Aside
 ------------------------------------- */
 .aside {
-  color: #8D8D8D; }
+  color: #6F6F6F; }
   .aside a {
     display: block;
-    color: #8D8D8D;
+    color: #6F6F6F;
     line-height: 1.2em; }
     .aside a:hover {
       color: #EC513C; }
@@ -1344,6 +1379,8 @@ body {
         color: #285F8A; }
     .site-main .square.blog-post .timestamp {
       font-weight: normal; }
+      .site-main .square.blog-post .timestamp .day-year {
+        font-size: 14px; }
     .site-main .square.blog-post.even {
       color: #703F50;
       border-color: #703F50; }
@@ -1543,9 +1580,9 @@ body {
     margin-bottom: 0; }
   .border-block .date {
     margin-bottom: 1em;
-    color: #8D8D8D; }
+    color: #6F6F6F; }
   .border-block .title a {
-    color: #8D8D8D; }
+    color: #6F6F6F; }
     .border-block .title a:hover {
       color: #EC513C; }
 
@@ -1847,19 +1884,19 @@ body {
     .main-nav ul {
       z-index: 1;
       position: absolute;
-      top: 50px;
+      top: 46px;
       height: 0;
       max-height: 0;
       width: 100%;
       background: white;
-      border-bottom: 5px solid #F4F5F6;
+      border-bottom: 4px solid #F4F5F6;
       -webkit-transition: all 500ms ease;
               transition: all 500ms ease;
       overflow: hidden; }
       .main-nav ul li {
         width: 100%;
         padding: 15px 0;
-        border-top: 1px solid #E0E0E0; }
+        border-top: 4px solid #F4F5F6; }
 
   .hentry {
     max-width: 100%; }

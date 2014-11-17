@@ -3,12 +3,19 @@
  */
 
 // override list styles in '.entry-content' containers
-.entry-content .gform_wrapper ul {
-	margin: 0;
+.entry-content {
+	.gform_wrapper {
+		ul {
+			margin: 0;
+		}
+		li {
+			padding-left: 0;
+			&:before { content: ""; margin: 0; width: 0; }
+		}
+	}
+	
 }
-.entry-content .gform_wrapper li {
-	&:before { content: ""; margin: 0; }
-}
+
 
 // gform Wrapper
 .gform_wrapper {

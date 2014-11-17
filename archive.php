@@ -49,7 +49,9 @@ get_header(); ?>
 				<?php $color_class = 'odd'; ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article class="border-block top-right-bottom square blog-post <?php echo $color_class; ?>">
+
 						<h4 class="timestamp"><?php echo carr_display_date(); ?></h4>
+
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</article>
 

@@ -162,6 +162,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/practices_assets\/practice_creditors_rights.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3421,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/practices_assets\/practice_creditors_rights@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6991,
+		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights@2x.png",
+		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/practices_assets\/practice_employment.png": {
 		"fileType": 32768,
 		"ignore": 0,
