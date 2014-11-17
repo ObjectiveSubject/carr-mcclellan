@@ -47,7 +47,7 @@ get_header();
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 						<article class="border-block top-right-bottom square blog-post <?php echo $color_class.' place'.$place; ?>">
-							<h4 class="timestamp"><?php the_time('M. d, Y'); ?></h4>
+							<h4 class="timestamp"><span class="month"><?php the_time('M. '); ?></span><span class="day-year"><?php the_time('d, Y'); ?></span></h4>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						</article>
 

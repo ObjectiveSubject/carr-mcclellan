@@ -233,6 +233,10 @@
 		}
 		.timestamp {
 			font-weight: normal;
+			
+			.day-year {
+				font-size: 14px;
+			}
 		}
 		&.even {
 			color: $color_purple1;

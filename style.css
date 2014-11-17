@@ -883,7 +883,7 @@ object {
     background-size: 240px; } }
 body {
   border: 10px solid #EC513C;
-  border-left: none; }
+  border-bottom: none; }
 
 #page {
   position: relative; }
@@ -1344,6 +1344,8 @@ body {
         color: #285F8A; }
     .site-main .square.blog-post .timestamp {
       font-weight: normal; }
+      .site-main .square.blog-post .timestamp .day-year {
+        font-size: 14px; }
     .site-main .square.blog-post.even {
       color: #703F50;
       border-color: #703F50; }
