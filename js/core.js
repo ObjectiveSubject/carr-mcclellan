@@ -15,6 +15,8 @@ var Carr = {
 				milestones.removeClass('active');
 				targetSection.addClass('active');
 				targetMilestone.addClass('active');
+				sections.hide();
+				targetSection.fadeIn('850');
 			}
 		}
 
@@ -67,6 +69,8 @@ var Carr = {
 				menuItems.removeClass('active');
 				targetSection.addClass('active');
 				targetMenuItem.addClass('active');
+				sections.hide();
+				targetSection.fadeIn('850');
 			}
 		}
 
