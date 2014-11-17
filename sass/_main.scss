@@ -94,6 +94,8 @@
 		font-size: 14px;
 	}
 
+	p { font-size: 14px; }
+
 	.social-share {
 		a { color: #FFF; }
 		li { margin-bottom: 0; }
@@ -105,10 +107,10 @@
 
 	.contact-info {
 		.block-label {
-			padding-bottom: 0.5em;
+			padding-bottom: 0.3em;
 		}
 		ul {
-			margin-bottom: 1.5em;
+			margin-bottom: 1.8em;
 		}
 	}
 }
@@ -121,6 +123,12 @@
 .aside-right {
 	width: $grid_span2;
 	float: right;
+}
+
+.page-template-page-sidebars {
+	.aside {
+		h3 { padding-bottom: 0.3em; }
+	}
 }
 
 /* Solid Block
