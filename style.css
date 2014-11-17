@@ -1105,6 +1105,8 @@ body {
 
 .terminal-page .page-header {
   background: #FFF; }
+  .terminal-page .page-header .meta-date {
+    color: #C0C0C0; }
 
 .page-title {
   color: #542E4B;
@@ -1129,7 +1131,7 @@ body {
   color: #C0C0C0; }
 
 .meta-title {
-  color: #542E4B; }
+  color: #6F6F6F; }
 
 .attorney-pic {
   position: absolute;

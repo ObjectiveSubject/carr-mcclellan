@@ -13,6 +13,8 @@
 		}
 	.terminal-page .page-header {
 		background: #FFF;
+		
+		.meta-date { color: $color_gray2; }
 	}
 
 	.page-title { 
@@ -37,7 +39,7 @@
 			color: $color_gray2;
 			}
 		.meta-title {
-			color: $color_purple;
+			color: #6F6F6F;
 			}
 	.attorney-pic {
 		position: absolute;
