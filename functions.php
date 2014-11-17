@@ -47,10 +47,12 @@ add_action( 'after_setup_theme', 'cmc_setup' );
  * Enqueue scripts and styles.
  */
 function cmc_scripts() {
+	$postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
+
 	wp_enqueue_style( 'cmc-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-2.5.3.min.js' );
-	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'core', get_template_directory_uri() . "/js/core{$postfix}.js", array( 'jquery' ), '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
