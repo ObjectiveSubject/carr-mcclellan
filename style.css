@@ -527,7 +527,7 @@ textarea {
   width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #8D8D8D;
+  color: #6F6F6F;
   background: none;
   border: none;
   border-top: 4px solid #F4F5F6;
@@ -685,7 +685,7 @@ select {
 .ginput_complex label,
 .gfield_description {
   font-style: italic;
-  color: #8D8D8D;
+  color: #6F6F6F;
   margin: 2px 0 0; }
 
 .gfield_checkbox,
@@ -869,7 +869,7 @@ object {
   background-repeat: no-repeat; }
 
 .link-gray3 {
-  color: #8D8D8D; }
+  color: #6F6F6F; }
   .link-gray3:hover {
     color: #EC513C; }
 
@@ -963,7 +963,7 @@ body {
   padding-right: 1em; }
   .site-main .our-firm .border-block p {
     font-size: 16px;
-    color: #8D8D8D; }
+    color: #6F6F6F; }
 .site-main .our-firm .square {
   min-height: 22em; }
 
@@ -985,7 +985,7 @@ body {
   .bottom-matter:after {
     clear: both; }
   .bottom-matter .menu h3, .bottom-matter .sections .section-title {
-    color: #8D8D8D;
+    color: #6F6F6F;
     cursor: pointer;
     font-size: 16px;
     letter-spacing: 1px;
@@ -999,7 +999,7 @@ body {
     display: none; }
   .bottom-matter section {
     display: none;
-    color: #8D8D8D;
+    color: #6F6F6F;
     margin-left: 5.12821%;
     padding-right: 2em; }
     .bottom-matter section.active {
@@ -1014,7 +1014,7 @@ body {
       margin-bottom: 0;
       color: #5A5A5A; }
     .bottom-matter section a {
-      color: #8D8D8D; }
+      color: #6F6F6F; }
       .bottom-matter section a:hover {
         color: #EC513C; }
     .bottom-matter section p {
@@ -1213,10 +1213,10 @@ body {
 /* Aside
 ------------------------------------- */
 .aside {
-  color: #8D8D8D; }
+  color: #6F6F6F; }
   .aside a {
     display: block;
-    color: #8D8D8D;
+    color: #6F6F6F;
     line-height: 1.2em; }
     .aside a:hover {
       color: #EC513C; }
@@ -1580,9 +1580,9 @@ body {
     margin-bottom: 0; }
   .border-block .date {
     margin-bottom: 1em;
-    color: #8D8D8D; }
+    color: #6F6F6F; }
   .border-block .title a {
-    color: #8D8D8D; }
+    color: #6F6F6F; }
     .border-block .title a:hover {
       color: #EC513C; }
 
