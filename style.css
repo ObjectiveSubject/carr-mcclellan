@@ -574,6 +574,7 @@ select {
   border: 4px solid #F4F5F6;
   background: none;
   padding: 10px 15px;
+  cursor: pointer;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   -webkit-appearance: none;
@@ -581,18 +582,18 @@ select {
   background-repeat: no-repeat;
   background-position: right -20px;
   background-origin: content-box;
-  -webkit-transition: all 250ms ease;
-          transition: all 250ms ease; }
+  -webkit-transition: border-color 250ms ease;
+          transition: border-color 250ms ease; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     select {
       background-image: url("images/down-arrow@2x.png");
       background-size: 34px 8px; } }
   select:hover {
     border-color: #EC513C;
-    background-position: right -8px; }
+    background-position: right 8px; }
   select:focus {
     border-color: #EC513C;
-    background-position: right -8px;
+    background-position: right 8px;
     color: #EC513C;
     outline: none; }
 
