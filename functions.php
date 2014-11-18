@@ -103,14 +103,6 @@ function myformatTinyMCE( $in ) {
 
 //add_filter('tiny_mce_before_init', 'myformatTinyMCE' );
 
-// Remove Featured Image from Posts
-add_action( 'do_meta_boxes', 'remove_thumbnail_box' );
-function remove_thumbnail_box() {
-	remove_meta_box( 'postimagediv', 'post', 'side' );
-	remove_meta_box( 'postimagediv', 'page', 'side' );
-	remove_meta_box( 'multi_content', 'attorneys', 'side' );
-}
-
 /*******************************************************
  * Register Custom Post Types
  */
