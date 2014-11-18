@@ -1,10 +1,6 @@
 <?php
 get_header();
 
-$type   = wp_get_post_terms( $post->ID, 'publications' );
-$type   = $type[0]->name;
-//$date = get_the_date('m/d/y');
-//$date = get_the_date('M. n, Y');
 $month         = strlen( get_the_date( 'F' ) );
 $date          = ( $month > 3 ? get_the_date( 'M. j, Y' ) : get_the_date( 'M j, Y' ) );
 $attachments   = attachments_get_attachments();

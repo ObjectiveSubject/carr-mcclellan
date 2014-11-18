@@ -207,10 +207,6 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 								while ( $loop->have_posts() ) : $loop->the_post();
 									$custom      = get_post_custom( $post->ID );
 									$pub_summary = get_post_meta( $post->ID, "pub_summary", true );
-									$type        = wp_get_post_terms( $post->ID, 'publications' );
-									if ( $type ) {
-										$type = $type[0]->name;
-									}
 									$date = get_the_date( 'm/d/y' );
 
 									$pub_summary = strip_tags( $pub_summary );
