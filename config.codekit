@@ -92,6 +92,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/header.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/header.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/home.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -119,6 +128,94 @@
 		"initialSize": 440,
 		"inputAbbreviatedPath": "\/images\/down-arrow@2x.png",
 		"outputAbbreviatedPath": "\/images\/down-arrow@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/favicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 492,
+		"inputAbbreviatedPath": "\/images\/icons\/favicon.png",
+		"outputAbbreviatedPath": "\/images\/icons\/favicon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/favicon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1073,
+		"inputAbbreviatedPath": "\/images\/icons\/favicon@2x.png",
+		"outputAbbreviatedPath": "\/images\/icons\/favicon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-114x114.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4080,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-114x114.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-114x114.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-120x120.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4365,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-120x120.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-120x120.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-152x152.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5516,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-152x152.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-152x152.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-180x180.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6642,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-180x180.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-180x180.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-58x58.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1984,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-58x58.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-58x58.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/icons\/icon-76x76.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2659,
+		"inputAbbreviatedPath": "\/images\/icons\/icon-76x76.png",
+		"outputAbbreviatedPath": "\/images\/icons\/icon-76x76.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -387,110 +484,110 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/inc\/admin.php": {
+	"\/includes\/admin.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/admin.php",
+		"inputAbbreviatedPath": "\/includes\/admin.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/customizer.php": {
+	"\/includes\/customizer.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/customizer.php",
+		"inputAbbreviatedPath": "\/includes\/customizer.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/extras.php": {
+	"\/includes\/extras.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/extras.php",
+		"inputAbbreviatedPath": "\/includes\/extras.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/posts_meta.php": {
+	"\/includes\/meta-boxes-articles.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/posts_meta.php",
+		"inputAbbreviatedPath": "\/includes\/meta-boxes-articles.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/reg_articles.php": {
+	"\/includes\/meta-boxes.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_articles.php",
+		"inputAbbreviatedPath": "\/includes\/meta-boxes.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/reg_attorneys.php": {
+	"\/includes\/post-types.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_attorneys.php",
+		"inputAbbreviatedPath": "\/includes\/post-types.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/reg_industries.php": {
+	"\/includes\/reg_attorneys.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_industries.php",
+		"inputAbbreviatedPath": "\/includes\/reg_attorneys.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/reg_milestones.php": {
+	"\/includes\/reg_industries.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_milestones.php",
+		"inputAbbreviatedPath": "\/includes\/reg_industries.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/reg_practices.php": {
+	"\/includes\/reg_practices.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/reg_practices.php",
+		"inputAbbreviatedPath": "\/includes\/reg_practices.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/template-tags.php": {
+	"\/includes\/template-tags.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/template-tags.php",
+		"inputAbbreviatedPath": "\/includes\/template-tags.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/v_card.php": {
+	"\/includes\/v_card.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/v_card.php",
+		"inputAbbreviatedPath": "\/includes\/v_card.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/inc\/v_card_class.php": {
+	"\/includes\/v_card_class.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/inc\/v_card_class.php",
+		"inputAbbreviatedPath": "\/includes\/v_card_class.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

@@ -16,7 +16,6 @@ include CARR_PATH . 'includes/post-types.php';
 include CARR_PATH . 'includes/reg_attorneys.php';
 include CARR_PATH . 'includes/reg_practices.php';
 include CARR_PATH . 'includes/reg_industries.php';
-include CARR_PATH . 'includes/reg_milestones.php';
 include CARR_PATH . 'includes/v_card.php';
 
 /**

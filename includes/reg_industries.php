@@ -1,20 +1,4 @@
 <?php
-
-/*********************************************************
-  Custom Column Headers
-*/
-
-  add_filter( "manage_edit-industries_columns", "industries_edit_columns" );
-
-  function industries_edit_columns( $columns ){
-        $columns = array(
-            "cb" => "<input type=\"checkbox\" />",
-            "title" => "Industry Title",
-        );
-        return $columns;
-  }
-
-
 /*********************************************************
 Custom Meta Box
  */
