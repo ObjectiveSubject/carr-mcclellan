@@ -1,37 +1,6 @@
 <?php
 
 /*********************************************************
- * Register Custom Post Type
- */
-
-add_action( 'init', 'attorneys_register' );
-
-function attorneys_register() {
-	$args = array(
-		'label'          => __( 'Attorneys' ),
-		'singular_label' => __( 'Attorney' ),
-		'public'         => true,
-		'show_ui'        => true,
-		//'capability_type' => 'post',
-		'hierarchical'   => false,
-		//'rewrite' => true,
-		'supports'       => array( 'title', 'thumbnail' ),
-		'menu_icon'       => 'dashicons-businessman'
-	);
-	register_post_type( 'attorneys', $args );
-}
-
-// Disable Autosave ** Edit - Modified save_attorneys_meta() to fix autosave
-//
-//add_action('admin_print_scripts', 'disable_autosave');
-function disable_autosave() {
-	global $post;
-	if ( get_post_type( $post->ID ) === 'attorneys' ) {
-		wp_deregister_script( 'autosave' );
-	}
-}
-
-/*********************************************************
  * Custom Meta Box
  */
 

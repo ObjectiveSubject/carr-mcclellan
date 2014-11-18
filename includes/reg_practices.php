@@ -1,26 +1,6 @@
 <?php
 
 /*********************************************************
- * Register Custom Post Type
- */
-
-
-add_action( 'init', 'practices_register' );
-function practices_register() {
-	$args = array(
-		'label'          => __( 'Practices' ),
-		'singular_label' => __( 'Practice' ),
-		'public'         => true,
-		'show_ui'        => true,
-		'hierarchical'   => false,
-		'rewrite'        => true,
-		'supports'       => array( 'title', 'editor' ),
-		'menu_icon'      => 'dashicons-portfolio'
-	);
-	register_post_type( 'practices', $args );
-}
-
-/*********************************************************
  * Custom Meta Box
  */
 

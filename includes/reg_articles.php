@@ -1,41 +1,6 @@
 <?php
 
 /*********************************************************
- * Register Custom Post Type
- */
-
-add_action( 'init', 'articles_register' );
-function articles_register() {
-	$args = array(
-		'label'           => __( 'Articles' ),
-		'singular_label'  => __( 'Article' ),
-		'public'          => true,
-		'show_ui'         => true,
-		'capability_type' => 'post',
-		'hierarchical'    => false,
-		'rewrite'         => true,
-		'supports'        => array( 'title', 'editor' ),
-		'menu_icon'       => 'dashicons-media-text'
-	);
-	register_post_type( 'articles', $args );
-
-
-	register_taxonomy(
-		'publications',
-		'articles',
-		array(
-			'label'        => 'Article Type',
-			'sort'         => true,
-			'args'         => array( 'orderby' => 'term_order' ),
-			//'rewrite' => array('slug' => 'pub_type'),
-			'rewrite'      => array( 'slug' => 'articles' ),
-			'hierarchical' => true
-		)
-	);
-
-}
-
-/*********************************************************
  * Custom Meta Box
  */
 

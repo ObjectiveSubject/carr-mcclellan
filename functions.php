@@ -11,6 +11,7 @@ include CARR_PATH . 'includes/template-tags.php';
 include CARR_PATH . 'includes/extras.php';
 include CARR_PATH . 'includes/admin.php';
 include CARR_PATH . 'includes/meta_boxes.php';
+include CARR_PATH . 'includes/post-types.php';
 include CARR_PATH . 'includes/reg_articles.php';
 include CARR_PATH . 'includes/reg_attorneys.php';
 include CARR_PATH . 'includes/reg_practices.php';

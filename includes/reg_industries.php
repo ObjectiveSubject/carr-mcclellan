@@ -1,27 +1,6 @@
 <?php
 
 /*********************************************************
-  Register Custom Post Type
-*/
-
-  add_action( 'init', 'industries_register' );
-  function industries_register() {
-      $args = array(
-          'label' => __('Industries'),
-          'singular_label' => __('Industry'),
-          'public' => true,
-          'show_ui' => true,
-          'capability_type' => 'post',
-          'hierarchical' => false,
-          'rewrite' => true,
-          'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-          'menu_icon'       => 'dashicons-hammer'
-        );
-      register_post_type( 'industries' , $args );
-  }
-
-
-/*********************************************************
   Custom Column Headers
 */
 
