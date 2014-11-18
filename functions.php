@@ -1,38 +1,45 @@
 <?php
+/**
+ * Carr McClellan functions and definitions
+ */
 
-if ( ! function_exists( 'cmc_setup' ) ) :
+// Useful global constants
+define( 'CARR_VERSION', '0.1' );
+define( 'CARR_PATH', dirname( __FILE__ ) . '/' );
 
-	function cmc_setup() {
+/**
+ * Set up theme defaults and register supported WordPress features.
+ */
+function carr_setup() {
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
 
-		// Enable support for Post Thumbnails on posts and pages.
-		add_theme_support( 'post-thumbnails' );
+	// Enable support for Post Thumbnails on posts and pages.
+	add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in two locations.
-		register_nav_menus( array(
-			'main'      => __( 'Header - Main', 'cmc' ),
-			'footer_main' => __( 'Footer - Main', 'cmc' ),
-			'footer_main_sub' => __( 'Footer - Main Submenu', 'cmc' ),
-			'footer_secondary' => __( 'Footer - Secondary', 'cmc' ),
-		) );
+	// This theme uses wp_nav_menu() in two locations.
+	register_nav_menus( array(
+		'main'      => __( 'Header - Main', 'cmc' ),
+		'footer_main' => __( 'Footer - Main', 'cmc' ),
+		'footer_main_sub' => __( 'Footer - Main Submenu', 'cmc' ),
+		'footer_secondary' => __( 'Footer - Secondary', 'cmc' ),
+	) );
 
-		// Page Excerpts
-		add_post_type_support( 'page', 'excerpt' );
+	// Page Excerpts
+	add_post_type_support( 'page', 'excerpt' );
 
-		// Switch default core markup for search form, comment form, and comments
-		// to output valid HTML5
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
-	}
-endif; // cmc_setup
-add_action( 'after_setup_theme', 'cmc_setup' );
+	// Switch default core markup for search form, comment form, and comments
+	// to output valid HTML5
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+}
+add_action( 'after_setup_theme', 'carr_setup' );
 
 
 /**
