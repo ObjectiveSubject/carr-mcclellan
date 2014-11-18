@@ -10,12 +10,12 @@ define( 'CARR_PATH', dirname( __FILE__ ) . '/' );
 include CARR_PATH . 'includes/template-tags.php';
 include CARR_PATH . 'includes/extras.php';
 include CARR_PATH . 'includes/admin.php';
+include CARR_PATH . 'includes/meta_boxes.php';
 include CARR_PATH . 'includes/reg_articles.php';
 include CARR_PATH . 'includes/reg_attorneys.php';
 include CARR_PATH . 'includes/reg_practices.php';
 include CARR_PATH . 'includes/reg_industries.php';
 include CARR_PATH . 'includes/reg_milestones.php';
-include CARR_PATH . 'includes/posts_meta.php';
 include CARR_PATH . 'includes/v_card.php';
 
 /**
