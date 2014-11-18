@@ -59,17 +59,17 @@ add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/includes/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/includes/extras.php';
 
 /**
  * Custom functions that for the admin area.
  */
-require get_template_directory() . '/inc/admin.php';
+require get_template_directory() . '/includes/admin.php';
 
 
 /*----------------------------------------------------------
@@ -84,24 +84,24 @@ From here down is stuff brought over from Carr McClellan 1.0
  */
 
 // Articles
-include( 'inc/reg_articles.php' );
+include( 'includes/reg_articles.php' );
 
 // Attorneys
-include( 'inc/reg_attorneys.php' );
+include( 'includes/reg_attorneys.php' );
 
 // Practices
-include( 'inc/reg_practices.php' );
+include( 'includes/reg_practices.php' );
 
 // Industries
-include( 'inc/reg_industries.php' );
+include( 'includes/reg_industries.php' );
 
 // Milestones
-include( 'inc/reg_milestones.php' );
+include( 'includes/reg_milestones.php' );
 
 // Posts Tagging of Attorneys
-include( 'inc/posts_meta.php' );
+include( 'includes/posts_meta.php' );
 
-include( 'inc/v_card.php' );
+include( 'includes/v_card.php' );
 
 
 // Init all Meta Boxes
