@@ -175,33 +175,30 @@ function admin_init() {
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
 	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
-	add_meta_box( 'carr_post_options', 'Options', 'carr_post_options', 'post', 'side' );
+	add_meta_box( 'carr_post_options', 'Display Date', 'carr_post_options', 'post', 'side' );
 	add_meta_box( 'carr_post_news_options', 'News Options', 'carr_post_news_options', 'post' );
 
 	// Pages
 	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
 }
 
+/**
+ * Queue up custom JavaScript and CSS for the admin section
+ */
+function carr_admin_scripts_styles() {
+	$postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-// Register datepicker ui for properties
-function datepicker_js() {
 	global $post;
-	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' || $post->post_type == 'post' ) && is_admin() ) {
+	if ( ( $post->post_type == 'post' ) && is_admin() ) {
 		wp_enqueue_script( 'jquery-ui-datepicker' );
 	}
+
+	wp_enqueue_script( 'carr-admin-js', get_template_directory_uri() . "/js/admin{$postfix}.js", array( 'jquery' ), false, true );
+	wp_enqueue_style( 'carr-admin-css', get_template_directory_uri() . "/css/admin{$postfix}.css" );
+
 }
 
-add_action( 'admin_print_scripts', 'datepicker_js' );
-
-// Register ui styles for properties
-function datepicker_css() {
-	global $post;
-	if ( $post && ( $post->post_type == 'events' || $post->post_type == 'news' || $post->post_type == 'post' ) && is_admin() ) {
-		wp_enqueue_style( 'jquery-ui', WP_CONTENT_URL . '/themes/carr_mcclellan/js/datepicker/css/jquery-ui-1.8.16.custom.css  ' );
-	}
-}
-
-add_action( 'admin_print_styles', 'datepicker_css' );
+add_action( 'admin_enqueue_scripts', 'carr_admin_scripts_styles' );
 
 
 /**

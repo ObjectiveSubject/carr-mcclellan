@@ -146,12 +146,20 @@ function carr_post_options( $post ) {
 	</script>
 
 	<div class="edit-form-section">
-		<label for="display_date">Display Date:</label>
-		<input id="display_date" name="display_date" value="<?php echo $display_date; ?>">
+		<div class="display-date-group display-date">
+			<label for="display_date"><strong>Date Picker:</strong></label><br>
+			<input id="display_date" name="display_date" value="<?php echo $display_date; ?>">
+			<p>Click the box to select your date</p>
+			<p><a class="datepicker-toggle">Use custom date instead</a></p>
+		</div>
 
-		<label for="display_date_manual">Display Date (Manual):</label>
-		<input id="display_date_manual" name="display_date_manual" value="<?php echo $display_date_manual; ?>">
-		<small>Override the date (Spring 2012, May 2014, etc.)</small>
+		<div class="display-date-group display-date-manual">
+			<label for="display_date_manual"><strong>Custom:</strong></label><br>
+			<input id="display_date_manual" name="display_date_manual" value="<?php echo $display_date_manual; ?>">
+
+			<p>Use this to override the date with your own text (Spring 2012, May 2014, etc.)</p>
+			<p><a class="datepicker-toggle">Use date picker instead</a></p>
+		</div>
 
 		<?php wp_nonce_field( 'save', 'carr_post_event_data' ); ?>
 	</div>
