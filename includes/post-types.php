@@ -64,6 +64,25 @@ add_action( 'init', 'industries_register' );
 
 
 /**
+ * Register Practices custom post type
+ */
+function practices_register() {
+	$args = array(
+		'label'          => __( 'Practices' ),
+		'singular_label' => __( 'Practice' ),
+		'public'         => true,
+		'show_ui'        => true,
+		'hierarchical'   => false,
+		'rewrite'        => true,
+		'supports'       => array( 'title', 'editor' ),
+		'menu_icon'      => 'dashicons-portfolio'
+	);
+	register_post_type( 'practices', $args );
+}
+add_action( 'init', 'practices_register' );
+
+
+/**
  * Register Firm History (Milestones) custom post type
  */
 function milestones_register() {
@@ -81,22 +100,3 @@ function milestones_register() {
 	register_post_type( 'milestones', $args );
 }
 add_action( 'init', 'milestones_register' );
-
-
-/**
- * Register Practices custom post type
- */
-function practices_register() {
-	$args = array(
-		'label'          => __( 'Practices' ),
-		'singular_label' => __( 'Practice' ),
-		'public'         => true,
-		'show_ui'        => true,
-		'hierarchical'   => false,
-		'rewrite'        => true,
-		'supports'       => array( 'title', 'editor' ),
-		'menu_icon'      => 'dashicons-portfolio'
-	);
-	register_post_type( 'practices', $args );
-}
-add_action( 'init', 'practices_register' );
