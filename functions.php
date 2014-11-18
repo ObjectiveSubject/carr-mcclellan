@@ -189,7 +189,7 @@ function carr_admin_scripts_styles() {
 	$postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
 	global $post;
-	if ( ( $post->post_type == 'post' ) && is_admin() ) {
+	if ( $post && ( $post->post_type == 'post' ) && is_admin() ) {
 		wp_enqueue_script( 'jquery-ui-datepicker' );
 		wp_enqueue_style( 'jquery-ui-datepicker', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css' );
 	}
