@@ -191,6 +191,7 @@ function carr_admin_scripts_styles() {
 	global $post;
 	if ( ( $post->post_type == 'post' ) && is_admin() ) {
 		wp_enqueue_script( 'jquery-ui-datepicker' );
+		wp_enqueue_style( 'jquery-ui-datepicker', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css' );
 	}
 
 	wp_enqueue_script( 'carr-admin-js', get_template_directory_uri() . "/js/admin{$postfix}.js", array( 'jquery' ), false, true );
