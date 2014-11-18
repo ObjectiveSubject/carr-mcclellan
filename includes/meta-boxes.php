@@ -1,7 +1,9 @@
 <?php
 
-// Init all Meta Boxes
-function admin_init() {
+/**
+ * Add meta boxes
+ */
+function setup_meta_boxes() {
 
 	// Attorneys
 	add_meta_box( "attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys" );
@@ -17,7 +19,6 @@ function admin_init() {
 	add_meta_box( "articles_meta_options", "Article Information", "articles_meta_options", "articles" );
 	add_meta_box( 'carr_post_options', 'Options', 'carr_post_options', 'articles', 'side' );
 
-
 	// Posts
 	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
 	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
@@ -27,13 +28,12 @@ function admin_init() {
 	// Pages
 	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
 }
-add_action( 'admin_init', 'admin_init' );
+add_action( 'add_meta_boxes', 'setup_meta_boxes' );
 
-/* Custom Meta Box
-------------------------------------------------------*/
 
-add_action('save_post', 'save_posts_attorneys_meta');
-
+/**
+ * Meta Box to display Attorneys that can be tagged
+ */
 function posts_attorneys_meta_options(){
 	global $post;
 	$custom = get_post_custom($post->ID);
@@ -64,16 +64,23 @@ function posts_attorneys_meta_options(){
 		</div>
 		
 <?php }
-	
+
+/**
+ * Save Attorneys associated with post
+ *
+ * @todo Add nonces/security here
+ */
 function save_posts_attorneys_meta(){
 	global $post;
 	if(isset($_POST["post_attorneys"])) update_post_meta($post->ID, "post_attorneys", $_POST["post_attorneys"]);
 }
+add_action('save_post', 'save_posts_attorneys_meta');
 
-	
-	
-add_action('save_post', 'save_posts_practices_meta');
 
+
+/**
+ * Meta Box to display Pratices that can be tagged
+ */
 function posts_practices_meta_options(){
 	global $post;
 	$custom = get_post_custom($post->ID);
@@ -104,10 +111,17 @@ function posts_practices_meta_options(){
 	
 <?php }
 
+/**
+ * Save Practices associated with post
+ *
+ * @todo Add nonces/security here
+ */
 function save_posts_practices_meta(){
 	global $post;
 	if(isset($_POST["post_practices"])) update_post_meta($post->ID, "post_practices", $_POST["post_practices"]);
 }
+add_action('save_post', 'save_posts_practices_meta');
+
 
 // add_action( 'edit_form_after_title', 'carr_subtitle' );
 
@@ -127,8 +141,6 @@ function carr_subtitle( $post ) {
 <?php
 }
 
-add_action( 'save_post', 'save_post_subtitle', 15, 2 );
-
 function save_post_subtitle( $post_id, $post ) {
 	// Bail if doing autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
@@ -146,7 +158,14 @@ function save_post_subtitle( $post_id, $post ) {
 		update_post_meta( $post->ID, "post_subtitle", $_POST["post_subtitle"] );
 	}
 }
+add_action( 'save_post', 'save_post_subtitle', 15, 2 );
 
+/**
+ * Used for the display date box
+ *
+ * @param $post
+ * @todo rename to be more semantic
+ */
 function carr_post_options( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'post', 'articles' ) ) ) {
 		return;
@@ -194,6 +213,11 @@ function carr_post_options( $post ) {
 <?php
 }
 
+/**
+ * Options for In the News posts
+ *
+ * @param $post
+ */
 function carr_post_news_options( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'post' ) ) ) {
 		return;
@@ -240,6 +264,11 @@ function carr_post_news_options( $post ) {
 <?php
 }
 
+/**
+ * Meta box to display sidebar fields on page templates
+ *
+ * @param $post
+ */
 function carr_page_sidebars( $post ) {
 	if ( ! in_array( get_post_type( $post ), array( 'page' ) ) ) {
 		return;
@@ -264,8 +293,13 @@ function carr_page_sidebars( $post ) {
 }
 
 
-add_action( 'save_post', 'save_post_options_data', 15, 2 );
-
+/**
+ * Save the display date box
+ *
+ * @param $post_id
+ * @param $post
+ * @todo rename to make this more semantic
+ */
 function save_post_options_data( $post_id, $post ) {
 	// Bail if doing autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
@@ -289,9 +323,15 @@ function save_post_options_data( $post_id, $post ) {
 		delete_post_meta( $post->ID, 'display_date_manual' );
 	}
 }
+add_action( 'save_post', 'save_post_options_data', 15, 2 );
 
-add_action( 'save_post', 'save_post_news_options_data', 15, 2 );
 
+/**
+ * Save In the News options
+ *
+ * @param $post_id
+ * @param $post
+ */
 function save_post_news_options_data( $post_id, $post ) {
 	// Bail if doing autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
@@ -324,9 +364,15 @@ function save_post_news_options_data( $post_id, $post ) {
 		update_post_meta($post->ID, "source_url", '' );
 	}
 }
+add_action( 'save_post', 'save_post_news_options_data', 15, 2 );
 
-add_action( 'save_post', 'save_page_sidebar', 15, 2 );
 
+/**
+ * Save page sidebars
+ *
+ * @param $post_id
+ * @param $post
+ */
 function save_page_sidebar( $post_id, $post ) {
 	// Bail if doing autosave
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
@@ -347,3 +393,4 @@ function save_page_sidebar( $post_id, $post ) {
 		update_post_meta( $post->ID, "post_sidebar_2", $_POST["post_sidebar_2"] );
 	}
 }
+add_action( 'save_post', 'save_page_sidebar', 15, 2 );
