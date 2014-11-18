@@ -1713,7 +1713,8 @@ body {
     margin: 0;
     padding-left: 0; }
   .footer-nav li {
-    float: left; }
+    float: left;
+    width: 170px; }
   .footer-nav a {
     display: block;
     padding: 16px 20px 12px 0;
@@ -1725,7 +1726,7 @@ body {
   .footer-nav .sub-menu li {
     float: none;
     display: block;
-    max-width: 140px; }
+    max-width: 160px; }
     .footer-nav .sub-menu li a {
       padding: 8px 5px 8px 0; }
 
