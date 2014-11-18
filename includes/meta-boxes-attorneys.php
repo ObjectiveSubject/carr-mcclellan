@@ -1,10 +1,8 @@
 <?php
-
 /*********************************************************
  * Custom Meta Box
  */
 
-add_action( 'admin_init', 'admin_init' );
 add_action( 'save_post', 'save_attorneys_meta', 15, 2 );
 
 function attorneys_meta_options() {

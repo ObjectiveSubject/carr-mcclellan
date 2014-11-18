@@ -12,9 +12,9 @@ include CARR_PATH . 'includes/extras.php';
 include CARR_PATH . 'includes/admin.php';
 include CARR_PATH . 'includes/meta-boxes.php';
 include CARR_PATH . 'includes/meta-boxes-articles.php';
+include CARR_PATH . 'includes/meta-boxes-attorneys.php';
 include CARR_PATH . 'includes/meta-boxes-practices.php';
 include CARR_PATH . 'includes/post-types.php';
-include CARR_PATH . 'includes/reg_attorneys.php';
 include CARR_PATH . 'includes/reg_industries.php';
 include CARR_PATH . 'includes/v_card.php';
 
