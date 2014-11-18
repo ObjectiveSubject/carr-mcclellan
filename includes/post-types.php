@@ -21,21 +21,6 @@ function articles_register() {
 		'menu_icon'       => 'dashicons-media-text'
 	);
 	register_post_type( 'articles', $args );
-
-
-	register_taxonomy(
-		'publications',
-		'articles',
-		array(
-			'label'        => 'Article Type',
-			'sort'         => true,
-			'args'         => array( 'orderby' => 'term_order' ),
-			//'rewrite' => array('slug' => 'pub_type'),
-			'rewrite'      => array( 'slug' => 'articles' ),
-			'hierarchical' => true
-		)
-	);
-
 }
 
 /*********************************************************
