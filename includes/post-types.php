@@ -3,11 +3,9 @@
  * Register custom post types used in theme
  */
 
-/*********************************************************
- * Register Custom Post Type
+/**
+ * Register Articles custom post type
  */
-
-add_action( 'init', 'articles_register' );
 function articles_register() {
 	$args = array(
 		'label'           => __( 'Articles' ),
@@ -22,13 +20,12 @@ function articles_register() {
 	);
 	register_post_type( 'articles', $args );
 }
+add_action( 'init', 'articles_register' );
 
-/*********************************************************
- * Register Custom Post Type
+
+/**
+ * Register Attorneys custom post type
  */
-
-add_action( 'init', 'attorneys_register' );
-
 function attorneys_register() {
 	$args = array(
 		'label'          => __( 'Attorneys' ),
@@ -43,22 +40,12 @@ function attorneys_register() {
 	);
 	register_post_type( 'attorneys', $args );
 }
+add_action( 'init', 'attorneys_register' );
 
-// Disable Autosave ** Edit - Modified save_attorneys_meta() to fix autosave
-//
-//add_action('admin_print_scripts', 'disable_autosave');
-function disable_autosave() {
-	global $post;
-	if ( get_post_type( $post->ID ) === 'attorneys' ) {
-		wp_deregister_script( 'autosave' );
-	}
-}
 
-/*********************************************************
-Register Custom Post Type
+/**
+ * Register Industries custom post type
  */
-
-add_action( 'init', 'industries_register' );
 function industries_register() {
 	$args = array(
 		'label' => __('Industries'),
@@ -73,13 +60,12 @@ function industries_register() {
 	);
 	register_post_type( 'industries' , $args );
 }
+add_action( 'init', 'industries_register' );
 
 
-/*********************************************************
- * Register Custom Post Type
+/**
+ * Register Firm History (Milestones) custom post type
  */
-
-add_action( 'init', 'milestones_register' );
 function milestones_register() {
 	$args = array(
 		'label'           => __( 'Firm History' ),
@@ -94,13 +80,12 @@ function milestones_register() {
 	);
 	register_post_type( 'milestones', $args );
 }
+add_action( 'init', 'milestones_register' );
 
-/*********************************************************
- * Register Custom Post Type
+
+/**
+ * Register Practices custom post type
  */
-
-
-add_action( 'init', 'practices_register' );
 function practices_register() {
 	$args = array(
 		'label'          => __( 'Practices' ),
@@ -114,3 +99,4 @@ function practices_register() {
 	);
 	register_post_type( 'practices', $args );
 }
+add_action( 'init', 'practices_register' );
