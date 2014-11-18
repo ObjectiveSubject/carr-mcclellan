@@ -1728,7 +1728,10 @@ body {
     display: block;
     max-width: 160px; }
     .footer-nav .sub-menu li a {
-      padding: 8px 5px 8px 0; }
+      padding: 8px 5px 8px 0;
+      font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
+      font-weight: normal;
+      text-transform: none; }
 
 .site-footer {
   background: #2A2F4C;

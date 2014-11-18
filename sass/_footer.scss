@@ -18,7 +18,7 @@
 		color: #FFF;
 		font: normal normal bold 14px/1em $font_heading;
 		text-transform: uppercase;
-	
+
 		&:hover {
 			color: $color_red;
 		}
@@ -32,6 +32,9 @@
 			max-width: 160px;
 			a {
 				padding: 8px 5px 8px 0;
+				font-family: $font_text;
+				font-weight: normal;
+				text-transform: none;
 			}
 		}
 	}
