@@ -6,63 +6,60 @@
  */
 
 get_header(); ?>
+<div id="primary" class="content-area content-articles">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<header class="page-header">
+		<div class="centered">
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'cmc' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		</div>
+	</header>
 
-		<?php if ( have_posts() ) : ?>
+	<main id="main" class="site-main span12 aligncenter" role="main">
+		<section class="articles_wrap">
+			<div class="articles">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'cmc' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+				<?php if ( have_posts() ) : ?>
+					<?php
+					// $count = '';
+						$color_class = 'odd';
+						$place = 1;
+					?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-				/**
-				 * The template part for displaying results in search pages.
-				 *
-				 * Learn more: http://codex.wordpress.org/Template_Hierarchy
-				 *
-				 * @package Carr McClellan
-				 */
-				?>
+						<article class="border-block top-right-bottom square blog-post <?php echo $color_class.' place'.$place; ?>">
+							<h4 class="timestamp"><span class="month"><?php the_time('M. '); ?></span><span class="day-year"><?php the_time('d, Y'); ?></span></h4>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						</article>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+						<?php
+							if ( 'even' == $color_class ) {
+								$color_class = 'odd';
+							} else {
+								$color_class = 'even';
+							}
 
-						<?php if ( 'post' == get_post_type() ) : ?>
-							<div class="entry-meta">
-								<?php cmc_posted_on(); ?>
-							</div><!-- .entry-meta -->
-						<?php endif; ?>
-					</header><!-- .entry-header -->
+							if ( $place == 4 ) {
+								$place = 1;
+							} else {
+								$place++;
+							}
+						?>
 
-					<div class="entry-summary">
-						<?php the_excerpt(); ?>
-					</div><!-- .entry-summary -->
+					<?php endwhile; ?>
 
-					<footer class="entry-footer">
-						<?php cmc_entry_footer(); ?>
-					</footer><!-- .entry-footer -->
-				</article><!-- #post-## -->
+					<?php cmc_paging_nav(); ?>
 
+				<?php else : ?>
 
-			<?php endwhile; ?>
+					<article>
+						<p>No posts found</p>
+					</article>
 
-			<?php cmc_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<article>
-				<p>No posts found</p>
-			</article>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				<?php endif; ?>
+			</div>
+		</section>
+	</main><!-- #main -->
+</div>
 
 <?php get_footer(); ?>
