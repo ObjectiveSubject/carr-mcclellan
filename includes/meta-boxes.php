@@ -62,6 +62,7 @@ function posts_attorneys_meta_options() {
 			}
 			?>
 		</ul>
+		<?php wp_nonce_field( 'save', 'carr_post_attorneys' ); ?>
 	</div>
 
 <?php
@@ -70,16 +71,37 @@ function posts_attorneys_meta_options() {
 /**
  * Save Attorneys associated with post
  *
- * @todo Add nonces/security here
+ * @param $post_id
+ * @param $post
  */
-function save_posts_attorneys_meta() {
-	global $post;
+function save_posts_attorneys_meta( $post_id, $post ) {
+
+	// Bail if doing autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+
+	// Bail if nonce isn't set
+	if ( ! isset( $_POST['carr_post_attorneys'] ) || ! wp_verify_nonce( $_POST['carr_post_attorneys'], 'save' ) ) {
+		return;
+	}
+
+	// Bail if the user isn't allowed to edit the post
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+
+	// Bail if not a page
+	if ( 'post' !== $post->post_type ) {
+		return;
+	}
+
 	if ( isset( $_POST["post_attorneys"] ) ) {
 		update_post_meta( $post->ID, "post_attorneys", $_POST["post_attorneys"] );
 	}
 }
 
-add_action( 'save_post', 'save_posts_attorneys_meta' );
+add_action( 'save_post', 'save_posts_attorneys_meta', 15, 2 );
 
 
 /**
@@ -111,6 +133,7 @@ function posts_practices_meta_options() {
 				echo '</li>';
 			} ?>
 		</ul>
+		<?php wp_nonce_field( 'save', 'carr_post_practices' ); ?>
 	</div>
 
 <?php
@@ -118,16 +141,34 @@ function posts_practices_meta_options() {
 
 /**
  * Save Practices associated with post
- *
- * @todo Add nonces/security here
  */
-function save_posts_practices_meta() {
-	global $post;
+function save_posts_practices_meta( $post_id, $post ) {
+
+	// Bail if doing autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+
+	// Bail if nonce isn't set
+	if ( ! isset( $_POST['carr_post_practices'] ) || ! wp_verify_nonce( $_POST['carr_post_practices'], 'save' ) ) {
+		return;
+	}
+
+	// Bail if the user isn't allowed to edit the post
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+
+	// Bail if not a page
+	if ( 'post' !== $post->post_type ) {
+		return;
+	}
+
 	if ( isset( $_POST["post_practices"] ) ) {
 		update_post_meta( $post->ID, "post_practices", $_POST["post_practices"] );
 	}
 }
-add_action( 'save_post', 'save_posts_practices_meta' );
+add_action( 'save_post', 'save_posts_practices_meta', 15, 2 );
 
 /**
  * Used for the display date box
