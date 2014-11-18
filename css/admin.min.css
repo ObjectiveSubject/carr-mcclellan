@@ -1,2 +1,5 @@
 .datepicker-toggle {
   cursor: pointer; }
+
+#carr_page_sidebars {
+  display: none; }

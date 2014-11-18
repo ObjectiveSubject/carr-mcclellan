@@ -26,6 +26,28 @@ var CarrAdmin = {
 			sections.toggle();
 		});
 
+	},
+
+	// Only show News Options for In the News
+	setupPageSidebars: function() {
+		var templateName = 'page-sidebars.php',
+			currentTemplate = $( '#page_template'),
+			metabox = $( '#carr_page_sidebars' );
+
+		// Check if page template is selected
+		if ( currentTemplate.val() === templateName ) {
+			metabox.show();
+		}
+
+		// Bind a change event to make sure we show or hide the metabox based on user selection of a template
+		currentTemplate.change( function() {
+			if ( currentTemplate.val() === templateName ) {
+				metabox.show();
+			}
+			else {
+				metabox.hide();
+			}
+		});
 	}
 };
 
@@ -34,5 +56,7 @@ jQuery(function ($) {
 
 	// @todo Find a body class to make sure this only gets setup there
 	CarrAdmin.setupDisplayDate();
+
+	CarrAdmin.setupPageSidebars();
 
 });

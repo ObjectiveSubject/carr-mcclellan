@@ -1,2 +1,5 @@
 .datepicker-toggle {
-  font-size: 12px; }
+  cursor: pointer; }
+
+#carr_page_sidebars {
+  display: none; }
