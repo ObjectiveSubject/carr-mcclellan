@@ -21,31 +21,50 @@ get_header(); ?>
 	</header>
 
 	<main id="main" class="site-main span12 aligncenter" role="main">
+		<section class="articles_wrap">
+			<div class="articles">
 
-		<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
+					<?php
+					// $count = '';
+					$color_class = 'odd';
+					$place = 1;
+					?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+						<article class="border-block top-right-bottom square blog-post <?php echo $color_class.' place'.$place; ?>">
+							<h4 class="timestamp"><span class="month"><?php the_time('M. '); ?></span><span class="day-year"><?php the_time('d, Y'); ?></span></h4>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						</article>
 
-			<?php endwhile; ?>
+						<?php
+						if ( 'even' == $color_class ) {
+							$color_class = 'odd';
+						} else {
+							$color_class = 'even';
+						}
 
-			<?php carr_paging_nav(); ?>
+						if ( $place == 4 ) {
+							$place = 1;
+						} else {
+							$place++;
+						}
+						?>
 
-		<?php else : ?>
+					<?php endwhile; ?>
 
-			<article>
-				<p>No posts found</p>
-			</article>
+					<?php carr_paging_nav(); ?>
 
-		<?php endif; ?>
+				<?php else : ?>
 
+					<article>
+						<p>No posts found</p>
+					</article>
+
+				<?php endif; ?>
+			</div>
+		</section>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
