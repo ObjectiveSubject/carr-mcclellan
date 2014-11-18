@@ -27,6 +27,7 @@ function admin_init() {
 	// Pages
 	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
 }
+add_action( 'admin_init', 'admin_init' );
 
 /* Custom Meta Box
 ------------------------------------------------------*/
