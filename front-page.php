@@ -49,20 +49,20 @@ $home_featured = z_get_zone_query( 'home-featured' );
 			<h3 class="front-page">News &amp; Events</h3>
 			<a href="<?php echo get_bloginfo( 'url' ); ?>/news-events/" class="see-all">See All <span class="icon-arrow-right"></span></a>
 
-			<?php cmc_get_newsevents(); ?>
+			<?php carr_get_newsevents(); ?>
 		</section>
 
 		<section class="attorneys span10 aligncenter">
 			<h3 class="front-page">Meet Our Attorneys</h3>
 			<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="see-all">See All <span class="icon-arrow-right"></span></a>
 
-			<?php cmc_get_attorneys(); ?>
+			<?php carr_get_attorneys(); ?>
 
 		</section>
 
 		<section class="practices span10 aligncenter">
 			<h3 class="front-page">Our Practices</h3>
-			<?php cmc_get_practices(); ?>
+			<?php carr_get_practices(); ?>
 		</section>
 
 	</main><!-- #main -->

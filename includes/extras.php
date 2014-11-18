@@ -8,29 +8,13 @@
  */
 
 /**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function cmc_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'cmc_body_classes' );
-
-/**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function cmc_wp_title( $title, $sep ) {
+function carr_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
@@ -71,4 +55,4 @@ function cmc_wp_title( $title, $sep ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'cmc_wp_title', 10, 2 );
+add_filter( 'wp_title', 'carr_wp_title', 10, 2 );

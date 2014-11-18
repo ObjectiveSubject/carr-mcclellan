@@ -46,7 +46,7 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 
-					<?php cmc_share_links(); ?>
+					<?php carr_share_links(); ?>
 				</aside>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('span9 push-left'); ?>>
@@ -55,7 +55,7 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					<?php cmc_post_nav(); ?>
+					<?php carr_post_nav(); ?>
 
 				</article><!-- #post-## -->
 

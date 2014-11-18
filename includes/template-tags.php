@@ -7,11 +7,11 @@
  * @package Carr McClellan
  */
 
-if ( ! function_exists( 'cmc_paging_nav' ) ) :
+if ( ! function_exists( 'carr_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function cmc_paging_nav() {
+function carr_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -39,11 +39,11 @@ function cmc_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'cmc_post_nav' ) ) :
+if ( ! function_exists( 'carr_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-function cmc_post_nav() {
+function carr_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -89,11 +89,11 @@ function cmc_post_nav() {
 endif;
 
 
-if ( ! function_exists( 'cmc_posted_on' ) ) :
+if ( ! function_exists( 'carr_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function cmc_posted_on() {
+function carr_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -121,11 +121,11 @@ function cmc_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'cmc_entry_footer' ) ) :
+if ( ! function_exists( 'carr_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function cmc_entry_footer() {
+	function carr_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' == get_post_type() ) {
 				/* translators: used between list items, there is a space after the comma */
@@ -143,7 +143,7 @@ if ( ! function_exists( 'cmc_entry_footer' ) ) :
 }
 endif;
 
-function cmc_share_links() {
+function carr_share_links() {
 	global $post;
 
 	$permalink = get_the_permalink( $post->ID );

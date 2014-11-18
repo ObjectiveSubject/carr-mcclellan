@@ -44,7 +44,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php cmc_paging_nav(); ?>
+				<?php carr_paging_nav(); ?>
 
 			<?php else : ?>
 

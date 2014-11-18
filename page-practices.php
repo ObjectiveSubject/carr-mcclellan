@@ -15,7 +15,7 @@
 
 		<section id="content" class="practices_wrap">
 			<a href="<?php echo get_bloginfo( 'url' ); ?>/expertise/" class="see-all"><span class="icon-arrow-left"></span> Back to Expertise</a>
-			<?php cmc_get_practices(); ?>
+			<?php carr_get_practices(); ?>
 		</section>
 
 	</main>

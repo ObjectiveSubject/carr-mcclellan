@@ -55,7 +55,7 @@ add_action( 'after_setup_theme', 'carr_setup' );
 /**
  * Enqueue scripts and styles.
  */
-function cmc_scripts() {
+function carr_scripts() {
 	$postfix = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_enqueue_style( 'cmc-style', get_template_directory_uri() . "/css/style{$postfix}.css" );
@@ -64,7 +64,7 @@ function cmc_scripts() {
 	wp_enqueue_script( 'core', get_template_directory_uri() . "/js/core{$postfix}.js", array( 'jquery' ), '1.0', true );
 }
 
-add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
+add_action( 'wp_enqueue_scripts', 'carr_scripts' );
 
 
 /**
@@ -90,7 +90,7 @@ add_action( 'admin_enqueue_scripts', 'carr_admin_scripts_styles' );
 /**
  * Retrieve the practices list and display
  */
-function cmc_get_practices() {
+function carr_get_practices() {
 
 	$practices = new WP_Query( array(
 		'post_type'      => 'practices',
@@ -118,7 +118,7 @@ function cmc_get_practices() {
 /**
  * Retrieve a short list of attorneys and display
  */
-function cmc_get_attorneys() {
+function carr_get_attorneys() {
 
 	$attorneys_zone = z_get_zone_query( 'home-attorneys' );
 
@@ -173,7 +173,7 @@ function cmc_get_attorneys() {
 /**
  * Retrieve recent news and events
  */
-function cmc_get_newsevents() {
+function carr_get_newsevents() {
 
 	$news_events_zone = z_get_zone_query( 'home-news-events' );
 
