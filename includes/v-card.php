@@ -10,7 +10,7 @@
  */
 function carr_generate_vcard( $id ) {
 
-	require_once( 'v_card_class.php' );
+	require_once( 'v-card-class.php' );
 	$vc = new vcard();
 
 	$vc->data['first_name']      = get_post_meta( $id, 'first_name', true );

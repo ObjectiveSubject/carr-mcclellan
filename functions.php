@@ -15,7 +15,7 @@ include CARR_PATH . 'includes/meta-boxes-industries.php';
 include CARR_PATH . 'includes/meta-boxes-practices.php';
 include CARR_PATH . 'includes/post-types.php';
 include CARR_PATH . 'includes/template-tags.php';
-include CARR_PATH . 'includes/v_card.php';
+include CARR_PATH . 'includes/v-card.php';
 
 /**
  * Set up theme defaults and register supported WordPress features.
