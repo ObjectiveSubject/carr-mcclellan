@@ -22,7 +22,6 @@ function carr_setup() {
 	register_nav_menus( array(
 		'main'      => __( 'Header - Main', 'cmc' ),
 		'footer_main' => __( 'Footer - Main', 'cmc' ),
-		'footer_main_sub' => __( 'Footer - Main Submenu', 'cmc' ),
 		'footer_secondary' => __( 'Footer - Secondary', 'cmc' ),
 	) );
 

@@ -18,14 +18,8 @@
 			</nav>
 			<a href="<?php echo get_bloginfo( 'url' ); ?>" class="monogram sprite"><span class="hide-text">Carr McClellan</span></a>
 		</div>
-
-		<div class="row row2 span12 aligncenter">
-			<nav id="footer-navigation-submenu" class="footer-nav-submenu clear" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'footer_main_sub' ) ); ?>
-			</nav>
-		</div>
 		
-		<div class="row row3 span12 aligncenter">
+		<div class="row row2 span12 aligncenter">
 			<div id="mc_embed_signup" class="span5 push-left">
 				<form action="//kirkpettinga.us3.list-manage.com/subscribe/post?u=c4d01ae08a48a7dc40dad79d7&amp;id=74448769d8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			    <div id="mc_embed_signup_scroll">
@@ -56,7 +50,7 @@
 			</div>
 		</div>
 		
-		<div class="row row4 span12 aligncenter">
+		<div class="row row3 span12 aligncenter">
 			<div class="span5 push-left">
 				<nav id="social-navigation" class="social-nav">
 					<ul class="menu">
