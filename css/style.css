@@ -1230,6 +1230,8 @@ body {
     line-height: 1.2em;
     margin-bottom: 1em;
     font-size: 14px; }
+  .aside p {
+    font-size: 14px; }
   .aside .social-share a {
     color: #FFF; }
   .aside .social-share li {
@@ -1237,9 +1239,9 @@ body {
   .aside .categories li {
     margin-bottom: 1.25em; }
   .aside .contact-info .block-label {
-    padding-bottom: 0.5em; }
+    padding-bottom: 0.3em; }
   .aside .contact-info ul {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.8em; }
 
 .aside-left {
   width: 100%;
@@ -1250,6 +1252,9 @@ body {
 .aside-right {
   width: 14.52991%;
   float: right; }
+
+.page-template-page-sidebars .aside h3 {
+  padding-bottom: 0.3em; }
 
 /* Solid Block
 ------------------------------------- */
@@ -1708,7 +1713,7 @@ body {
     margin: 0;
     padding-left: 0; }
   .footer-nav li {
-    display: inline-block; }
+    float: left; }
   .footer-nav a {
     display: block;
     padding: 16px 20px 12px 0;
@@ -1717,6 +1722,12 @@ body {
     text-transform: uppercase; }
     .footer-nav a:hover {
       color: #EC513C; }
+  .footer-nav .sub-menu li {
+    float: none;
+    display: block;
+    max-width: 140px; }
+    .footer-nav .sub-menu li a {
+      padding: 8px 5px 8px 0; }
 
 .site-footer {
   background: #2A2F4C;
