@@ -12,8 +12,10 @@ if ( ! function_exists( 'cmc_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'main'      => __( 'Main Menu', 'cmc' ),
-			'secondary' => __( 'Secondary Menu', 'cmc' ),
+			'main'      => __( 'Header - Main', 'cmc' ),
+			'footer_main' => __( 'Footer - Main', 'cmc' ),
+			'footer_main_sub' => __( 'Footer - Main Submenu', 'cmc' ),
+			'footer_secondary' => __( 'Footer - Secondary', 'cmc' ),
 		) );
 
 		// Page Excerpts
