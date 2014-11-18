@@ -20,6 +20,7 @@ function articles_register() {
 	);
 	register_post_type( 'articles', $args );
 }
+
 add_action( 'init', 'articles_register' );
 
 
@@ -32,14 +33,13 @@ function attorneys_register() {
 		'singular_label' => __( 'Attorney' ),
 		'public'         => true,
 		'show_ui'        => true,
-		//'capability_type' => 'post',
 		'hierarchical'   => false,
-		//'rewrite' => true,
 		'supports'       => array( 'title', 'thumbnail' ),
-		'menu_icon'       => 'dashicons-businessman'
+		'menu_icon'      => 'dashicons-businessman'
 	);
 	register_post_type( 'attorneys', $args );
 }
+
 add_action( 'init', 'attorneys_register' );
 
 
@@ -48,18 +48,19 @@ add_action( 'init', 'attorneys_register' );
  */
 function industries_register() {
 	$args = array(
-		'label' => __('Industries'),
-		'singular_label' => __('Industry'),
-		'public' => true,
-		'show_ui' => true,
+		'label'           => __( 'Industries' ),
+		'singular_label'  => __( 'Industry' ),
+		'public'          => true,
+		'show_ui'         => true,
 		'capability_type' => 'post',
-		'hierarchical' => false,
-		'rewrite' => true,
-		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		'hierarchical'    => false,
+		'rewrite'         => true,
+		'supports'        => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		'menu_icon'       => 'dashicons-hammer'
 	);
-	register_post_type( 'industries' , $args );
+	register_post_type( 'industries', $args );
 }
+
 add_action( 'init', 'industries_register' );
 
 
@@ -79,6 +80,7 @@ function practices_register() {
 	);
 	register_post_type( 'practices', $args );
 }
+
 add_action( 'init', 'practices_register' );
 
 
@@ -99,4 +101,5 @@ function milestones_register() {
 	);
 	register_post_type( 'milestones', $args );
 }
+
 add_action( 'init', 'milestones_register' );
