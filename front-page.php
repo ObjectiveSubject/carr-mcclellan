@@ -69,5 +69,4 @@ $home_featured = z_get_zone_query( 'home-featured' );
 
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
