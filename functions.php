@@ -67,42 +67,6 @@ function cmc_scripts() {
 add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
 
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-From here down is stuff brought over from Carr McClellan 1.0
-------------------------------------------------------------
-------------------------------------------------------------
-*/
-
-
-// Init all Meta Boxes
-function admin_init() {
-
-	// Attorneys
-	add_meta_box( "attorneys_meta_options", "Attorney Information", "attorneys_meta_options", "attorneys" );
-
-	// Industries
-	add_meta_box( "industries_meta_options", "Related Practices", "industries_meta_options", "industries" );
-
-	// Practices
-	add_meta_box( "practices_meta_options", "Practice Information", "practices_meta_options", "practices" );
-	add_meta_box( "practices_attorneys_meta_options", "Practicing Attorneys", "practices_attorneys_meta_options", "practices", "side" );
-
-	// Articles
-	add_meta_box( "articles_meta_options", "Article Information", "articles_meta_options", "articles" );
-	add_meta_box( 'carr_post_options', 'Options', 'carr_post_options', 'articles', 'side' );
-
-
-	// Posts
-	add_meta_box( "posts_attorneys_meta_options", "Tag Attorneys", "posts_attorneys_meta_options", "post", "side" );
-	add_meta_box( "posts_practices_meta_options", "Tag Practices", "posts_practices_meta_options", "post", "side" );
-	add_meta_box( 'carr_post_options', 'Display Date', 'carr_post_options', 'post', 'side' );
-	add_meta_box( 'carr_post_news_options', 'News Options', 'carr_post_news_options', 'post' );
-
-	// Pages
-	add_meta_box( "carr_page_sidebars", "Sidebars", "carr_page_sidebars", "page" );
-}
-
 /**
  * Queue up custom JavaScript and CSS for the admin section
  */
