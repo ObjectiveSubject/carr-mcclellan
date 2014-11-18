@@ -7,7 +7,7 @@
  * @package Carr McClellan
  */
 
-if ( ! function_exists( 'carr_paging_nav' ) ) :
+
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
@@ -37,9 +37,8 @@ function carr_paging_nav() {
 	</nav><!-- .navigation -->
 	<?php
 }
-endif;
 
-if ( ! function_exists( 'carr_post_nav' ) ) :
+
 /**
  * Display navigation to next/previous post when applicable.
  */
@@ -86,10 +85,8 @@ function carr_post_nav() {
 	
 	<?php
 }
-endif;
 
 
-if ( ! function_exists( 'carr_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -119,30 +116,32 @@ function carr_posted_on() {
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
 }
-endif;
 
-if ( ! function_exists( 'carr_entry_footer' ) ) :
-	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
-	function carr_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' == get_post_type() ) {
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'cmc' ) );
-				if ( $categories_list ) {
-						printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'cmc' ) . '</span>', $categories_list );
+
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function carr_entry_footer() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( __( ', ', 'cmc' ) );
+			if ( $categories_list ) {
+					printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'cmc' ) . '</span>', $categories_list );
+			}
+
+	/* translators: used between list items, there is a space after the comma */
+	$tags_list = get_the_tag_list( '', __( ', ', 'cmc' ) );
+	if ( $tags_list ) {
+					printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'cmc' ) . '</span>', $tags_list );
 				}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'cmc' ) );
-		if ( $tags_list ) {
-						printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'cmc' ) . '</span>', $tags_list );
-					}
 	}
 }
-endif;
 
+
+/**
+ * Generate sidebar sharing links for Posts/Articles
+ */
 function carr_share_links() {
 	global $post;
 
@@ -162,6 +161,7 @@ function carr_share_links() {
 
 	<?php
 }
+
 
 /**
  * Sidebar for News & Events pages
@@ -219,6 +219,7 @@ function carr_news_events_sidebar() {
 	<?php
 }
 
+
 /**
  * Function to display a posts' date. Priority goes to the manual entry field,
  * then date picker, then original post date.
@@ -234,11 +235,7 @@ function carr_display_date() {
 		$date_string = 'M d, Y';
 	}
 
-	/* Kirk's string for timestamps on Archive/Category pages
-	 * <h4 class="timestamp"><span class="month"><?php the_time('M. '); ?></span><span class="day-year"><?php the_time('d, Y'); ?></span></h4>
-	 */
-
-$display_date = get_post_meta( $post->ID, 'display_date', true );
+	$display_date = get_post_meta( $post->ID, 'display_date', true );
 	$display_date_manual = get_post_meta( $post->ID, 'display_date_manual', true );
 
 	if ( $display_date_manual ) {
