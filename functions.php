@@ -111,24 +111,6 @@ function remove_thumbnail_box() {
 	remove_meta_box( 'multi_content', 'attorneys', 'side' );
 }
 
-
-/*******************************************************
- * Custom WP Login Logo
- */
-
-add_action( "login_head", "my_login_head" );
-function my_login_head() {
-	echo "
-    <style>
-    body.login #login h1 a {
-      background: url('" . get_bloginfo( 'template_url' ) . "/images/carr-login.png') no-repeat scroll center top transparent !important; background-size: 274px 63px; width: 274px; height: 63px;
-
-    }
-    </style>
-    ";
-}
-
-
 /*******************************************************
  * Register Custom Post Types
  */
