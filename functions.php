@@ -7,6 +7,17 @@
 define( 'CARR_VERSION', '0.1' );
 define( 'CARR_PATH', dirname( __FILE__ ) . '/' );
 
+include CARR_PATH . 'includes/template-tags.php';
+include CARR_PATH . 'includes/extras.php';
+include CARR_PATH . 'includes/admin.php';
+include CARR_PATH . 'includes/reg_articles.php';
+include CARR_PATH . 'includes/reg_attorneys.php';
+include CARR_PATH . 'includes/reg_practices.php';
+include CARR_PATH . 'includes/reg_industries.php';
+include CARR_PATH . 'includes/reg_milestones.php';
+include CARR_PATH . 'includes/posts_meta.php';
+include CARR_PATH . 'includes/v_card.php';
+
 /**
  * Set up theme defaults and register supported WordPress features.
  */
@@ -56,52 +67,12 @@ function cmc_scripts() {
 add_action( 'wp_enqueue_scripts', 'cmc_scripts' );
 
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/includes/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/includes/extras.php';
-
-/**
- * Custom functions that for the admin area.
- */
-require get_template_directory() . '/includes/admin.php';
-
-
 /*----------------------------------------------------------
 ------------------------------------------------------------
 From here down is stuff brought over from Carr McClellan 1.0
 ------------------------------------------------------------
 ------------------------------------------------------------
 */
-
-/*******************************************************
- * Register Custom Post Types
- */
-
-// Articles
-include( 'includes/reg_articles.php' );
-
-// Attorneys
-include( 'includes/reg_attorneys.php' );
-
-// Practices
-include( 'includes/reg_practices.php' );
-
-// Industries
-include( 'includes/reg_industries.php' );
-
-// Milestones
-include( 'includes/reg_milestones.php' );
-
-// Posts Tagging of Attorneys
-include( 'includes/posts_meta.php' );
-
-include( 'includes/v_card.php' );
 
 
 // Init all Meta Boxes
