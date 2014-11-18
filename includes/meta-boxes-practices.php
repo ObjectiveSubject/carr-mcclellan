@@ -4,7 +4,6 @@
  * Custom Meta Box
  */
 
-add_action( "admin_init", "admin_init" );
 add_action( 'save_post', 'save_practices_meta', 15, 2 );
 
 function practices_meta_options() {
