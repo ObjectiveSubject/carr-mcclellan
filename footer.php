@@ -20,6 +20,19 @@
 		</div>
 		
 		<div class="row row2 span12 aligncenter">
+			
+			<div id="cm_embed_signup" class="span5 push-left">
+				<form id="cm-embedded-subscribe-form" action="http://objectivesubject.createsend.com/t/r/s/iyiukll/" method="post">
+					<h3 class="font-text">Sign up for our newsletter</h3>
+					<div class="cm-field-group">
+		        <input id="fieldEmail" name="cm-iyiukll-iyiukll" type="email" placeholder="Email address" class="email" required />
+		        <input type="submit" value="Submit" name="subscribe" id="cm-embedded-subscribe" class="button">
+					</div>
+				</form>
+			</div>
+			
+			
+<!--
 			<div id="mc_embed_signup" class="span5 push-left">
 				<form action="//kirkpettinga.us3.list-manage.com/subscribe/post?u=c4d01ae08a48a7dc40dad79d7&amp;id=74448769d8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			    <div id="mc_embed_signup_scroll">
@@ -36,6 +49,7 @@
 			    </div>
 				</form>
 			</div>
+-->
 			
 			<div class="contact span5 push-right">
 				<h3 class="font-text"><a href="<?php echo get_bloginfo( 'url' ); ?>/our-firm/contact-us/">Contact</a></h3>
