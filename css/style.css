@@ -1714,7 +1714,7 @@ body {
     padding-left: 0; }
   .footer-nav li {
     float: left;
-    width: 170px; }
+    width: auto; }
   .footer-nav a {
     display: block;
     padding: 16px 20px 12px 0;
@@ -1723,10 +1723,12 @@ body {
     text-transform: uppercase; }
     .footer-nav a:hover {
       color: #EC513C; }
+  .footer-nav .menu > li {
+    margin-right: 30px; }
   .footer-nav .sub-menu li {
     float: none;
     display: block;
-    max-width: 160px; }
+    max-width: 100px; }
     .footer-nav .sub-menu li a {
       padding: 8px 5px 8px 0;
       font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;

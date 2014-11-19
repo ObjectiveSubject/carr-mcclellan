@@ -9,7 +9,7 @@
 	
 	li {
 		float: left;
-		width: 170px;
+		width: auto;
 	}
 	
 	a {
@@ -24,12 +24,14 @@
 		}
 	}
 
+	.menu > li { margin-right: 30px; }
+
 	.sub-menu {
 		li {
 			float: none;
 			display: block;
 			// max-width: $grid_span2;
-			max-width: 160px;
+			max-width: 100px;
 			a {
 				padding: 8px 5px 8px 0;
 				font-family: $font_text;
