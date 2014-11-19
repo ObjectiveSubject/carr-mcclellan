@@ -80,7 +80,7 @@
 /* Images
 -------------------------------------- */
 @mixin sprite($x: 0, $y: 0) {
-	background-image: url(images/sprite.png);
+	background-image: url(../images/sprite.png);
 	background-position: $x $y;
 	background-repeat: no-repeat;
 }
