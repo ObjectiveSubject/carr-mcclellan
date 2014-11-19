@@ -38,6 +38,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/style.min.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -101,7 +110,7 @@
 		"outputAbbreviatedPath": "\/images\/down-arrow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/down-arrow@2x.png": {
 		"fileType": 32768,
@@ -112,7 +121,7 @@
 		"outputAbbreviatedPath": "\/images\/down-arrow@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/icons\/favicon.png": {
 		"fileType": 32768,
@@ -211,7 +220,7 @@
 		"outputAbbreviatedPath": "\/images\/large-monogram.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/large-monogram@2x.png": {
 		"fileType": 32768,
@@ -222,73 +231,73 @@
 		"outputAbbreviatedPath": "\/images\/large-monogram@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_business.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3046,
+		"initialSize": 1997,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_business.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_business.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_business@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 6332,
+		"initialSize": 4552,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_business@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_business@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_construction.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2497,
+		"initialSize": 1710,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_construction.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_construction.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_construction@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5334,
+		"initialSize": 3584,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_construction@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_construction@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_corporate.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3128,
+		"initialSize": 1887,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_corporate@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 6400,
+		"initialSize": 3708,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_corporate@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_creditors_rights.png": {
 		"fileType": 32768,
@@ -299,7 +308,7 @@
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_creditors_rights@2x.png": {
 		"fileType": 32768,
@@ -310,117 +319,117 @@
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_creditors_rights@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_employment.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2404,
+		"initialSize": 1628,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_employment.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_employment.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_employment@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5126,
+		"initialSize": 3704,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_employment@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_employment@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_intellectual_property.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2810,
+		"initialSize": 2117,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_intellectual_property@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5364,
+		"initialSize": 3953,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_intellectual_property@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_pro_bono.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3170,
+		"initialSize": 2223,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_pro_bono@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 6888,
+		"initialSize": 4807,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_pro_bono@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_real_estate.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2100,
+		"initialSize": 1603,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_real_estate@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3967,
+		"initialSize": 3062,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_real_estate@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_taxation.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1420,
+		"initialSize": 1147,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_taxation@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2764,
+		"initialSize": 2261,
 		"inputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation@2x.png",
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_taxation@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_trusts_estate.png": {
 		"fileType": 32768,
@@ -431,7 +440,7 @@
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/practices_assets\/practice_trusts_estate@2x.png": {
 		"fileType": 32768,
@@ -442,7 +451,7 @@
 		"outputAbbreviatedPath": "\/images\/practices_assets\/practice_trusts_estate@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/sprite.png": {
 		"fileType": 32768,
@@ -453,7 +462,7 @@
 		"outputAbbreviatedPath": "\/images\/sprite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/sprite@2x.png": {
 		"fileType": 32768,
@@ -464,7 +473,7 @@
 		"outputAbbreviatedPath": "\/images\/sprite@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/includes\/admin.php": {
 		"fileType": 8192,
@@ -1251,7 +1260,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Kirk Pettinga",
+"lastSavedByUser": "Dave Kellam",
 "manualImportLinks": {
 	},
 "projectAttributes": {
