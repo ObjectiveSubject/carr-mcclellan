@@ -26,19 +26,7 @@ $home_featured = z_get_zone_query( 'home-featured' );
 				</div>
 			<?php else : ?>
 				<h1 class="page-title">We Make<br/>It Happen</h1>
-				<div class="page-subtitle"><?php the_content(); ?></div>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-						<div class="entry-content">
-							<?php the_content(); ?>
-						</div><!-- .entry-content -->
-
-					</article><!-- #post-## -->
-
-				<?php endwhile; // end of the loop. ?>
+				<div class="page-subtitle"><?php the_post(); the_content(); ?></div>
 			<?php endif; ?>
 		</div>
 	</header>
