@@ -28,7 +28,7 @@ var CarrAdmin = {
 
 	},
 
-	// Only show News Options for In the News
+	// Only show sidebar fields if page-sidebars template is selected
 	setupPageSidebars: function() {
 		var templateName = 'page-sidebars.php',
 			currentTemplate = $( '#page_template'),
@@ -48,6 +48,22 @@ var CarrAdmin = {
 				metabox.hide();
 			}
 		});
+	},
+
+	// Only show News Options for In the News
+	setupPostNewsOptions: function() {
+		var newsCategory = $('#in-category-29'),
+			metabox = $( '#carr_post_news_options' );
+
+		if ( newsCategory.is(':checked') ) {
+			metabox.show();
+		} else {
+			metabox.hide();
+		}
+		
+		newsCategory.click( function() {
+			metabox.toggle( this.checked );
+		});
 	}
 };
 
@@ -58,5 +74,7 @@ jQuery(function ($) {
 	CarrAdmin.setupDisplayDate();
 
 	CarrAdmin.setupPageSidebars();
+
+	CarrAdmin.setupPostNewsOptions();
 
 });
