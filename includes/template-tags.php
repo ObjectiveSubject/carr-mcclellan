@@ -101,7 +101,7 @@ function carr_share_links() {
 		<h3 class="block-label">Share</h3>
 		<ul>
 			<?php // @TODO These need some work and more testing ?>
-			<li><a href="https://twitter.com/share?url=<?php echo $permalink; ?>&title=<?php echo $title; ?>" class="social-icon icon-twitter"><span class="hide-text">Twitter</span></a></li>
+			<li><a href="https://twitter.com/share?url=<?php echo $permalink; ?>&text=<?php echo $title; ?>" class="social-icon icon-twitter"><span class="hide-text">Twitter</span></a></li>
 			<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $permalink; ?>&title=<?php echo $title; ?>&source=carrmcclellan.com" class="social-icon icon-linkedin"><span class="hide-text">Linkedin</span></a></li>
 			<li><a href="http://www.facebook.com/share.php?u=<?php echo $permalink; ?>&title=<?php echo $title; ?>" class="social-icon icon-facebook"><span class="hide-text">Facebook</span></a></li>
 		</ul>
