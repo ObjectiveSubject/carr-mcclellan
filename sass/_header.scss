@@ -83,9 +83,43 @@ only screen and (min-resolution: 2dppx) {
 }
 
 
+/* Search
+----------------------------------- */
 
-
-
+.site-header .search {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	a {
+		color: white;
+		background: $color_red;
+		padding: 16px;
+		font-size: 14px;
+		width: 46px;
+		height: 46px;
+		display: block;
+		float: left;
+		cursor: pointer;
+	}
+	.search-popup {
+		width: 0;
+		float: right;
+		height: 46px;
+		//background-color: $color_blue2;
+	}
+	.search-field {
+		display: none;
+		background-color: $color_blue2;
+		color: white;
+		border: none;
+		margin: 0;
+		padding: 11px 5px;
+	}
+	.search-submit {
+		display: none;
+	}
+}
 
 
 

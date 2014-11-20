@@ -1097,6 +1097,37 @@ body {
 .menu-toggle {
   display: none; }
 
+/* Search
+----------------------------------- */
+.site-header .search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5; }
+  .site-header .search a {
+    color: white;
+    background: #EC513C;
+    padding: 16px;
+    font-size: 14px;
+    width: 46px;
+    height: 46px;
+    display: block;
+    float: left;
+    cursor: pointer; }
+  .site-header .search .search-popup {
+    width: 0;
+    float: right;
+    height: 46px; }
+  .site-header .search .search-field {
+    display: none;
+    background-color: #32507C;
+    color: white;
+    border: none;
+    margin: 0;
+    padding: 11px 5px; }
+  .site-header .search .search-submit {
+    display: none; }
+
 /* Page Header
 ----------------------------------- */
 .page-header {

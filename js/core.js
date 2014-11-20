@@ -170,6 +170,24 @@ var Carr = {
 
 			return false;
 		});
+	},
+
+	// Setup social sharing icons
+	setupSearch: function() {
+		$('.search-link').on( 'click', function() {
+			var searchPopup = $('.search-popup'),
+				searchField = $('.search-field');
+
+			if ( searchPopup.width() > 0 ) {
+				searchPopup.animate( { width:'0px' }, 350 );
+				searchField.fadeToggle('350');
+			} else {
+				searchPopup.animate( { width:'250px' }, 350 );
+				searchField.toggle();
+				searchField.removeAttr('placeholder').focus();
+			}
+
+		});
 	}
 	
 	
@@ -191,4 +209,6 @@ jQuery(function ($) {
 	Carr.setupSocialShare();
 	
 	Carr.mobileMenuToggle();
+
+	Carr.setupSearch();
 });
