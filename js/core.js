@@ -148,6 +148,28 @@ var Carr = {
 				menu.setAttribute( 'aria-expanded', 'true' );
 			}
 		};
+	},
+
+	// Setup social sharing icons
+	setupSocialShare: function() {
+		$('.social-share a').on( 'click', function() {
+			var $this = $( this ),
+				dimensions = 'width=500, height=350',
+				popup;
+
+			if ( $this.hasClass( 'icon-facebook' ) ) {
+				dimensions = 'width=500, height=300';
+				console.log('!');
+			} else if ( $this.hasClass( 'icon-twitter' ) ) {
+				dimensions = 'width=400, height=230';
+			}
+
+			popup = window.open( $this.attr( 'href' ), 'popup', dimensions );
+
+			if (window.focus) { popup.focus(); }
+
+			return false;
+		});
 	}
 	
 	
@@ -157,14 +179,16 @@ var Carr = {
 jQuery(function ($) {
 	window.$ = $;
 
-	// Find a body class to make sure this only gets setup there
+	// We can make the JS slightly more efficient by only running them if needed
+	// We could add body classes based on the template, and wrap these calls in an if
+	// that checks for appropriate classes
 	Carr.setupFirmHistory();
 
-	// Find a body class to make sure this only gets setup there
 	Carr.setupAttorneys();
 
-	// Find a body class to make sure this only gets setup there
 	Carr.setupBottomMatter();
+
+	Carr.setupSocialShare();
 	
 	Carr.mobileMenuToggle();
 });
