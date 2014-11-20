@@ -199,7 +199,7 @@ function carr_get_newsevents() {
 			<?php endif; ?>
 				<article class="solid-block square news event child<?php echo $count; ?>">
 					<a href="<?php the_permalink(); ?>">
-						<p class="timestamp caps">Aug. 29, 2014</p>
+						<p class="timestamp caps"><?php echo carr_display_date(); ?></p>
 						<h3 class="post-title font-text"><?php the_title(); ?></h3>
 						<span href="<?php the_permalink(); ?>" class="read-more font-heading small caps"><strong>Read More</strong>&nbsp;&nbsp;&nbsp;<span class="icon icon-arrow-right"></span></span>
 					</a>
