@@ -18,7 +18,7 @@ $attorneys = new WP_Query(array(
 	<header class="page-header">
 		<div class="span12 aligncenter">
 			<h1 class="page-title"><?php the_title(); ?></h1>
-			<h2 class="page-subtitle"><?php the_content(); ?></h2>
+			<!-- <h2 class="page-subtitle"><?php the_content(); ?></h2> -->
 		</div>
 	</header>
 
