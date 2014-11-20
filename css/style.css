@@ -1579,6 +1579,32 @@ body {
     color: #6F6F6F; }
     .border-block .title a:hover {
       color: #EC513C; }
+  .border-block.meet-headline {
+    position: relative;
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    min-height: 18em; }
+    .border-block.meet-headline a {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      padding: 50% 1em 0; }
+      .border-block.meet-headline a h2 {
+        margin-top: -35px; }
+  .border-block.meet-content {
+    width: 63%;
+    float: left;
+    margin-left: 3.333%;
+    padding: 0 10% 0 0;
+    min-height: 18em;
+    display: table; }
+    .border-block.meet-content h3 {
+      display: table-cell;
+      vertical-align: middle;
+      color: #285F8A; }
 
 .block-label {
   font: normal normal bold 14px/14px "BrandonGrotesque", helvetica, sans-serif;
@@ -1660,7 +1686,7 @@ body {
     vertical-align: -1px;
     margin: 0 5px 0px 0; }
 
-/* Special Page styles
+/* Home Page styles
 ------------------------------------- */
 .home h3.front-page {
   text-align: center;
@@ -1676,11 +1702,15 @@ body {
   .home .featured .button:hover {
     border-color: #4B4B72;
     color: #4B4B72; }
+.home section.attorneys {
+  margin: 4em auto; }
 .home .site-main .square.attorney {
   min-height: 17em; }
 .home .site-main .square.attorney a {
   padding-top: 1.5em; }
 
+/* News/Events Page styles
+------------------------------------- */
 .news-events section {
   display: none; }
   .news-events section.section-1 {

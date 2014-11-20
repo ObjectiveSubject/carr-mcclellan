@@ -492,6 +492,42 @@
 		color: $color_gray3;
 		&:hover { color: $color_red; }
 	}
+	
+	&.meet-headline {
+		position: relative;
+		width: 33.333%;
+		float: left;
+		text-align: center;
+		min-height: 18em;
+		
+		a {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+			padding: 50% 1em 0;
+			
+			h2 { 
+				margin-top: -35px; 
+			}
+		}
+	}
+	&.meet-content {
+		width: 63%;
+		float: left;
+		margin-left: 3.333%;
+		padding: 0 10% 0 0;
+		min-height: 18em;
+		display: table;
+		
+		h3 { 
+			display: table-cell; 
+			vertical-align: middle;
+			color: $color_blue1;
+		}
+	}
+
 }
 
 .block-label {
@@ -581,7 +617,7 @@
 
 
 
-/* Special Page styles
+/* Home Page styles
 ------------------------------------- */
 .home {
 
@@ -608,10 +644,14 @@
 		}
 	}
 	
+	section.attorneys { margin: 4em auto; }
 	.site-main .square.attorney { min-height: 17em; }
 	.site-main .square.attorney a { padding-top: 1.5em; }
 }
 
+
+/* News/Events Page styles
+------------------------------------- */
 .news-events {
 	section {
 		display: none;

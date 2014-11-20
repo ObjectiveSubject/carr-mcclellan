@@ -41,11 +41,20 @@ $home_featured = z_get_zone_query( 'home-featured' );
 		</section>
 
 		<section class="attorneys span10 aligncenter">
+			
+			<article class="border-block top-left-bottom meet-headline child1">
+				<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/">
+					<h2>Meet our Attorneys</h2>
+				</a>
+			</article>
+			<article class="border-block top-right-bottom meet-content child1">
+				<h3 class="font-text">This is some content about our attorneys. Morbi aliquam velit laoreet purus fringilla suscipit. Morbi ipsum ex, consequat pellentesque lobortis vitae, auctor a quam. <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys »</a></h3>
+			</article>
+<!--
 			<h3 class="front-page">Meet Our Attorneys</h3>
 			<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="see-all">See All <span class="icon-arrow-right"></span></a>
-
-			<?php carr_get_attorneys(); ?>
-
+-->
+			<?php //carr_get_attorneys(); ?>
 		</section>
 
 		<section class="practices span10 aligncenter">
