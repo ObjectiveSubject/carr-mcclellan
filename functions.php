@@ -198,8 +198,11 @@ function carr_get_newsevents() {
 			<section class="section-<?php echo ceil( $count / 3 ); ?>">
 			<?php endif; ?>
 				<article class="solid-block square news event child<?php echo $count; ?>">
-					<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-					<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+					<a href="<?php the_permalink(); ?>">
+						<p class="timestamp caps">Aug. 29, 2014</p>
+						<h3 class="post-title font-text"><?php the_title(); ?></h3>
+						<span href="<?php the_permalink(); ?>" class="read-more font-heading small caps"><strong>Read More</strong>&nbsp;&nbsp;&nbsp;<span class="icon icon-arrow-right"></span></span>
+					</a>
 				</article>
 			<?php if ( $count % 3 == 0 ) : ?>
 				</section>

@@ -559,7 +559,6 @@
 	a { display: block; }
 }
 
-
 .practices, .industries {
 	@include layout_clearfix;
 	position: relative;
@@ -592,6 +591,7 @@
 		}
 	}
 }
+
 .practices_wrap,
 .articles_wrap,
 .industries_wrap {
@@ -645,13 +645,11 @@
 	}
 	
 	section.attorneys { margin: 4em auto; }
-	.site-main .square.attorney { min-height: 17em; }
-	.site-main .square.attorney a { padding-top: 1.5em; }
+	//.site-main .square.attorney { min-height: 17em; }
+	//.site-main .square.attorney a { padding-top: 1.5em; }
+	
 }
 
-
-/* News/Events Page styles
-------------------------------------- */
 .news-events {
 	section {
 		display: none;
@@ -661,10 +659,40 @@
 		width: 33.3%;
 		margin-right: 0 !important; // this could probably be reengineered
 		display: inline-block;
+		&:hover { 
+			.read-more { opacity: 1; }
+		}
+		
+		a {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+			padding: 1.5em;
+		}
+		
+		.post-title {
+			font-size: 21px;	
+		}
+		
+		.timestamp {
+			font-size: 14px;
+		}
+		
+		.read-more {
+			opacity: 0;
+			position: absolute;
+			bottom: 1.5em;
+			transition: opacity 250ms ease;
+		}
 	}
 }
 
 
+/* Affiliations/Memberships
+	 Community Involvement
+------------------------------------- */
 .page-affiliations-memberships,
 .page-community-involvement {
 		
