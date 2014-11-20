@@ -48,7 +48,13 @@ $home_featured = z_get_zone_query( 'home-featured' );
 				</a>
 			</article>
 			<article class="border-block top-right-bottom meet-content child1">
-				<h3 class="font-text">This is some content about our attorneys. Morbi aliquam velit laoreet purus fringilla suscipit. Morbi ipsum ex, consequat pellentesque lobortis vitae, auctor a quam. <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys »</a></h3>
+				<?php
+					$attorney_page_id = carr_get_post_id_by_slug( 'attorneys', 'page' );
+					$attorney_page    = get_post( $attorney_page_id );
+					// $attorney_content = apply_filters( 'the_content', $attorney_page->post_content );
+					$attorney_content = $attorney_page->post_content;
+				?>
+				<h3 class="font-text"><?php echo $attorney_content; ?> <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys »</a></h3>
 			</article>
 <!--
 			<h3 class="front-page">Meet Our Attorneys</h3>
