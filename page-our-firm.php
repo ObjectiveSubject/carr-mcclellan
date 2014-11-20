@@ -26,30 +26,40 @@ get_header(); ?>
 				<li class="solid-block square child1">
 					<?php the_excerpt(); ?>
 				</li>
-				<li class="border-block top-right-bottom square child2">
-					<?php $firm_page = get_post( 14 ); ?>
-					<h3><a href="<?php echo get_permalink('14'); ?>"><?php echo get_the_title( 14 ); ?></a></h3>
-					<p><?php echo $firm_page->post_excerpt; ?></p>
+				<li class="our-firm-child border-block top-right-bottom square child2">
+					<a href="<?php echo get_permalink('14'); ?>">
+						<?php $firm_page = get_post( 14 ); ?>
+						<h3><?php echo get_the_title( 14 ); ?></h3>
+						<p><?php echo $firm_page->post_excerpt; ?></p>
+					</a>
 				</li>
-				<li class="border-block top-right-bottom square child3">
-					<?php $firm_page = get_post( 16 ); ?>
-					<h3><a href="<?php echo get_permalink('16'); ?>"><?php echo get_the_title( 16 ); ?></a></h3>
-					<p><?php echo $firm_page->post_excerpt; ?></p>
+				<li class="our-firm-child border-block top-right-bottom square child3">
+					<a href="<?php echo get_permalink('16'); ?>">
+						<?php $firm_page = get_post( 16 ); ?>
+						<h3><?php echo get_the_title( 16 ); ?></h3>
+						<p><?php echo $firm_page->post_excerpt; ?></p>
+					</a>
 				</li>
-				<li class="border-block top-right-bottom square child4">
-					<?php $firm_page = get_post( 18 ); ?>
-					<h3><a href="<?php echo get_permalink('18'); ?>"><?php echo get_the_title( 18 ); ?></a></h3>
-					<p><?php echo $firm_page->post_excerpt; ?></p>
+				<li class="our-firm-child border-block top-right-bottom square child4">
+					<a href="<?php echo get_permalink('18'); ?>">
+						<?php $firm_page = get_post( 18 ); ?>
+						<h3><?php echo get_the_title( 18 ); ?></h3>
+						<p><?php echo $firm_page->post_excerpt; ?></p>
+					</a>
 				</li>
-				<li class="border-block top-right-bottom square child5">
-					<?php $firm_page = get_post( 22 ); ?>
-					<h3><a href="<?php echo get_permalink('22'); ?>"><?php echo get_the_title( 22 ); ?></a></h3>
-					<p><?php echo $firm_page->post_excerpt; ?></p>
+				<li class="our-firm-child border-block top-right-bottom square child5">
+					<a href="<?php echo get_permalink('22'); ?>">
+						<?php $firm_page = get_post( 22 ); ?>
+						<h3><?php echo get_the_title( 22 ); ?></h3>
+						<p><?php echo $firm_page->post_excerpt; ?></p>
+					</a>
 				</li>
-				<li class="solid-block square child6">
-					<?php $firm_page = get_post( 2305 ); ?>
-					<h3><a href="<?php echo get_permalink('2305'); ?>"><?php echo get_the_title( 2305 ); ?></a></h3>
-					<p><?php echo $firm_page->post_excerpt; ?></p>
+				<li class="our-firm-child solid-block square child6">
+					<a href="<?php echo get_permalink('2305'); ?>">
+						<?php $firm_page = get_post( 2305 ); ?>
+						<h3><?php echo get_the_title( 2305 ); ?></h3>
+						<p><?php echo $firm_page->post_excerpt; ?></p>
+					</a>
 				</li>
 			</ul>
 		

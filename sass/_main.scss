@@ -157,23 +157,50 @@
 }
 
 .site-main .square {
+	position: relative;
 	width: 48%;
 	float: left;
 	min-height: 18em;
+	transition: all 250ms ease;
+	
+	h3, p { transition: all 250ms ease; }
 
 	&.child1, &.child3, &.child5 {
 		margin-right: 2%;
 	}
+	
+	&.our-firm-child {
+		
+		&:hover {
+			h3 { color: $color_red; }
+		}
+		&.border-block:hover { border-color: $color_red; }
+		&.solid-block:hover { 
+			background-color: $color_red;
+			h3 { color: #FFF; }
+		}
+		&.solid-block a {
+			padding: 1.3em 1em;
+		}
+	
+		a {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+			padding: 1.3em 1em 0 0;
+		}
+		
+	}
 
 	&.attorney {
-		position: relative;
 		width: 30%;
 		margin-left: 3%;
 		margin-bottom: 3%;
 		padding: 1em 0 0;
 		min-height: 15em;
 		border-color: $color_blue1;
-		transition: all 250ms ease;
 		&.active {
 			display: block;
 		}
@@ -196,7 +223,6 @@
 			font-size: 20px;
 			margin-bottom: 0.1em;
 			color: $color_blue1;
-			transition: all 250ms ease;
 			text-transform: uppercase;
 		}
 
@@ -208,7 +234,6 @@
 			text-transform: uppercase;
 			letter-spacing: 0.01em;
 			line-height: 1em;
-			transition: all 250ms ease;
 		}
 
 		.wp-post-image {
@@ -219,7 +244,6 @@
 	}
 
 	&.blog-post {
-		position:     relative;
 		width:        30%;
 		margin-left:  3%;
 		padding:      1em 0 0;
@@ -256,7 +280,6 @@
 			}
 		}
 		&:hover {
-			transition: all 250ms ease;
 			border-color: $color_red;
 			color: $color_red;
 			h3 a { color: $color_red; }
@@ -268,7 +291,6 @@
 		height: 163px;
 		min-height: 163px;
 		background: $color_blue1;
-		position: relative;
 		padding: 0;
 		margin: 0;
 		display: table;
@@ -288,7 +310,6 @@
 		}
 	}
 	&.practice {
-		transition: background-color 250ms ease;
 		
 		h3 {
 			/* Image replacement code */
@@ -442,23 +463,23 @@
 	&.child1 { border-color: $color_blue1; }
 	&.child2 {
 		border-color: $color_purple1;
-		h3 a { color: $color_purple1; }
+		h3, h3 a { color: $color_purple1; }
 	}
 	&.child3 {
 		border-color: $color_blue2;
-		h3 a { color: $color_blue1; }
+		h3, h3 a { color: $color_blue1; }
 	}
 	&.child4 {
 		border-color: $color_purple2;
-		h3 a { color: $color_purple2; }
+		h3, h3 a { color: $color_purple2; }
 	}
 	&.child5 {
 		border-color: $color_blue3;
-		h3 a { color: $color_blue3; }
+		h3, h3 a { color: $color_blue3; }
 	}
 	&.child6 {
 		border-color: $color_blue4;
-		h3 a { color: $color_blue4; }
+		h3, h3 a { color: $color_blue4; }
 	}
 	
 	.last-item {
