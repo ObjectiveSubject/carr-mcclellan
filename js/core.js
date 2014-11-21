@@ -188,8 +188,20 @@ var Carr = {
 			}
 
 		});
+	},
+
+	setupMobileSidebars: function() {
+		var area = $('.aside'),
+			sidebarMenusHeaders = area.find('.sidebar-menu-header'),
+			sidebarMenus = area.find('.sidebar-menu');
+
+		sidebarMenusHeaders.on( 'click', function() {
+			var currentMenu = $(this).next('.sidebar-menu');
+
+			currentMenu.fadeToggle();
+		});
+
 	}
-	
 	
 }; // Carr object
 
@@ -211,4 +223,6 @@ jQuery(function ($) {
 	Carr.mobileMenuToggle();
 
 	Carr.setupSearch();
+
+	Carr.setupMobileSidebars();
 });

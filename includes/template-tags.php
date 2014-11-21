@@ -134,17 +134,17 @@ function carr_news_events_sidebar() {
 		</div>
 	<?php endif; ?>
 
-	<div class="border-block top">
-		<h3 class="block-label">Categories</h3>
+	<div class="border-block top sidebar-menu-block">
+		<h3 class="block-label sidebar-menu-header">Categories</h3>
 
-		<ul class="categories">
+		<ul class="categories sidebar-menu">
 			<?php wp_list_categories( '&title_li=&depth=1' ); ?>
 		</ul>
 	</div>
 
-	<div class="border-block top">
-		<h3>Attorneys</h3>
-		<ul class="attorneys">
+	<div class="border-block top sidebar-menu-block">
+		<h3 class="sidebar-menu-header">Attorneys</h3>
+		<ul class="attorneys sidebar-menu">
 
 			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
 

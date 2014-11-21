@@ -2034,6 +2034,18 @@ body {
       width: 55px;
       height: 55px;
       font-size: 24px; }
+  .aside .sidebar-menu-block {
+    margin-bottom: 0;
+    padding: 15px 0 0; }
+  .aside .sidebar-menu-header {
+    cursor: pointer; }
+    .aside .sidebar-menu-header::after {
+      content: "+";
+      float: right;
+      color: #C0C0C0;
+      font-size: 18px; }
+  .aside .sidebar-menu {
+    display: none; }
 
   .bottom-matter .menu {
     display: none; }

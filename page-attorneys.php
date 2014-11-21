@@ -25,8 +25,8 @@ $attorneys = new WP_Query(array(
 	<main id="main" class="site-main span12 aligncenter" role="main">
 
 		<aside class="aside aside-left span2 push-left">
-			<div class="border-block top">
-				<h3 class="block-label">Filter by practice</h3>
+			<div class="border-block top sidebar-menu-block">
+				<h3 class="block-label sidebar-menu-header">Filter by practice</h3>
 
 				<?php
 					$practices = new WP_Query(array(
@@ -36,7 +36,7 @@ $attorneys = new WP_Query(array(
 						'posts_per_page' => 100
 					));
 				?>
-				<ul class="practice-list">
+				<ul class="practice-list sidebar-menu">
 						<li class="practice all active">All Practices</li>
 					<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
 						<li class="practice <?php echo $post->post_name; ?>"><?php the_title();?></li>

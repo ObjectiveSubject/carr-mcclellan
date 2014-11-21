@@ -94,6 +94,22 @@
 				}
 			}
 		}
+		.sidebar-menu-block {
+			margin-bottom: 0;
+			padding: 15px 0 0;
+		}
+		.sidebar-menu-header {
+			cursor: pointer;
+			&::after {
+				content: "+";
+				float: right;
+				color: $color_gray2;
+				font-size: 18px;
+			}
+		}
+		.sidebar-menu {
+			display: none;
+		}
 	}
 
 	.bottom-matter {
