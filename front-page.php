@@ -51,10 +51,9 @@ $home_featured = z_get_zone_query( 'home-featured' );
 				<?php
 					$attorney_page_id = carr_get_post_id_by_slug( 'attorneys', 'page' );
 					$attorney_page    = get_post( $attorney_page_id );
-					// $attorney_content = apply_filters( 'the_content', $attorney_page->post_content );
-					$attorney_content = $attorney_page->post_content;
+					$attorney_content = $attorney_page->post_content; // Don't apply the_content filter
 				?>
-				<h3 class="font-text"><?php echo $attorney_content; ?> <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys »</a></h3>
+				<h3 class="font-text"><?php echo $attorney_content; ?> <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys &raquo;</a></h3>
 			</article>
 		</section>
 
