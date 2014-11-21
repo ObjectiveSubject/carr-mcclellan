@@ -2025,6 +2025,31 @@ body {
     .site-main .border-block, .site-main .solid-block {
       margin-bottom: 15px; }
 
+  .news-events .see-all {
+    display: none; }
+
+  .home section.attorneys {
+    margin-top: 1em; }
+    .home section.attorneys .meet-headline {
+      width: 100%;
+      margin-right: 0;
+      border: 0;
+      min-height: 0;
+      float: none;
+      padding: 1.5em; }
+      .home section.attorneys .meet-headline a {
+        padding: 0;
+        position: relative; }
+    .home section.attorneys .meet-content {
+      width: 100%;
+      margin-left: 0;
+      float: none; }
+      .home section.attorneys .meet-content:before, .home section.attorneys .meet-content:after {
+        content: "";
+        display: table; }
+      .home section.attorneys .meet-content:after {
+        clear: both; }
+
   .aside .social-share ul {
     margin-bottom: 0; }
     .aside .social-share ul:before, .aside .social-share ul:after {
