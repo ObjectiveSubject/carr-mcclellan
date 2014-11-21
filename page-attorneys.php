@@ -26,7 +26,7 @@ $attorneys = new WP_Query(array(
 
 		<aside class="aside aside-left span2 push-left">
 			<div class="border-block top sidebar-menu-block">
-				<h3 class="block-label sidebar-menu-header">Filter by practice</h3>
+				<h3 class="block-label sidebar-menu-header">Filter by practice  <span class="icon-arrow-down"></span></h3>
 
 				<?php
 					$practices = new WP_Query(array(

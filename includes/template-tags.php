@@ -135,7 +135,7 @@ function carr_news_events_sidebar() {
 	<?php endif; ?>
 
 	<div class="border-block top sidebar-menu-block">
-		<h3 class="block-label sidebar-menu-header">Categories</h3>
+		<h3 class="block-label sidebar-menu-header">Categories <span class="icon-arrow-down"></span></h3>
 
 		<ul class="categories sidebar-menu">
 			<?php wp_list_categories( '&title_li=&depth=1' ); ?>
@@ -143,7 +143,7 @@ function carr_news_events_sidebar() {
 	</div>
 
 	<div class="border-block top sidebar-menu-block">
-		<h3 class="sidebar-menu-header">Attorneys</h3>
+		<h3 class="sidebar-menu-header">Attorneys <span class="icon-arrow-down"></span></h3>
 		<ul class="attorneys sidebar-menu">
 
 			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>

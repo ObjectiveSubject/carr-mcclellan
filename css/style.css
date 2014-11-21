@@ -1255,6 +1255,8 @@ body {
     color: #595959;
     padding: 0 0 1em;
     margin: 0; }
+    .aside h3 .icon-arrow-down {
+      display: none; }
   .aside ul {
     margin: 0 0 1em 0; }
   .aside li {
@@ -2039,11 +2041,10 @@ body {
     padding: 15px 0 0; }
   .aside .sidebar-menu-header {
     cursor: pointer; }
-    .aside .sidebar-menu-header::after {
-      content: "+";
+    .aside .sidebar-menu-header .icon-arrow-down {
+      display: block;
       float: right;
-      color: #C0C0C0;
-      font-size: 18px; }
+      color: #C0C0C0; }
   .aside .sidebar-menu {
     display: none; }
 
