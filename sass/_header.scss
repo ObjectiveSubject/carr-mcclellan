@@ -106,7 +106,7 @@ only screen and (min-resolution: 2dppx) {
 		width: 0;
 		float: right;
 		height: 46px;
-		//background-color: $color_blue2;
+		background-color: $color_blue2;
 	}
 	.search-field {
 		display: none;
@@ -115,6 +115,7 @@ only screen and (min-resolution: 2dppx) {
 		border: none;
 		margin: 0;
 		padding: 11px 5px;
+		height: 46px;
 	}
 	.search-submit {
 		display: none;
