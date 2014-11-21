@@ -56,11 +56,6 @@ $home_featured = z_get_zone_query( 'home-featured' );
 				?>
 				<h3 class="font-text"><?php echo $attorney_content; ?> <a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="small">Meet our attorneys »</a></h3>
 			</article>
-<!--
-			<h3 class="front-page">Meet Our Attorneys</h3>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/" class="see-all">See All <span class="icon-arrow-right"></span></a>
--->
-			<?php //carr_get_attorneys(); ?>
 		</section>
 
 		<section class="practices span10 aligncenter">

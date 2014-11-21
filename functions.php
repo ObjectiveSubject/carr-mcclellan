@@ -115,61 +115,6 @@ function carr_get_practices() {
 }
 
 /**
- * Retrieve a short list of attorneys and display
- */
-function carr_get_attorneys() {
-
-	$attorneys_zone = z_get_zone_query( 'home-attorneys' );
-
-	if ( $attorneys_zone->have_posts() ) {
-		$attorneys = $attorneys_zone;
-	} else {
-		$attorneys = new WP_Query( array(
-			'post_type'      => 'attorneys',
-			'orderby'        => 'menu_order',
-			'order'          => 'ASC',
-			'posts_per_page' => 3
-		) );
-	}
-
-	?>
-	<div class="attorneys">
-
-		<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
-
-			<?php
-			global $post;
-			$name = get_post_meta( $post->ID, 'first_name', true ) . ' ';
-			$name .= get_post_meta( $post->ID, 'middle_initial', true ) . ' ';
-			$name .= get_post_meta( $post->ID, 'last_name', true );
-
-			$title     = get_post_meta( $post->ID, 'title', true );
-			$sec_title = get_post_meta( $post->ID, 'secondary_title', true );
-			?>
-
-			<article class="border-block top-right-bottom square attorney">
-				<a href="<?php the_permalink() ?>">
-					<h3><?php echo $name; ?></h3>
-	
-					<p class="titles">
-						<?php echo $title; ?>
-						<?php if ( $title && $sec_title ) {
-							echo '<br>';
-						} ?>
-						<?php echo $sec_title; ?>
-					</p>
-	
-					<?php the_post_thumbnail( 'attorney-thumb', array( 'class' => 'alignleft png-bg' ) ); ?>
-				</a>
-			</article>
-
-		<?php endwhile; ?>
-
-	</div>
-<?php
-}
-
-/**
  * Retrieve recent news and events
  */
 function carr_get_newsevents() {
@@ -282,14 +227,6 @@ function carr_news_events_terminals() {
 	}
 }
 add_action( 'parse_request', 'carr_news_events_terminals', 1);
-
-/**
- * Add Attorney posts to Zoninator
- */
-function carr_add_zoninator_post_types() {
-	add_post_type_support( 'attorneys', 'zoninator_zones' );
-}
-add_action( 'init', 'carr_add_zoninator_post_types' );
 
 /**
  * Adds custom classes to the array of body classes.
