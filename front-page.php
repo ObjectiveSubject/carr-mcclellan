@@ -29,6 +29,11 @@ $home_featured = z_get_zone_query( 'home-featured' );
 				<div class="page-subtitle"><?php the_post(); the_content(); ?></div>
 			<?php endif; ?>
 		</div>
+
+		<video id="bgvideo" autoplay preload="auto" loop poster="<?php echo get_template_directory_uri(); ?>/images/bridge.png" width="100%">
+			<source src="http://ak5.picdn.net/shutterstock/videos/1220212/preview/stock-footage-sunset-golden-gate-bridge-time-lapse.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+		</video>
+
 	</header>
 
 	<main id="main" class="site-main span12 aligncenter" role="main">

@@ -1093,6 +1093,11 @@ body {
   .main-nav a:hover {
     color: #EC513C; }
 
+.home .main-nav a {
+  color: #FFF; }
+  .home .main-nav a:hover {
+    color: #EC513C; }
+
 /* Small menu */
 .menu-toggle {
   display: none; }
@@ -1134,13 +1139,27 @@ body {
   .site-header .search .search-submit {
     display: none; }
 
+/* Homepage Background Video
+----------------------------------- */
+#bgvideo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  background: url("../images/bridge.png") no-repeat center center; }
+
 /* Page Header
 ----------------------------------- */
 .page-header {
   position: relative;
   text-align: center;
   padding: 16em 0 0 0;
-  background: #F4F5F6; }
+  background: #F4F5F6;
+  overflow: hidden; }
   .page-header:before, .page-header:after {
     content: "";
     display: table; }
@@ -1148,8 +1167,8 @@ body {
     clear: both; }
 
 .home .page-header, .page-id-32 .page-header {
-  background: url(../images/large-monogram.png) no-repeat center center #F4F5F6;
-  padding-bottom: 5em; }
+  padding-bottom: 5em;
+  background: rgba(42, 47, 76, 0.8); }
 
 .terminal-page .page-header {
   background: #FFF; }
@@ -1161,6 +1180,9 @@ body {
   padding: 0 0 0.25em;
   margin: 0; }
 
+.home .page-title {
+  color: #EC513C; }
+
 .page-subtitle {
   font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
   font-size: 24px;
@@ -1170,6 +1192,9 @@ body {
   max-width: 50%;
   margin: 0 auto;
   padding-bottom: 1.5em; }
+
+.home .page-subtitle {
+  color: #FFF; }
 
 .entry-meta {
   padding: 0 0 1em; }

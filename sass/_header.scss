@@ -77,6 +77,13 @@ only screen and (min-resolution: 2dppx) {
 	}
 }
 
+.home .main-nav a {
+	color: #FFF;
+	&:hover {
+		color: $color_red;
+	}
+}
+
 /* Small menu */
 .menu-toggle {
 	display: none;
@@ -130,8 +137,19 @@ only screen and (min-resolution: 2dppx) {
 }
 
 
-
-
+/* Homepage Background Video
+----------------------------------- */	
+#bgvideo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	min-height: 100%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	background: url('../images/bridge.png') no-repeat center center;
+}
 
 
 
