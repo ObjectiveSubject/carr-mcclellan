@@ -91,7 +91,14 @@ only screen and (min-resolution: 2dppx) {
 	top: 0;
 	right: 0;
 	z-index: 5;
-	a {
+	overflow: hidden;
+	&.open {
+		.search-popup {
+			width: 250px;			
+		}
+	}
+	
+	.search-link {
 		color: white;
 		background: $color_red;
 		padding: 16px;
@@ -107,9 +114,9 @@ only screen and (min-resolution: 2dppx) {
 		float: right;
 		height: 46px;
 		background-color: $color_blue2;
+		transition: width 250ms ease;
 	}
 	.search-field {
-		display: none;
 		background-color: $color_blue2;
 		color: white;
 		border: none;

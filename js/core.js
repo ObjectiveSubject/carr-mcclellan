@@ -175,16 +175,15 @@ var Carr = {
 	// Setup social sharing icons
 	setupSearch: function() {
 		$('.search-link').on( 'click', function() {
-			var searchPopup = $('.search-popup'),
-				searchField = $('.search-field');
-
-			if ( searchPopup.width() > 0 ) {
-				searchPopup.animate( { width:'0px' }, 350 );
-				searchField.fadeToggle('350');
+			var searchDiv = $('.site-header > .search'),
+					searchLink = searchDiv.find('.search-link');
+			
+			searchLink.toggleClass('icon-search icon-close');
+			
+			if ( searchDiv.hasClass('open') ) {
+				searchDiv.removeClass('open');
 			} else {
-				searchPopup.animate( { width:'250px' }, 350 );
-				searchField.toggle();
-				searchField.removeAttr('placeholder').focus();
+				searchDiv.addClass('open');
 			}
 
 		});

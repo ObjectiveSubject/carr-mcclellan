@@ -1103,8 +1103,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 5; }
-  .site-header .search a {
+  z-index: 5;
+  overflow: hidden; }
+  .site-header .search.open .search-popup {
+    width: 250px; }
+  .site-header .search .search-link {
     color: white;
     background: #EC513C;
     padding: 16px;
@@ -1118,9 +1121,10 @@ body {
     width: 0;
     float: right;
     height: 46px;
-    background-color: #32507C; }
+    background-color: #32507C;
+    -webkit-transition: width 250ms ease;
+            transition: width 250ms ease; }
   .site-header .search .search-field {
-    display: none;
     background-color: #32507C;
     color: white;
     border: none;
