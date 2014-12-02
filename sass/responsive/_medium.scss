@@ -10,3 +10,13 @@
 // Feel free to change max-width value based on the needs of the site.
 
 }
+
+@media only screen and (min-width: 480px) {
+	// Styling for homepage navigation on non-mobile sizes
+	.home .main-nav a {
+		color: #FFF;
+		&:hover {
+			color: $color_red;
+		}
+	}
+}

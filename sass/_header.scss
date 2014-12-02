@@ -77,13 +77,6 @@ only screen and (min-resolution: 2dppx) {
 	}
 }
 
-.home .main-nav a {
-	color: #FFF;
-	&:hover {
-		color: $color_red;
-	}
-}
-
 /* Small menu */
 .menu-toggle {
 	display: none;

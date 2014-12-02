@@ -1093,11 +1093,6 @@ body {
   .main-nav a:hover {
     color: #EC513C; }
 
-.home .main-nav a {
-  color: #FFF; }
-  .home .main-nav a:hover {
-    color: #EC513C; }
-
 /* Small menu */
 .menu-toggle {
   display: none; }
@@ -1997,6 +1992,11 @@ body {
     #grid-overlay .column:last-child {
       margin: 0; }
 
+@media only screen and (min-width: 480px) {
+  .home .main-nav a {
+    color: #FFF; }
+    .home .main-nav a:hover {
+      color: #EC513C; } }
 @media only screen and (max-width: 480px) {
   .menu-toggle,
   .main-nav.toggled .nav-menu {
