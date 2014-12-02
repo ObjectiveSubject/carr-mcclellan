@@ -3,9 +3,9 @@
 	.menu-toggle,
 	.main-nav.toggled .nav-menu {
 		display: block;
-		border-color: $color_red;
 		height: auto;
 		max-height: 1000px;
+		border-bottom: 4px solid $color_red;
 	}
 	.menu-toggle {
 		border: none;
@@ -27,7 +27,6 @@
 			max-height: 0;
 			width: 100%;
 			background: white;
-			border-bottom: 4px solid $color_gray0;
 			transition: all 500ms ease;
 			overflow: hidden;
 			li {

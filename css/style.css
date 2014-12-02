@@ -2001,9 +2001,9 @@ body {
   .menu-toggle,
   .main-nav.toggled .nav-menu {
     display: block;
-    border-color: #EC513C;
     height: auto;
-    max-height: 1000px; }
+    max-height: 1000px;
+    border-bottom: 4px solid #EC513C; }
 
   .menu-toggle {
     border: none;
@@ -2021,7 +2021,6 @@ body {
       max-height: 0;
       width: 100%;
       background: white;
-      border-bottom: 4px solid #F4F5F6;
       -webkit-transition: all 500ms ease;
               transition: all 500ms ease;
       overflow: hidden; }
