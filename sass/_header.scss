@@ -93,44 +93,60 @@ only screen and (min-resolution: 2dppx) {
 /* Search
 ----------------------------------- */
 
-.site-header .search {
+.site-header .search-link {
+	color: white;
+	background: $color_red;
+	padding: 16px;
+	font-size: 14px;
+	width: 46px;
+	height: 46px;
+	display: block;
+	float: left;
+	cursor: pointer;
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 5;
-	overflow: hidden;
-	&.open {
-		.search-popup {
-			width: 250px;			
-		}
+	&.icon-close {
+		top: 56px;
 	}
-	
-	.search-link {
-		color: white;
-		background: $color_red;
-		padding: 16px;
-		font-size: 14px;
-		width: 46px;
-		height: 46px;
-		display: block;
-		float: left;
-		cursor: pointer;
+}
+
+.site-header .search {
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	transition: height 250ms ease;
+	&.open {
+			height: 56px;
 	}
 	.search-popup {
-		width: 0;
+		width: 100%;
+		height: 56px;
 		float: right;
-		height: 46px;
-		background-color: $color_blue2;
-		transition: width 250ms ease;
+		background-color: $color_red;
 	}
 	.search-field {
-		background-color: $color_blue2;
+		background-color: $color_red;
 		color: white;
 		border: none;
-		margin: 0;
-		padding: 11px 5px;
+		margin: 0 auto;
+		max-width: 700px;
+		padding: 11px 5px 5px;
 		height: 46px;
+		border-bottom: 4px dotted white;
+		font-family: $font-heading;
+		font-size: 20px;
+		font-weight: bold;
+		&::-webkit-input-placeholder { color: white; }
+		&::-moz-placeholder { color: white; }
+		&:-ms-input-placeholder { color: white; }
 	}
+
 	.search-submit {
 		display: none;
 	}

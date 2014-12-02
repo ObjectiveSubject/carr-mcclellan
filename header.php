@@ -35,16 +35,16 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
+		<a class="search-link icon-search"><span class="hide-text">Search</span></a>
+
+		<div class="search">
+			<div class="search-popup"><?php get_search_form(); ?></div>
+		</div>
 
 		<nav id="site-navigation" class="main-nav span12 clear main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', '_s' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
 		</nav><!-- #site-navigation -->
-
-		<div class="search">
-			<a class="search-link icon-search"><span class="hide-text">Search</span></a>
-			<div class="search-popup"><?php get_search_form(); ?></div>
-		</div>
 		
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

@@ -174,16 +174,19 @@ var Carr = {
 
 	// Setup social sharing icons
 	setupSearch: function() {
-		$('.search-link').on( 'click', function() {
+		var searchLink = $('.search-link');
+
+		searchLink.on( 'click', function() {
 			var searchDiv = $('.site-header > .search'),
-					searchLink = searchDiv.find('.search-link');
-			
+				searchField = searchDiv.find('.search-field');
+
 			searchLink.toggleClass('icon-search icon-close');
 			
 			if ( searchDiv.hasClass('open') ) {
 				searchDiv.removeClass('open');
 			} else {
 				searchDiv.addClass('open');
+				searchField.focus();
 			}
 
 		});
