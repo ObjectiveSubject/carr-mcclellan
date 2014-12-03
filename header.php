@@ -42,7 +42,7 @@
 				<form role="search" method="get" class="search-form" action="<?php echo site_url(); ?>">
 					<label>
 						<span class="screen-reader-text">Search for:</span>
-						<input class="search-field" placeholder="Enter your search term" value="" name="s" title="Search for:" type="search">
+						<input class="search-field" placeholder="Enter your search term" value="" name="s" title="Search for:" type="text">
 					</label>
 					<input class="search-submit" value="Search" type="submit">
 				</form>

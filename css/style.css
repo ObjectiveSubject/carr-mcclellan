@@ -1137,8 +1137,9 @@ body {
     background-color: #EC513C;
     color: white;
     border: none;
-    margin: 0 auto;
-    padding: 5px 5px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     height: 46px;
     text-align: center;
     font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
