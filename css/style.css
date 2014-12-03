@@ -1138,10 +1138,9 @@ body {
     color: white;
     border: none;
     margin: 0 auto;
-    max-width: 700px;
     padding: 11px 5px 5px;
     height: 46px;
-    border-bottom: 4px dotted white;
+    text-align: center;
     font-family: "BrandonGrotesque", helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold; }
