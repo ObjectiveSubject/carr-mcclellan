@@ -38,7 +38,15 @@
 		<a class="search-link icon-search"><span class="hide-text">Search</span></a>
 
 		<div class="search">
-			<div class="search-popup"><?php get_search_form(); ?></div>
+			<div class="search-popup">
+				<form role="search" method="get" class="search-form" action="<?php echo site_url(); ?>">
+					<label>
+						<span class="screen-reader-text">Search for:</span>
+						<input class="search-field" placeholder="Enter your search term" value="" name="s" title="Search for:" type="search">
+					</label>
+					<input class="search-submit" value="Search" type="submit">
+				</form>
+			</div>
 		</div>
 
 		<nav id="site-navigation" class="main-nav span12 clear main-navigation" role="navigation">

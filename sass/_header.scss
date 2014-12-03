@@ -128,14 +128,12 @@ only screen and (min-resolution: 2dppx) {
 		color: white;
 		border: none;
 		margin: 0 auto;
-		//max-width: 700px;
-		padding: 11px 5px 5px;
+		padding: 5px 5px;
 		height: 46px;
-		//border-bottom: 4px dotted white;
 		text-align: center;
-		font-family: $font-heading;
-		font-size: 20px;
-		font-weight: bold;
+		font-family: $font-text;
+		font-size: 22px;
+		@include font-smoothing;
 		&::-webkit-input-placeholder { color: white; }
 		&::-moz-placeholder { color: white; }
 		&:-ms-input-placeholder { color: white; }
