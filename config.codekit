@@ -101,13 +101,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/images\/bridge.png": {
-		"fileType": 32768,
+	"\/images\/bridge-frame1.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.64915e+06,
-		"inputAbbreviatedPath": "\/images\/bridge.png",
-		"outputAbbreviatedPath": "\/images\/bridge.png",
+		"initialSize": 92499,
+		"inputAbbreviatedPath": "\/images\/bridge-frame1.jpg",
+		"outputAbbreviatedPath": "\/images\/bridge-frame1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
