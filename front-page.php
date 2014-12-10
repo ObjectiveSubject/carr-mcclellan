@@ -32,7 +32,7 @@ $home_featured = z_get_zone_query( 'home-featured' );
 
 		<video id="bgvideo" autoplay preload="auto" loop poster="<?php echo get_template_directory_uri(); ?>/images/bridge-frame1.jpg" width="100%">
 <!-- 			<source src="http://ak5.picdn.net/shutterstock/videos/1220212/preview/stock-footage-sunset-golden-gate-bridge-time-lapse.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' /> -->
-			<source src="<?php echo get_template_directory_uri().'/images/bridgeSD.mp4.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+			<source src="<?php echo get_template_directory_uri().'/images/bridgeSD_v2.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
 			<source src="<?php echo get_template_directory_uri().'/images/bridgeSD.oggtheora.ogv' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
 		</video>
 
