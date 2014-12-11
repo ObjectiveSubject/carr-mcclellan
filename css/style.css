@@ -852,34 +852,34 @@ object {
     color: #EC513C; }
 
 .span1 {
-  width: 5.98291%; }
+  width: 5.9829059829%; }
 
 .span2 {
-  width: 14.52991%; }
+  width: 14.5299145299%; }
 
 .span3 {
-  width: 23.07692%; }
+  width: 23.0769230769%; }
 
 .span4 {
-  width: 31.62393%; }
+  width: 31.6239316239%; }
 
 .span5 {
-  width: 40.17094%; }
+  width: 40.1709401709%; }
 
 .span6 {
-  width: 48.71795%; }
+  width: 48.7179487179%; }
 
 .span7 {
-  width: 57.26496%; }
+  width: 57.264957265%; }
 
 .span8 {
-  width: 65.81197%; }
+  width: 65.811965812%; }
 
 .span9 {
-  width: 74.35897%; }
+  width: 74.358974359%; }
 
 .span10 {
-  width: 82.90598%; }
+  width: 82.905982906%; }
 
 .span12 {
   position: relative;
@@ -978,7 +978,7 @@ body {
   .bottom-matter section {
     display: none;
     color: #6F6F6F;
-    margin-left: 5.12821%;
+    margin-left: 5.1282051282%;
     padding-right: 2em; }
     .bottom-matter section.active {
       display: block; }
@@ -1238,11 +1238,11 @@ body {
 ------------------------------------- */
 .hentry {
   margin: 0 auto;
-  max-width: 65.81197%; }
+  max-width: 65.811965812%; }
   .hentry[class*=" span"] {
     max-width: none;
-    margin: 0 -14.52991% 0 0;
-    padding: 0 25.64103% 0 0; }
+    margin: 0 -14.5299145299% 0 0;
+    padding: 0 25.641025641% 0 0; }
 
 .entry-content {
   margin: 0 auto; }
@@ -1322,11 +1322,11 @@ body {
 .aside-left {
   width: 100%;
   float: left;
-  margin: 0 -74.35897% 0 0;
-  padding: 0 85.47009% 0 0; }
+  margin: 0 -74.358974359% 0 0;
+  padding: 0 85.4700854701% 0 0; }
 
 .aside-right {
-  width: 14.52991%;
+  width: 14.5299145299%;
   float: right; }
 
 .page-template-page-sidebars .aside h3 {
@@ -1676,6 +1676,7 @@ body {
     margin-left: 3.333%;
     padding: 0 10% 0 0;
     min-height: 18em;
+    height: 18em;
     display: table; }
     .border-block.meet-content h3 {
       display: table-cell;
@@ -1882,7 +1883,7 @@ body {
     margin-bottom: 2em; }
   .site-footer #cm_embed_signup {
     position: relative;
-    margin-right: 2.5641%; }
+    margin-right: 2.5641025641%; }
     .site-footer #cm_embed_signup .email {
       position: absolute;
       border-right: none;
@@ -1911,7 +1912,7 @@ body {
       .site-footer #cm_embed_signup .button {
         padding-bottom: 13px; } }
   .site-footer .contact {
-    margin-left: 2.5641%; }
+    margin-left: 2.5641025641%; }
     .site-footer .contact .font-text a {
       color: white; }
     .site-footer .contact .info {
@@ -1973,7 +1974,7 @@ body {
   display: inline-block;
   font: normal normal bold 12px/12px "BrandonGrotesque", helvetica, sans-serif;
   color: #696d81;
-  margin: 12px 0 0px 2.5641%; }
+  margin: 12px 0 0px 2.5641025641%; }
 
 #grid-overlay {
   display: none;
@@ -1989,10 +1990,10 @@ body {
   #grid-overlay .column {
     float: left;
     height: 100%;
-    margin-right: 2.5641%;
+    margin-right: 2.5641025641%;
     background: #FF7EEA;
     opacity: 0.2;
-    width: 5.98291%; }
+    width: 5.9829059829%; }
     #grid-overlay .column:last-child {
       margin: 0; }
 
