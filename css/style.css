@@ -1907,6 +1907,9 @@ body {
       .site-footer #cm_embed_signup .button:hover, .site-footer #cm_embed_signup .button:focus {
         color: #EC513C;
         border-color: #EC513C; }
+    @media screen and (-moz-images-in-menus: 0) {
+      .site-footer #cm_embed_signup .button {
+        padding-bottom: 13px; } }
   .site-footer .contact {
     margin-left: 2.5641%; }
     .site-footer .contact .font-text a {

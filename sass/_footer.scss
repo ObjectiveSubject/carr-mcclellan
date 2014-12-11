@@ -85,6 +85,12 @@
 				border-color: $color_red;
 			}
 		}
+		// a hacky way to get the padding working for the submit button in Firefox
+		@media screen and (-moz-images-in-menus:0) {
+			.button {
+				padding-bottom: 13px;
+			}
+		}
 	}
 
 	.contact {
