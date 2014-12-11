@@ -13,6 +13,9 @@ $home_featured = z_get_zone_query( 'home-featured' );
 
 	<header class="page-header">
 		<div class="centered">
+			<h1 class="page-title">We Make<br/>It Happen</h1>
+			<div class="page-subtitle"><?php the_post(); the_content(); ?></div>
+			
 			<?php if ( $home_featured->have_posts() ) : $home_featured->the_post(); ?>
 				<div class="featured">
 					<h4 class="date"><?php echo carr_display_date(); ?></h4>
@@ -24,9 +27,6 @@ $home_featured = z_get_zone_query( 'home-featured' );
 						<a class="button" href="<?php the_permalink(); ?>">Event Registration</a>
 					<?php endif; ?>
 				</div>
-			<?php else : ?>
-				<h1 class="page-title">We Make<br/>It Happen</h1>
-				<div class="page-subtitle"><?php the_post(); the_content(); ?></div>
 			<?php endif; ?>
 		</div>
 
