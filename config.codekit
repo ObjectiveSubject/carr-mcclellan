@@ -85,6 +85,7 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+<<<<<<< HEAD
 	"\/images\/bridge.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -103,6 +104,15 @@
 		"initialSize": 508457,
 		"inputAbbreviatedPath": "\/images\/bridge[placeholder].png",
 		"outputAbbreviatedPath": "\/images\/bridge[placeholder].png",
+=======
+	"\/images\/bridge-frame1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 92499,
+		"inputAbbreviatedPath": "\/images\/bridge-frame1.jpg",
+		"outputAbbreviatedPath": "\/images\/bridge-frame1.jpg",
+>>>>>>> FETCH_HEAD
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
