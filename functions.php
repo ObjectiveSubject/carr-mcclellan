@@ -336,3 +336,33 @@ function carr_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'carr_wp_title', 10, 2 );
+
+/**
+ * Schedule shortcode, which allows for content to be 'scheduled'
+ * within a post.
+ *
+ * @param array  $args     Shortcode arguments
+ * @param string $content  Shortcode content
+ *
+ * @return string
+ */
+function carr_schedule_shortcode( $args = array(), $content = '' ) {
+	$on = '';
+
+	extract( shortcode_atts(
+		array(
+			'on' => 'tomorrow', // tomorrow never comes
+		),
+		$args
+	));
+
+	$scheduled_time = strtotime( $on );
+	$current_time = current_time( 'timestamp' );
+
+	if ( $scheduled_time < $current_time ) {
+		return $content;
+	}
+
+	return '';
+}
+add_shortcode( 'schedule', 'carr_schedule_shortcode' );
