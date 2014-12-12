@@ -1235,6 +1235,11 @@ body {
 #main {
   padding-top: 3em;
   padding-bottom: 5em; }
+  #main:before, #main:after {
+    content: "";
+    display: table; }
+  #main:after {
+    clear: both; }
 
 /* Hentry
 ------------------------------------- */
@@ -2083,7 +2088,7 @@ body {
     padding: 0; }
 
   .aside-left {
-    margin: 0;
+    margin: 0 0 2em;
     padding: 0; }
 
   .page-header {
