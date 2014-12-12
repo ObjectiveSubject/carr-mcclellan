@@ -632,16 +632,51 @@
 
 	
 	.featured {
-		.date {
-			font-weight: normal;
-			color: $color_blue4;
+		max-width: 970px;
+		margin: 0px auto -5em;
+		padding: 1.5em 30px 2em;
+		background: $color_blue1;
+		background: rgba(40, 95, 138, 0.3);
+
+		.label {
+	    font-family: $font_heading;
+			font-weight: bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: $color_red;
+	    margin: 0px 0px 1em;
+		}
+		.page-title {
+			@include h3size;
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			a { 
+				display: block;
+				color: #FFF;
+				&:hover { color: $color_red; }
+			}
+		}
+		.page-subtitle {
+			font-size: 18px;
+			padding: 0;
+			margin: 1em auto 1em;
+			max-width: 80%;
 		}
 		.button {
 			border-color: $color_red;
 			color: $color_red;
+			display: inline-block;
+			width: auto;
+			padding-right: 18px;
+			padding-left: 18px;
 			&:hover {
-				border-color: $color_blue3;
-				color: $color_blue3;
+				border-color: #FFF;
+				color: #FFF;
+			}
+			.icon {
+				vertical-align: -1px;
+				margin-left: 15px;
 			}
 		}
 	}

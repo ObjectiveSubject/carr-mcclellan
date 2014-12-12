@@ -39,7 +39,7 @@
 	line-height: 1.25em;
 }
 @mixin h4size {
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 1em;
 }
 @mixin h5size {
@@ -61,8 +61,10 @@
 }
 
 @mixin font-otcaps {
-	text-transform: lowercase;
-	font-variant: small-caps;
+	//text-transform: lowercase;
+	//font-variant: small-caps;
+	text-transform: uppercase;
+	font-size: 0.9em;
 }
 
 

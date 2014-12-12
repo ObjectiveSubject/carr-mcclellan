@@ -40,8 +40,7 @@ h4 {
 	@include h4size;
 	font-family: $font_text;
 	margin-bottom: 0.5em;
-	font-variant: small-caps;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 0.03em;
 }
@@ -168,6 +167,5 @@ big {
 }
 
 .ot-caps {
-	font-variant: small-caps;
-	text-transform: lowercase;	
+	@include font-otcaps;	
 }
