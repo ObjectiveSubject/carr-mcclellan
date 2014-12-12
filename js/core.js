@@ -203,7 +203,15 @@ var Carr = {
 			currentMenu.fadeToggle();
 		});
 
-	}
+	},
+	
+	setupHomeVideo: function() {
+	 var video = $('#bgvideo')[0];
+	 $(document).ready(function(){
+		 video.play();
+		 $('#bgvideo-wrap').addClass('video-playing');
+	 });
+	},
 	
 }; // Carr object
 
@@ -211,20 +219,30 @@ var Carr = {
 jQuery(function ($) {
 	window.$ = $;
 
-	// We can make the JS slightly more efficient by only running them if needed
-	// We could add body classes based on the template, and wrap these calls in an if
-	// that checks for appropriate classes
-	Carr.setupFirmHistory();
+	if($('body.home').index() > -1) {
+		Carr.setupHomeVideo();		
+	}
 
-	Carr.setupAttorneys();
+	if ($('.history').index() > -1) {		
+		Carr.setupFirmHistory();
+	}
 
-	Carr.setupBottomMatter();
+	if ($('.practice-list').index() > -1) {
+		Carr.setupAttorneys();	
+	}
 
-	Carr.setupSocialShare();
+	if ($('.bottom-matter').index() > -1) {
+		Carr.setupBottomMatter();		
+	}
+
+	if ($('.social-share a').index() > -1) {
+		Carr.setupSocialShare();		
+	}
 	
 	Carr.mobileMenuToggle();
 
 	Carr.setupSearch();
 
 	Carr.setupMobileSidebars();
+	
 });

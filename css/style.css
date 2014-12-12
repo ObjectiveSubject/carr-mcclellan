@@ -1156,16 +1156,35 @@ body {
 
 /* Homepage Background Video
 ----------------------------------- */
-#bgvideo {
+#bgvideo-wrap {
   position: absolute;
   left: 0px;
   top: 0px;
-  min-height: 100%;
-  min-width: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  background: url("../images/bridge-frame1.jpg") no-repeat center center; }
+  bottom: 0;
+  right: 0;
+  z-index: -1; }
+  #bgvideo-wrap.video-playing .overlay {
+    opacity: 0; }
+  #bgvideo-wrap #bgvideo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; }
+  #bgvideo-wrap .overlay {
+    opacity: 1;
+    background: #2a2f4c;
+    -webkit-transition: opacity 3s ease;
+            transition: opacity 3s ease;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1; }
 
 /* Page Header
 ----------------------------------- */
@@ -1183,7 +1202,7 @@ body {
 
 .home .page-header, .page-id-32 .page-header {
   padding-bottom: 5em;
-  background: rgba(42, 47, 76, 0.8); }
+  background: rgba(42, 47, 76, 0.7); }
 
 .terminal-page .page-header {
   background: #FFF; }
