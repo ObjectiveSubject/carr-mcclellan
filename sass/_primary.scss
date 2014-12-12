@@ -10,7 +10,11 @@
 	}
 	.home .page-header, .page-id-32 .page-header {
 		padding-bottom: 5em;
-		background: rgba(42, 47, 76, 0.7);
+		background: rgba(42, 47, 76, 1);
+		transition: background 3s ease;
+		&.video-playing {
+			background: rgba(42, 47, 76, 0.7);
+		}
 		}
 	.terminal-page .page-header {
 		background: #FFF;

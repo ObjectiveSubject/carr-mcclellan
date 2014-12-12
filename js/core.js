@@ -207,10 +207,10 @@ var Carr = {
 	
 	setupHomeVideo: function() {
 	 var video = $('#bgvideo')[0];
-	 $(document).ready(function(){
-		 video.play();
-		 $('#bgvideo-wrap').addClass('video-playing');
-	 });
+		 if (video.canPlayType('video/mp4') !== "" || video.canPlayType('video/webm') !== "") {
+			 video.play();
+			 $('.page-header').addClass('video-playing');			 
+		 }
 	},
 	
 }; // Carr object

@@ -148,46 +148,13 @@ only screen and (min-resolution: 2dppx) {
 
 /* Homepage Background Video
 ----------------------------------- */	
-#bgvideo-wrap {
+#bgvideo {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	bottom: 0;
-	right: 0;
+	min-height: 100%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
 	z-index: -1;
-	&.video-playing {
-		.overlay { opacity: 0; }
-	}
-	
-	#bgvideo {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		min-height: 100%;
-		min-width: 100%;
-		width: auto;
-		height: auto;
-		z-index: 0;
-	}	
-
-	.overlay {
-		opacity: 1;
-		background: rgba(42, 47, 76, 1); //purposely only* include rgba here so non-CSS3 browswers don't show it
-		transition: opacity 3s ease;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		z-index: 1;
-	}
-}
-
-
-
-
-
-
-
-
-
+}	

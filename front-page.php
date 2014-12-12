@@ -34,13 +34,13 @@ $home_featured = z_get_zone_query( 'home-featured' );
 			<?php endif; ?>
 		</div>
 
-		<div id="bgvideo-wrap">
-			<div class="overlay"></div>
+<!-- 		<div id="bgvideo-wrap"> -->
+			<!-- <div class="overlay"></div> -->
 			<video id="bgvideo" preload="auto" loop="loop">
 				<source src="<?php echo get_template_directory_uri().'/images/bridgeSD_v2.mp4.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
 				<source src="<?php echo get_template_directory_uri().'/images/bridgeSD_v2.webmhd.webm' ?>" type='video/webm;codecs="vp8, vorbis"' />
 			</video>
-		</div>
+<!-- 		</div> -->
 
 	</header>
 
