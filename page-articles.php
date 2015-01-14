@@ -9,7 +9,7 @@ get_header();
 
 		<header class="page-header">
 			<div class="centered">
-				<h1 class="page-title">Articles</h1>
+				<h1 class="page-title"><?php the_title(); ?></h1>
 
 				<div class="page-subtitle"><?php the_content(); ?></div>
 			</div>
