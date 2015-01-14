@@ -16,18 +16,7 @@ get_header();
 		</header>
 
 		<main id="main" class="site-main span12 aligncenter" role="main">
-			<!-- <aside class="aside aside-left span2 push-left">
-				<div class="border-block top">
-					<h3 class="block-label">Categories</h3>
 
-					<ul>
-						XX<?php // wp_list_categories( '&title_li=' ); ?>
-					</ul>
-
-				</div>
-			</aside> -->
-
-			<!-- <section class="span9 push-right"> -->
 			<section class="articles_wrap">
 				<a href="<?php echo get_bloginfo( 'url' ); ?>/expertise/" class="see-all"><span class="icon-arrow-left"></span> Back to Expertise</a>
 				<div class="articles">
