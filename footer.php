@@ -59,7 +59,7 @@
 				</address>
 				<div class="info span3 push-left">
 					650-342-9600<br/>
-					<a href="mailto:carr-mcclellan@carr-mcclellan.com" target="_blank">carr-mcclellan@carr-mcclellan.com</a>
+					<a href="mailto:info@carr-mcclellan.com" target="_blank">info@carr-mcclellan.com</a>
 				</div>
 			</div>
 		</div>
