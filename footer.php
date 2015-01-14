@@ -58,7 +58,7 @@
 				</nav>
 			</div>
 			
-			<div class="copyright caps span5 push-right">&copy; 2014 Carr McClellan P.C.</div>
+			<div class="copyright caps span5 push-right">&copy; <?php echo date("Y"); ?> Carr McClellan P.C.</div>
 		</div>
 		
 	</footer><!-- #colophon -->
