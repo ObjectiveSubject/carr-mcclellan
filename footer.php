@@ -31,26 +31,6 @@
 				</form>
 			</div>
 			
-			
-<!--
-			<div id="mc_embed_signup" class="span5 push-left">
-				<form action="//kirkpettinga.us3.list-manage.com/subscribe/post?u=c4d01ae08a48a7dc40dad79d7&amp;id=74448769d8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			    <div id="mc_embed_signup_scroll">
-						<h3 class="font-text">Sign up for our newsletter</h3>
-						<div class="mc-field-group">
-							<input type="email" value="" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL">
-							<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
-						</div>
-						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="display:none"></div>
-							<div class="response" id="mce-success-response" style="display:none"></div>
-						</div>
-						<div style="position: absolute; left: -5000px;"><input type="text" name="b_c4d01ae08a48a7dc40dad79d7_74448769d8" tabindex="-1" value=""></div>
-			    </div>
-				</form>
-			</div>
--->
-			
 			<div class="contact span5 push-right">
 				<h3 class="font-text"><a href="<?php echo get_bloginfo( 'url' ); ?>/our-firm/contact-us/">Contact</a></h3>
 				<address class="info span2 push-left">
