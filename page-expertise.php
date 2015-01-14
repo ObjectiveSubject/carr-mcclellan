@@ -26,26 +26,20 @@ get_header(); ?>
 				<li class="solid-block square child1">
 					<?php the_excerpt(); ?>
 				</li>
-				<?php
-					$excerpt = '';
-					$expertise_page = get_post( 2312 );
 
-					if ($expertise_page ) {
-						$excerpt = $expertise_page->post_excerpt;
-					} else { $excerpt = ''; }
-				?>
 				<li class="border-block top-right-bottom square child2">
 					<?php $expertise_page = get_post( 28 ); ?>
-					<h3><a href="<?php echo get_permalink('28'); ?>">Articles</a></h3>
+					<h3><a href="<?php echo get_permalink('28'); ?>"><?php echo $expertise_page->post_title; ?></a></h3>
 					<p><?php echo $expertise_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child3">
-					<h3><a href="<?php echo get_permalink('2312'); ?>">Industries</a></h3>
-					<p><?php echo $excerpt; ?></p>
+					<?php $expertise_page = get_post( 2312 ); ?>
+					<h3><a href="<?php echo get_permalink('2312'); ?>"><?php echo $expertise_page->post_title; ?></a></h3>
+					<p><?php echo $expertise_page->post_excerpt; ?></p>
 				</li>
 				<li class="border-block top-right-bottom square child4">
 					<?php $expertise_page = get_post( 26 ); ?>
-					<h3><a href="<?php echo get_permalink('26'); ?>">Practices</a></h3>
+					<h3><a href="<?php echo get_permalink('26'); ?>"><?php echo $expertise_page->post_title; ?></a></h3>
 					<p><?php echo $expertise_page->post_excerpt; ?></p>
 				</li>
 			</ul>
