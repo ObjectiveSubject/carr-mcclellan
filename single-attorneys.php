@@ -143,7 +143,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 				<div class="menu span3 push-left">
 					<h3 class="experience-affiliations menu-item border-block top-right active">Experience &amp; Affiliations</h3>
 
-					<h3 class="articles menu-item border-block top-right">Articles</h3>
+					<h3 class="articles menu-item border-block top-right">Insights</h3>
 
 				</div>
 
@@ -188,7 +188,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 					</section>
 
-					<h3 class="articles border-block section-title top">Articles</h3>
+					<h3 class="articles border-block section-title top">Insights</h3>
 					<section class="articles bottom-section border-block top-right-bottom">
 
 						<?php
