@@ -4,17 +4,21 @@
  */
 
 /**
- * Register Articles custom post type
+ * Register Insights (articles) custom post type
+ *
+ * @todo Insights were formerly called Articles. We were asked to change just before launch. Entire codebase could be refactored, for now a fresh-coat of paint.
  */
 function articles_register() {
 	$args = array(
-		'label'           => __( 'Articles' ),
-		'singular_label'  => __( 'Article' ),
+		'label'           => __( 'Insights' ),
+		'singular_label'  => __( 'Insight' ),
 		'public'          => true,
 		'show_ui'         => true,
 		'capability_type' => 'post',
 		'hierarchical'    => false,
-		'rewrite'         => true,
+		'rewrite'         => array(
+			'slug'  => 'insights'
+		),
 		'supports'        => array( 'title', 'editor' ),
 		'menu_icon'       => 'dashicons-media-text'
 	);
