@@ -200,7 +200,7 @@ if ( $chair_id_2 ) {
 
 	<div class="menu span3 push-left">
 		<h3 class="rep-matters menu-item border-block top-right active">Representative Matters</h3>
-		<h3 class="articles menu-item border-block top-right">Articles</h3>
+		<h3 class="articles menu-item border-block top-right">Insights</h3>
 		<h3 class="news menu-item border-block top-right">News</h3>
 	</div>
 
@@ -222,7 +222,7 @@ if ( $chair_id_2 ) {
 		</script>
 		<?php endif; ?>
 
-		<h3 class="articles section-title border-block top-right">Articles</h3>
+		<h3 class="articles section-title border-block top-right">Insights</h3>
 
 		<section class="articles bottom-section border-block top-right-bottom ">
 
