@@ -64,23 +64,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<div id="grid-overlay">
-	<div class="span12 wrapper aligncenter">
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-		<div class="column span1"></div>
-	</div>
-</div>
-
 <?php wp_footer(); ?>
 
 </body>
