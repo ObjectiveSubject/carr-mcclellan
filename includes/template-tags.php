@@ -117,12 +117,29 @@ function carr_news_events_sidebar() {
 
 	global $post;
 
-	$attorneys = new WP_Query(array(
+	/*$attorneys = new WP_Query(array(
 		'post_type' => 'attorneys',
 		'orderby' => 'menu_order',
 		'order' => 'ASC',
 		'posts_per_page' => 80
-	));
+	)); */
+
+	global $wpdb;
+	global $post;
+
+// Originally sorting was done with menu_order and a plugin to rearrange in the backend
+// This is a bit ugly, but uses a custom query to sort by the last_name post meta field
+
+	$attorneys = "
+	    SELECT wposts.*
+	    FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta
+	    WHERE wposts.ID = wpostmeta.post_id
+	    AND wpostmeta.meta_key = 'last_name'
+	    AND wposts.post_type = 'attorneys'
+	    ORDER BY wpostmeta.meta_value ASC
+	    ";
+
+	$attorneys = $wpdb->get_results( $attorneys, OBJECT );
 
 	?>
 	<?php if ( ! is_home() ) : ?>
@@ -146,7 +163,8 @@ function carr_news_events_sidebar() {
 		<h3 class="sidebar-menu-header">Attorneys <span class="icon-arrow-down"></span></h3>
 		<ul class="attorneys sidebar-menu">
 
-			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+			<?php // while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+			<?php foreach ( $attorneys as $post ) : ?>
 
 				<?php
 
@@ -160,7 +178,8 @@ function carr_news_events_sidebar() {
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>/news-events/attorney/<?php echo $post->post_name; ?>"><?php echo $name; ?></a>
 				</li>
 
-			<?php endwhile; ?>
+			<?php // endwhile; ?>
+			<?php endforeach; ?>
 		</ul>
 	</div>
 	<?php
