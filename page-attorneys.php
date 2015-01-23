@@ -5,20 +5,35 @@
 
 get_header();
 
-$attorneys = new WP_Query(array(
+/*$attorneys = new WP_Query(array(
 	'post_type' => 'attorneys',
 	'orderby' => 'menu_order',
 	'order' => 'ASC',
 	'posts_per_page' => -1
-));
+));*/
 
+global $wpdb;
+global $post;
+
+// Originally sorting was done with menu_order and a plugin to rearrange in the backend
+// This is a bit ugly, but uses a custom query to sort by the last_name post meta field
+
+$attorneys = "
+    SELECT wposts.*
+    FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta
+    WHERE wposts.ID = wpostmeta.post_id
+    AND wpostmeta.meta_key = 'last_name'
+    AND wposts.post_type = 'attorneys'
+    ORDER BY wpostmeta.meta_value ASC
+    ";
+
+	$attorneys = $wpdb->get_results( $attorneys, OBJECT );
 ?>
 
 <div id="primary" class="content-area page-default">
 	<header class="page-header">
 		<div class="span12 aligncenter">
 			<h1 class="page-title"><?php the_title(); ?></h1>
-			<!-- <h2 class="page-subtitle"><?php the_content(); ?></h2> -->
 		</div>
 	</header>
 
@@ -46,7 +61,8 @@ $attorneys = new WP_Query(array(
 		</aside>
 
 		<section class="span9 push-right attorneys">
-			<?php while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+			<?php // while ( $attorneys->have_posts() ) : $attorneys->the_post(); ?>
+			<?php foreach ( $attorneys as $post ) : ?>
 
 				<?php
 					$custom = get_post_custom( $post->ID );
@@ -82,7 +98,8 @@ $attorneys = new WP_Query(array(
 					</a>
 				</article>
 
-			<?php endwhile; ?>
+			<?php // endwhile; ?>
+			<?php endforeach; ?>
 		</section>
 
 	</main>
