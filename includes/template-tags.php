@@ -137,6 +137,7 @@ function carr_news_events_sidebar() {
 	    AND wpostmeta.meta_key = 'last_name'
 	    AND wposts.post_type = 'attorneys'
 	    ORDER BY wpostmeta.meta_value ASC
+	    LIMIT 80
 	    ";
 
 	$attorneys = $wpdb->get_results( $attorneys, OBJECT );
