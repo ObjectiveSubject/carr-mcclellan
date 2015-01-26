@@ -14,6 +14,7 @@ function attorneys_meta_options() {
 	$first_name            = get_post_meta( $post->ID, 'first_name', true );
 	$middle_initial        = get_post_meta( $post->ID, "middle_initial", true );
 	$last_name             = get_post_meta( $post->ID, "last_name", true );
+	$short_name            = get_post_meta( $post->ID, "short_name", true );
 	$title                 = get_post_meta( $post->ID, "title", true );
 	$secondary_title       = get_post_meta( $post->ID, "secondary_title", true );
 	$phone                 = ( $phone ) ? get_post_meta( $post->ID, "phone", true ) : '650-342-9600 ';
@@ -90,6 +91,12 @@ function attorneys_meta_options() {
 			<th style="width: 20%;"><label for="last_name">Last Name</label></th>
 			<td>
 				<input type="text" class="text_input" name="last_name" value="<?php echo $last_name; ?>" size="30" />
+			</td>
+		</tr>
+		<tr>
+			<th style="width: 20%;"><label for="short_name">Short Name</label></th>
+			<td>
+				<input type="text" class="text_input" name="short_name" value="<?php echo $short_name; ?>" size="30" />
 			</td>
 		</tr>
 
@@ -302,6 +309,9 @@ function save_attorneys_meta( $post_id, $post ) {
 	}
 	if ( isset( $_POST["last_name"] ) ) {
 		update_post_meta( $post->ID, "last_name", $_POST["last_name"] );
+	}
+	if ( isset( $_POST["short_name"] ) ) {
+		update_post_meta( $post->ID, "short_name", $_POST["short_name"] );
 	}
 	if ( isset( $_POST["title"] ) ) {
 		update_post_meta( $post->ID, "title", $_POST["title"] );
