@@ -173,7 +173,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<?php endif; ?>
 
 						<?php if ( $recent_speaking ) : ?>
-							<h4>Recent Speaking Engagements</h4>
+							<h4>Speaking Engagements</h4>
 							<?php echo $recent_speaking; ?>
 						<?php endif; ?>
 
