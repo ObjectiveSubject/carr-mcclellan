@@ -136,6 +136,7 @@ function carr_news_events_sidebar() {
 	    WHERE wposts.ID = wpostmeta.post_id
 	    AND wpostmeta.meta_key = 'last_name'
 	    AND wposts.post_type = 'attorneys'
+		AND wposts.post_status = 'publish'
 	    ORDER BY wpostmeta.meta_value ASC
 	    LIMIT 80
 	    ";
