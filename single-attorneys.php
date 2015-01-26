@@ -4,6 +4,7 @@ get_header();
 $name = get_post_meta( $post->ID, "first_name", true ) . ' ';
 $name .= ( get_post_meta( $post->ID, "middle_initial", true ) ) ? get_post_meta( $post->ID, "middle_initial", true ) . ' ' : '';
 $name .= get_post_meta( $post->ID, "last_name", true );
+$short_name = get_post_meta( $post->ID, "short_name", true ) ? get_post_meta( $post->ID, "short_name", true ) : get_post_meta( $post->ID, "first_name", true );
 $title     = get_post_meta( $post->ID, "title", true );
 $sec_title = get_post_meta( $post->ID, "secondary_title", true );
 $phone     = get_post_meta( $post->ID, "phone", true );
@@ -132,7 +133,7 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 					</ul>
 				</div>
 
-				<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">Read <?php echo get_post_meta( $post->ID, "first_name", true ) . '\'s' ?> News
+				<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">Read <?php echo $short_name . '\'s' ?> News
 					<span class="icon-arrow-right"></span>
 				</a>
 
