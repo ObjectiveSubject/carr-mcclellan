@@ -27,6 +27,7 @@ function carr_setup() {
 
 	// Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'attorney-thumb', 145, 145, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -360,7 +361,7 @@ function carr_schedule_shortcode( $args = array(), $content = '' ) {
 	$current_time = current_time( 'timestamp' );
 
 	if ( $scheduled_time < $current_time ) {
-		return $content;
+ 		return $content;
 	}
 
 	return '';
