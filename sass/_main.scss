@@ -739,18 +739,22 @@
 			
 			& > li {
 				border-bottom: 1px solid #EEE;
-				padding: 0.75em 0px;
+				padding: 0.75em 0px 0.75em 15px;
 				font-size: 1.25em;
 				line-height: 1.2em;
 				color: $color_purple;
-				&:before { content: ""; margin: 0; }
+				&:before {
+					content: "";
+					margin: 0;
+					width: 0;
+				}
 			}
 		}
 		
 		ul ul {
 			margin: 0.5em 0px 0px 0.5em;
 			
-			li { font-size: 16px; color: $color_gray4; }
+			li { font-size: 16px; color: $color_gray4; margin-left: -15px; }
 		}
 	}
 }

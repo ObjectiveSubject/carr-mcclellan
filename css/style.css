@@ -47,7 +47,6 @@ html {
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
-  -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
   box-sizing: border-box; }
 
@@ -480,7 +479,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -502,7 +500,6 @@ input[type="search"],
 textarea {
   display: block;
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #6F6F6F;
   background: none;
@@ -552,8 +549,7 @@ select {
   background: none;
   padding: 10px 15px;
   cursor: pointer;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
   background-image: url("../images/down-arrow.png");
   background-repeat: no-repeat;
@@ -884,7 +880,6 @@ object {
   position: relative;
   max-width: 1170px;
   padding: 0 30px;
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -1060,8 +1055,7 @@ body {
   width: 100%;
   margin: 1.3em auto;
   padding: 0 30px;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .main-nav ul {
   list-style: none;
@@ -1856,21 +1850,23 @@ body {
 .page-affiliations-memberships .entry-content > ul > li,
 .page-community-involvement .entry-content > ul > li {
   border-bottom: 1px solid #EEE;
-  padding: 0.75em 0px;
+  padding: 0.75em 0px 0.75em 15px;
   font-size: 1.25em;
   line-height: 1.2em;
   color: #542E4B; }
   .page-affiliations-memberships .entry-content > ul > li:before,
   .page-community-involvement .entry-content > ul > li:before {
     content: "";
-    margin: 0; }
+    margin: 0;
+    width: 0; }
 .page-affiliations-memberships .entry-content ul ul,
 .page-community-involvement .entry-content ul ul {
   margin: 0.5em 0px 0px 0.5em; }
   .page-affiliations-memberships .entry-content ul ul li,
   .page-community-involvement .entry-content ul ul li {
     font-size: 16px;
-    color: #5A5A5A; }
+    color: #5A5A5A;
+    margin-left: -15px; }
 
 .content-articles .site-main .square.blog-post {
   width: 22%;
