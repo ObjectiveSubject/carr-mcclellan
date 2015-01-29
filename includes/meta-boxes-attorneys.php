@@ -7,8 +7,6 @@ add_action( 'save_post', 'save_attorneys_meta', 15, 2 );
 
 function attorneys_meta_options() {
 	global $post;
-	$fax   = '';
-	$phone = '';
 
 	$custom                = get_post_custom( $post->ID );
 	$first_name            = get_post_meta( $post->ID, 'first_name', true );
@@ -17,8 +15,8 @@ function attorneys_meta_options() {
 	$short_name            = get_post_meta( $post->ID, "short_name", true );
 	$title                 = get_post_meta( $post->ID, "title", true );
 	$secondary_title       = get_post_meta( $post->ID, "secondary_title", true );
-	$phone                 = ( $phone ) ? get_post_meta( $post->ID, "phone", true ) : '650-342-9600 ';
-	$fax                   = ( $fax ) ? get_post_meta( $post->ID, "fax", true ) : '650-342-7685';
+	$phone                 = ( get_post_meta( $post->ID, "phone", true ) ) ? get_post_meta( $post->ID, "phone", true ) : '650-342-9600 ';
+	$fax                   = ( get_post_meta( $post->ID, "fax", true ) ) ? get_post_meta( $post->ID, "fax", true ) : '650-342-7685';
 	$email                 = get_post_meta( $post->ID, "email", true );
 	$linkedin              = get_post_meta( $post->ID, "linkedin", true );
 	$biography             = get_post_meta( $post->ID, "biography", true );
