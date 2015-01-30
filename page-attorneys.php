@@ -60,6 +60,25 @@ $attorneys = "
 					<?php endwhile; ?>
 				</ul>
 			</div>
+
+			<div class="border-block top sidebar-menu-block">
+				<h3 class="block-label sidebar-menu-header">Filter by industry  <span class="icon-arrow-down"></span></h3>
+
+				<?php
+				$practices = new WP_Query(array(
+					'post_type' => 'industries',
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'posts_per_page' => 100
+				));
+				?>
+				<ul class="industry-list sidebar-menu">
+					<li class="industry all active">All Industries</li>
+					<?php while ( $practices->have_posts() ) : $practices->the_post(); ?>
+						<li class="industry <?php echo $post->post_name; ?>"><?php the_title();?></li>
+					<?php endwhile; ?>
+				</ul>
+			</div>
 		</aside>
 
 		<section class="span9 push-right attorneys">
@@ -76,17 +95,30 @@ $attorneys = "
 					$sec_title = get_post_meta( $post->ID, 'secondary_title', true );
 
 					// $areas_practice = get_post_meta($post->ID, 'areas_practice', true);
-					$areas_practice = get_post_meta($post->ID, 'areas_practice', 'single');
+					$areas_practice = get_post_meta($post->ID, 'areas_practice', true );
 
 					$practice_areas = '';
-					foreach ( $areas_practice as $practice ) {
-						$practice_post = get_post( $practice );
-						$practice_areas .= $practice_post->post_name . ' ';
+					if ( is_array( $areas_practice ) ) {
+						foreach ( $areas_practice as $practice ) {
+							$practice_post = get_post( $practice );
+							$practice_areas .= $practice_post->post_name . ' ';
+						}
+					}
+
+					// $areas_practice = get_post_meta($post->ID, 'areas_practice', true);
+					$industries = get_post_meta( $post->ID, 'industry', true );
+
+					$attorney_industries = '';
+					if ( is_array( $industries) ) {
+						foreach ( $industries as $industry ) {
+							$industry_post = get_post( $industry );
+							$attorney_industries .= $industry_post->post_name . ' ';
+						}
 					}
 
 				?>
 
-				<article class="border-block top-right-bottom square attorney sortable all <?php echo $practice_areas; ?> active">
+				<article class="border-block top-right-bottom square attorney sortable all <?php echo $practice_areas . ' ' . $attorney_industries; ?> active">
 					<a href="<?php the_permalink() ?>">
 						<h3><?php echo $name; ?></h3>
 	

@@ -939,10 +939,10 @@ body {
 .site-main .our-firm .square {
   min-height: 22em; }
 
-.practice-list li {
+.practice-list li, .industry-list li {
   margin-bottom: 1em;
   cursor: pointer; }
-  .practice-list li.active {
+  .practice-list li.active, .industry-list li.active {
     color: #EC513C; }
 
 .attorneys .attorney.sortable {

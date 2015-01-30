@@ -29,25 +29,35 @@ var Carr = {
 	// Practice filter for Attorney page
 	setupAttorneys: function () {
 		var practiceList = $('.practice-list'),
+			industryList = $('.industry-list'),
 			attorneyList = $('.attorneys'),
 			practices = practiceList.find('.practice'),
+			industries = industryList.find('.industry'),
 			attorneys = attorneyList.find('.attorney');
 
 		function updateActive(target) {
 			var targetPractice = practices.filter('.' + target),
+				targetIndustry = industries.filter('.' + target),
 				targetAttorney = attorneys.filter('.' + target);
 
 			if (targetAttorney.length > 0) {
 				practices.removeClass('active');
+				industries.removeClass('active');
 				attorneys.removeClass('active');
 				attorneyList.hide();
 				targetPractice.addClass('active');
+				targetIndustry.addClass('active');
 				targetAttorney.addClass('active');
 				attorneyList.fadeIn('850');
 			}
 		}
 
 		practices.on('click', function () {
+			var target_class = $(this).attr("class").split(' ')[1];
+			updateActive(target_class);
+		});
+
+		industries.on('click', function () {
 			var target_class = $(this).attr("class").split(' ')[1];
 			updateActive(target_class);
 		});
