@@ -64,6 +64,33 @@ var CarrAdmin = {
 		newsCategory.click( function() {
 			metabox.toggle( this.checked );
 		});
+	},
+
+	setupPDFUpload: function() {
+		var attorney_pdf = true,
+			orig_send_attachment = wp.media.editor.send.attachment;
+
+		$('.pdf-uploader .button').click(function() {
+			//var send_attachment_bkp = wp.media.editor.send.attachment;
+			var button = $(this);
+			var id = button.attr('id').replace('_button', '');
+			attorney_pdf = true;
+
+			wp.media.editor.send.attachment = function(props, attachment){
+				if ( attorney_pdf ) {
+					$("#"+id).val(attachment.url);
+				} else {
+					return orig_send_attachment.apply( this, [props, attachment] );
+				}
+			};
+
+			wp.media.editor.open(button);
+			return false;
+		});
+
+		$('.add_media').on('click', function(){
+			attorney_pdf = false;
+		});
 	}
 };
 
@@ -76,5 +103,7 @@ jQuery(function ($) {
 	CarrAdmin.setupPageSidebars();
 
 	CarrAdmin.setupPostNewsOptions();
+
+	CarrAdmin.setupPDFUpload();
 
 });
