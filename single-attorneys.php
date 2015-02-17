@@ -11,6 +11,7 @@ $phone     = get_post_meta( $post->ID, "phone", true );
 $fax       = get_post_meta( $post->ID, "fax", true );
 $email     = get_post_meta( $post->ID, "email", true );
 $linkedin  = get_post_meta( $post->ID, "linkedin", true );
+$attorney_pdf  = get_post_meta( $post->ID, "attorney_pdf", true );
 $biography = get_post_meta( $post->ID, "biography", true );
 $title     = get_post_meta( $post->ID, "title", true );
 
@@ -79,9 +80,11 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 						<a href="<?php echo esc_url( home_url( '/' ) ) . 'v-card/' . $post->post_name; ?>" class="link-gray3"><span class="small icon-download"></span>&nbsp;&nbsp;Download vCard</a>
 					</h3>
 
-					<h3 class="block-label print">
-						<a href="javascript:if(window.print)window.print();" class="link-gray3"><span class="icon-print"></span>&nbsp;&nbsp;Print Profile</a>
-					</h3>
+					<?php if ( $attorney_pdf ) : ?>
+						<h3 class="block-label print">
+							<a href="<?php echo $attorney_pdf; ?>" class="link-gray3"><span class="small icon-print"></span>&nbsp;&nbsp;Download PDF</a>
+						</h3>
+					<?php endif; ?>
 				</div>
 
 			</aside>
