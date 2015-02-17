@@ -19,6 +19,7 @@ function attorneys_meta_options() {
 	$fax                   = ( get_post_meta( $post->ID, "fax", true ) ) ? get_post_meta( $post->ID, "fax", true ) : '650-342-7685';
 	$email                 = get_post_meta( $post->ID, "email", true );
 	$linkedin              = get_post_meta( $post->ID, "linkedin", true );
+	$attorney_pdf          = get_post_meta( $post->ID, "attorney_pdf", true );
 	$biography             = get_post_meta( $post->ID, "biography", true );
 	$quote                 = get_post_meta( $post->ID, "quote", true );
 	$academic_creds        = get_post_meta( $post->ID, "academic_creds", true );
@@ -141,6 +142,16 @@ function attorneys_meta_options() {
 			<th style="width: 20%;"><label for="linkedin">LinkedIn Profile</label></th>
 			<td>
 				<input type="text" class="text_input" name="linkedin" value="<?php echo $linkedin; ?>" size="30" />
+			</td>
+		</tr>
+
+		<tr>
+			<th style="width: 20%;"><label for="attorney_pdf">PDF</label></th>
+			<td>
+				<div class="pdf-uploader">
+					<input id="attorney_pdf" name="attorney_pdf" type="text" size="50" value="<?php echo $attorney_pdf; ?>" />
+					<input id="attorney_pdf_button" class="button" name="attorney_pdf_button" type="text" value="Upload" />
+				</div>
 			</td>
 		</tr>
 
@@ -328,6 +339,9 @@ function save_attorneys_meta( $post_id, $post ) {
 	}
 	if ( isset( $_POST["linkedin"] ) ) {
 		update_post_meta( $post->ID, "linkedin", $_POST["linkedin"] );
+	}
+	if ( isset( $_POST["attorney_pdf"] ) ) {
+		update_post_meta( $post->ID, "attorney_pdf", $_POST["attorney_pdf"] );
 	}
 	if ( isset( $_POST["biography"] ) ) {
 		update_post_meta( $post->ID, "biography", $_POST["biography"] );
