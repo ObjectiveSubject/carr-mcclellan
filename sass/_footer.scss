@@ -6,12 +6,12 @@
 		margin: 0;
 		padding-left: 0;
 	}
-	
+
 	li {
 		float: left;
 		width: auto;
 	}
-	
+
 	a {
 		display: block;
 		padding: 16px 20px 12px 0;
@@ -37,6 +37,10 @@
 				font-family: $font_text;
 				font-weight: normal;
 				text-transform: none;
+				color: tint($color_blue, 70%);
+				&:hover {
+					color: #FFF;
+				}
 			}
 		}
 	}
@@ -44,18 +48,19 @@
 
 .site-footer {
 	background: $color_blue;
-	color: #FFF;	
+	color: #FFF;
 
 	.monogram { float: right; }
-	
+
 	.row { @include layout-clearfix; }
 	.row1 { margin: 2em auto; }
 	.row2, .row3 { margin-bottom: 2em; }
-	
+
 	#cm_embed_signup {
 		position: relative;
-		margin-right: $grid_margin;
-		
+		//margin-right: $grid_margin;
+		margin-bottom: 2em;
+
 		.email {
 			position: absolute;
 			border-right: none;
@@ -80,8 +85,8 @@
 			color: #FFF;
 			padding: 19px 17px 16px;
 			border-color: tint($color_blue, 30%);
-			&:hover, &:focus { 
-				color: $color_red; 
+			&:hover, &:focus {
+				color: $color_red;
 				border-color: $color_red;
 			}
 		}
@@ -94,7 +99,7 @@
 	}
 
 	.contact {
-		margin-left: $grid_margin;
+		//margin-left: $grid_margin;
 		.font-text a {
 			color: white;
 		}
@@ -103,9 +108,9 @@
 			font-size: 0.8em;
 			color: tint($color_blue, 70%);
 		}
-		address.info { 
+		address.info {
 			width: 36.17%;
-			margin-right: 6.38%; 
+			margin-right: 6.38%;
 		}
 		a {
 			color: tint($color_blue, 70%);
@@ -116,7 +121,7 @@
 	.social-nav {
 		display: inline-block;
 		margin-right: 20px;
-	
+
 		li {
 			display: inline-block;
 		}
@@ -146,7 +151,7 @@
 	display: inline-block;
 
 	.menu-legalutility-nav-container { display: inline-block; }
-	
+
 	li {
 		display: inline-block;
 
@@ -169,7 +174,7 @@
 	display: inline-block;
 	font: normal normal bold 12px/12px $font_heading;
 	color: tint($color_blue, 30%);
-	margin: 12px 0 0px $grid_margin;
+	margin: 12px 0 0px 0;
 }
 
 #grid-overlay {
@@ -180,12 +185,12 @@
 	bottom: 0;
 	left: 0;
 	pointer-events: none;
-	
+
 	.wrapper {
 		position: relative;
 		height: 100%;
 	}
-	
+
 	.column {
 		float: left;
 		height: 100%;

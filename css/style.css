@@ -1901,7 +1901,10 @@ body {
       padding: 8px 5px 8px 0;
       font-family: "Mercury Text G1 A", "Mercury Text G1 B", georgia, serif;
       font-weight: normal;
-      text-transform: none; }
+      text-transform: none;
+      color: #bfc0c9; }
+      .footer-nav .sub-menu li a:hover {
+        color: #FFF; }
 
 .site-footer {
   background: #2A2F4C;
@@ -1919,7 +1922,7 @@ body {
     margin-bottom: 2em; }
   .site-footer #cm_embed_signup {
     position: relative;
-    margin-right: 2.5641025641%; }
+    margin-bottom: 2em; }
     .site-footer #cm_embed_signup .email {
       position: absolute;
       border-right: none;
@@ -1947,21 +1950,19 @@ body {
     @media screen and (-moz-images-in-menus: 0) {
       .site-footer #cm_embed_signup .button {
         padding-bottom: 13px; } }
-  .site-footer .contact {
-    margin-left: 2.5641025641%; }
-    .site-footer .contact .font-text a {
-      color: white; }
-    .site-footer .contact .info {
-      width: 57.45%;
-      font-size: 0.8em;
-      color: #bfc0c9; }
-    .site-footer .contact address.info {
-      width: 36.17%;
-      margin-right: 6.38%; }
-    .site-footer .contact a {
-      color: #bfc0c9; }
-      .site-footer .contact a:hover {
-        color: #EC513C; }
+  .site-footer .contact .font-text a {
+    color: white; }
+  .site-footer .contact .info {
+    width: 57.45%;
+    font-size: 0.8em;
+    color: #bfc0c9; }
+  .site-footer .contact address.info {
+    width: 36.17%;
+    margin-right: 6.38%; }
+  .site-footer .contact a {
+    color: #bfc0c9; }
+    .site-footer .contact a:hover {
+      color: #EC513C; }
   .site-footer .social-nav {
     display: inline-block;
     margin-right: 20px; }
@@ -2010,7 +2011,7 @@ body {
   display: inline-block;
   font: normal normal bold 12px/12px "BrandonGrotesque", helvetica, sans-serif;
   color: #696d81;
-  margin: 12px 0 0px 2.5641025641%; }
+  margin: 12px 0 0px 0; }
 
 #grid-overlay {
   display: none;
