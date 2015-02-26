@@ -15,7 +15,7 @@ $home_featured = z_get_zone_query( 'home-featured' );
 		<div class="centered">
 			<h1 class="page-title">We Make<br/>It Happen</h1>
 			<div class="page-subtitle"><?php the_post(); the_content(); ?></div>
-			
+
 			<?php if ( $home_featured->have_posts() ) : $home_featured->the_post(); ?>
 				<div class="featured">
 					<div class="label">Featured</div>
@@ -37,8 +37,8 @@ $home_featured = z_get_zone_query( 'home-featured' );
 <!-- 		<div id="bgvideo-wrap"> -->
 			<!-- <div class="overlay"></div> -->
 			<video id="bgvideo" preload="auto" loop="loop">
-				<source src="<?php echo get_template_directory_uri().'/images/bridgeSD_v2.mp4.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-				<source src="<?php echo get_template_directory_uri().'/images/bridgeSD_v2.webmhd.webm' ?>" type='video/webm;codecs="vp8, vorbis"' />
+				<source src="<?php echo site_url() . '/wp-content/uploads/videos/bridgeSD_v2.mp4.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+				<source src="<?php echo site_url() . '/wp-content/uploads/videos/bridgeSD_v2.webmhd.webm' ?>" type='video/webm;codecs="vp8, vorbis"' />
 			</video>
 <!-- 		</div> -->
 
@@ -54,7 +54,7 @@ $home_featured = z_get_zone_query( 'home-featured' );
 		</section>
 
 		<section class="attorneys span10 aligncenter">
-			
+
 			<article class="border-block top-left-bottom meet-headline child1">
 				<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/">
 					<h2>Meet our Attorneys</h2>
