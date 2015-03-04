@@ -1158,7 +1158,8 @@ body {
   min-width: 100%;
   width: auto;
   height: auto;
-  z-index: -1; }
+  z-index: -1;
+  background: url(../images/bridge-frame1.jpg); }
 
 /* Page Header
 ----------------------------------- */
