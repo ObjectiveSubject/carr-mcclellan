@@ -54,7 +54,6 @@ $home_featured = z_get_zone_query( 'home-featured' );
 		</section>
 
 		<section class="attorneys span10 aligncenter">
-
 			<article class="border-block top-left-bottom meet-headline child1">
 				<a href="<?php echo get_bloginfo( 'url' ); ?>/attorneys/">
 					<h2>Meet our Attorneys</h2>
@@ -73,6 +72,18 @@ $home_featured = z_get_zone_query( 'home-featured' );
 		<section class="practices span10 aligncenter">
 			<h3 class="front-page">Our Practices</h3>
 			<?php carr_get_practices(); ?>
+		</section>
+
+		<section class="attorneys span10 aligncenter">
+			<article class="border-block top-left-bottom meet-headline child1">
+				<?php $ggiImage = get_post(2648); ?>
+				<a href="/our-firm/affiliations-memberships/ggi/" style="padding-top: 35%;">
+					<?php echo wp_get_attachment_image( $ggiImage->ID, 'medium', false, array( 'style' => 'max-width:220px;' ) ); ?>
+				</a>
+			</article>
+			<article class="border-block top-right-bottom meet-content child1">
+				<h3 class="font-text">Carr McClellan P.C. is a proud, independent member of Geneva Group International, a global alliance of independent professional firms.<br/><a href="<?php echo site_url('/our-firm/affiliations-memberships/ggi/'); ?>" class="small">Read more about GGI &raquo;</a></h3>
+			</article>
 		</section>
 
 	</main><!-- #main -->
