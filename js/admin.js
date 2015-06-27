@@ -104,6 +104,8 @@ jQuery(function ($) {
 
 	CarrAdmin.setupPostNewsOptions();
 
-	CarrAdmin.setupPDFUpload();
+	if ( $( 'body' ).hasClass( 'post-type-attorneys' ) ) {
+		CarrAdmin.setupPDFUpload();
+	}
 
 });
