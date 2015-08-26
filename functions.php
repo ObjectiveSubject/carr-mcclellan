@@ -14,6 +14,7 @@ include CARR_PATH . 'includes/meta-boxes-attorneys.php';
 include CARR_PATH . 'includes/meta-boxes-industries.php';
 include CARR_PATH . 'includes/meta-boxes-practices.php';
 include CARR_PATH . 'includes/post-types.php';
+include CARR_PATH . 'includes/taxonomies.php';
 include CARR_PATH . 'includes/template-tags.php';
 include CARR_PATH . 'includes/v-card.php';
 
@@ -85,6 +86,21 @@ function carr_admin_scripts_styles() {
 }
 
 add_action( 'admin_enqueue_scripts', 'carr_admin_scripts_styles' );
+
+
+/**
+ * Custom Queries
+ */
+function carr_custom_queries($query) {
+  if ( ! is_admin() && $query->is_main_query() ) {
+
+  	if ( is_tax('industries_tax') ) {
+  		$query->set( 'posts_per_page', 500 );
+  	}
+  }
+}
+
+add_action('pre_get_posts', 'carr_custom_queries');
 
 
 /**

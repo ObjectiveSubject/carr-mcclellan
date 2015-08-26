@@ -19,6 +19,11 @@ if ( $attachments ) {
 		<header class="page-header">
 			<div class="span12 aligncenter">
 				<h1 class="page-title"><?php the_title(); ?></h1>
+				<?php if ( has_term( 'food-beverage', 'industries_tax') ) : ?>
+					<div class="page-subtitle">
+						<a href="<?php echo esc_url( site_url( '/insights-industries/food-beverage/' ) ); ?>">Food & Beverage</a>
+					</div>
+				<?php endif; ?>
 				<div class="entry-meta">
 					<strong class="meta-date font-heading caps"><?php echo get_the_date('M. j, Y'); ?></strong>
 				</div><!-- .entry-meta -->
@@ -54,7 +59,7 @@ if ( $attachments ) {
 				</div>
 			</aside>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('span9 push-left'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('span6 push-left'); ?>>
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
