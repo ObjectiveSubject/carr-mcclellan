@@ -147,7 +147,7 @@ only screen and (min-resolution: 2dppx) {
 
 
 /* Homepage Background Video
------------------------------------ */
+----------------------------------- */	
 #bgvideo {
 	position: absolute;
 	left: 0px;
@@ -157,5 +157,4 @@ only screen and (min-resolution: 2dppx) {
 	width: auto;
 	height: auto;
 	z-index: -1;
-	background: url(../images/bridge-frame1.jpg);
-}
+}	
