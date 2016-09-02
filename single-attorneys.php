@@ -129,12 +129,19 @@ $industries             = get_post_meta( $post->ID, 'industry', 'single' );
 					</div>
 				<?php endif; ?>
 
-				<div class="border-block top academic-creds">
-					<h3 class="block-label">Academic Credentials</h3>
-					<ul>
-						<li><?php echo $academic_creds; ?></li>
-					</ul>
-				</div>
+				<?php if ( $academic_creds ) : ?>
+					<div class="border-block top academic-creds">
+						<h3 class="block-label">Academic Credentials</h3>
+						<?php echo $academic_creds; ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $attorney_languages ) : ?>
+					<div class="border-block top academic-creds">
+						<h3 class="block-label">Languages</h3>
+						<?php echo $attorney_languages; ?>
+					</div>
+				<?php endif; ?>
 
 				<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/attorney/' . $post->post_name . '/'; ?>">Read <?php echo $short_name . '\'s' ?> News
 					<span class="icon-arrow-right"></span>
