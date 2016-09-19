@@ -1,6 +1,8 @@
 <?php
 get_header();
 
+$this_post 			 = $post;
+$this_post_id        = $post->ID;
 $custom              = get_post_custom( $post->ID );
 $tagline             = $custom["tagline"][0];
 $description         = $custom["description"][0];
@@ -9,7 +11,6 @@ $chair_id            = $custom["chair_id"][0];
 $attorney_title_2    = $custom["attorney_title_2"][0];
 $chair_id_2          = $custom["chair_id_2"][0];
 $rep_matters         = $custom["rep_matters"][0];
-$this_post           = $post->ID;
 $areas_focus         = get_post_meta( $post->ID, 'areas_focus', true );
 $practices_attorneys = get_post_meta( $post->ID, 'practices_attorneys', true );
 $industries         = get_post_meta( $post->ID, 'industry', 'single' );
@@ -189,9 +190,24 @@ if ( $chair_id_2 ) {
 
 
 		<?php wp_reset_postdata(); ?>
-		<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/practice/' . $post->post_name . '/'; ?>">View <?php the_title(); ?> Blog Posts
-			<span class="icon-arrow-right"></span>
-		</a>
+
+		<?php
+		$args = array(
+			'post_type' => 'post',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'category',
+					'field'    => 'slug',
+					'terms'	   => $this_post->post_name
+				)
+			)
+		);
+		$posts = new WP_Query( $args );
+		if ( $posts->have_posts() ) : ?>
+			<a class="button" href="<?php echo esc_url( home_url( '/' ) ) . 'news-events/practice/' . $post->post_name . '/'; ?>">View <?php the_title(); ?> Blog Posts
+				<span class="icon-arrow-right"></span>
+			</a>
+		<?php endif; ?>
 
 	</div>
 </aside>
@@ -249,7 +265,7 @@ if ( $chair_id_2 ) {
 
 				$pub_practices = get_post_meta( $post->ID, 'pub_practices', true );
 
-				if ( is_array( $pub_practices ) && in_array( $this_post, $pub_practices ) ) :
+				if ( is_array( $pub_practices ) && in_array( $this_post_id, $pub_practices ) ) :
 					?>
 
 					<div class="date"><?php echo $date; ?></div>
@@ -308,7 +324,7 @@ if ( $chair_id_2 ) {
 					$source_url = $pdf;
 				}
 
-				if ( is_array( $news_practices ) && in_array( $this_post, $news_practices ) ) :
+				if ( is_array( $news_practices ) && in_array( $this_post_id, $news_practices ) ) :
 					?>
 
 					<div class="date"><?php echo $fix_date; ?> | Source: <?php echo $source; ?></div>
