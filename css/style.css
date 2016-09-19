@@ -402,7 +402,7 @@ a {
   color: #EC513C;
   text-decoration: none;
   -webkit-transition: all 250ms ease;
-          transition: all 250ms ease; }
+  transition: all 250ms ease; }
 
 a:visited {
   color: #EC513C; }
@@ -446,7 +446,7 @@ input[type="submit"] {
   padding: 18px 0 14px;
   text-transform: uppercase;
   -webkit-transition: all 250ms ease;
-          transition: all 250ms ease; }
+  transition: all 250ms ease; }
   button:hover, .button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -512,7 +512,7 @@ textarea {
   padding: 15px 15px 7px 0;
   outline: none;
   -webkit-transition: all 250ms ease;
-          transition: all 250ms ease; }
+  transition: all 250ms ease; }
   input[type="text"]:hover,
   input[type="email"]:hover,
   input[type="url"]:hover,
@@ -556,8 +556,8 @@ select {
   background-position: right -20px;
   background-origin: content-box;
   -webkit-transition: border-color 250ms ease;
-          transition: border-color 250ms ease; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  transition: border-color 250ms ease; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     select {
       background-image: url("../images/down-arrow@2x.png");
       background-size: 34px 8px; } }
@@ -882,7 +882,7 @@ object {
   padding: 0 30px;
   box-sizing: content-box; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .sprite {
     background-image: url(../images/sprite@2x.png);
     background-size: 240px; } }
@@ -1041,7 +1041,7 @@ body {
     height: 22px;
     margin: 0 auto; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .site-title a {
     background: url(../images/sprite@2x.png) no-repeat center top;
     background-size: 240px; } }
@@ -1118,7 +1118,7 @@ body {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 250ms ease;
-          transition: height 250ms ease; }
+  transition: height 250ms ease; }
   .site-header .search.open {
     height: 56px; }
   .site-header .search .search-popup {
@@ -1178,7 +1178,7 @@ body {
   padding-bottom: 5em;
   background: #2a2f4c;
   -webkit-transition: background 3s ease;
-          transition: background 3s ease; }
+  transition: background 3s ease; }
   .home .page-header.video-playing, .page-id-32 .page-header.video-playing {
     background: rgba(42, 47, 76, 0.7); }
 
@@ -1355,19 +1355,19 @@ body {
 
 .home .solid-block {
   -webkit-transition: background-color 250ms ease;
-          transition: background-color 250ms ease; }
+  transition: background-color 250ms ease; }
   .home .solid-block.child1:hover {
     background-color: #204c6e; }
   .home .solid-block.child2:hover {
-    background-color: #593240; }
+    background-color: #5a3240; }
   .home .solid-block.child3:hover {
     background-color: #284063; }
   .home .solid-block.child4:hover {
-    background-color: #4c3841; }
+    background-color: #4d3942; }
   .home .solid-block.child5:hover {
     background-color: #3c3c5b; }
   .home .solid-block.child6:hover {
-    background-color: #33334c; }
+    background-color: #33334d; }
 
 .site-main .square {
   position: relative;
@@ -1375,10 +1375,10 @@ body {
   float: left;
   min-height: 18em;
   -webkit-transition: all 250ms ease;
-          transition: all 250ms ease; }
+  transition: all 250ms ease; }
   .site-main .square h3, .site-main .square p {
     -webkit-transition: all 250ms ease;
-            transition: all 250ms ease; }
+    transition: all 250ms ease; }
   .site-main .square.child1, .site-main .square.child3, .site-main .square.child5 {
     margin-right: 2%; }
   .site-main .square.our-firm-child:hover h3 {
@@ -1502,17 +1502,17 @@ body {
     background-color: #404060; }
     .site-main .square.practice.business-litigation h3 {
       background-image: url("../images/practices_assets/practice_business.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.business-litigation h3 {
           background-image: url("../images/practices_assets/practice_business@2x.png");
           background-size: 215px 163px; } }
     .site-main .square.practice.business-litigation:hover {
-      background-color: #33334c; }
+      background-color: #33334d; }
   .site-main .square.practice.construction {
     background-color: #4B4B72; }
     .site-main .square.practice.construction h3 {
       background-image: url("../images/practices_assets/practice_construction.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.construction h3 {
           background-image: url("../images/practices_assets/practice_construction@2x.png");
           background-size: 215px 163px; } }
@@ -1522,7 +1522,7 @@ body {
     background-color: #32507C; }
     .site-main .square.practice.business-corporate h3 {
       background-image: url("../images/practices_assets/practice_corporate.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.business-corporate h3 {
           background-image: url("../images/practices_assets/practice_corporate@2x.png");
           background-size: 215px 163px; } }
@@ -1532,7 +1532,7 @@ body {
     background-color: #285F8A; }
     .site-main .square.practice.creditors-rights-bankruptcy h3 {
       background-image: url("../images/practices_assets/practice_creditors_rights.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.creditors-rights-bankruptcy h3 {
           background-image: url("../images/practices_assets/practice_creditors_rights@2x.png");
           background-size: 215px 163px; } }
@@ -1542,33 +1542,43 @@ body {
     background-color: #703F50; }
     .site-main .square.practice.employment h3 {
       background-image: url("../images/practices_assets/practice_employment.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.employment h3 {
           background-image: url("../images/practices_assets/practice_employment@2x.png");
           background-size: 215px 163px; } }
     .site-main .square.practice.employment:hover {
-      background-color: #593240; }
+      background-color: #5a3240; }
+  .site-main .square.practice.estate-planning {
+    background-color: #285F8A; }
+    .site-main .square.practice.estate-planning h3 {
+      background-image: url("../images/practices_assets/practice_estate_planning.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.estate-planning h3 {
+          background-image: url("../images/practices_assets/practice_estate_planning@2x.png");
+          background-size: 215px 163px; } }
+    .site-main .square.practice.estate-planning:hover {
+      background-color: #284063; }
   .site-main .square.practice.exempt-organizations {
     background-color: #604752; }
     .site-main .square.practice.exempt-organizations h3 {
       text-indent: 0; }
     .site-main .square.practice.exempt-organizations:hover {
-      background-color: #4c3841; }
+      background-color: #4d3942; }
   .site-main .square.practice.intellectual-property {
     background-color: #404060; }
     .site-main .square.practice.intellectual-property h3 {
       background-image: url("../images/practices_assets/practice_intellectual_property.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.intellectual-property h3 {
           background-image: url("../images/practices_assets/practice_intellectual_property@2x.png");
           background-size: 215px 163px; } }
     .site-main .square.practice.intellectual-property:hover {
-      background-color: #33334c; }
+      background-color: #33334d; }
   .site-main .square.practice.real-estate {
     background-color: #4B4B72; }
     .site-main .square.practice.real-estate h3 {
       background-image: url("../images/practices_assets/practice_real_estate.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.real-estate h3 {
           background-image: url("../images/practices_assets/practice_real_estate@2x.png");
           background-size: 215px 163px; } }
@@ -1578,7 +1588,7 @@ body {
     background-color: #32507C; }
     .site-main .square.practice.tax h3 {
       background-image: url("../images/practices_assets/practice_taxation.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.tax h3 {
           background-image: url("../images/practices_assets/practice_taxation@2x.png");
           background-size: 215px 163px; } }
@@ -1588,7 +1598,7 @@ body {
     background-color: #285F8A; }
     .site-main .square.practice.trusts-estates-litigation h3 {
       background-image: url("../images/practices_assets/practice_trusts_estate.png"); }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.trusts-estates-litigation h3 {
           background-image: url("../images/practices_assets/practice_trusts_estate@2x.png");
           background-size: 215px 163px; } }
@@ -1842,7 +1852,7 @@ body {
     position: absolute;
     bottom: 1.5em;
     -webkit-transition: opacity 250ms ease;
-            transition: opacity 250ms ease; }
+    transition: opacity 250ms ease; }
 
 /* Affiliations/Memberships
 	 Community Involvement
@@ -1924,10 +1934,10 @@ body {
       position: absolute;
       border-right: none;
       border-bottom: 4px solid;
-      color: #bfc0c9;
+      color: #bfc1c9;
       padding: 16px 105px 14px 0;
       line-height: 1em;
-      border-color: #696d81; }
+      border-color: #6a6d82; }
       .site-footer #cm_embed_signup .email:hover {
         border-color: #FFF;
         color: #FFF; }
@@ -1940,7 +1950,7 @@ body {
       z-index: 1;
       color: #FFF;
       padding: 19px 17px 16px;
-      border-color: #696d81; }
+      border-color: #6a6d82; }
       .site-footer #cm_embed_signup .button:hover, .site-footer #cm_embed_signup .button:focus {
         color: #EC513C;
         border-color: #EC513C; }
@@ -1954,12 +1964,12 @@ body {
     .site-footer .contact .info {
       width: 57.45%;
       font-size: 0.8em;
-      color: #bfc0c9; }
+      color: #bfc1c9; }
     .site-footer .contact address.info {
       width: 36.17%;
       margin-right: 6.38%; }
     .site-footer .contact a {
-      color: #bfc0c9; }
+      color: #bfc1c9; }
       .site-footer .contact a:hover {
         color: #EC513C; }
   .site-footer .social-nav {
@@ -2000,7 +2010,7 @@ body {
   .utility-nav a {
     display: block;
     font: normal normal bold 12px/12px "BrandonGrotesque", helvetica, sans-serif;
-    color: #696d81;
+    color: #6a6d82;
     text-transform: uppercase;
     padding: 0 10px 0 0; }
     .utility-nav a:hover {
@@ -2009,7 +2019,7 @@ body {
 .copyright {
   display: inline-block;
   font: normal normal bold 12px/12px "BrandonGrotesque", helvetica, sans-serif;
-  color: #696d81;
+  color: #6a6d82;
   margin: 12px 0 0px 2.5641025641%; }
 
 #grid-overlay {
@@ -2063,7 +2073,7 @@ body {
       width: 100%;
       background: white;
       -webkit-transition: all 500ms ease;
-              transition: all 500ms ease;
+      transition: all 500ms ease;
       overflow: hidden; }
       .main-nav ul li {
         width: 100%;

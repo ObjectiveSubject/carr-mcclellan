@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<header class="page-header ">
 			<div class="span12 aligncenter">
-				<h1 class="page-title"><?php the_title(); ?></h1>	
+				<h1 class="page-title"><?php the_title(); ?></h1>
 				<div class="entry-meta">
 					<strong class="meta-date font-heading caps"><?php echo carr_display_date(); ?></strong>
 				</div><!-- .entry-meta -->
@@ -33,7 +33,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					<?php $related_attorneys = get_post_meta( $post->ID, 'post_attorneys', 'single' ); ?>
-					
+
 					<?php if ( $related_attorneys ) : ?>
 						<div class="border-block top author">
 							<h3 class="block-label">Author</h3>
@@ -49,7 +49,7 @@ get_header(); ?>
 					<?php carr_share_links(); ?>
 				</aside>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('span9 push-left'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('span6 push-left'); ?>>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
@@ -72,7 +72,7 @@ get_header(); ?>
 					</div>
 
 				</aside>
-	
+
 		</main><!-- #main -->
 
 

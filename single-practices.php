@@ -236,14 +236,17 @@ if ( $chair_id_2 ) {
 			$i    = 0;
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom      = get_post_custom( $post->ID );
-				$pub_summary = $custom["pub_summary"][0];
+				$pub_summary = ( isset( $custom["pub_summary"] ) ) ? $custom["pub_summary"][0] : false;
 				$date        = get_the_date( 'm/d/y' );
 
-				$pub_summary = strip_tags( $pub_summary );
-				if ( strlen( $pub_summary ) > 350 ) {
-					$pub_summary = preg_replace( '/\s+?(\S+)?$/', '', substr( $pub_summary, 0, 350 ) );
-					$pub_summary .= '&hellip;';
+				if ( $pub_summary ) {
+					$pub_summary = strip_tags( $pub_summary );
+					if ( strlen( $pub_summary ) > 350 ) {
+						$pub_summary = preg_replace( '/\s+?(\S+)?$/', '', substr( $pub_summary, 0, 350 ) );
+						$pub_summary .= '&hellip;';
+					}
 				}
+
 				$pub_practices = get_post_meta( $post->ID, 'pub_practices', true );
 
 				if ( is_array( $pub_practices ) && in_array( $this_post, $pub_practices ) ) :

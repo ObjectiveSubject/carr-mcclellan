@@ -4,21 +4,21 @@
 	// center hentry's with NO 'span' class
 	margin: 0 auto;
 	max-width: $grid_span8;
-	
+
 	// hentry's WITH a 'span' class
 	&[class*=" span"] {
 		max-width: none;
 		margin: 0 ($grid_span2 * -1) 0 0;
-		padding: 0 ($grid_span3 + $grid_margin) 0 0;		
+		padding: 0 ($grid_span3 + $grid_margin) 0 0;
 	}
 }
 .entry-content {
 	margin: 0 auto;
-	
+
 	h1, h2, h3, h4 {
 		color: $color_red;
 	}
-	
+
 	ul, ol {
 		margin: 0 0 1.5em;
 		ul, ol { margin: 0 0 0 1.5em; }
@@ -43,7 +43,7 @@
 ------------------------------------- */
 .aside {
 	color: $color_gray3;
-	
+
 	a {
 		display: block;
 		color: $color_gray3;
@@ -61,17 +61,17 @@
 		&:hover {
 			border-color: $color_red;
 		}
-		[class*="icon-"] { 
+		[class*="icon-"] {
 			position: absolute;
 			top: 50%;
 			right: 15px;
 			margin-top: -6px;
 		}
-	
+
 		&.point-left {
 			padding-right: 0;
 			padding-left: 40px;
-			[class*="icon-"] { 
+			[class*="icon-"] {
 				left: 15px;
 				right: auto;
 			}
@@ -163,27 +163,27 @@
 	float: left;
 	min-height: 18em;
 	transition: all 250ms ease;
-	
+
 	h3, p { transition: all 250ms ease; }
 
 	&.child1, &.child3, &.child5 {
 		margin-right: 2%;
 	}
-	
+
 	&.our-firm-child {
-		
+
 		&:hover {
 			h3 { color: $color_red; }
 		}
 		&.border-block:hover { border-color: $color_red; }
-		&.solid-block:hover { 
+		&.solid-block:hover {
 			background-color: $color_red;
 			h3 { color: #FFF; }
 		}
 		&.solid-block a {
 			padding: 1.3em 1em;
 		}
-	
+
 		a {
 			position: absolute;
 			bottom: 0;
@@ -192,7 +192,7 @@
 			top: 0;
 			padding: 1.3em 1em 0 0;
 		}
-		
+
 	}
 
 	&.attorney {
@@ -209,7 +209,7 @@
 			border-color: $color_red;
 			p, h3 { color: $color_red; }
 		}
-		
+
 		a {
 			position: absolute;
 			bottom: 0;
@@ -268,7 +268,7 @@
 			font-weight: normal;
 			font-size: 14px;
 			text-transform: uppercase;
-			
+
 			.day-year {
 				font-size: 14px;
 			}
@@ -311,7 +311,7 @@
 		}
 	}
 	&.practice {
-		
+
 		h3 {
 			/* Image replacement code */
 			display: block;
@@ -368,6 +368,15 @@
 			}
 			&:hover {
 				background-color: shade($color_purple1, 20%);
+			}
+		}
+		&.estate-planning {
+			background-color: $color_blue1;
+			h3 {
+				@include background-image-retina('../images/practices_assets/practice_estate_planning', png, 215px, 163px);
+			}
+			&:hover {
+				background-color: shade($color_blue2, 20%);
 			}
 		}
 		&.exempt-organizations {
@@ -482,25 +491,25 @@
 		border-color: $color_blue4;
 		h3, h3 a { color: $color_blue4; }
 	}
-	
+
 	.last-item {
-		margin-bottom: 0; 
+		margin-bottom: 0;
 	}
-	
+
 	.date { margin-bottom: 1em; color: $color_gray3; }
-	
+
 	.title a {
 		color: $color_gray3;
 		&:hover { color: $color_red; }
 	}
-	
+
 	&.meet-headline {
 		position: relative;
 		width: 33.333%;
 		float: left;
 		text-align: center;
 		min-height: 18em;
-		
+
 		a {
 			position: absolute;
 			bottom: 0;
@@ -508,9 +517,9 @@
 			left: 0;
 			top: 0;
 			padding: 50% 1em 0;
-			
-			h2 { 
-				margin-top: -35px; 
+
+			h2 {
+				margin-top: -35px;
 			}
 		}
 	}
@@ -522,9 +531,9 @@
 		min-height: 18em;
 		height: 18em;
 		display: table;
-		
+
 		h3 {
-			display: table-cell; 
+			display: table-cell;
 			vertical-align: middle;
 			color: $color_blue1;
 		}
@@ -584,7 +593,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		&:hover { color: $color_red; }
-		
+
 		[class*="icon-"] {
 			position: absolute;
 			top: 50%;
@@ -608,7 +617,7 @@
 		text-transform: uppercase;
 		margin: 0 0 10px 0;
 		&:hover { color: $color_red; }
-		
+
 		[class*="icon-"] {
 			vertical-align: -1px;
 			margin: 0 5px 0px 0;
@@ -630,7 +639,7 @@
 		margin: 0 0 1.5em;
 	}
 
-	
+
 	.featured {
 		max-width: 970px;
 		margin: 0px auto -5em;
@@ -651,7 +660,7 @@
 			margin: 0;
 			padding: 0;
 			text-transform: uppercase;
-			a { 
+			a {
 				display: block;
 				color: #FFF;
 				&:hover { color: $color_red; }
@@ -680,11 +689,11 @@
 			}
 		}
 	}
-	
+
 	section.attorneys { margin: 4em auto; }
 	//.site-main .square.attorney { min-height: 17em; }
 	//.site-main .square.attorney a { padding-top: 1.5em; }
-	
+
 }
 
 .news-events {
@@ -696,10 +705,10 @@
 		width: 33.3%;
 		margin-right: 0 !important; // this could probably be reengineered
 		display: inline-block;
-		&:hover { 
+		&:hover {
 			.read-more { opacity: 1; }
 		}
-		
+
 		a {
 			position: absolute;
 			bottom: 0;
@@ -708,15 +717,15 @@
 			top: 0;
 			padding: 1.5em;
 		}
-		
+
 		.post-title {
-			font-size: 21px;	
+			font-size: 21px;
 		}
-		
+
 		.timestamp {
 			font-size: 14px;
 		}
-		
+
 		.read-more {
 			opacity: 0;
 			position: absolute;
@@ -732,11 +741,11 @@
 ------------------------------------- */
 .page-affiliations-memberships,
 .page-community-involvement {
-		
+
 	.entry-content {
-		
+
 		& > ul {
-			
+
 			& > li {
 				border-bottom: 1px solid #EEE;
 				padding: 0.75em 0px 0.75em 15px;
@@ -750,42 +759,24 @@
 				}
 			}
 		}
-		
+
 		ul ul {
 			margin: 0.5em 0px 0px 0.5em;
-			
+
 			li { font-size: 16px; color: $color_gray4; margin-left: -15px; }
 		}
 	}
 }
 
 .content-articles {
-	
+
 	.site-main {
-		
+
 		.square.blog-post {
 			width: 22%;
 			margin-left: 4%;
-		
+
 			&.place1 { margin-left: 0; }
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
