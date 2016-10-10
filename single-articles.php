@@ -61,9 +61,16 @@ if ( $attachments ) {
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class('span6 push-left'); ?>>
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-				<?php endwhile; ?>
+				<?php if ( have_posts() ) :
+
+					while ( have_posts() ) : the_post(); ?>
+
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div>
+
+					<?php endwhile; ?>
+
 				<?php endif; ?>
 
 			</article>
