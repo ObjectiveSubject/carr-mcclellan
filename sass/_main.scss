@@ -311,6 +311,29 @@
 		}
 	}
 	&.practice {
+		background-color: $color_blue2;
+		&:hover { background-color: shade($color_blue2, 20%); }
+
+		&:nth-child(6n+2){
+			background-color: $color_purple1;
+			&:hover { background-color: shade($color_purple1, 20%); }
+		}
+		&:nth-child(6n+3){
+			background-color: $color_blue1;
+			&:hover { background-color: shade($color_blue1, 20%); }
+		}
+		&:nth-child(6n+4){
+			background-color: $color_blue4;
+			&:hover { background-color: shade($color_blue4, 20%); }
+		}
+		&:nth-child(6n+5){
+			background-color: $color_blue3;
+			&:hover { background-color: shade($color_blue3, 20%); }
+		}
+		&:nth-child(6n+6){
+			background-color: $color_purple2;
+			&:hover { background-color: shade($color_purple2, 20%); }
+		}
 
 		h3 {
 			/* Image replacement code */
@@ -324,108 +347,50 @@
 			background-position: center;
 		}
 
-		&.business-litigation {
-			background-color: $color_blue4;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_business', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue4, 20%);
-			}
+		&.business-litigation h3 {
+			@include background-image-retina('../images/practices_assets/practice_business', png, 215px, 163px);
 		}
-		&.construction {
-			background-color: $color_blue3;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_construction', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue3, 20%);
-			}
+
+		&.construction h3 {
+			@include background-image-retina('../images/practices_assets/practice_construction', png, 215px, 163px);
 		}
-		&.business-corporate {
-			background-color: $color_blue2;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_corporate', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue2, 20%);
-			}
+
+		&.business-corporate h3 {
+			@include background-image-retina('../images/practices_assets/practice_corporate', png, 215px, 163px);
 		}
-		&.creditors-rights-bankruptcy {
-			background-color: $color_blue1;
-			h3 {
-				// text-indent: 0;
-				@include background-image-retina('../images/practices_assets/practice_creditors_rights', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue1, 20%);
-			}
+
+		&.creditors-rights-bankruptcy h3 {
+			@include background-image-retina('../images/practices_assets/practice_creditors_rights', png, 215px, 163px);
 		}
-		&.employment {
-			background-color: $color_purple1;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_employment', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_purple1, 20%);
-			}
+
+		&.employment h3 {
+			@include background-image-retina('../images/practices_assets/practice_employment', png, 215px, 163px);
 		}
-		&.estate-planning {
-			background-color: $color_blue1;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_estate_planning', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue2, 20%);
-			}
+
+		&.wealth-transfer-planning h3 {
+			@include background-image-retina('../images/practices_assets/practice_wealth_transfer_planning', png, 215px, 163px);
 		}
-		&.exempt-organizations {
-			background-color: $color_purple2;
-			h3 {
-				text-indent: 0;
-				// @include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_purple2, 20%);
-			}
+
+		&.exempt-organizations h3 {
+			@include background-image-retina('images/practices_assets/practice_construction', png, 198px, 163px);
 		}
-		&.intellectual-property {
-			background-color: $color_blue4;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_intellectual_property', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue4, 20%);
-			}
+
+		&.intellectual-property h3 {
+			@include background-image-retina('../images/practices_assets/practice_intellectual_property', png, 215px, 163px);
 		}
-		&.real-estate {
-			background-color: $color_blue3;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_real_estate', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue3, 20%);
-			}
+
+		&.real-estate h3 {
+			@include background-image-retina('../images/practices_assets/practice_real_estate', png, 215px, 163px);
 		}
-		&.tax {
-			background-color: $color_blue2;
-			h3 {
-				@include background-image-retina('../images/practices_assets/practice_taxation', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue2, 20%);
-			}
+
+		&.tax h3 {
+			@include background-image-retina('../images/practices_assets/practice_taxation', png, 215px, 163px);
 		}
-		&.trusts-estates-litigation {
-			background-color: $color_blue1;
-			h3 {
-				// text-indent: 0;
-				@include background-image-retina('../images/practices_assets/practice_trusts_estate', png, 215px, 163px);
-			}
-			&:hover {
-				background-color: shade($color_blue1, 20%);
-			}
+
+		&.trusts-estates-litigation h3 {
+			@include background-image-retina('../images/practices_assets/practice_trusts_estate', png, 215px, 163px);
 		}
+
 	}
 	&.industry {
 		&.financial-services {

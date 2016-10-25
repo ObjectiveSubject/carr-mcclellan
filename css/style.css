@@ -1488,122 +1488,106 @@ body {
         height: 100%;
         width: 100%;
         display: block; }
-  .site-main .square.practice h3 {
-    /* Image replacement code */
-    display: block;
-    min-width: 215px;
-    height: 163px;
-    text-indent: -9999px;
-    white-space: nowrap;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .site-main .square.practice.business-litigation {
-    background-color: #404060; }
+  .site-main .square.practice {
+    background-color: #32507C; }
+    .site-main .square.practice:hover {
+      background-color: #284063; }
+    .site-main .square.practice:nth-child(6n+2) {
+      background-color: #703F50; }
+      .site-main .square.practice:nth-child(6n+2):hover {
+        background-color: #5a3240; }
+    .site-main .square.practice:nth-child(6n+3) {
+      background-color: #285F8A; }
+      .site-main .square.practice:nth-child(6n+3):hover {
+        background-color: #204c6e; }
+    .site-main .square.practice:nth-child(6n+4) {
+      background-color: #404060; }
+      .site-main .square.practice:nth-child(6n+4):hover {
+        background-color: #33334d; }
+    .site-main .square.practice:nth-child(6n+5) {
+      background-color: #4B4B72; }
+      .site-main .square.practice:nth-child(6n+5):hover {
+        background-color: #3c3c5b; }
+    .site-main .square.practice:nth-child(6n+6) {
+      background-color: #604752; }
+      .site-main .square.practice:nth-child(6n+6):hover {
+        background-color: #4d3942; }
+    .site-main .square.practice h3 {
+      /* Image replacement code */
+      display: block;
+      min-width: 215px;
+      height: 163px;
+      text-indent: -9999px;
+      white-space: nowrap;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center; }
     .site-main .square.practice.business-litigation h3 {
       background-image: url("../images/practices_assets/practice_business.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.business-litigation h3 {
           background-image: url("../images/practices_assets/practice_business@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.business-litigation:hover {
-      background-color: #33334d; }
-  .site-main .square.practice.construction {
-    background-color: #4B4B72; }
     .site-main .square.practice.construction h3 {
       background-image: url("../images/practices_assets/practice_construction.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.construction h3 {
           background-image: url("../images/practices_assets/practice_construction@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.construction:hover {
-      background-color: #3c3c5b; }
-  .site-main .square.practice.business-corporate {
-    background-color: #32507C; }
     .site-main .square.practice.business-corporate h3 {
       background-image: url("../images/practices_assets/practice_corporate.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.business-corporate h3 {
           background-image: url("../images/practices_assets/practice_corporate@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.business-corporate:hover {
-      background-color: #284063; }
-  .site-main .square.practice.creditors-rights-bankruptcy {
-    background-color: #285F8A; }
     .site-main .square.practice.creditors-rights-bankruptcy h3 {
       background-image: url("../images/practices_assets/practice_creditors_rights.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.creditors-rights-bankruptcy h3 {
           background-image: url("../images/practices_assets/practice_creditors_rights@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.creditors-rights-bankruptcy:hover {
-      background-color: #204c6e; }
-  .site-main .square.practice.employment {
-    background-color: #703F50; }
     .site-main .square.practice.employment h3 {
       background-image: url("../images/practices_assets/practice_employment.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.employment h3 {
           background-image: url("../images/practices_assets/practice_employment@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.employment:hover {
-      background-color: #5a3240; }
-  .site-main .square.practice.estate-planning {
-    background-color: #285F8A; }
-    .site-main .square.practice.estate-planning h3 {
-      background-image: url("../images/practices_assets/practice_estate_planning.png"); }
+    .site-main .square.practice.wealth-transfer-planning h3 {
+      background-image: url("../images/practices_assets/practice_wealth_transfer_planning.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-        .site-main .square.practice.estate-planning h3 {
-          background-image: url("../images/practices_assets/practice_estate_planning@2x.png");
+        .site-main .square.practice.wealth-transfer-planning h3 {
+          background-image: url("../images/practices_assets/practice_wealth_transfer_planning@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.estate-planning:hover {
-      background-color: #284063; }
-  .site-main .square.practice.exempt-organizations {
-    background-color: #604752; }
     .site-main .square.practice.exempt-organizations h3 {
-      text-indent: 0; }
-    .site-main .square.practice.exempt-organizations:hover {
-      background-color: #4d3942; }
-  .site-main .square.practice.intellectual-property {
-    background-color: #404060; }
+      background-image: url("images/practices_assets/practice_construction.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .site-main .square.practice.exempt-organizations h3 {
+          background-image: url("images/practices_assets/practice_construction@2x.png");
+          background-size: 198px 163px; } }
     .site-main .square.practice.intellectual-property h3 {
       background-image: url("../images/practices_assets/practice_intellectual_property.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.intellectual-property h3 {
           background-image: url("../images/practices_assets/practice_intellectual_property@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.intellectual-property:hover {
-      background-color: #33334d; }
-  .site-main .square.practice.real-estate {
-    background-color: #4B4B72; }
     .site-main .square.practice.real-estate h3 {
       background-image: url("../images/practices_assets/practice_real_estate.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.real-estate h3 {
           background-image: url("../images/practices_assets/practice_real_estate@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.real-estate:hover {
-      background-color: #3c3c5b; }
-  .site-main .square.practice.tax {
-    background-color: #32507C; }
     .site-main .square.practice.tax h3 {
       background-image: url("../images/practices_assets/practice_taxation.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.tax h3 {
           background-image: url("../images/practices_assets/practice_taxation@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.tax:hover {
-      background-color: #284063; }
-  .site-main .square.practice.trusts-estates-litigation {
-    background-color: #285F8A; }
     .site-main .square.practice.trusts-estates-litigation h3 {
       background-image: url("../images/practices_assets/practice_trusts_estate.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .site-main .square.practice.trusts-estates-litigation h3 {
           background-image: url("../images/practices_assets/practice_trusts_estate@2x.png");
           background-size: 215px 163px; } }
-    .site-main .square.practice.trusts-estates-litigation:hover {
-      background-color: #204c6e; }
   .site-main .square.industry.financial-services {
     background-color: #404060; }
   .site-main .square.industry.food-beverage {
