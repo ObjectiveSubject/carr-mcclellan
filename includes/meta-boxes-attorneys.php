@@ -108,6 +108,7 @@ function attorneys_meta_options() {
 					<option value="Director" <?php echo ( $title == 'Director' ) ? 'selected="selected"' : ''; ?>>Director</option>
 					<option value="Special Counsel" <?php echo ( $title == 'Special Counsel' ) ? 'selected="selected"' : ''; ?>>Special Counsel</option>
 					<option value="Senior Counsel" <?php echo ( $title == 'Senior Counsel' ) ? 'selected="selected"' : ''; ?>>Senior Counsel</option>
+					<option value="Counsel" <?php echo ( $title == 'Counsel' ) ? 'selected="selected"' : ''; ?>>Counsel</option>
 					<option value="Of Counsel" <?php echo ( $title == 'Of Counsel' ) ? 'selected="selected"' : ''; ?>>Of Counsel</option>
 					<option value="Senior Associate" <?php echo ( $title == 'Senior Associate' ) ? 'selected="selected"' : ''; ?>>Senior Associate</option>
 				</select>
